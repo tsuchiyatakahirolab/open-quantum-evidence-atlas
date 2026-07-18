@@ -1,0 +1,156 @@
+{
+  "as_of": "2026-07-18T01:22:21Z",
+  "scope": {
+    "from_year": 2020,
+    "to_year": 2026,
+    "terms": [
+      "quantum computing",
+      "quantum communication",
+      "quantum sensing",
+      "quantum simulation",
+      "quantum cryptography",
+      "quantum information",
+      "quantum metrology",
+      "quantum network"
+    ],
+    "population": "OpenAIRE publication records matching >=1 exact taxonomy phrase, with resolved affiliations in Japan and EU27",
+    "relationship_definition": "At least one explicit OpenAIRE graph relation to the named entity type; dataset/software checks include incoming and outgoing Scholix links"
+  },
+  "query_counts_by_term_before_deduplication": {
+    "quantum computing": 811,
+    "quantum communication": 185,
+    "quantum sensing": 229,
+    "quantum simulation": 201,
+    "quantum cryptography": 113,
+    "quantum information": 903,
+    "quantum metrology": 119,
+    "quantum network": 88
+  },
+  "japan_query_union": 2334,
+  "organization_ids": 1813,
+  "organization_ids_resolved": 1813,
+  "eu27_japan_observed_publications": 645,
+  "eu27_japan_strict_title_publications": 87,
+  "extended_europe_japan_sensitivity": 804,
+  "rates": {
+    "project": {
+      "numerator": 392,
+      "denominator": 645,
+      "rate": 0.6077519379844961
+    },
+    "funding": {
+      "numerator": 392,
+      "denominator": 645,
+      "rate": 0.6077519379844961
+    },
+    "dataset": {
+      "numerator": 68,
+      "denominator": 250,
+      "wilson95": [
+        0.22059935523679833,
+        0.33030167910902997
+      ],
+      "sampled": true,
+      "rate": 0.272
+    },
+    "software": {
+      "numerator": 22,
+      "denominator": 250,
+      "wilson95": [
+        0.058830921041025906,
+        0.12963936909266374
+      ],
+      "sampled": true,
+      "rate": 0.088
+    }
+  },
+  "strict_title_sensitivity": {
+    "definition": "EU27-Japan observed publications whose title literally contains at least one taxonomy phrase",
+    "project": {
+      "numerator": 45,
+      "denominator": 87,
+      "rate": 0.5172413793103449
+    },
+    "funding": {
+      "numerator": 45,
+      "denominator": 87,
+      "rate": 0.5172413793103449
+    },
+    "dataset": {
+      "numerator": 21,
+      "denominator": 87,
+      "wilson95": [
+        0.16364043223999153,
+        0.34099180673422297
+      ],
+      "rate": 0.2413793103448276
+    },
+    "software": {
+      "numerator": 7,
+      "denominator": 87,
+      "wilson95": [
+        0.03951976844435234,
+        0.1568836414471511
+      ],
+      "rate": 0.08045977011494253
+    }
+  },
+  "quality_checks": {
+    "publiclyFunded_true": 7,
+    "project_link_but_publiclyFunded_false": 386,
+    "records_with_no_resolved_country": 17,
+    "records_with_no_organization": 0
+  },
+  "q_neko": {
+    "aliases": [
+      "Q-Neko",
+      "QNEKO",
+      "Nippon-Europe Quantum Koraborēshon",
+      "HORIZON-EUROHPC-JU-2024-INCO-06"
+    ],
+    "research_products_union": 0,
+    "projects_union": 0,
+    "product_queries": {
+      "Q-Neko": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/research-products?search=%22Q-Neko%22&page=1&pageSize=100&includeStats=true"
+      },
+      "QNEKO": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/research-products?search=%22QNEKO%22&page=1&pageSize=100&includeStats=true"
+      },
+      "Nippon-Europe Quantum Koraborēshon": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/research-products?search=%22Nippon-Europe+Quantum+Korabor%C4%93shon%22&page=1&pageSize=100&includeStats=true"
+      },
+      "HORIZON-EUROHPC-JU-2024-INCO-06": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/research-products?search=%22HORIZON-EUROHPC-JU-2024-INCO-06%22&page=1&pageSize=100&includeStats=true"
+      }
+    },
+    "project_queries": {
+      "Q-Neko": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/projects?search=Q-Neko&page=1&pageSize=100"
+      },
+      "QNEKO": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/projects?search=QNEKO&page=1&pageSize=100"
+      },
+      "Nippon-Europe Quantum Koraborēshon": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/projects?search=Nippon-Europe+Quantum+Korabor%C4%93shon&page=1&pageSize=100"
+      },
+      "HORIZON-EUROHPC-JU-2024-INCO-06": {
+        "count": 0,
+        "url": "https://api.openaire.eu/graph/v3/projects?search=HORIZON-EUROHPC-JU-2024-INCO-06&page=1&pageSize=100"
+      }
+    }
+  },
+  "source_urls": {
+    "graph_api": "https://api.openaire.eu/graph/v3/research-products",
+    "scholix_links": "https://api.openaire.eu/graph/v1/researchProducts/links",
+    "relationships_docs": "https://graph.openaire.eu/docs/data-model/relationships/",
+    "api_docs": "https://graph.openaire.eu/docs/apis/graph-api/research-products/"
+  }
+}

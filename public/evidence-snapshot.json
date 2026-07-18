@@ -1,0 +1,32 @@
+{
+  "artifact": "Open Quantum Evidence Atlas",
+  "snapshot_timestamp": "2026-07-18T01:20:47Z",
+  "scope": {
+    "years": "2020-2026",
+    "type": "publication",
+    "geography": "at least one resolved Japan affiliation and at least one resolved EU27 affiliation",
+    "search_phrases": ["quantum computing", "quantum communication", "quantum sensing", "quantum simulation", "quantum cryptography", "quantum information", "quantum metrology", "quantum network"]
+  },
+  "observed_corpus": {
+    "japan_query_union": 2334,
+    "eu27_japan_publications": 645,
+    "strict_title_subset": 87,
+    "project": {"connected": 392, "audited": 645, "rate_percent": 60.775},
+    "funding": {"connected": 392, "audited": 645, "rate_percent": 60.775},
+    "dataset": {"connected": 68, "audited": 250, "rate_percent": 27.2, "wilson_95_percent": [22.1, 33.0]},
+    "software": {"connected": 22, "audited": 250, "rate_percent": 8.8, "wilson_95_percent": [5.9, 13.0]}
+  },
+  "strict_title_subset": {
+    "records": 87,
+    "project": {"connected": 45, "audited": 87, "rate_percent": 51.7},
+    "funding": {"connected": 45, "audited": 87, "rate_percent": 51.7},
+    "dataset": {"connected": 21, "audited": 87, "rate_percent": 24.1},
+    "software": {"connected": 7, "audited": 87, "rate_percent": 8.0}
+  },
+  "q_neko_watchlist": {
+    "aliases_audited": ["Q-Neko", "QNEKO", "Nippon-Europe Quantum Koraborēshon", "HORIZON-EUROHPC-JU-2024-INCO-06"],
+    "openaire_project_union": 0,
+    "openaire_research_product_union": 0
+  },
+  "semantics": "Connected means at least one observable OpenAIRE product-project/funder edge or research-product link. Zero does not prove that no underlying project, dataset, or software exists."
+}
