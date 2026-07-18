@@ -31,6 +31,10 @@ Among 645 EU27–Japan quantum publications from 2020–2026, 392 (60.8%) connec
 
 The current graph makes investment and project structures substantially easier to observe than reusable outputs. The 60.8% to 7.4% fall—an 8.2× visibility gap—is therefore treated as an evidence-infrastructure gap, not as a claim that researchers failed to produce software. The operational response is to make grant, DOI, repository and Software Heritage identifiers part of project delivery and to re-audit their visibility over time.
 
+## Alien / OpenAIRE MCP cross-check
+
+An authenticated single-record run through the official Alien/OpenAIRE demo resolved the featured DOI to the same OpenAIRE record and confirmed an EC-linked project signal. Its typed dataset/software calls reported non-zero totals but returned no rows on pages 1 or 2, and the rendered route did not surface the full organisation, country, or named-project objects available to the frozen API audit. The result is published as an interoperability trace, not merged into the 645-record denominator. This discrepancy reinforces the state semantics: “not observable through this tool route” is not “does not exist.”
+
 ## Falsification and limits
 
 The full-corpus audit removes sampling error within the observed boundary, but does not turn that boundary into all EU–Japan quantum activity. The “software cliff” would weaken if additional identifiers, repositories or improved OpenAIRE classification lifted software visibility toward the observed dataset rate. Search-phrase coverage, affiliation resolution, graph classification and snapshot timing still bound the inference.
@@ -43,4 +47,4 @@ The Global Quantum Statecraft Observatory (GQSO) connection is prospective. The 
 
 ## Reproducibility and licensing
 
-The executed notebook, evidence snapshot, connection-rate table, observed corpus, Scholix audit and extraction pipeline are distributed beside this report. Code is MIT licensed. Data, analysis and documentation are CC BY 4.0.
+The executed notebook, evidence snapshot, connection-rate table, observed corpus, Scholix audit, Alien/OpenAIRE MCP cross-check and extraction pipeline are distributed beside this report. Code is MIT licensed. Data, analysis and documentation are CC BY 4.0.

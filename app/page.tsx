@@ -129,6 +129,7 @@ export default function Home() {
         <div className="nav-links">
           <a href="/audit">Run auditor</a>
           <a href="#trace">Trace</a>
+          <a href="#mcp">MCP check</a>
           <a href="#watch">Watchlist</a>
           <a href="#method">Method</a>
           <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">GitHub</a>
@@ -286,10 +287,94 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mcp-section" id="mcp">
+        <div className="shell">
+          <div className="section-heading split-heading mcp-heading">
+            <div>
+              <p className="kicker">03 · ALIEN / OPENAIRE MCP CROSS-CHECK</p>
+              <h2>The agent found the record.<br />It also found a tool boundary.</h2>
+            </div>
+            <p>
+              On 18 July 2026, the official Alien/OpenAIRE demo re-queried the featured DOI through
+              authenticated OpenAIRE tools. This is a single-record interoperability check—not a
+              replacement for the frozen 645-record API audit.
+            </p>
+          </div>
+
+          <div className="mcp-grid">
+            <article className="mcp-query-card">
+              <div className="mcp-card-top">
+                <span><i className="status linked" /> EXECUTED</span>
+                <b>OFFICIAL ALIEN DEMO · SONNET 4.6</b>
+              </div>
+              <p className="mcp-prompt">
+                “Using the OpenAIRE Graph only, cross-check DOI
+                <strong> 10.1088/1367-2630/ad5b13</strong>. Return identity, funding, projects,
+                organisations, datasets, software and provenance. Treat missing relations as not observable.”
+              </p>
+              <div className="mcp-call-strip">
+                <span><b>29</b> tool calls</span>
+                <span><b>1</b> exact DOI</span>
+                <span><b>0</b> model-estimated metrics</span>
+              </div>
+              <a href="https://demo.alien.club/openaire" target="_blank" rel="noreferrer">
+                Open the official demo <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article className="mcp-findings-card">
+              <p className="mcp-label">DIRECTLY OBSERVED IN THE MCP RUN</p>
+              <ul>
+                <li><span>Identity</span><b>Exact DOI resolved to <code>doi_dedup___::82d884…</code></b></li>
+                <li><span>Publication</span><b>2024 record retrieved from OpenAIRE</b></li>
+                <li><span>Funding</span><b>EC-linked project signal confirmed</b></li>
+                <li><span>Relations</span><b>60 returned link rows, all typed as <code>cites</code></b></li>
+              </ul>
+            </article>
+
+            <article className="mcp-boundary-card">
+              <p className="mcp-label">TOOL BOUNDARY, NOT A NULL FINDING</p>
+              <h3>Non-zero totals.<br />Zero typed rows returned.</h3>
+              <p>
+                The dataset and software link tools reported records in their totals but returned no rows on
+                pages 1 or 2. Organisation/country fields and the three named project objects were also not
+                surfaced in this trace. Those relations are therefore <strong>not observable through this MCP run</strong>,
+                not absent from OpenAIRE.
+              </p>
+            </article>
+          </div>
+
+          <div className="mcp-comparison" role="table" aria-label="API audit and MCP cross-check comparison">
+            <div role="row" className="mcp-comparison-head">
+              <span role="columnheader">Evidence question</span>
+              <span role="columnheader">Frozen API audit</span>
+              <span role="columnheader">Alien/OpenAIRE MCP</span>
+            </div>
+            <div role="row">
+              <span role="cell">Record identity</span><b role="cell">Exact match</b><b role="cell">Exact match</b>
+            </div>
+            <div role="row">
+              <span role="cell">EC project signal</span><b role="cell">3 project objects</b><b role="cell">Confirmed; names not surfaced</b>
+            </div>
+            <div role="row">
+              <span role="cell">Dataset / software edges</span><b role="cell">1 dataset · 2 software</b><b role="cell">Typed endpoint pagination boundary</b>
+            </div>
+            <div role="row">
+              <span role="cell">Role in this artifact</span><b role="cell">Canonical census</b><b role="cell">Human-facing cross-check</b>
+            </div>
+          </div>
+
+          <div className="mcp-footnote">
+            <p><strong>Decision:</strong> keep the direct API pipeline as the reproducible denominator-complete method, and publish the MCP trace as an honest interoperability test.</p>
+            <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download executed cross-check record · MD ↓</a>
+          </div>
+        </div>
+      </section>
+
       <section className="section shell" id="watch">
         <div className="watch-grid">
           <div className="watch-copy">
-            <p className="kicker">03 · PROSPECTIVE WATCHLIST</p>
+            <p className="kicker">04 · PROSPECTIVE WATCHLIST</p>
             <h2>Q‑NEKO is the test case.<br /><em>Not the corpus.</em></h2>
             <p>
               Q‑NEKO is the first EU–Japan joint quantum-technology project: €4m in European funding,
@@ -326,7 +411,7 @@ export default function Home() {
       <section className="decision-section" id="decision">
         <div className="shell">
           <div className="decision-title">
-            <p className="kicker">04 · DECISION BRIEF</p>
+            <p className="kicker">05 · DECISION BRIEF</p>
             <h2>Build the broad Atlas.<br />Use Q‑NEKO as a live benchmark.</h2>
             <p>One policy decision, three operating moves.</p>
           </div>
@@ -361,7 +446,7 @@ export default function Home() {
       <section className="section shell method-section" id="method">
         <div className="section-heading split-heading">
           <div>
-            <p className="kicker">05 · REUSE THE AUDIT</p>
+            <p className="kicker">06 · REUSE THE AUDIT</p>
             <h2>Every number has<br />a denominator.</h2>
           </div>
           <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes a compact evidence snapshot for independent checking.</p>
@@ -382,6 +467,7 @@ export default function Home() {
             <a href="/reproducibility/openaire_connection_rates.ipynb" download><span>Executed analysis</span><b>IPYNB ↓</b></a>
             <a href="/analysis-report.md" download><span>Analysis report</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
+            <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
             <small>Snapshot timestamp: 2026-07-18T05:02:39Z</small>
