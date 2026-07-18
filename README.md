@@ -2,7 +2,14 @@
 
 An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The artifact traces how observable links fall from funding and projects to datasets and software, then uses Q‑NEKO as a prospective policy-observability benchmark.
 
+- Live application: <https://atlas.tsuchiyalab.com>
+- Research archive: <https://tsuchiyatakahiro.com/research/open-quantum-evidence-atlas>
+
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
+
+## GQSO relationship
+
+The Atlas is a standalone OpenAIRE audit. Its connection to the Global Quantum Statecraft Observatory (GQSO) is prospective: the published metrics and evidence-chain model provide a candidate observability layer for a future GQSO integration. This repository does not claim a current partnership or completed technical integration.
 
 ## Headline finding
 
@@ -36,4 +43,4 @@ Snapshot timestamp: `2026-07-18T01:20:47Z`.
 
 ## License
 
-Artifact and story: CC BY 4.0. Code: MIT.
+Code is licensed under the MIT License. Data, analysis, documentation and the hackathon story are licensed under CC BY 4.0. See `LICENSE` and `LICENSE-DATA`.

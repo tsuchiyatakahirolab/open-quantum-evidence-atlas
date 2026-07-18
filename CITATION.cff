@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this Atlas, its evidence snapshot, or its connection-rate metrics, please cite this software."
+title: "Open Quantum Evidence Atlas"
+type: software
+authors:
+  - family-names: "Tsuchiya"
+    given-names: "Takahiro"
+version: 1.0.0
+date-released: 2026-07-18
+url: "https://atlas.tsuchiyalab.com"
+repository-code: "https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas"
+license: MIT
+keywords:
+  - OpenAIRE
+  - quantum technology
+  - EU-Japan research
+  - evidence graph
+  - open science

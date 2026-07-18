@@ -131,6 +131,7 @@ export default function Home() {
           <a href="#trace">Trace</a>
           <a href="#watch">Watchlist</a>
           <a href="#method">Method</a>
+          <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">GitHub</a>
         </div>
         <span className="audit-stamp"><span /> AUDIT · 18 JUL 2026</span>
       </nav>
@@ -350,6 +351,10 @@ export default function Home() {
             <span>WHAT WOULD CHANGE THE CONCLUSION?</span>
             <p>If a full-corpus Scholix audit or added repository identifiers lifts software visibility near the 27% dataset rate, the “software cliff” weakens. This Atlas publishes its denominator so that claim can be tested.</p>
           </div>
+          <div className="falsification">
+            <span>PROSPECTIVE GQSO PATH</span>
+            <p>The Atlas is a standalone OpenAIRE audit today. Connecting its evidence-chain metrics to the Global Quantum Statecraft Observatory is a next-stage integration path—not a current partnership or completed system link.</p>
+          </div>
         </div>
       </section>
 
@@ -391,8 +396,10 @@ export default function Home() {
           </div>
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
+            <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; releases · GitHub ↗</a>
+            <a href="https://tsuchiyatakahiro.com/research/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Research archive · TSUCHIYA Takahiro ↗</a>
             <span>Data: OpenAIRE Graph · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
-            <span>Artifact and story licensed CC BY 4.0</span>
+            <span>Code: MIT · Data, artifact and story: CC BY 4.0</span>
           </div>
         </div>
       </footer>

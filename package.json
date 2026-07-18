@@ -11,6 +11,7 @@
     "dev": "vinext dev",
     "prebuild": "npm run data:build",
     "build": "vinext build",
+    "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.atlas.jsonc",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
