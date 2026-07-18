@@ -35,6 +35,7 @@ The public reproducibility pack includes:
 - `public/connection-rates.csv` — connection numerators, denominators and intervals
 - `public/reproducibility/openaire_feasibility.py` — OpenAIRE extraction/audit pipeline
 - `public/reproducibility/openaire_connection_rates.ipynb` — executed notebook
+- `public/analysis-report.md` — findings, decision logic, limitations and next steps
 - `public/reproducibility/eu27_japan_corpus.csv` — the deduplicated observed corpus
 - `public/reproducibility/scholix_link_audit.csv` — audited research-product links
 - `public/submission-story.md` — the required 1–2 page hackathon story

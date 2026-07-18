@@ -380,6 +380,7 @@ export default function Home() {
             <a href="/evidence-snapshot.json" download><span>Evidence snapshot</span><b>JSON ↓</b></a>
             <a href="/connection-rates.csv" download><span>Connection rates</span><b>CSV ↓</b></a>
             <a href="/reproducibility/openaire_connection_rates.ipynb" download><span>Executed analysis</span><b>IPYNB ↓</b></a>
+            <a href="/analysis-report.md" download><span>Analysis report</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
