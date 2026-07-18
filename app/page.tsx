@@ -292,12 +292,12 @@ export default function Home() {
           <div className="section-heading split-heading mcp-heading">
             <div>
               <p className="kicker">03 · ALIEN / OPENAIRE MCP CROSS-CHECK</p>
-              <h2>The agent found the record.<br />It also found a tool boundary.</h2>
+              <h2>The MCP found the totals.<br />The audit recovered the rows.</h2>
             </div>
             <p>
               On 18 July 2026, the official Alien/OpenAIRE demo re-queried the featured DOI through
-              authenticated OpenAIRE tools. This is a single-record interoperability check—not a
-              replacement for the frozen 645-record API audit.
+              authenticated OpenAIRE tools. A targeted follow-up then isolated and reproduced a
+              zero-based pagination mismatch in the MCP link wrapper.
             </p>
           </div>
 
@@ -313,9 +313,9 @@ export default function Home() {
                 organisations, datasets, software and provenance. Treat missing relations as not observable.”
               </p>
               <div className="mcp-call-strip">
-                <span><b>29</b> tool calls</span>
-                <span><b>1</b> exact DOI</span>
-                <span><b>0</b> model-estimated metrics</span>
+                <span><b>30</b> initial MCP calls</span>
+                <span><b>2</b> page-0 probes rejected</span>
+                <span><b>3</b> rows recovered via API</span>
               </div>
               <a href="https://demo.alien.club/openaire" target="_blank" rel="noreferrer">
                 Open the official demo <span aria-hidden="true">↗</span>
@@ -327,46 +327,48 @@ export default function Home() {
               <ul>
                 <li><span>Identity</span><b>Exact DOI resolved to <code>doi_dedup___::82d884…</code></b></li>
                 <li><span>Publication</span><b>2024 record retrieved from OpenAIRE</b></li>
-                <li><span>Funding</span><b>EC-linked project signal confirmed</b></li>
-                <li><span>Relations</span><b>60 returned link rows, all typed as <code>cites</code></b></li>
+                <li><span>Funding</span><b>EC grant 101102140 · QIA-Phase1 confirmed</b></li>
+                <li><span>Recovered</span><b>1 Figshare dataset · 2 software records</b></li>
               </ul>
             </article>
 
             <article className="mcp-boundary-card">
-              <p className="mcp-label">TOOL BOUNDARY, NOT A NULL FINDING</p>
-              <h3>Non-zero totals.<br />Zero typed rows returned.</h3>
+              <p className="mcp-label">ROOT CAUSE CONFIRMED · OFF-BY-ONE</p>
+              <h3>Page 0 has the rows.<br />MCP rejects page 0.</h3>
               <p>
-                The dataset and software link tools reported records in their totals but returned no rows on
-                pages 1 or 2. Organisation/country fields and the three named project objects were also not
-                surfaced in this trace. Those relations are therefore <strong>not observable through this MCP run</strong>,
-                not absent from OpenAIRE.
+                The official link endpoint defaults to page 0. Direct calls returned all three typed rows there;
+                pages 1 and 2 returned none. Alien&apos;s <code>ResearchLinksInput</code> rejected page 0 before an
+                upstream call. This is an <strong>MCP schema/offset defect</strong>, not missing OpenAIRE data.
               </p>
             </article>
           </div>
 
           <div className="mcp-comparison" role="table" aria-label="API audit and MCP cross-check comparison">
             <div role="row" className="mcp-comparison-head">
-              <span role="columnheader">Evidence question</span>
-              <span role="columnheader">Frozen API audit</span>
+              <span role="columnheader">Diagnostic</span>
+              <span role="columnheader">OpenAIRE link endpoint</span>
               <span role="columnheader">Alien/OpenAIRE MCP</span>
             </div>
             <div role="row">
-              <span role="cell">Record identity</span><b role="cell">Exact match</b><b role="cell">Exact match</b>
+              <span role="cell">Page contract</span><b role="cell">Default page = 0</b><b role="cell">Validator requires page ≥ 1</b>
             </div>
             <div role="row">
-              <span role="cell">EC project signal</span><b role="cell">3 project objects</b><b role="cell">Confirmed; names not surfaced</b>
+              <span role="cell">Dataset</span><b role="cell">Page 0 → 1 of 1 row</b><b role="cell">Page 0 rejected</b>
             </div>
             <div role="row">
-              <span role="cell">Dataset / software edges</span><b role="cell">1 dataset · 2 software</b><b role="cell">Typed endpoint pagination boundary</b>
+              <span role="cell">Software</span><b role="cell">Page 0 → 2 of 2 rows</b><b role="cell">Page 0 rejected</b>
             </div>
             <div role="row">
-              <span role="cell">Role in this artifact</span><b role="cell">Canonical census</b><b role="cell">Human-facing cross-check</b>
+              <span role="cell">Repair</span><b role="cell">Direct API fallback works now</b><b role="cell">Allow 0 or translate page − 1</b>
             </div>
           </div>
 
           <div className="mcp-footnote">
-            <p><strong>Decision:</strong> keep the direct API pipeline as the reproducible denominator-complete method, and publish the MCP trace as an honest interoperability test.</p>
-            <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download executed cross-check record · MD ↓</a>
+            <p><strong>Decision:</strong> retain the direct API fallback, publish the reproducible failure, and treat a non-zero total with zero returned rows as a tool error—not an evidence null.</p>
+            <div>
+              <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
+              <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download diagnostic record · MD ↓</a>
+            </div>
           </div>
         </div>
       </section>
@@ -468,6 +470,7 @@ export default function Home() {
             <a href="/analysis-report.md" download><span>Analysis report</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
+            <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
             <small>Snapshot timestamp: 2026-07-18T05:02:39Z</small>

@@ -16,7 +16,7 @@ Project and funding visibility are strong: 392 of 645 publications (60.8%) conne
 
 One record demonstrates that a complete chain is possible: European Commission → QIA-Phase1 / QUANGO / QSNP → OIST and European institutions → “Connecting quantum cities” → a Figshare dataset → two software records collected from GitHub and Software Heritage.
 
-We then re-ran that exact DOI through the authenticated Alien/OpenAIRE demo. The MCP route resolved the same OpenAIRE record and confirmed an EC project signal, but its typed dataset/software tools reported non-zero totals without returning the rows needed to name those outputs. That boundary is part of the result: the direct API audit supplies the canonical census, while the MCP trace demonstrates an AI-facing route and documents what was not observable through it.
+We then re-ran that exact DOI through the authenticated Alien/OpenAIRE demo. The MCP route resolved the same record and confirmed QIA-Phase1, but its typed dataset/software tools reported non-zero totals without rows. We reproduced the cause: OpenAIRE's link operation defaults to page 0, which returns the one dataset and two software records, while the MCP validator requires page 1 or higher. The Atlas therefore turns an apparent evidence null into a concrete integration finding, supplies a working direct-API fallback, and publishes a minimal reproducer for the MCP maintainers.
 
 Q-Neko, the first EU–Japan joint quantum-technology project, becomes a prospective policy benchmark. Four aliases and identifiers returned zero OpenAIRE projects and zero research products on 18 July 2026. This is labelled observation lag—not project failure.
 

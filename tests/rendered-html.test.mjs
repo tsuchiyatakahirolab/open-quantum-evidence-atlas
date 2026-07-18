@@ -24,8 +24,9 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /Funding is visible\./i);
   assert.match(html, /Trace a complete chain/i);
   assert.match(html, /Alien \/ OpenAIRE MCP cross-check/i);
-  assert.match(html, /<b>29<\/b>\s*tool calls/i);
-  assert.match(html, /Tool boundary, not a null finding/i);
+  assert.match(html, /<b>30<\/b>\s*initial MCP calls/i);
+  assert.match(html, /Page 0 has the rows/i);
+  assert.match(html, /MCP schema\/offset defect/i);
   assert.match(html, /Q‑NEKO is the test case/i);
   assert.match(html, /Build the broad Atlas/i);
   assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas-v1\.1\.png"/i);
@@ -45,11 +46,12 @@ test("server-renders the reusable Evidence Chain Auditor", async () => {
 });
 
 test("publishes a denominator-complete reproducibility pack", async () => {
-  const [snapshotText, ratesText, storyText, mcpText, imageInfo] = await Promise.all([
+  const [snapshotText, ratesText, storyText, mcpText, reproText, imageInfo] = await Promise.all([
     readFile(new URL("../public/evidence-snapshot.json", import.meta.url), "utf8"),
     readFile(new URL("../public/connection-rates.csv", import.meta.url), "utf8"),
     readFile(new URL("../public/submission-story.md", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/openaire-mcp-crosscheck.md", import.meta.url), "utf8"),
+    readFile(new URL("../public/reproducibility/openaire_mcp_pagination_repro.py", import.meta.url), "utf8"),
     stat(new URL("../public/og-atlas-v1.1.png", import.meta.url)),
   ]);
 
@@ -64,8 +66,11 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.equal(snapshot.q_neko_watchlist.openaire_project_union, 0);
   assert.match(ratesText, /observed,software,48,645,7\.4,5\.7,9\.7/);
   assert.match(storyText, /Observation lag—not project failure/i);
-  assert.match(mcpText, /29 completed OpenAIRE tool calls/i);
-  assert.match(mcpText, /not observable through this particular MCP\/demo trace/i);
+  assert.match(mcpText, /default of `0`/i);
+  assert.match(mcpText, /ResearchLinksInput.*page.*greater than or equal to `1`/i);
+  assert.match(mcpText, /netsquid-freespace software on GitHub/i);
+  assert.match(reproText, /"page": page/);
+  assert.match(reproText, /"mismatch_reproduced": reproduced/);
   assert.ok(imageInfo.size > 100_000, "social preview should be a real raster asset");
 });
 

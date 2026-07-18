@@ -1,55 +1,84 @@
-# Alien / OpenAIRE MCP cross-check
+# Alien / OpenAIRE MCP pagination diagnostic
 
 **Executed:** 18 July 2026  
-**Route:** Official Alien Intelligence OpenAIRE demo (`https://demo.alien.club/openaire`)  
-**Model shown by the interface:** Sonnet 4.6  
-**Purpose:** A single-record interoperability check beside the denominator-complete direct OpenAIRE Graph API audit.
+**Routes:** Official Alien Intelligence OpenAIRE demo and OpenAIRE Graph API
 
-## Prompt
+**Model shown by the demo:** Sonnet 4.6
 
-> Using the OpenAIRE Graph only, cross-check the publication “Connecting quantum cities: simulations of a satellite-based quantum network” (DOI 10.1088/1367-2630/ad5b13). Return its OpenAIRE record ID, publication year, organisations and countries, linked projects and funders, linked datasets, linked software, and source/provenance URLs. If a relation is absent, say “not observable” rather than claiming it does not exist.
+**Purpose:** Separate a genuine evidence null from a recoverable MCP integration defect.
 
-## Directly observed in the executed trace
+## Initial cross-check
 
-- `Get Research Product Details` resolved DOI `10.1088/1367-2630/ad5b13` to OpenAIRE record `doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db`.
-- The research-product record was retrieved as a 2024 publication.
-- `Search Research Products` returned the target when filtered for an EC funding/project relation, confirming an EC-linked project signal.
-- A second target query with `has_project_rel: true` returned the record, independently confirming that at least one project relation is observable.
-- The all-links call returned 60 link rows; the agent reported that all 60 were typed as `cites` in that response.
-- The trace used 29 completed OpenAIRE tool calls before it was stopped after the requested evidence fields had been probed.
+The authenticated Alien/OpenAIRE run used 30 OpenAIRE MCP calls. It directly established:
 
-## Tool boundary observed
+- DOI `10.1088/1367-2630/ad5b13` resolves to `doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db`.
+- The record is a 2024 publication.
+- DOI plus `rel_project_code=101102140` returns exactly the target record, confirming EC grant **QIA-Phase1**.
+- `get_research_links(target_type=dataset)` reported `total: 1` but returned no rows on pages 1 and 2.
+- `get_research_links(target_type=software)` reported `total: 2` but returned no rows on pages 1 and 2.
 
-- Dataset and software link calls reported non-zero totals, but returned no rows on pages 1 or 2.
-- Relationship probes for `isSupplementedBy`, `isRelatedTo`, `isSupplementTo`, and `compiles` did not surface typed dataset or software rows.
-- The full research-product response used by the demo did not surface organisation/country fields in the rendered result.
-- EC funding was confirmed, but the trace did not directly surface the three named project objects (`QIA-Phase1`, `QUANGO`, `QSNP`) that are present in the frozen API record.
+The last two observations initially looked like a pagination boundary. They were then isolated in a controlled comparison.
 
-These are **not null findings about the OpenAIRE Graph**. They are relations not observable through this particular MCP/demo trace. The direct API audit remains canonical because it preserves raw result objects, sweeps all research-product links, and publishes every denominator.
+## Root cause
 
-## Comparison with the frozen API audit
+The official OpenAPI definition for `GET /v1/researchProducts/links` gives `page` a default of `0`. Direct calls confirm that this operation is zero-indexed for the tested record:
 
-| Evidence question | Direct API audit | Alien / OpenAIRE MCP trace |
-| --- | --- | --- |
-| Record identity | Exact DOI and OpenAIRE ID | Exact match |
-| Publication year | 2024 | 2024 |
-| EC project signal | Three project objects with EC funder data | Project/funding relation confirmed |
-| Named projects | QIA-Phase1, QUANGO, QSNP | Not surfaced in the executed trace |
-| Dataset | One Figshare collection edge | Non-zero total; rows not returned |
-| Software | Two code-record edges | Non-zero total; rows not returned |
-| Role in the artifact | Canonical census and metrics | Human-facing interoperability cross-check |
+| Target type | Page | `totalLinks` | Rows returned |
+| --- | ---: | ---: | ---: |
+| dataset | 0 | 1 | 1 |
+| dataset | 1 | 1 | 0 |
+| dataset | 2 | 1 | 0 |
+| software | 0 | 2 | 2 |
+| software | 1 | 2 | 0 |
+| software | 2 | 2 | 0 |
 
-## Decision
+Two targeted Alien MCP calls then explicitly requested `page=0`. Both failed validation before an upstream URL was produced. The demo reported that `ResearchLinksInput` requires `page` to be greater than or equal to `1`.
 
-Keep the direct OpenAIRE Graph API pipeline as the reproducible, denominator-complete method. Publish this MCP trace as an honest cross-check that confirms record identity and the EC project signal while exposing pagination and field-surfacing limits in the current agent route.
+This is an **off-by-one contract mismatch in the MCP wrapper**:
+
+- upstream link operation: zero-indexed, default page 0;
+- Alien MCP input model: page 1 or greater;
+- effect for result sets smaller than one page: the only data page is skipped while the total count remains visible.
+
+It is not an OpenAIRE data-null and not an upstream pagination failure.
+
+## Rows recovered at page 0
+
+### Dataset
+
+- **Title:** Quantum-limited measurements of optical signals from a geostationary satellite
+- **Type:** dataset / Collection
+- **DOI:** `10.6084/m9.figshare.c.3813670`
+- **Relation:** `references`
+- **Provenance:** OpenAIRE
+
+### Software
+
+1. **netsquid-freespace software on GitHub**
+
+   OpenAIRE ID: `openaire____::0203e43bc9da9dd3318eede5cd1e5544`
+2. **quantumcity software on GitHub**
+
+   OpenAIRE ID: `openaire____::4f63b22fef29eff8bc0dc768945bfe9c`
+
+Both software rows are typed as software, carry a `cites` relation, have OpenAIRE provenance, and were collected from GitHub and Software Heritage.
+
+## Corrective action
+
+Either server-side repair is sufficient:
+
+1. define the MCP `page` field with a default of `0` and minimum of `0`; or
+2. retain a one-indexed MCP interface and send `page - 1` to this upstream link operation.
+
+A regression test should request a known one-row dataset relation and verify that the first MCP page returns the row rather than only `totalLinks`.
+
+Until the MCP wrapper is repaired, the Atlas uses the direct link endpoint with `page=0` as its reproducible fallback. A non-zero total with an empty result page is classified as a tool inconsistency, not as “no relation.”
 
 ## Reproduction
 
-1. Sign in to the official Alien Intelligence OpenAIRE demo.
-2. Submit the prompt above without altering the DOI.
-3. Expand the tool-call trace and record the returned OpenAIRE ID, relation totals, row counts, and project filter result.
-4. Treat absent rendered relations as “not observable through this run.”
-5. Compare the response with `evidence-snapshot.json` and the frozen API record before drawing any substantive conclusion.
+Run `openaire_mcp_pagination_repro.py` in this directory. It queries page 0 and page 1 for both target types, prints the returned titles and identifiers, and marks whether the mismatch is reproduced.
 
-Official hackathon call: `https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8`
-
+- Official OpenAPI: `https://api.openaire.eu/graph/v3/api-docs`
+- Swagger UI: `https://api.openaire.eu/graph/swagger-ui/index.html`
+- Alien demo: `https://demo.alien.club/openaire`
+- Hackathon call: `https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8`

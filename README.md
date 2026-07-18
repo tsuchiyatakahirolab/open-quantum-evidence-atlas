@@ -7,7 +7,7 @@ An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The
 
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
 
-The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and EC project signal while documenting a current typed-link pagination boundary. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics.
+The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics.
 
 ## GQSO relationship
 
@@ -41,6 +41,7 @@ The public reproducibility pack includes:
 - `public/reproducibility/eu27_japan_corpus.csv` — the deduplicated observed corpus
 - `public/reproducibility/scholix_link_audit.csv` — audited research-product links
 - `public/reproducibility/openaire-mcp-crosscheck.md` — executed Alien/OpenAIRE MCP trace and API comparison
+- `public/reproducibility/openaire_mcp_pagination_repro.py` — minimal executable reproduction of the page-0 mismatch
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
 Snapshot timestamp: `2026-07-18T05:02:39Z`.
