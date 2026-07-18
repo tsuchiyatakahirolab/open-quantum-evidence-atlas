@@ -2,13 +2,13 @@ import assert from "node:assert/strict";
 import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
-async function render() {
+async function render(pathname = "/") {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
   return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
+    new Request(`http://localhost${pathname}`, { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
     { waitUntil() {}, passThroughOnException() {} },
   );
@@ -28,6 +28,17 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas\.png"/i);
   assert.match(html, /role="tablist"/i);
   assert.match(html, /Wilson 95% confidence intervals/i);
+});
+
+test("server-renders the reusable Evidence Chain Auditor", async () => {
+  const response = await render("/audit");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Evidence Chain Auditor/i);
+  assert.match(html, /Turn a policy question/i);
+  assert.match(html, /Run evidence audit/i);
+  assert.match(html, /Check OpenAIRE live/i);
+  assert.match(html, /Upload JSON/i);
 });
 
 test("publishes a denominator-complete reproducibility pack", async () => {
@@ -50,4 +61,21 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.match(ratesText, /observed,software,22,250,8\.8,5\.9,13\.0/);
   assert.match(storyText, /Observation lag—not project failure/i);
   assert.ok(imageInfo.size > 100_000, "social preview should be a real raster asset");
+});
+
+test("builds an audit dataset that reproduces the published findings", async () => {
+  const data = JSON.parse(await readFile(new URL("../public/audit-dataset.json", import.meta.url), "utf8"));
+  assert.equal(data.schema_version, 1);
+  assert.equal(data.records.length, 645);
+  assert.deepEqual(data.checks, {
+    records: 645,
+    projects: 392,
+    broad_audited: 250,
+    broad_datasets: 68,
+    broad_software: 22,
+    strict_records: 87,
+    strict_projects: 45,
+    strict_datasets: 21,
+    strict_software: 7,
+  });
 });

@@ -2,6 +2,8 @@
 
 An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The artifact traces how observable links fall from funding and projects to datasets and software, then uses Q‑NEKO as a prospective policy-observability benchmark.
 
+The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
+
 ## Headline finding
 
 Among 645 EU27–Japan quantum publications from 2020–2026, 60.8% connect to a project and funder. In the 250-record Scholix audit, 27.2% connect to a dataset and 8.8% to software. A stricter 87-record title-literal sensitivity check preserves the pattern.

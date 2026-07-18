@@ -127,6 +127,7 @@ export default function Home() {
           <span>OPEN QUANTUM<br />EVIDENCE ATLAS</span>
         </a>
         <div className="nav-links">
+          <a href="/audit">Run auditor</a>
           <a href="#trace">Trace</a>
           <a href="#watch">Watchlist</a>
           <a href="#method">Method</a>
@@ -143,8 +144,8 @@ export default function Home() {
             Fewer than one in ten of the audited sample connects to software.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="#trace">Trace a complete chain <span aria-hidden="true">↘</span></a>
-            <a className="button quiet" href="#decision">Read the decision brief</a>
+            <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
+            <a className="button quiet" href="#trace">Trace a complete chain</a>
           </div>
           <p className="source-line">Measured, not model-estimated · OpenAIRE Graph v3 + research-product links</p>
         </div>
