@@ -1,6 +1,6 @@
 {
   "artifact": "Open Quantum Evidence Atlas",
-  "snapshot_timestamp": "2026-07-18T01:20:47Z",
+  "snapshot_timestamp": "2026-07-18T05:02:39Z",
   "scope": {
     "years": "2020-2026",
     "type": "publication",
@@ -13,8 +13,14 @@
     "strict_title_subset": 87,
     "project": {"connected": 392, "audited": 645, "rate_percent": 60.775},
     "funding": {"connected": 392, "audited": 645, "rate_percent": 60.775},
-    "dataset": {"connected": 68, "audited": 250, "rate_percent": 27.2, "wilson_95_percent": [22.1, 33.0]},
-    "software": {"connected": 22, "audited": 250, "rate_percent": 8.8, "wilson_95_percent": [5.9, 13.0]}
+    "dataset": {"connected": 179, "audited": 645, "rate_percent": 27.8, "wilson_95_percent": [24.4, 31.3]},
+    "software": {"connected": 48, "audited": 645, "rate_percent": 7.4, "wilson_95_percent": [5.7, 9.7]}
+  },
+  "link_audit_quality": {
+    "audited": 645,
+    "missing_ids": 0,
+    "duplicate_corpus_ids": 0,
+    "duplicate_link_ids": 0
   },
   "strict_title_subset": {
     "records": 87,

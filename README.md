@@ -13,7 +13,7 @@ The Atlas is a standalone OpenAIRE audit. Its connection to the Global Quantum S
 
 ## Headline finding
 
-Among 645 EU27–Japan quantum publications from 2020–2026, 60.8% connect to a project and funder. In the 250-record Scholix audit, 27.2% connect to a dataset and 8.8% to software. A stricter 87-record title-literal sensitivity check preserves the pattern.
+Among 645 EU27–Japan quantum publications from 2020–2026, 60.8% connect to a project and funder, 27.8% to a dataset and 7.4% to software. Dataset and software relations are now audited across all 645 observed records. A stricter 87-record title-literal sensitivity check preserves the pattern.
 
 “Connected” means at least one explicit OpenAIRE edge. An absent edge means not observable in the Graph; it is not evidence that the underlying output does not exist.
 
@@ -40,7 +40,7 @@ The public reproducibility pack includes:
 - `public/reproducibility/scholix_link_audit.csv` — audited research-product links
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
-Snapshot timestamp: `2026-07-18T01:20:47Z`.
+Snapshot timestamp: `2026-07-18T05:02:39Z`.
 
 ## License
 

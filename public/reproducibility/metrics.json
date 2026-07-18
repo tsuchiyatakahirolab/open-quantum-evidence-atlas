@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-07-18T01:22:21Z",
+  "as_of": "2026-07-18T05:02:39Z",
   "scope": {
     "from_year": 2020,
     "to_year": 2026,
@@ -14,7 +14,8 @@
       "quantum network"
     ],
     "population": "OpenAIRE publication records matching >=1 exact taxonomy phrase, with resolved affiliations in Japan and EU27",
-    "relationship_definition": "At least one explicit OpenAIRE graph relation to the named entity type; dataset/software checks include incoming and outgoing Scholix links"
+    "relationship_definition": "At least one explicit OpenAIRE graph relation to the named entity type; dataset/software checks include incoming and outgoing Scholix links",
+    "link_audit_population": "All observed EU27-Japan publications"
   },
   "query_counts_by_term_before_deduplication": {
     "quantum computing": 811,
@@ -44,24 +45,24 @@
       "rate": 0.6077519379844961
     },
     "dataset": {
-      "numerator": 68,
-      "denominator": 250,
+      "numerator": 179,
+      "denominator": 645,
       "wilson95": [
-        0.22059935523679833,
-        0.33030167910902997
+        0.24435690883734273,
+        0.3133163352949693
       ],
-      "sampled": true,
-      "rate": 0.272
+      "sampled": false,
+      "rate": 0.2775193798449612
     },
     "software": {
-      "numerator": 22,
-      "denominator": 250,
+      "numerator": 48,
+      "denominator": 645,
       "wilson95": [
-        0.058830921041025906,
-        0.12963936909266374
+        0.05658717700107829,
+        0.09728951647850131
       ],
-      "sampled": true,
-      "rate": 0.088
+      "sampled": false,
+      "rate": 0.07441860465116279
     }
   },
   "strict_title_sensitivity": {
@@ -96,6 +97,10 @@
     }
   },
   "quality_checks": {
+    "observed_duplicate_ids": 0,
+    "scholix_records_audited": 645,
+    "scholix_missing_records": 0,
+    "scholix_duplicate_ids": 0,
     "publiclyFunded_true": 7,
     "project_link_but_publiclyFunded_false": 386,
     "records_with_no_resolved_country": 17,

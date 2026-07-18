@@ -6,13 +6,13 @@ Can a decision-maker trace EU–Japan quantum-research policy through funding an
 
 ## The journey
 
-We searched eight quantum phrases across 2020–2026 publications, deduplicated a 2,334-record Japan-query union, and retained records with at least one resolved Japan affiliation and one EU27 affiliation. That produced 645 observed EU–Japan publications. We audited every record for project and funder objects. We then audited OpenAIRE research-product links for a reproducible 250-record broad sample and all 87 records in a stricter title-literal subset. Wilson intervals express sampling uncertainty.
+We searched eight quantum phrases across 2020–2026 publications, deduplicated a 2,334-record Japan-query union, and retained records with at least one resolved Japan affiliation and one EU27 affiliation. That produced 645 observed EU–Japan publications. We audited every record for project and funder objects, then audited OpenAIRE Scholix relations for every one of the same 645 records. All corpus and audit identifiers are unique, with no missing audit rows. Wilson intervals express uncertainty in the observed rates.
 
 The Atlas distinguishes three states: connected in OpenAIRE, not observable in OpenAIRE, and not audited. An absent edge is never presented as proof that an output does not exist.
 
 ## The insight
 
-Project and funding visibility are strong: 392 of 645 publications (60.8%) connect to at least one project and a funder object. Reuse visibility collapses downstream. Among 250 audited records, 68 (27.2%, Wilson 95% CI 22.1–33.0) connect to a dataset and only 22 (8.8%, CI 5.9–13.0) connect to software. The title-literal sensitivity check preserves the pattern: 51.7% project/funding, 24.1% dataset, and 8.0% software.
+Project and funding visibility are strong: 392 of 645 publications (60.8%) connect to at least one project and a funder object. Reuse visibility collapses downstream. Across the full 645-record audit, 179 (27.8%, Wilson 95% CI 24.4–31.3) connect to a dataset and only 48 (7.4%, CI 5.7–9.7) connect to software—an 8.2× funding-to-software visibility gap. The title-literal sensitivity check preserves the pattern: 51.7% project/funding, 24.1% dataset, and 8.0% software. The former deterministic 250-record sample is retained as a reproducibility check and yields its original 68 dataset and 22 software connections.
 
 One record demonstrates that a complete chain is possible: European Commission → QIA-Phase1 / QUANGO / QSNP → OIST and European institutions → “Connecting quantum cities” → a Figshare dataset → two software records collected from GitHub and Software Heritage.
 

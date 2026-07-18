@@ -49,7 +49,9 @@ EU27 = {
     "PL", "PT", "RO", "SK", "SI", "ES", "SE",
 }
 EUROPE_EXTENDED = EU27 | {"GB", "CH", "NO", "IS", "LI"}
-LINK_SAMPLE_MAX = 250
+# Audit every observed EU27-Japan publication. Set this to an integer only for
+# bounded development runs; published metrics must use the full corpus.
+LINK_AUDIT_LIMIT: int | None = None
 
 
 def cache_key(url: str) -> Path:
@@ -254,11 +256,11 @@ def main() -> None:
     rows.sort(key=lambda row: (row["publication_date"] or "", row["id"]), reverse=True)
     observed = [row for row in rows if row["has_japan"] and row["has_eu27"]]
     extended = [row for row in rows if row["has_japan"] and row["has_extended_europe"]]
-    ordered_sample = sorted(observed, key=lambda row: hashlib.sha256(row["id"].encode()).hexdigest())
-    sample = ordered_sample[:LINK_SAMPLE_MAX]
-    sample_ids = {row["id"] for row in sample}
+    ordered_audit_targets = sorted(observed, key=lambda row: hashlib.sha256(row["id"].encode()).hexdigest())
+    broad_audit = ordered_audit_targets[:LINK_AUDIT_LIMIT] if LINK_AUDIT_LIMIT else ordered_audit_targets
+    broad_audit_ids = {row["id"] for row in broad_audit}
     strict_observed = [row for row in observed if row["strict_title_match"]]
-    audit_targets_by_id = {row["id"]: row for row in sample}
+    audit_targets_by_id = {row["id"]: row for row in broad_audit}
     audit_targets_by_id.update({row["id"]: row for row in strict_observed})
     audit_targets = list(audit_targets_by_id.values())
 
@@ -275,7 +277,9 @@ def main() -> None:
             "publication_date": row["publication_date"],
             "countries": row["countries"],
             "strict_title_match": row["strict_title_match"],
-            "broad_sample": row["id"] in sample_ids,
+            # Retained for snapshot-schema compatibility. In the published
+            # full-corpus run this is true for every observed record.
+            "broad_sample": row["id"] in broad_audit_ids,
             "dataset_connected": dataset["connected"],
             "dataset_outgoing_links": dataset["outgoing"],
             "dataset_incoming_links": dataset["incoming"],
@@ -294,14 +298,24 @@ def main() -> None:
         return sum(bool(item[field]) for item in items)
 
     n = len(observed)
-    sampled_link_rows = [row for row in link_rows if row["id"] in sample_ids]
+    broad_link_rows = [row for row in link_rows if row["id"] in broad_audit_ids]
     strict_link_rows = [row for row in link_rows if row["strict_title_match"]]
-    link_n = len(sampled_link_rows)
-    dataset_count = count_flag(sampled_link_rows, "dataset_connected")
-    software_count = count_flag(sampled_link_rows, "software_connected")
+    link_n = len(broad_link_rows)
+    dataset_count = count_flag(broad_link_rows, "dataset_connected")
+    software_count = count_flag(broad_link_rows, "software_connected")
     strict_n = len(strict_observed)
     strict_dataset_count = count_flag(strict_link_rows, "dataset_connected")
     strict_software_count = count_flag(strict_link_rows, "software_connected")
+    observed_unique_ids = len({row["id"] for row in observed})
+    link_unique_ids = len({row["id"] for row in link_rows})
+    if LINK_AUDIT_LIMIT is None and link_n != n:
+        raise RuntimeError(f"Full Scholix audit incomplete: {link_n} audited records for {n} observed records")
+    if observed_unique_ids != n or link_unique_ids != len(link_rows):
+        raise RuntimeError("Duplicate identifiers detected in the observed corpus or Scholix audit")
+    if len(strict_link_rows) != strict_n:
+        raise RuntimeError(
+            f"Strict-title Scholix audit incomplete: {len(strict_link_rows)} audited records for {strict_n} records"
+        )
     metrics = {
         "as_of": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "scope": {
@@ -310,6 +324,7 @@ def main() -> None:
             "terms": TERMS,
             "population": "OpenAIRE publication records matching >=1 exact taxonomy phrase, with resolved affiliations in Japan and EU27",
             "relationship_definition": "At least one explicit OpenAIRE graph relation to the named entity type; dataset/software checks include incoming and outgoing Scholix links",
+            "link_audit_population": "All observed EU27-Japan publications",
         },
         "query_counts_by_term_before_deduplication": term_results,
         "japan_query_union": len(rows),
@@ -362,6 +377,10 @@ def main() -> None:
             },
         },
         "quality_checks": {
+            "observed_duplicate_ids": n - observed_unique_ids,
+            "scholix_records_audited": link_n,
+            "scholix_missing_records": n - link_n,
+            "scholix_duplicate_ids": len(link_rows) - link_unique_ids,
             "publiclyFunded_true": count_flag(observed, "publicly_funded_flag"),
             "project_link_but_publiclyFunded_false": sum(
                 row["project_connected"] and not row["publicly_funded_flag"] for row in observed

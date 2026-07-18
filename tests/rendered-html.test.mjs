@@ -25,7 +25,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /Trace a complete chain/i);
   assert.match(html, /Q‑NEKO is the test case/i);
   assert.match(html, /Build the broad Atlas/i);
-  assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas\.png"/i);
+  assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas-v1\.1\.png"/i);
   assert.match(html, /role="tablist"/i);
   assert.match(html, /Wilson 95% confidence intervals/i);
 });
@@ -46,19 +46,19 @@ test("publishes a denominator-complete reproducibility pack", async () => {
     readFile(new URL("../public/evidence-snapshot.json", import.meta.url), "utf8"),
     readFile(new URL("../public/connection-rates.csv", import.meta.url), "utf8"),
     readFile(new URL("../public/submission-story.md", import.meta.url), "utf8"),
-    stat(new URL("../public/og-atlas.png", import.meta.url)),
+    stat(new URL("../public/og-atlas-v1.1.png", import.meta.url)),
   ]);
 
   const snapshot = JSON.parse(snapshotText);
   assert.equal(snapshot.observed_corpus.eu27_japan_publications, 645);
   assert.deepEqual(snapshot.observed_corpus.software, {
-    connected: 22,
-    audited: 250,
-    rate_percent: 8.8,
-    wilson_95_percent: [5.9, 13.0],
+    connected: 48,
+    audited: 645,
+    rate_percent: 7.4,
+    wilson_95_percent: [5.7, 9.7],
   });
   assert.equal(snapshot.q_neko_watchlist.openaire_project_union, 0);
-  assert.match(ratesText, /observed,software,22,250,8\.8,5\.9,13\.0/);
+  assert.match(ratesText, /observed,software,48,645,7\.4,5\.7,9\.7/);
   assert.match(storyText, /Observation lag—not project failure/i);
   assert.ok(imageInfo.size > 100_000, "social preview should be a real raster asset");
 });
@@ -69,10 +69,14 @@ test("builds an audit dataset that reproduces the published findings", async () 
   assert.equal(data.records.length, 645);
   assert.deepEqual(data.checks, {
     records: 645,
+    unique_records: 645,
     projects: 392,
-    broad_audited: 250,
-    broad_datasets: 68,
-    broad_software: 22,
+    link_rows: 645,
+    unique_link_rows: 645,
+    missing_link_rows: 0,
+    broad_audited: 645,
+    broad_datasets: 179,
+    broad_software: 48,
     strict_records: 87,
     strict_projects: 45,
     strict_datasets: 21,

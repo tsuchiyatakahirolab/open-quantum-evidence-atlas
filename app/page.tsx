@@ -13,8 +13,8 @@ const scopes = {
     metrics: [
       { label: "Project", value: 60.8, count: "392 / 645", note: "all records audited" },
       { label: "Funding", value: 60.8, count: "392 / 645", note: "all records audited" },
-      { label: "Dataset", value: 27.2, count: "68 / 250", note: "95% CI 22.1–33.0" },
-      { label: "Software", value: 8.8, count: "22 / 250", note: "95% CI 5.9–13.0" },
+      { label: "Dataset", value: 27.8, count: "179 / 645", note: "95% interval 24.4–31.3" },
+      { label: "Software", value: 7.4, count: "48 / 645", note: "95% interval 5.7–9.7" },
     ],
   },
   strict: {
@@ -99,7 +99,7 @@ const chain = [
     short: "2 cited code records",
     eyebrow: "Scholix-linked software",
     title: "Two code records complete the chain",
-    body: "The paper cites ‘netsquid-freespace’ and ‘quantumcity’ software records collected from GitHub and Software Heritage. This is the kind of reusable output that is visible in only 8.8% of the audited sample.",
+    body: "The paper cites ‘netsquid-freespace’ and ‘quantumcity’ software records collected from GitHub and Software Heritage. This is the kind of reusable output that is visible in only 7.4% of the full observed corpus.",
     facts: ["netsquid-freespace", "quantumcity", "GitHub + Software Heritage"],
     link: "https://explore.openaire.eu/search/result?id=openaire____::0203e43bc9da9dd3318eede5cd1e5544",
     linkLabel: "Open a software record",
@@ -142,7 +142,7 @@ export default function Home() {
           <h1>Funding is visible.<br /><em>Reuse is not.</em></h1>
           <p className="hero-lede">
             Across <strong>645 EU–Japan quantum publications</strong>, six in ten connect to a project.
-            Fewer than one in ten of the audited sample connects to software.
+            Fewer than one in ten connects to software in the full-corpus link audit.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
@@ -155,16 +155,16 @@ export default function Home() {
           <div className="signal-orbit orbit-one" />
           <div className="signal-orbit orbit-two" />
           <div className="signal-grid" aria-hidden="true" />
-          <div className="signal-topline"><span>EVIDENCE SIGNAL</span><span>n = 645 / 250</span></div>
+          <div className="signal-topline"><span>EVIDENCE SIGNAL</span><span>n = 645 / 645</span></div>
           <div className="signal-main">
             <span className="signal-number">60.8</span>
             <span className="signal-arrow">→</span>
-            <span className="signal-number dim">8.8</span>
+            <span className="signal-number dim">7.4</span>
           </div>
           <div className="signal-labels"><span>PROJECT-LINKED</span><span>SOFTWARE-LINKED</span></div>
           <div className="signal-floor">
             <span><i className="status linked" /> Graph edge</span>
-            <span><i className="status unaudited" /> Partial Scholix audit</span>
+            <span><i className="status linked" /> Full-corpus Scholix audit</span>
           </div>
         </div>
       </section>
@@ -174,8 +174,8 @@ export default function Home() {
           <div><strong>2,334</strong><span>Japan-query union</span></div>
           <div><strong>645</strong><span>EU27–Japan corpus</span></div>
           <div><strong>392</strong><span>project-linked</span></div>
-          <div><strong>68 / 250</strong><span>dataset-linked</span></div>
-          <div><strong>22 / 250</strong><span>software-linked</span></div>
+          <div><strong>179 / 645</strong><span>dataset-linked</span></div>
+          <div><strong>48 / 645</strong><span>software-linked</span></div>
         </div>
       </section>
 
@@ -229,7 +229,7 @@ export default function Home() {
           </div>
           <aside className="gap-card">
             <p>FUNDING → SOFTWARE GAP</p>
-            <div className="gap-ratio">6.9<span>×</span></div>
+            <div className="gap-ratio">8.2<span>×</span></div>
             <h3>A visibility cliff, not a minor drop.</h3>
             <p>The near-identical strict-title result (51.7% → 8.0%) shows the conclusion is not created by the broad search alone.</p>
             <div className="gap-rule"><span /></div>
@@ -349,7 +349,7 @@ export default function Home() {
           </div>
           <div className="falsification">
             <span>WHAT WOULD CHANGE THE CONCLUSION?</span>
-            <p>If a full-corpus Scholix audit or added repository identifiers lifts software visibility near the 27% dataset rate, the “software cliff” weakens. This Atlas publishes its denominator so that claim can be tested.</p>
+            <p>If added repository identifiers or improved OpenAIRE classification lifts software visibility near the 28% dataset rate, the “software cliff” weakens. This Atlas publishes its denominator so that claim can be tested.</p>
           </div>
           <div className="falsification">
             <span>PROSPECTIVE GQSO PATH</span>
@@ -372,7 +372,7 @@ export default function Home() {
             <li><span>01</span><p><strong>Discover</strong> with eight quantum phrases; deduplicate the Japan-query union.</p></li>
             <li><span>02</span><p><strong>Resolve scope</strong> to 2020–2026 publications with Japan + EU27 affiliations.</p></li>
             <li><span>03</span><p><strong>Audit all 645</strong> for project and funder objects in product links.</p></li>
-            <li><span>04</span><p><strong>Audit Scholix links</strong> for 250 broad records and all 87 title-literal records.</p></li>
+            <li><span>04</span><p><strong>Audit Scholix links</strong> for all 645 observed records; retain the 87 title-literal sensitivity set.</p></li>
             <li><span>05</span><p><strong>Quantify uncertainty</strong> with Wilson 95% confidence intervals.</p></li>
           </ol>
           <div className="download-card">
@@ -384,7 +384,7 @@ export default function Home() {
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
-            <small>Snapshot timestamp: 2026-07-18T01:20:47Z</small>
+            <small>Snapshot timestamp: 2026-07-18T05:02:39Z</small>
           </div>
         </div>
       </section>

@@ -1,4 +1,3 @@
-import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 
 const corpusPath = new URL("../public/reproducibility/eu27_japan_corpus.csv", import.meta.url);
@@ -52,7 +51,6 @@ function parseCsv(text) {
 const bool = (value) => String(value).toLowerCase() === "true";
 const number = (value) => Number(value || 0);
 const list = (value) => String(value || "").split(";").map((item) => item.trim()).filter(Boolean);
-const hash = (value) => createHash("sha256").update(value).digest("hex");
 
 const [corpusText, linksText, metricsText] = await Promise.all([
   readFile(corpusPath, "utf8"),
@@ -64,7 +62,7 @@ const corpus = parseCsv(corpusText);
 const links = parseCsv(linksText);
 const metrics = JSON.parse(metricsText);
 const linksById = new Map(links.map((row) => [row.id, row]));
-const broadSampleIds = new Set([...corpus].sort((a, b) => hash(a.id).localeCompare(hash(b.id))).slice(0, 250).map((row) => row.id));
+const auditedIds = new Set(links.map((row) => row.id));
 
 const records = corpus.map((row) => {
   const link = linksById.get(row.id);
@@ -80,7 +78,8 @@ const records = corpus.map((row) => {
     funding_connected: bool(row.funding_connected),
     project_count: number(row.project_count),
     funder_count: number(row.funder_count),
-    broad_sample: broadSampleIds.has(row.id),
+    link_audited: Boolean(link),
+    broad_sample: auditedIds.has(row.id),
     dataset_connected: link ? bool(link.dataset_connected) : null,
     dataset_outgoing_links: link ? number(link.dataset_outgoing_links) : null,
     dataset_incoming_links: link ? number(link.dataset_incoming_links) : null,
@@ -98,7 +97,11 @@ const strict = records.filter((record) => record.strict_title_match);
 const count = (rows, field) => rows.filter((row) => row[field] === true).length;
 const checks = {
   records: records.length,
+  unique_records: new Set(records.map((record) => record.id)).size,
   projects: count(records, "project_connected"),
+  link_rows: links.length,
+  unique_link_rows: linksById.size,
+  missing_link_rows: records.filter((record) => !record.link_audited).length,
   broad_audited: broadAudit.length,
   broad_datasets: count(broadAudit, "dataset_connected"),
   broad_software: count(broadAudit, "software_connected"),
@@ -110,10 +113,14 @@ const checks = {
 
 const expected = {
   records: 645,
+  unique_records: 645,
   projects: 392,
-  broad_audited: 250,
-  broad_datasets: 68,
-  broad_software: 22,
+  link_rows: 645,
+  unique_link_rows: 645,
+  missing_link_rows: 0,
+  broad_audited: 645,
+  broad_datasets: 179,
+  broad_software: 48,
   strict_records: 87,
   strict_projects: 45,
   strict_datasets: 21,

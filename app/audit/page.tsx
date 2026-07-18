@@ -16,6 +16,7 @@ type AuditRecord = {
   funding_connected: boolean;
   project_count: number;
   funder_count: number;
+  link_audited?: boolean;
   broad_sample: boolean;
   dataset_connected: boolean | null;
   dataset_outgoing_links: number | null;
@@ -98,7 +99,7 @@ function evidenceState(record: AuditRecord, field: "project_connected" | "fundin
 }
 
 function recordLinkAudited(record: AuditRecord, scope: Filters["scope"]) {
-  return record.dataset_connected !== null && (scope === "strict" ? record.strict_title_match : record.broad_sample);
+  return record.dataset_connected !== null && (scope === "strict" ? record.strict_title_match : (record.link_audited ?? record.broad_sample));
 }
 
 export default function AuditLab() {
@@ -202,6 +203,7 @@ export default function AuditLab() {
         ...record,
         matched_terms: record.matched_terms ?? [],
         countries: record.countries ?? [],
+        link_audited: record.link_audited ?? record.broad_sample ?? (record.dataset_connected !== null),
         broad_sample: record.broad_sample ?? (record.dataset_connected !== null),
         strict_title_match: record.strict_title_match ?? false,
       }));
