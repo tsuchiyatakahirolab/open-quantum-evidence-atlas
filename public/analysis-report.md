@@ -33,7 +33,7 @@ The current graph makes investment and project structures substantially easier t
 
 ## Alien / OpenAIRE MCP cross-check
 
-An authenticated single-record run through the official Alien/OpenAIRE demo resolved the featured DOI to the same OpenAIRE record and confirmed an EC-linked project signal. Its typed dataset/software calls reported non-zero totals but returned no rows on pages 1 or 2, and the rendered route did not surface the full organisation, country, or named-project objects available to the frozen API audit. The result is published as an interoperability trace, not merged into the 645-record denominator. This discrepancy reinforces the state semantics: “not observable through this tool route” is not “does not exist.”
+An authenticated single-record run through the official Alien/OpenAIRE demo resolved the featured DOI to the same OpenAIRE record and confirmed EC grant 101102140 (QIA-Phase1). Its typed dataset/software calls reported non-zero totals but returned no rows on pages 1 or 2. A controlled follow-up identified the cause: the official `/v1/researchProducts/links` operation defaults to page 0, where direct calls returned the one dataset and two software rows, while Alien's `ResearchLinksInput` rejected page 0 before any upstream request. The discrepancy is therefore a reproducible MCP schema/offset defect, not an OpenAIRE null. It is published as an interoperability diagnostic and is not merged into the 645-record denominator.
 
 ## Falsification and limits
 
