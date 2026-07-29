@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "compared_at": "2026-07-29T00:18:11Z",
+  "old_snapshot_as_of": "2026-07-18T05:02:39Z",
+  "new_snapshot_as_of": "2026-07-29T00:13:14Z",
+  "source_retrieval_window": {
+    "from": "2026-07-28T08:39:51Z",
+    "to": "2026-07-29T00:13:14Z",
+    "cache_directory": "analysis\\output\\cache-runs\\2026-07-28"
+  },
+  "exact_match": true,
+  "corpus": {
+    "old_records": 645,
+    "new_records": 645,
+    "ids_added": [],
+    "ids_removed": []
+  },
+  "link_audit": {
+    "old_records": 645,
+    "new_records": 645,
+    "ids_added": [],
+    "ids_removed": [],
+    "state_changes": []
+  },
+  "rates": {
+    "project": {
+      "old": {
+        "numerator": 392,
+        "denominator": 645,
+        "rate": 0.6077519379844961
+      },
+      "new": {
+        "numerator": 392,
+        "denominator": 645,
+        "rate": 0.6077519379844961
+      },
+      "percentage_point_delta": 0.0
+    },
+    "funding": {
+      "old": {
+        "numerator": 392,
+        "denominator": 645,
+        "rate": 0.6077519379844961
+      },
+      "new": {
+        "numerator": 392,
+        "denominator": 645,
+        "rate": 0.6077519379844961
+      },
+      "percentage_point_delta": 0.0
+    },
+    "dataset": {
+      "old": {
+        "numerator": 179,
+        "denominator": 645,
+        "rate": 0.2775193798449612
+      },
+      "new": {
+        "numerator": 179,
+        "denominator": 645,
+        "rate": 0.2775193798449612
+      },
+      "percentage_point_delta": 0.0
+    },
+    "software": {
+      "old": {
+        "numerator": 48,
+        "denominator": 645,
+        "rate": 0.07441860465116279
+      },
+      "new": {
+        "numerator": 48,
+        "denominator": 645,
+        "rate": 0.07441860465116279
+      },
+      "percentage_point_delta": 0.0
+    }
+  },
+  "quality_checks": {
+    "observed_duplicate_ids": 0,
+    "scholix_records_audited": 645,
+    "scholix_missing_records": 0,
+    "scholix_duplicate_ids": 0,
+    "publiclyFunded_true": 7,
+    "project_link_but_publiclyFunded_false": 386,
+    "records_with_no_resolved_country": 17,
+    "records_with_no_organization": 0
+  },
+  "interpretation": "The fresh full-corpus execution exactly reproduces the published population, identifiers, link states, and four connection rates."
+}

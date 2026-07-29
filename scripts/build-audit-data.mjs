@@ -112,19 +112,19 @@ const checks = {
 };
 
 const expected = {
-  records: 645,
-  unique_records: 645,
-  projects: 392,
-  link_rows: 645,
-  unique_link_rows: 645,
-  missing_link_rows: 0,
-  broad_audited: 645,
-  broad_datasets: 179,
-  broad_software: 48,
-  strict_records: 87,
-  strict_projects: 45,
-  strict_datasets: 21,
-  strict_software: 7,
+  records: metrics.eu27_japan_observed_publications,
+  unique_records: metrics.eu27_japan_observed_publications,
+  projects: metrics.rates.project.numerator,
+  link_rows: metrics.quality_checks.scholix_records_audited,
+  unique_link_rows: metrics.quality_checks.scholix_records_audited,
+  missing_link_rows: metrics.quality_checks.scholix_missing_records,
+  broad_audited: metrics.rates.dataset.denominator,
+  broad_datasets: metrics.rates.dataset.numerator,
+  broad_software: metrics.rates.software.numerator,
+  strict_records: metrics.eu27_japan_strict_title_publications,
+  strict_projects: metrics.strict_title_sensitivity.project.numerator,
+  strict_datasets: metrics.strict_title_sensitivity.dataset.numerator,
+  strict_software: metrics.strict_title_sensitivity.software.numerator,
 };
 
 for (const [key, value] of Object.entries(expected)) {

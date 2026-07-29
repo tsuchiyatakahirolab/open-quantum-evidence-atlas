@@ -18,6 +18,8 @@ One record demonstrates that a complete chain is possible: European Commission �
 
 We then re-ran that exact DOI through the authenticated Alien/OpenAIRE demo. The MCP route resolved the same record and confirmed QIA-Phase1, but its typed dataset/software tools reported non-zero totals without rows. We reproduced the cause: OpenAIRE's link operation defaults to page 0, which returns the one dataset and two software records, while the MCP validator requires page 1 or higher. The Atlas therefore turns an apparent evidence null into a concrete integration finding, supplies a working direct-API fallback, and publishes a minimal reproducer for the MCP maintainers.
 
+An uncached live integrity recheck on 29 July repeated the eight discovery queries, featured DOI and grant lookup, page-0/page-1 link comparison, and four Q‑NEKO aliases. All six contract checks passed, all eight discovery counts were unchanged, and the page mismatch remained reproducible. We also completed a fresh full-corpus execution: all 645 corpus IDs, all 645 dataset/software link states, and all four connection rates exactly matched the published audit. The bounded recheck and full comparison are both machine-readable.
+
 Q-Neko, the first EU–Japan joint quantum-technology project, becomes a prospective policy benchmark. Four aliases and identifiers returned zero OpenAIRE projects and zero research products on 18 July 2026. This is labelled observation lag—not project failure.
 
 ## What a decision-maker can do

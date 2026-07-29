@@ -74,6 +74,10 @@ A regression test should request a known one-row dataset relation and verify tha
 
 Until the MCP wrapper is repaired, the Atlas uses the direct link endpoint with `page=0` as its reproducible fallback. A non-zero total with an empty result page is classified as a tool inconsistency, not as “no relation.”
 
+## Live recheck
+
+An uncached bounded recheck on 29 July 2026 reconfirmed the representative contract: the featured DOI and grant resolved, page 0 returned one dataset and two software rows, and page 1 returned no rows despite retaining the same non-zero totals. All eight discovery-query counts also matched the full refresh, while the four Q‑NEKO aliases remained at zero projects and zero research products. The machine-readable result and source are published as `live-recheck.json` and `openaire_live_recheck.py`.
+
 ## Reproduction
 
 Run `openaire_mcp_pagination_repro.py` in this directory. It queries page 0 and page 1 for both target types, prints the returned titles and identifiers, and marks whether the mismatch is reproduced.

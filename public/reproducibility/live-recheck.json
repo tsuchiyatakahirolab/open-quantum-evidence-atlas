@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-07-29T00:16:22Z",
+  "snapshot_as_of": "2026-07-29T00:13:14Z",
+  "scope": "Bounded live integrity recheck; not a recomputation of the 645-record census",
+  "summary": {
+    "checks_passed": 6,
+    "checks_total": 6,
+    "term_queries_changed": 0,
+    "q_neko_project_hits": 0,
+    "q_neko_product_hits": 0
+  },
+  "checks": {
+    "featured_doi_resolves": true,
+    "featured_grant_resolves": true,
+    "dataset_page_zero_returns_rows": true,
+    "software_page_zero_returns_rows": true,
+    "page_one_still_skips_dataset": true,
+    "page_one_still_skips_software": true
+  },
+  "term_query_counts": {
+    "quantum computing": {
+      "snapshot": 811,
+      "current": 811,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+computing%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum communication": {
+      "snapshot": 185,
+      "current": 185,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+communication%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum sensing": {
+      "snapshot": 229,
+      "current": 229,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+sensing%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum simulation": {
+      "snapshot": 201,
+      "current": 201,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+simulation%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum cryptography": {
+      "snapshot": 113,
+      "current": 113,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+cryptography%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum information": {
+      "snapshot": 903,
+      "current": 903,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+information%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum metrology": {
+      "snapshot": 119,
+      "current": 119,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+metrology%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum network": {
+      "snapshot": 88,
+      "current": 88,
+      "delta": 0,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+network%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    }
+  },
+  "featured_record": {
+    "doi": "10.1088/1367-2630/ad5b13",
+    "expected_id": "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db",
+    "returned_ids": [
+      "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db"
+    ],
+    "doi_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%2210.1088%2F1367-2630%2Fad5b13%22&page=1&pageSize=10",
+    "grant": "101102140",
+    "grant_match_count": 1,
+    "grant_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%2210.1088%2F1367-2630%2Fad5b13%22&relProjectCode=101102140&page=1&pageSize=10"
+  },
+  "link_page_contract": {
+    "dataset": {
+      "0": {
+        "total": 1,
+        "rows": 1,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=dataset&page=0&size=10"
+      },
+      "1": {
+        "total": 1,
+        "rows": 0,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=dataset&page=1&size=10"
+      }
+    },
+    "software": {
+      "0": {
+        "total": 2,
+        "rows": 2,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=software&page=0&size=10"
+      },
+      "1": {
+        "total": 2,
+        "rows": 0,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=software&page=1&size=10"
+      }
+    }
+  },
+  "q_neko": {
+    "Q-Neko": {
+      "products": 0,
+      "projects": 0,
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Q-Neko%22&page=1&pageSize=1",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Q-Neko&page=1&pageSize=1"
+    },
+    "QNEKO": {
+      "products": 0,
+      "projects": 0,
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22QNEKO%22&page=1&pageSize=1",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=QNEKO&page=1&pageSize=1"
+    },
+    "Nippon-Europe Quantum Koraborēshon": {
+      "products": 0,
+      "projects": 0,
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Nippon-Europe+Quantum+Korabor%C4%93shon%22&page=1&pageSize=1",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Nippon-Europe+Quantum+Korabor%C4%93shon&page=1&pageSize=1"
+    },
+    "HORIZON-EUROHPC-JU-2024-INCO-06": {
+      "products": 0,
+      "projects": 0,
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22HORIZON-EUROHPC-JU-2024-INCO-06%22&page=1&pageSize=1",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=HORIZON-EUROHPC-JU-2024-INCO-06&page=1&pageSize=1"
+    }
+  }
+}

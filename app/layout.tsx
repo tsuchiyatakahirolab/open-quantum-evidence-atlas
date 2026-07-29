@@ -21,13 +21,13 @@ export async function generateMetadata(): Promise<Metadata> {
       description: "645 EU–Japan quantum publications. One inspectable evidence gap.",
       type: "website",
       url: origin,
-      images: [{ url: `${origin}/og-atlas-v1.1.png`, width: 1536, height: 1024, alt: "Open Quantum Evidence Atlas: Funding is visible. Reuse is not." }],
+      images: [{ url: `${origin}/og-atlas-v1.2.png`, width: 1536, height: 1024, alt: "Open Quantum Evidence Atlas: Funding is visible. Reuse is not." }],
     },
     twitter: {
       card: "summary_large_image",
       title: "Funding is visible. Reuse is not.",
       description: "645 EU–Japan quantum publications. One inspectable evidence gap.",
-      images: [`${origin}/og-atlas-v1.1.png`],
+      images: [`${origin}/og-atlas-v1.2.png`],
     },
   };
 }

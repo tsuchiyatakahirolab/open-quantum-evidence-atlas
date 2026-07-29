@@ -9,6 +9,8 @@ The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomput
 
 The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics.
 
+A bounded uncached live recheck verifies the eight discovery-query totals, featured DOI and grant, page-0 link contract, and Q‑NEKO watchlist without relabelling a historical cache as current. The 29 July full-corpus execution exactly reproduced all 645 corpus IDs, all 645 link states, and all four rates. Full census runs use a date-stamped cache directory by default; historical replay requires an explicit `OPENAIRE_CACHE_DIR`.
+
 ## GQSO relationship
 
 The Atlas is a standalone OpenAIRE audit. Its connection to the Global Quantum Statecraft Observatory (GQSO) is prospective: the published metrics and evidence-chain model provide a candidate observability layer for a future GQSO integration. This repository does not claim a current partnership or completed technical integration.
@@ -42,9 +44,15 @@ The public reproducibility pack includes:
 - `public/reproducibility/scholix_link_audit.csv` — audited research-product links
 - `public/reproducibility/openaire-mcp-crosscheck.md` — executed Alien/OpenAIRE MCP trace and API comparison
 - `public/reproducibility/openaire_mcp_pagination_repro.py` — minimal executable reproduction of the page-0 mismatch
+- `public/reproducibility/live-recheck.json` — latest bounded uncached integrity recheck
+- `public/reproducibility/refresh-comparison.json` — ID-, link-state-, and rate-level comparison of consecutive full executions
+- `public/reproducibility/win-probability-source-notes.md` — scenario assumptions, chart map, caveats and report-quality mapping
+- `public/reproducibility/win-probability-artifact.json` — validated canonical decision-report payload
+- `public/reproducibility/win-probability-report.sql` — reviewed values query used by the decision report
+- `public/reproducibility/openaire_live_recheck.py` — source for the bounded live recheck
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
-Snapshot timestamp: `2026-07-18T05:02:39Z`.
+Snapshot timestamp: `2026-07-29T00:13:14Z`.
 
 ## License
 

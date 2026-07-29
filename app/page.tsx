@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import liveRecheck from "../public/reproducibility/live-recheck.json";
+import refreshComparison from "../public/reproducibility/refresh-comparison.json";
 
 type ScopeKey = "observed" | "strict";
 
@@ -134,7 +136,7 @@ export default function Home() {
           <a href="#method">Method</a>
           <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-        <span className="audit-stamp"><span /> AUDIT · 18 JUL 2026</span>
+        <span className="audit-stamp"><span /> AUDIT · 29 JUL 2026</span>
       </nav>
 
       <section className="hero shell" id="top">
@@ -299,6 +301,15 @@ export default function Home() {
               authenticated OpenAIRE tools. A targeted follow-up then isolated and reproduced a
               zero-based pagination mismatch in the MCP link wrapper.
             </p>
+          </div>
+
+          <div className="live-recheck-banner">
+            <span>LIVE RECHECK · {liveRecheck.checked_at.slice(0, 10)} UTC</span>
+            <b>{liveRecheck.summary.checks_passed}/{liveRecheck.summary.checks_total} integrity checks passed</b>
+            <b>{8 - liveRecheck.summary.term_queries_changed}/8 discovery counts unchanged</b>
+            <b>Q‑NEKO {liveRecheck.summary.q_neko_project_hits} projects · {liveRecheck.summary.q_neko_product_hits} products</b>
+            <b>Full census · {refreshComparison.corpus.new_records} IDs · {refreshComparison.exact_match ? "exact match" : "changed"}</b>
+            <a href="/reproducibility/live-recheck.json" download>Inspect JSON ↓</a>
           </div>
 
           <div className="mcp-grid">
@@ -471,9 +482,14 @@ export default function Home() {
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
+            <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/refresh-comparison.json" download><span>Full refresh comparison</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
+            <a href="/reproducibility/win-probability-source-notes.md" download><span>Prize probability model</span><b>MD ↓</b></a>
+            <a href="/reproducibility/win-probability-artifact.json" download><span>Decision report artifact</span><b>JSON ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
-            <small>Snapshot timestamp: 2026-07-18T05:02:39Z</small>
+            <small>Snapshot timestamp: 2026-07-29T00:13:14Z</small>
           </div>
         </div>
       </section>

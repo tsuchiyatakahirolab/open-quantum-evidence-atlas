@@ -20,6 +20,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
+  const visibleHtml = html.replaceAll("<!-- -->", "");
   assert.match(html, /<title>Open Quantum Evidence Atlas \| EU–Japan<\/title>/i);
   assert.match(html, /Funding is visible\./i);
   assert.match(html, /Trace a complete chain/i);
@@ -27,9 +28,12 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /<b>30<\/b>\s*initial MCP calls/i);
   assert.match(html, /Page 0 has the rows/i);
   assert.match(html, /MCP schema\/offset defect/i);
+  assert.match(visibleHtml, /6\/6 integrity checks passed/i);
+  assert.match(visibleHtml, /8\/8 discovery counts unchanged/i);
+  assert.match(visibleHtml, /Full census.*645 IDs.*exact match/i);
   assert.match(html, /Q‑NEKO is the test case/i);
   assert.match(html, /Build the broad Atlas/i);
-  assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas-v1\.1\.png"/i);
+  assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas-v1\.2\.png"/i);
   assert.match(html, /role="tablist"/i);
   assert.match(html, /Wilson 95% confidence intervals/i);
 });
@@ -46,13 +50,16 @@ test("server-renders the reusable Evidence Chain Auditor", async () => {
 });
 
 test("publishes a denominator-complete reproducibility pack", async () => {
-  const [snapshotText, ratesText, storyText, mcpText, reproText, imageInfo] = await Promise.all([
+  const [snapshotText, ratesText, storyText, mcpText, reproText, recheckText, comparisonText, probabilityText, imageInfo] = await Promise.all([
     readFile(new URL("../public/evidence-snapshot.json", import.meta.url), "utf8"),
     readFile(new URL("../public/connection-rates.csv", import.meta.url), "utf8"),
     readFile(new URL("../public/submission-story.md", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/openaire-mcp-crosscheck.md", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/openaire_mcp_pagination_repro.py", import.meta.url), "utf8"),
-    stat(new URL("../public/og-atlas-v1.1.png", import.meta.url)),
+    readFile(new URL("../public/reproducibility/live-recheck.json", import.meta.url), "utf8"),
+    readFile(new URL("../public/reproducibility/refresh-comparison.json", import.meta.url), "utf8"),
+    readFile(new URL("../public/reproducibility/win-probability-artifact.json", import.meta.url), "utf8"),
+    stat(new URL("../public/og-atlas-v1.2.png", import.meta.url)),
   ]);
 
   const snapshot = JSON.parse(snapshotText);
@@ -71,6 +78,25 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.match(mcpText, /netsquid-freespace software on GitHub/i);
   assert.match(reproText, /"page": page/);
   assert.match(reproText, /"mismatch_reproduced": reproduced/);
+  const recheck = JSON.parse(recheckText);
+  assert.deepEqual(recheck.summary, {
+    checks_passed: 6,
+    checks_total: 6,
+    term_queries_changed: 0,
+    q_neko_project_hits: 0,
+    q_neko_product_hits: 0,
+  });
+  const comparison = JSON.parse(comparisonText);
+  assert.equal(comparison.exact_match, true);
+  assert.equal(comparison.corpus.new_records, 645);
+  assert.equal(comparison.link_audit.state_changes.length, 0);
+  const probability = JSON.parse(probabilityText);
+  assert.equal(probability.surface, "report");
+  assert.equal(probability.snapshot.status, "ready");
+  assert.deepEqual(
+    probability.snapshot.datasets.award_probabilities.find((row) => row.award === "Grand Prize"),
+    { award: "Grand Prize", current_range: "12–20%", maximized_range: "20–30%" },
+  );
   assert.ok(imageInfo.size > 100_000, "social preview should be a real raster asset");
 });
 
