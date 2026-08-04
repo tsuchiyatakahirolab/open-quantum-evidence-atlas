@@ -337,6 +337,7 @@ export default function AuditLab() {
               {!candidates.length && <p className="empty-state">No connected records match this boundary. Broaden the filters or inspect the zero as an observability result.</p>}
             </div>
             <div className="chain-legend"><span><i className="evidence-dot connected" /> connected</span><span><i className="evidence-dot not-observable" /> not observable</span><span><i className="evidence-dot not-audited" /> not audited</span><b>PROJECT · FUNDING · DATA · CODE</b></div>
+            <p className="relation-semantics">Inspector totals are directional relation rows. In the featured chain, four software rows resolve to two unique software records.</p>
           </div>
 
           <aside className="record-inspector">
@@ -347,7 +348,11 @@ export default function AuditLab() {
               <div className="inspector-states">
                 {(["project_connected", "funding_connected", "dataset_connected", "software_connected"] as const).map((field) => <div key={field}><i className={`evidence-dot ${evidenceState(selected, field, applied.scope)}`} /><span>{field.replace("_connected", "")}</span><b>{evidenceState(selected, field, applied.scope).replaceAll("-", " ")}</b></div>)}
               </div>
-              <dl><div><dt>Projects</dt><dd>{selected.project_count}</dd></div><div><dt>Funders</dt><dd>{selected.funder_count}</dd></div><div><dt>Dataset links</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.dataset_outgoing_links ?? 0) + (selected.dataset_incoming_links ?? 0) : "—"}</dd></div><div><dt>Software links</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.software_outgoing_links ?? 0) + (selected.software_incoming_links ?? 0) : "—"}</dd></div></dl>
+              <dl><div><dt>Projects</dt><dd>{selected.project_count}</dd></div><div><dt>Funders</dt><dd>{selected.funder_count}</dd></div><div><dt>Dataset relation rows</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.dataset_outgoing_links ?? 0) + (selected.dataset_incoming_links ?? 0) : "—"}</dd></div><div><dt>Software relation rows</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.software_outgoing_links ?? 0) + (selected.software_incoming_links ?? 0) : "—"}</dd></div></dl>
+              <p className="relation-note">
+                Relation counts include incoming and outgoing rows. For the featured “Connecting quantum cities” chain,
+                four directional software rows resolve to two unique software records.
+              </p>
               <div className="inspector-links">{selected.doi && <a href={`https://doi.org/${selected.doi}`} target="_blank" rel="noreferrer">Open DOI ↗</a>}<a href={`https://explore.openaire.eu/search/result?id=${encodeURIComponent(selected.id)}`} target="_blank" rel="noreferrer">OpenAIRE record ↗</a></div>
             </> : <p>Select a result to inspect its evidence states.</p>}
           </aside>

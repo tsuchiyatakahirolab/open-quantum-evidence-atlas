@@ -130,6 +130,7 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="/audit">Run auditor</a>
+          <a href="/video">Watch video</a>
           <a href="#trace">Trace</a>
           <a href="#mcp">MCP check</a>
           <a href="#watch">Watchlist</a>
@@ -149,7 +150,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
-            <a className="button quiet" href="#trace">Trace a complete chain</a>
+            <a className="button quiet" href="/video">Watch the 119s demo</a>
           </div>
           <p className="source-line">Measured, not model-estimated · OpenAIRE Graph v3 + research-product links</p>
         </div>
@@ -485,9 +486,8 @@ export default function Home() {
             <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
             <a href="/reproducibility/refresh-comparison.json" download><span>Full refresh comparison</span><b>JSON ↓</b></a>
             <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
-            <a href="/reproducibility/win-probability-source-notes.md" download><span>Prize probability model</span><b>MD ↓</b></a>
-            <a href="/reproducibility/win-probability-artifact.json" download><span>Decision report artifact</span><b>JSON ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
+            <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
             <small>Snapshot timestamp: 2026-07-29T00:13:14Z</small>
           </div>
@@ -503,6 +503,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; releases · GitHub ↗</a>
+            <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com/research/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Research archive · TSUCHIYA Takahiro ↗</a>
             <span>Data: OpenAIRE Graph · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
             <span>Code: MIT · Data, artifact and story: CC BY 4.0</span>

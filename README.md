@@ -9,6 +9,8 @@ The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomput
 
 The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics.
 
+The public artifact includes a captioned 119-second walkthrough at `https://atlas.tsuchiyalab.com/video`. In the Evidence Chain Auditor, dataset and software counts are labelled as directional relation rows; the featured record's four software relation rows resolve to two unique software records.
+
 A bounded uncached live recheck verifies the eight discovery-query totals, featured DOI and grant, page-0 link contract, and Q‑NEKO watchlist without relabelling a historical cache as current. The 29 July full-corpus execution exactly reproduced all 645 corpus IDs, all 645 link states, and all four rates. Full census runs use a date-stamped cache directory by default; historical replay requires an explicit `OPENAIRE_CACHE_DIR`.
 
 ## GQSO relationship
