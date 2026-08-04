@@ -23,12 +23,13 @@ test("server-renders the evidence atlas and social metadata", async () => {
   const visibleHtml = html.replaceAll("<!-- -->", "");
   assert.match(html, /<title>Open Quantum Evidence Atlas \| EU–Japan<\/title>/i);
   assert.match(html, /Funding is visible\./i);
+  assert.match(visibleHtml, /Only\s+17 of 645 EU–Japan quantum publications/i);
   assert.match(html, /Watch the 119s demo/i);
   assert.match(html, /Alien \/ OpenAIRE MCP cross-check/i);
   assert.match(html, /<b>30<\/b>\s*initial MCP calls/i);
   assert.match(html, /Page 0 has the rows/i);
   assert.match(html, /MCP schema\/offset defect/i);
-  assert.match(html, /Public integration report · Issue #5/i);
+  assert.match(html, /Static integration diagnostic/i);
   assert.match(visibleHtml, /6\/6 integrity checks passed/i);
   assert.match(visibleHtml, /8\/8 discovery counts unchanged/i);
   assert.match(visibleHtml, /Full census.*645 IDs.*exact match/i);
@@ -36,7 +37,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /Build the broad Atlas/i);
   assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas-v1\.2\.png"/i);
   assert.match(html, /role="tablist"/i);
-  assert.match(html, /Wilson 95% confidence intervals/i);
+  assert.match(html, /Wilson 95% binomial reference bands/i);
 });
 
 test("server-renders the reusable Evidence Chain Auditor", async () => {
@@ -63,7 +64,7 @@ test("server-renders the public captioned walkthrough", async () => {
 });
 
 test("publishes a denominator-complete reproducibility pack", async () => {
-  const [snapshotText, ratesText, storyText, mcpText, reproText, recheckText, comparisonText, probabilityText, imageInfo, videoInfo, transcriptInfo] = await Promise.all([
+  const [snapshotText, ratesText, storyText, mcpText, reproText, recheckText, comparisonText, imageInfo, videoInfo, transcriptInfo] = await Promise.all([
     readFile(new URL("../public/evidence-snapshot.json", import.meta.url), "utf8"),
     readFile(new URL("../public/connection-rates.csv", import.meta.url), "utf8"),
     readFile(new URL("../public/submission-story.md", import.meta.url), "utf8"),
@@ -71,7 +72,6 @@ test("publishes a denominator-complete reproducibility pack", async () => {
     readFile(new URL("../public/reproducibility/openaire_mcp_pagination_repro.py", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/live-recheck.json", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/refresh-comparison.json", import.meta.url), "utf8"),
-    readFile(new URL("../public/reproducibility/win-probability-artifact.json", import.meta.url), "utf8"),
     stat(new URL("../public/og-atlas-v1.2.png", import.meta.url)),
     stat(new URL("../public/media/open-quantum-evidence-atlas-120s.mp4", import.meta.url)),
     stat(new URL("../public/media/open-quantum-evidence-atlas-transcript.txt", import.meta.url)),
@@ -105,13 +105,6 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.equal(comparison.exact_match, true);
   assert.equal(comparison.corpus.new_records, 645);
   assert.equal(comparison.link_audit.state_changes.length, 0);
-  const probability = JSON.parse(probabilityText);
-  assert.equal(probability.surface, "report");
-  assert.equal(probability.snapshot.status, "ready");
-  assert.deepEqual(
-    probability.snapshot.datasets.award_probabilities.find((row) => row.award === "Grand Prize"),
-    { award: "Grand Prize", current_range: "12–20%", maximized_range: "20–30%" },
-  );
   assert.ok(imageInfo.size > 100_000, "social preview should be a real raster asset");
   assert.ok(videoInfo.size > 10_000_000, "public walkthrough should be the verified final MP4");
   assert.ok(transcriptInfo.size > 500, "public walkthrough should include a transcript");

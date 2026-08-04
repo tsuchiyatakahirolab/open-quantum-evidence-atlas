@@ -235,9 +235,9 @@ export default function AuditLab() {
       "# Evidence Chain Audit — Decision Brief", "",
       `Generated: ${new Date().toISOString()}`, `Source: ${dataset?.title ?? "Uploaded snapshot"}`, "",
       "## Scope", "", `- Records after filters: ${filtered.length}`, `- Link-audited denominator: ${linkAudited.length}`, `- Complete project→data→software chains: ${completeChains}`, "",
-      "## Connection rates", "", ...metrics.map((item) => `- ${item.label}: ${item.rate.toFixed(1)}% (${item.connected}/${item.audited}; Wilson 95% CI ${item.low.toFixed(1)}–${item.high.toFixed(1)})`), "",
+      "## Connection rates", "", ...metrics.map((item) => `- ${item.label}: ${item.rate.toFixed(1)}% (${item.connected}/${item.audited}; Wilson 95% reference band ${item.low.toFixed(1)}–${item.high.toFixed(1)})`), "",
       "## Decision", "", gapRatio ? `Funding visibility is ${gapRatio.toFixed(1)}× software visibility in this filtered scope. Prioritise persistent software and repository identifiers, then re-run this audit.` : "Software has no observable links in the audited denominator. Verify repository identifiers before interpreting this as no software output.", "",
-      "## Semantics", "", "An absent OpenAIRE edge means not observable for this audit; it does not prove that no underlying output exists.",
+      "## Semantics", "", "An OpenAIRE edge is an observability signal, not proof of access, licensing, documentation quality or actual reuse. An absent edge means not observable for this audit; it does not prove that no underlying output exists.",
     ];
     download("evidence-audit-brief.md", "text/markdown", lines.join("\n"));
   }
@@ -278,7 +278,7 @@ export default function AuditLab() {
           <span>RUNTIME CONTRACT</span>
           <ol>
             <li><b>01</b><p>Choose scope</p><i>topic · partner · years</i></li>
-            <li><b>02</b><p>Run audit</p><i>rates · uncertainty · states</i></li>
+            <li><b>02</b><p>Run audit</p><i>rates · reference bands · states</i></li>
             <li><b>03</b><p>Inspect chain</p><i>project · data · software</i></li>
             <li><b>04</b><p>Export decision</p><i>JSON · CSV · Markdown</i></li>
           </ol>

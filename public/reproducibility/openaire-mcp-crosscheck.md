@@ -7,7 +7,7 @@
 
 **Purpose:** Separate a genuine evidence null from a recoverable MCP integration defect.
 
-**Public integration report:** https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5
+**Stable submission diagnostic:** https://atlas.tsuchiyalab.com/reproducibility/openaire-mcp-crosscheck.md
 
 ## Initial cross-check
 
