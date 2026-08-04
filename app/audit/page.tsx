@@ -349,10 +349,7 @@ export default function AuditLab() {
                 {(["project_connected", "funding_connected", "dataset_connected", "software_connected"] as const).map((field) => <div key={field}><i className={`evidence-dot ${evidenceState(selected, field, applied.scope)}`} /><span>{field.replace("_connected", "")}</span><b>{evidenceState(selected, field, applied.scope).replaceAll("-", " ")}</b></div>)}
               </div>
               <dl><div><dt>Projects</dt><dd>{selected.project_count}</dd></div><div><dt>Funders</dt><dd>{selected.funder_count}</dd></div><div><dt>Dataset relation rows</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.dataset_outgoing_links ?? 0) + (selected.dataset_incoming_links ?? 0) : "—"}</dd></div><div><dt>Software relation rows</dt><dd>{recordLinkAudited(selected, applied.scope) ? (selected.software_outgoing_links ?? 0) + (selected.software_incoming_links ?? 0) : "—"}</dd></div></dl>
-              <p className="relation-note">
-                Relation counts include incoming and outgoing rows. For the featured “Connecting quantum cities” chain,
-                four directional software rows resolve to two unique software records.
-              </p>
+              <p className="relation-note">Relation counts include incoming and outgoing rows; they are not unique target counts.</p>
               <div className="inspector-links">{selected.doi && <a href={`https://doi.org/${selected.doi}`} target="_blank" rel="noreferrer">Open DOI ↗</a>}<a href={`https://explore.openaire.eu/search/result?id=${encodeURIComponent(selected.id)}`} target="_blank" rel="noreferrer">OpenAIRE record ↗</a></div>
             </> : <p>Select a result to inspect its evidence states.</p>}
           </aside>

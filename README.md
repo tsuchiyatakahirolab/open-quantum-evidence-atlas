@@ -7,7 +7,7 @@ An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The
 
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
 
-The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics.
+The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics. The integration finding is tracked publicly in [issue #5](https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5).
 
 The public artifact includes a captioned 119-second walkthrough at `https://atlas.tsuchiyalab.com/video`. In the Evidence Chain Auditor, dataset and software counts are labelled as directional relation rows; the featured record's four software relation rows resolve to two unique software records.
 

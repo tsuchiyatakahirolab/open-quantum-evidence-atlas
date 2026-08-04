@@ -28,6 +28,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /<b>30<\/b>\s*initial MCP calls/i);
   assert.match(html, /Page 0 has the rows/i);
   assert.match(html, /MCP schema\/offset defect/i);
+  assert.match(html, /Public integration report · Issue #5/i);
   assert.match(visibleHtml, /6\/6 integrity checks passed/i);
   assert.match(visibleHtml, /8\/8 discovery counts unchanged/i);
   assert.match(visibleHtml, /Full census.*645 IDs.*exact match/i);

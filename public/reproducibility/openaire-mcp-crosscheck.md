@@ -7,6 +7,8 @@
 
 **Purpose:** Separate a genuine evidence null from a recoverable MCP integration defect.
 
+**Public integration report:** https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5
+
 ## Initial cross-check
 
 The authenticated Alien/OpenAIRE run used 30 OpenAIRE MCP calls. It directly established:

@@ -379,6 +379,7 @@ export default function Home() {
             <p><strong>Decision:</strong> retain the direct API fallback, publish the reproducible failure, and treat a non-zero total with zero returned rows as a tool error—not an evidence null.</p>
             <div>
               <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
+              <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer">Public integration report · Issue #5 ↗</a><br />
               <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download diagnostic record · MD ↓</a>
             </div>
           </div>
@@ -483,6 +484,7 @@ export default function Home() {
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
+            <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer"><span>Public MCP integration report</span><b>ISSUE #5 ↗</b></a>
             <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
             <a href="/reproducibility/refresh-comparison.json" download><span>Full refresh comparison</span><b>JSON ↓</b></a>
             <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
