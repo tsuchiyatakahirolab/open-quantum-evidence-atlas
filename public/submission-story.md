@@ -26,6 +26,6 @@ Q-Neko, the first EU–Japan joint quantum-technology project, becomes a prospec
 
 Keep the broad 645-record Atlas as the baseline while Q-Neko matures. Make grant, publication, repository, and software identifiers an explicit close-out deliverable. Re-audit Q-Neko to measure time-to-project, time-to-publication, and time-to-reusable-output. The published denominators and snapshot make the argument falsifiable and reusable in another bilateral domain.
 
-This artifact and story are licensed CC BY 4.0.
+OpenAIRE Graph is acknowledged as the source under its CC BY terms; the published snapshot declares the transformations applied. This derived artifact and story are licensed CC BY 4.0.
 
 Captioned 119-second walkthrough: https://atlas.tsuchiyalab.com/video

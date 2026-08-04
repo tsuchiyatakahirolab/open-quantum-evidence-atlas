@@ -9,6 +9,14 @@
 
 **Stable submission diagnostic:** https://atlas.tsuchiyalab.com/reproducibility/openaire-mcp-crosscheck.md
 
+## Replay prompt
+
+The public reviewer prompt that bounded the run was:
+
+> Using the OpenAIRE Graph only, cross-check DOI 10.1088/1367-2630/ad5b13. Return identity, funding, projects, organisations, datasets, software and provenance. Treat missing relations as not observable.
+
+This prompt fixes the record, requested entity types and missing-edge semantics. The deterministic API audit—not generated prose—remains the source of every aggregate rate.
+
 ## Initial cross-check
 
 The authenticated Alien/OpenAIRE run used 30 OpenAIRE MCP calls. It directly established:

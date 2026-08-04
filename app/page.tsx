@@ -299,7 +299,7 @@ export default function Home() {
               <h2>The MCP found the totals.<br />The audit recovered the rows.</h2>
             </div>
             <p>
-              On 18 July 2026, the official Alien/OpenAIRE demo re-queried the featured DOI through
+              On 18 July 2026, a 30-call run in the official Alien/OpenAIRE demo re-queried the featured DOI through
               authenticated OpenAIRE tools. A targeted follow-up then isolated and reproduced a
               zero-based pagination mismatch in the MCP link wrapper.
             </p>
@@ -465,7 +465,7 @@ export default function Home() {
             <p className="kicker">06 · REUSE THE AUDIT</p>
             <h2>Every number has<br />a denominator.</h2>
           </div>
-          <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes a compact evidence snapshot for independent checking.</p>
+          <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes source attribution, transformations and licence metadata with the evidence snapshot.</p>
         </div>
 
         <div className="method-grid">
@@ -490,7 +490,7 @@ export default function Home() {
             <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
-            <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
+            <a href="https://api.openaire.eu/graph/v3/research-products" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
             <small>Snapshot timestamp: 2026-07-29T00:13:14Z</small>
           </div>
         </div>
@@ -507,8 +507,9 @@ export default function Home() {
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; releases · GitHub ↗</a>
             <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com/research/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Research archive · TSUCHIYA Takahiro ↗</a>
-            <span>Data: OpenAIRE Graph · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
-            <span>Code: MIT · Data, artifact and story: CC BY 4.0</span>
+            <a href="https://graph.openaire.eu/docs/license/" target="_blank" rel="noreferrer">Source: OpenAIRE Graph · CC BY ↗</a>
+            <span>Derived audit: transformations declared · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
+            <span>Code: MIT · Derived data, artifact and story: CC BY 4.0</span>
           </div>
         </div>
       </footer>

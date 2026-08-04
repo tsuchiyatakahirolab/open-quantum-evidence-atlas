@@ -51,4 +51,4 @@ The Global Quantum Statecraft Observatory (GQSO) connection is prospective. The 
 
 ## Reproducibility and licensing
 
-The executed notebook, evidence snapshot, connection-rate table, observed corpus, Scholix audit, Alien/OpenAIRE MCP cross-check and extraction pipeline are distributed beside this report. Code is MIT licensed. Data, analysis and documentation are CC BY 4.0.
+The executed notebook, evidence snapshot, connection-rate table, observed corpus, Scholix audit, Alien/OpenAIRE MCP cross-check and extraction pipeline are distributed beside this report. OpenAIRE Graph is acknowledged as the source under its CC BY terms; the snapshot declares the discovery, deduplication, affiliation-filtering and link-classification transformations. Code is MIT licensed. Derived data, analysis and documentation are CC BY 4.0.

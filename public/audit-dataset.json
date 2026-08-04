@@ -4,8 +4,17 @@
   "title": "EU27–Japan quantum research",
   "description": "OpenAIRE research-product snapshot with project, funding, dataset and software audit states.",
   "source": {
+    "name": "OpenAIRE Graph",
     "product_api": "https://api.openaire.eu/graph/v3/research-products",
-    "link_api": "https://api.openaire.eu/graph/v1/researchProducts/links"
+    "link_api": "https://api.openaire.eu/graph/v1/researchProducts/links",
+    "license": "CC BY 4.0",
+    "license_url": "https://graph.openaire.eu/docs/license/",
+    "attribution": "Derived from OpenAIRE Graph metadata; OpenAIRE is the acknowledged source.",
+    "transformations": "Eight-phrase discovery, record deduplication, resolved Japan-EU27 affiliation filtering, and project/funding/dataset/software link classification."
+  },
+  "license": {
+    "derived_artifact": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
   },
   "terms": [
     "quantum communication",

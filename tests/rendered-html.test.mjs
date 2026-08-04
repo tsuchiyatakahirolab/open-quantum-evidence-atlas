@@ -50,6 +50,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /Watch the 119s demo/i);
   assert.match(html, /Alien \/ OpenAIRE MCP cross-check/i);
   assert.match(html, /<b>30<\/b>\s*initial MCP calls/i);
+  assert.match(html, /Source: OpenAIRE Graph/i);
   assert.match(html, /Page 0 has the rows/i);
   assert.match(html, /MCP schema\/offset defect/i);
   assert.match(html, /Static integration diagnostic/i);
@@ -102,6 +103,10 @@ test("publishes a denominator-complete reproducibility pack", async () => {
 
   const snapshot = JSON.parse(snapshotText);
   assert.equal(snapshot.observed_corpus.eu27_japan_publications, 645);
+  assert.equal(snapshot.source.name, "OpenAIRE Graph");
+  assert.equal(snapshot.source.license, "CC BY 4.0");
+  assert.match(snapshot.source.transformations, /deduplication/i);
+  assert.equal(snapshot.license.derived_artifact, "CC BY 4.0");
   assert.deepEqual(snapshot.observed_corpus.software, {
     connected: 48,
     audited: 645,
@@ -112,6 +117,7 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.match(ratesText, /observed,software,48,645,7\.4,5\.7,9\.7/);
   assert.match(storyText, /Observation lag—not project failure/i);
   assert.match(mcpText, /default of `0`/i);
+  assert.match(mcpText, /## Replay prompt/i);
   assert.match(mcpText, /ResearchLinksInput.*page.*greater than or equal to `1`/i);
   assert.match(mcpText, /netsquid-freespace software on GitHub/i);
   assert.match(reproText, /"page": page/);
@@ -136,6 +142,9 @@ test("publishes a denominator-complete reproducibility pack", async () => {
 test("builds an audit dataset that reproduces the published findings", async () => {
   const data = JSON.parse(await readFile(new URL("../public/audit-dataset.json", import.meta.url), "utf8"));
   assert.equal(data.schema_version, 1);
+  assert.equal(data.source.name, "OpenAIRE Graph");
+  assert.equal(data.source.license, "CC BY 4.0");
+  assert.equal(data.license.derived_artifact, "CC BY 4.0");
   assert.equal(data.records.length, 645);
   assert.deepEqual(data.checks, {
     records: 645,
