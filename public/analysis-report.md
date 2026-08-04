@@ -14,9 +14,9 @@ Proceed with the broad Open Quantum Evidence Atlas and use Q‑NEKO as a prospec
 
 ## Measured finding
 
-Among 645 EU27–Japan quantum publications from 2020–2026, 392 (60.8%) connect to a project and funder in the audited OpenAIRE Graph response, 179 (27.8%; Wilson 95% CI 24.4–31.3) connect to a dataset, and 48 (7.4%; CI 5.7–9.7) connect to software. A stricter 87-record title-literal sensitivity set preserves the pattern: 51.7% project-linked, 24.1% dataset-linked and 8.0% software-linked.
+Only 17 of 645 EU27–Japan quantum publications (2.6%) expose a complete project–funding–publication–dataset–software chain. The supporting pattern is a visibility cliff: 392 (60.8%) connect to a project and funder, 179 (27.8%; Wilson 95% reference band 24.4–31.3) to a dataset, and 48 (7.4%; reference band 5.7–9.7) to software. A stricter 87-record title-literal sensitivity set preserves the pattern: 51.7% project-linked, 24.1% dataset-linked and 8.0% software-linked.
 
-“Connected” means at least one explicit OpenAIRE edge. An absent edge means the relationship was not observable in the audited graph. It is not evidence that the underlying output does not exist.
+“Connected” means at least one explicit OpenAIRE edge. Dataset and software edges are Graph observability signals; they do not by themselves establish access, licensing, documentation quality or actual reuse. An absent edge means the relationship was not observable in the audited graph, not that the underlying output does not exist.
 
 ## Method
 
@@ -24,12 +24,12 @@ Among 645 EU27–Japan quantum publications from 2020–2026, 392 (60.8%) connec
 2. Restrict the corpus to 2020–2026 publications with both Japan and EU27 affiliations.
 3. Audit all 645 records for project and funder objects in research-product links.
 4. Audit Scholix relations for all 645 observed records, including all 87 title-literal records.
-5. Classify dataset and software edges and report Wilson 95% confidence intervals.
+5. Classify dataset and software edges and report Wilson 95% binomial reference bands for subset comparison.
 6. Test Q‑NEKO names and identifiers separately as a prospective project-visibility preflight.
 
 ## Interpretation
 
-The current graph makes investment and project structures substantially easier to observe than reusable outputs. The 60.8% to 7.4% fall—an 8.2× visibility gap—is therefore treated as an evidence-infrastructure gap, not as a claim that researchers failed to produce software. The operational response is to make grant, DOI, repository and Software Heritage identifiers part of project delivery and to re-audit their visibility over time.
+The current graph makes investment and project structures substantially easier to observe than reusable-output links. The 17 complete chains and the 60.8% to 7.4% fall—an 8.2× visibility gap—are therefore treated as an evidence-infrastructure gap, not as a claim that researchers failed to produce or reuse software. The operational response is to make grant, DOI, repository and Software Heritage identifiers part of project delivery and to re-audit their visibility over time.
 
 ## Alien / OpenAIRE MCP cross-check
 
@@ -41,7 +41,7 @@ On 29 July 2026, an uncached bounded recheck repeated the eight discovery-count 
 
 ## Falsification and limits
 
-The full-corpus audit removes sampling error within the observed boundary, but does not turn that boundary into all EU–Japan quantum activity. The “software cliff” would weaken if additional identifiers, repositories or improved OpenAIRE classification lifted software visibility toward the observed dataset rate. Search-phrase coverage, affiliation resolution, graph classification and snapshot timing still bound the inference.
+The full-corpus audit removes sampling error within the observed boundary, but does not turn that boundary into all EU–Japan quantum activity. Wilson intervals are binomial reference bands for comparing subsets; they do not quantify search-boundary, metadata or coverage uncertainty. Publication-year slices preserve the project-to-software gap in every complete year from 2020 through 2025; the 2026 cohort is partial through 5 May and is not interpreted as a trend. The “software cliff” would weaken if additional identifiers, repositories or improved OpenAIRE classification lifted software visibility toward the observed dataset rate. Search-phrase coverage, affiliation resolution, graph classification and snapshot timing still bound the inference.
 
 ## Q‑NEKO and GQSO
 

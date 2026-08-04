@@ -15,8 +15,8 @@ const scopes = {
     metrics: [
       { label: "Project", value: 60.8, count: "392 / 645", note: "all records audited" },
       { label: "Funding", value: 60.8, count: "392 / 645", note: "all records audited" },
-      { label: "Dataset", value: 27.8, count: "179 / 645", note: "95% interval 24.4–31.3" },
-      { label: "Software", value: 7.4, count: "48 / 645", note: "95% interval 5.7–9.7" },
+      { label: "Dataset", value: 27.8, count: "179 / 645", note: "Wilson 95% reference band 24.4–31.3" },
+      { label: "Software", value: 7.4, count: "48 / 645", note: "Wilson 95% reference band 5.7–9.7" },
     ],
   },
   strict: {
@@ -143,10 +143,10 @@ export default function Home() {
       <section className="hero shell" id="top">
         <div className="hero-copy">
           <div className="eyebrow"><span>OpenAIRE Graph · Theme C</span><b>EU ↔ JAPAN</b></div>
-          <h1>Funding is visible.<br /><em>Reuse is not.</em></h1>
+          <h1>Funding is visible.<br /><em>Reuse links are not.</em></h1>
           <p className="hero-lede">
-            Across <strong>645 EU–Japan quantum publications</strong>, six in ten connect to a project.
-            Fewer than one in ten connects to software in the full-corpus link audit.
+            Only <strong>17 of 645 EU–Japan quantum publications</strong> form a complete project–funding–dataset–software chain.
+            Project links reach 60.8%; software links reach 7.4%.
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
@@ -175,7 +175,7 @@ export default function Home() {
 
       <section className="metric-strip" aria-label="Headline evidence metrics">
         <div className="shell metric-strip-inner">
-          <div><strong>2,334</strong><span>Japan-query union</span></div>
+          <div><strong>17 / 645</strong><span>complete chains</span></div>
           <div><strong>645</strong><span>EU27–Japan corpus</span></div>
           <div><strong>392</strong><span>project-linked</span></div>
           <div><strong>179 / 645</strong><span>dataset-linked</span></div>
@@ -190,8 +190,9 @@ export default function Home() {
             <h2>The graph sees investment.<br />It loses reusable outputs.</h2>
           </div>
           <p>
-            “Connected” means at least one explicit OpenAIRE edge. “Not connected” means the edge was not
-            observable—it does <em>not</em> prove that no dataset or software exists.
+            “Connected” means at least one explicit OpenAIRE edge. It is a Graph observability signal—not
+            proof of access, licensing, documentation quality or actual reuse. “Not connected” means only
+            that the edge was not observable.
           </p>
         </div>
 
@@ -379,8 +380,8 @@ export default function Home() {
             <p><strong>Decision:</strong> retain the direct API fallback, publish the reproducible failure, and treat a non-zero total with zero returned rows as a tool error—not an evidence null.</p>
             <div>
               <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
-              <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer">Public integration report · Issue #5 ↗</a><br />
-              <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download diagnostic record · MD ↓</a>
+              <a href="/reproducibility/openaire-mcp-crosscheck.md" target="_blank" rel="noreferrer">Static integration diagnostic ↗</a><br />
+              <a href="/reproducibility/openaire_mcp_pagination_repro.py" download>Minimal reproducer · PY ↓</a>
             </div>
           </div>
         </div>
@@ -473,7 +474,7 @@ export default function Home() {
             <li><span>02</span><p><strong>Resolve scope</strong> to 2020–2026 publications with Japan + EU27 affiliations.</p></li>
             <li><span>03</span><p><strong>Audit all 645</strong> for project and funder objects in product links.</p></li>
             <li><span>04</span><p><strong>Audit Scholix links</strong> for all 645 observed records; retain the 87 title-literal sensitivity set.</p></li>
-            <li><span>05</span><p><strong>Quantify uncertainty</strong> with Wilson 95% confidence intervals.</p></li>
+            <li><span>05</span><p><strong>Compare subsets</strong> with Wilson 95% binomial reference bands.</p></li>
           </ol>
           <div className="download-card">
             <p>REPRODUCIBILITY PACK</p>
@@ -484,7 +485,6 @@ export default function Home() {
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
-            <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer"><span>Public MCP integration report</span><b>ISSUE #5 ↗</b></a>
             <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
             <a href="/reproducibility/refresh-comparison.json" download><span>Full refresh comparison</span><b>JSON ↓</b></a>
             <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>

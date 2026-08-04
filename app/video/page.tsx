@@ -18,8 +18,8 @@ export default function VideoPage() {
         <p className="video-kicker">OPENAIRE AI HACKATHON · THEME C</p>
         <h1>See the evidence<br />chain <em>run.</em></h1>
         <p className="video-lede">
-          A 119-second, captioned walkthrough of the 645-record audit, a complete funding-to-software chain,
-          and the Alien/OpenAIRE MCP boundary that the audit turns into a reproducible interoperability finding.
+          A 119-second, captioned walkthrough of why only 17 of 645 records expose a complete evidence chain,
+          one chain reviewers can inspect, and the MCP boundary turned into a reproducible interoperability finding.
         </p>
       </section>
 
@@ -41,7 +41,7 @@ export default function VideoPage() {
       </section>
 
       <section className="video-notes video-shell">
-        <article><span>01</span><h2>Measured</h2><p>All displayed rates retain their numerator and denominator; they are not model estimates.</p></article>
+        <article><span>01</span><h2>Measured</h2><p>Only 17 of 645 records expose every project, funding, dataset and software link; all rates retain their denominators.</p></article>
         <article><span>02</span><h2>Inspectable</h2><p>The featured chain links funding, projects, institutions, a publication, one dataset and two unique software records.</p></article>
         <article><span>03</span><h2>Reproducible</h2><p>The executed notebook, full 645-record audit, live recheck and MCP pagination reproducer are public.</p></article>
       </section>

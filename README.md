@@ -7,7 +7,7 @@ An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The
 
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
 
-The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics. The integration finding is tracked publicly in [issue #5](https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5).
+The homepage also publishes an executed single-record Alien/OpenAIRE MCP cross-check. It confirms the featured DOI and QIA-Phase1 grant, reproduces a zero-based pagination mismatch in the MCP link wrapper, and recovers the hidden dataset/software rows through the direct API. The MCP run is an interoperability demonstration; the direct API census remains the canonical source for metrics. The static [integration diagnostic](https://atlas.tsuchiyalab.com/reproducibility/openaire-mcp-crosscheck.md) is the reviewer-facing record.
 
 The public artifact includes a captioned 119-second walkthrough at `https://atlas.tsuchiyalab.com/video`. In the Evidence Chain Auditor, dataset and software counts are labelled as directional relation rows; the featured record's four software relation rows resolve to two unique software records.
 
@@ -19,9 +19,9 @@ The Atlas is a standalone OpenAIRE audit. Its connection to the Global Quantum S
 
 ## Headline finding
 
-Among 645 EU27–Japan quantum publications from 2020–2026, 60.8% connect to a project and funder, 27.8% to a dataset and 7.4% to software. Dataset and software relations are now audited across all 645 observed records. A stricter 87-record title-literal sensitivity check preserves the pattern.
+Only 17 of 645 EU27–Japan quantum publications (2.6%) expose a complete project–funding–publication–dataset–software chain. The supporting rates are 60.8% project/funder-linked, 27.8% dataset-linked and 7.4% software-linked. Dataset and software relations are audited across all 645 observed records, and a stricter 87-record title-literal sensitivity check preserves the pattern.
 
-“Connected” means at least one explicit OpenAIRE edge. An absent edge means not observable in the Graph; it is not evidence that the underlying output does not exist.
+“Connected” means at least one explicit OpenAIRE edge. Dataset and software connections measure Graph observability, not access, licensing, documentation quality or actual reuse. An absent edge means not observable in the Graph; it is not evidence that the underlying output does not exist. Wilson intervals are binomial reference bands for comparing subsets, not estimates of search-boundary, metadata or coverage uncertainty.
 
 ## Run and verify
 
@@ -48,9 +48,6 @@ The public reproducibility pack includes:
 - `public/reproducibility/openaire_mcp_pagination_repro.py` — minimal executable reproduction of the page-0 mismatch
 - `public/reproducibility/live-recheck.json` — latest bounded uncached integrity recheck
 - `public/reproducibility/refresh-comparison.json` — ID-, link-state-, and rate-level comparison of consecutive full executions
-- `public/reproducibility/win-probability-source-notes.md` — scenario assumptions, chart map, caveats and report-quality mapping
-- `public/reproducibility/win-probability-artifact.json` — validated canonical decision-report payload
-- `public/reproducibility/win-probability-report.sql` — reviewed values query used by the decision report
 - `public/reproducibility/openaire_live_recheck.py` — source for the bounded live recheck
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
