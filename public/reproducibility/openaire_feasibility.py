@@ -3,8 +3,9 @@
 
 The script uses the stable OpenAIRE Graph V3 search API for product/project
 metadata and the V1 Scholix links endpoint for result-to-result relations.
-Responses are cached so the analysis can be rerun without repeatedly querying
-the public service.
+Responses are cached inside a date-stamped run directory so a run on a new day
+retrieves the current public graph. Set OPENAIRE_CACHE_DIR to an earlier cache
+only when intentionally replaying a historical snapshot.
 """
 
 from __future__ import annotations
@@ -21,13 +22,18 @@ import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from threading import Lock
 
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "analysis" / "output"
-CACHE = OUT / "cache"
+DEFAULT_CACHE = OUT / "cache-runs" / time.strftime("%Y-%m-%d", time.gmtime())
+CACHE = Path(os.environ.get("OPENAIRE_CACHE_DIR", str(DEFAULT_CACHE))).resolve()
 OUT.mkdir(parents=True, exist_ok=True)
 CACHE.mkdir(parents=True, exist_ok=True)
+USED_CACHE_MTIMES: list[float] = []
+PROGRESS_LOCK = Lock()
+DOWNLOADED_COUNT = 0
 
 BASE = "https://api.openaire.eu/graph"
 USER_AGENT = "OpenQuantumEvidenceAtlas/0.1 (public feasibility study)"
@@ -58,27 +64,34 @@ def cache_key(url: str) -> Path:
     return CACHE / f"{hashlib.sha256(url.encode()).hexdigest()}.json"
 
 
-def get_json(url: str, retries: int = 6) -> dict:
+def get_json(url: str, retries: int = 4) -> dict:
+    global DOWNLOADED_COUNT
     path = cache_key(url)
     if path.exists():
+        USED_CACHE_MTIMES.append(path.stat().st_mtime)
         return json.loads(path.read_text(encoding="utf-8"))
     for attempt in range(retries):
         try:
             request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=60) as response:
+            with urllib.request.urlopen(request, timeout=30) as response:
                 payload = json.load(response)
             path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+            USED_CACHE_MTIMES.append(path.stat().st_mtime)
+            with PROGRESS_LOCK:
+                DOWNLOADED_COUNT += 1
+                if DOWNLOADED_COUNT % 100 == 0:
+                    print(f"Downloaded {DOWNLOADED_COUNT} new API responses into {CACHE}", flush=True)
             return payload
         except urllib.error.HTTPError as exc:
             if 400 <= exc.code < 500 and exc.code != 429:
                 raise RuntimeError(f"GET rejected with HTTP {exc.code}: {url}") from exc
             if attempt == retries - 1:
                 raise RuntimeError(f"GET failed after {retries} attempts: {url}") from exc
-            time.sleep(min(20, 1.5 * (2**attempt)) + random.random())
+            time.sleep(min(10, 1.5 * (2**attempt)) + random.random())
         except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as exc:
             if attempt == retries - 1:
                 raise RuntimeError(f"GET failed after {retries} attempts: {url}") from exc
-            time.sleep(min(20, 1.5 * (2**attempt)) + random.random())
+            time.sleep(min(10, 1.5 * (2**attempt)) + random.random())
     raise AssertionError("unreachable")
 
 
@@ -316,8 +329,21 @@ def main() -> None:
         raise RuntimeError(
             f"Strict-title Scholix audit incomplete: {len(strict_link_rows)} audited records for {strict_n} records"
         )
+    generated_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    retrieval_from = min(USED_CACHE_MTIMES) if USED_CACHE_MTIMES else time.time()
+    retrieval_to = max(USED_CACHE_MTIMES) if USED_CACHE_MTIMES else retrieval_from
+
+    def iso_utc(timestamp: float) -> str:
+        return time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(timestamp))
+
     metrics = {
-        "as_of": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "as_of": iso_utc(retrieval_to),
+        "generated_at": generated_at,
+        "source_retrieval_window": {
+            "from": iso_utc(retrieval_from),
+            "to": iso_utc(retrieval_to),
+            "cache_directory": str(CACHE.relative_to(ROOT)) if CACHE.is_relative_to(ROOT) else str(CACHE),
+        },
         "scope": {
             "from_year": FROM_YEAR,
             "to_year": TO_YEAR,

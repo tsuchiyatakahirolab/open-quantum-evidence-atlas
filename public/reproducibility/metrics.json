@@ -1,5 +1,11 @@
 {
-  "as_of": "2026-07-18T05:02:39Z",
+  "as_of": "2026-07-29T00:13:14Z",
+  "generated_at": "2026-07-29T00:13:14Z",
+  "source_retrieval_window": {
+    "from": "2026-07-28T08:39:51Z",
+    "to": "2026-07-29T00:13:14Z",
+    "cache_directory": "analysis\\output\\cache-runs\\2026-07-28"
+  },
   "scope": {
     "from_year": 2020,
     "to_year": 2026,

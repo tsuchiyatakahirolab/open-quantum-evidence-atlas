@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import liveRecheck from "../public/reproducibility/live-recheck.json";
+import refreshComparison from "../public/reproducibility/refresh-comparison.json";
 
 type ScopeKey = "observed" | "strict";
 
@@ -128,13 +130,14 @@ export default function Home() {
         </a>
         <div className="nav-links">
           <a href="/audit">Run auditor</a>
+          <a href="/video">Watch video</a>
           <a href="#trace">Trace</a>
           <a href="#mcp">MCP check</a>
           <a href="#watch">Watchlist</a>
           <a href="#method">Method</a>
           <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">GitHub</a>
         </div>
-        <span className="audit-stamp"><span /> AUDIT · 18 JUL 2026</span>
+        <span className="audit-stamp"><span /> AUDIT · 29 JUL 2026</span>
       </nav>
 
       <section className="hero shell" id="top">
@@ -147,7 +150,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
-            <a className="button quiet" href="#trace">Trace a complete chain</a>
+            <a className="button quiet" href="/video">Watch the 119s demo</a>
           </div>
           <p className="source-line">Measured, not model-estimated · OpenAIRE Graph v3 + research-product links</p>
         </div>
@@ -301,6 +304,15 @@ export default function Home() {
             </p>
           </div>
 
+          <div className="live-recheck-banner">
+            <span>LIVE RECHECK · {liveRecheck.checked_at.slice(0, 10)} UTC</span>
+            <b>{liveRecheck.summary.checks_passed}/{liveRecheck.summary.checks_total} integrity checks passed</b>
+            <b>{8 - liveRecheck.summary.term_queries_changed}/8 discovery counts unchanged</b>
+            <b>Q‑NEKO {liveRecheck.summary.q_neko_project_hits} projects · {liveRecheck.summary.q_neko_product_hits} products</b>
+            <b>Full census · {refreshComparison.corpus.new_records} IDs · {refreshComparison.exact_match ? "exact match" : "changed"}</b>
+            <a href="/reproducibility/live-recheck.json" download>Inspect JSON ↓</a>
+          </div>
+
           <div className="mcp-grid">
             <article className="mcp-query-card">
               <div className="mcp-card-top">
@@ -367,6 +379,7 @@ export default function Home() {
             <p><strong>Decision:</strong> retain the direct API fallback, publish the reproducible failure, and treat a non-zero total with zero returned rows as a tool error—not an evidence null.</p>
             <div>
               <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
+              <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer">Public integration report · Issue #5 ↗</a><br />
               <a href="/reproducibility/openaire-mcp-crosscheck.md" download>Download diagnostic record · MD ↓</a>
             </div>
           </div>
@@ -471,9 +484,14 @@ export default function Home() {
             <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
             <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
             <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
+            <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5" target="_blank" rel="noreferrer"><span>Public MCP integration report</span><b>ISSUE #5 ↗</b></a>
+            <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/refresh-comparison.json" download><span>Full refresh comparison</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
+            <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
             <a href="https://api.openaire.eu/graph/v3/researchProducts" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
-            <small>Snapshot timestamp: 2026-07-18T05:02:39Z</small>
+            <small>Snapshot timestamp: 2026-07-29T00:13:14Z</small>
           </div>
         </div>
       </section>
@@ -487,6 +505,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; releases · GitHub ↗</a>
+            <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com/research/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Research archive · TSUCHIYA Takahiro ↗</a>
             <span>Data: OpenAIRE Graph · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
             <span>Code: MIT · Data, artifact and story: CC BY 4.0</span>

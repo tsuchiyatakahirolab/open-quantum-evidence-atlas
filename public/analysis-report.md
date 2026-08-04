@@ -1,8 +1,8 @@
 # Open Quantum Evidence Atlas — Analysis Report
 
-**Version:** 1.1.0
+**Version:** 1.2.0
 
-**Snapshot:** 2026-07-18T05:02:39Z
+**Snapshot:** 2026-07-29T00:13:14Z
 
 **Author:** Takahiro Tsuchiya
 
@@ -34,6 +34,10 @@ The current graph makes investment and project structures substantially easier t
 ## Alien / OpenAIRE MCP cross-check
 
 An authenticated single-record run through the official Alien/OpenAIRE demo resolved the featured DOI to the same OpenAIRE record and confirmed EC grant 101102140 (QIA-Phase1). Its typed dataset/software calls reported non-zero totals but returned no rows on pages 1 or 2. A controlled follow-up identified the cause: the official `/v1/researchProducts/links` operation defaults to page 0, where direct calls returned the one dataset and two software rows, while Alien's `ResearchLinksInput` rejected page 0 before any upstream request. The discrepancy is therefore a reproducible MCP schema/offset defect, not an OpenAIRE null. It is published as an interoperability diagnostic and is not merged into the 645-record denominator.
+
+## Live integrity recheck
+
+On 29 July 2026, an uncached bounded recheck repeated the eight discovery-count queries, the featured DOI and grant lookup, the page-0/page-1 link contract, and all four Q‑NEKO aliases. Six of six integrity checks passed, all eight discovery counts matched the snapshot, and Q‑NEKO remained at zero projects and zero research products. A fresh full-corpus execution then exactly reproduced all 645 corpus IDs, all 645 dataset/software link states, and all four connection rates; the comparison is published as machine-readable JSON.
 
 ## Falsification and limits
 

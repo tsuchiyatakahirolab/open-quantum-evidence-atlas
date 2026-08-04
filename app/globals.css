@@ -202,6 +202,12 @@ a { color: inherit; }
 
 .mcp-section { padding-block: 130px; background: #ece8dc; border-bottom: 1px solid var(--line); }
 .mcp-heading { align-items: end; }
+.live-recheck-banner { display: grid; grid-template-columns: 1.15fr repeat(4, 1fr) auto; align-items: center; gap: 0; margin: -24px 0 24px; border: 1px solid var(--line); background: rgba(255,255,255,.56); }
+.live-recheck-banner > * { min-height: 58px; display: flex; align-items: center; padding: 12px 16px; border-right: 1px solid var(--line); }
+.live-recheck-banner > *:last-child { border-right: 0; }
+.live-recheck-banner span { color: #656a76; font: 9px var(--font-geist-mono); letter-spacing: .06em; }
+.live-recheck-banner b { font-size: 10px; line-height: 1.45; }
+.live-recheck-banner a { color: var(--ink); font: 9px var(--font-geist-mono); text-underline-offset: 5px; white-space: nowrap; }
 .mcp-grid { display: grid; grid-template-columns: 1.2fr .9fr .9fr; gap: 18px; }
 .mcp-grid article { min-height: 355px; padding: 28px; border: 1px solid var(--line); }
 .mcp-query-card { color: var(--white); background: var(--ink); }
@@ -307,6 +313,10 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px soli
   .metric-strip-inner > div:nth-child(4), .metric-strip-inner > div:nth-child(5) { border-top: 1px solid var(--line); }
   .split-heading, .finding-grid, .mcp-grid, .watch-grid, .method-grid { grid-template-columns: 1fr; gap: 45px; }
   .mcp-grid article { min-height: 0; }
+  .live-recheck-banner { grid-template-columns: 1fr 1fr; margin-top: -8px; }
+  .live-recheck-banner > * { border-bottom: 1px solid var(--line); }
+  .live-recheck-banner > *:nth-child(even) { border-right: 0; }
+  .live-recheck-banner > *:last-child { border-bottom: 0; }
   .mcp-footnote { align-items: flex-start; flex-direction: column; gap: 18px; }
   .scope-meta { grid-template-columns: 150px 1fr; }
   .gap-card { min-height: 340px; }
@@ -364,6 +374,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px soli
   .detail-facts { grid-column: 1; }
   .chain-provenance { text-align: left; line-height: 1.5; }
   .mcp-grid { gap: 14px; }
+  .live-recheck-banner { grid-template-columns: 1fr; }
+  .live-recheck-banner > * { border-right: 0; }
   .mcp-grid article { padding: 22px; }
   .mcp-card-top { line-height: 1.4; }
   .mcp-prompt { margin-top: 40px; }

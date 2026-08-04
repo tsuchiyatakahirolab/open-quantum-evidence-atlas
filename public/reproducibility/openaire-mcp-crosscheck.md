@@ -7,6 +7,8 @@
 
 **Purpose:** Separate a genuine evidence null from a recoverable MCP integration defect.
 
+**Public integration report:** https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas/issues/5
+
 ## Initial cross-check
 
 The authenticated Alien/OpenAIRE run used 30 OpenAIRE MCP calls. It directly established:
@@ -73,6 +75,10 @@ Either server-side repair is sufficient:
 A regression test should request a known one-row dataset relation and verify that the first MCP page returns the row rather than only `totalLinks`.
 
 Until the MCP wrapper is repaired, the Atlas uses the direct link endpoint with `page=0` as its reproducible fallback. A non-zero total with an empty result page is classified as a tool inconsistency, not as “no relation.”
+
+## Live recheck
+
+An uncached bounded recheck on 29 July 2026 reconfirmed the representative contract: the featured DOI and grant resolved, page 0 returned one dataset and two software rows, and page 1 returned no rows despite retaining the same non-zero totals. All eight discovery-query counts also matched the full refresh, while the four Q‑NEKO aliases remained at zero projects and zero research products. The machine-readable result and source are published as `live-recheck.json` and `openaire_live_recheck.py`.
 
 ## Reproduction
 

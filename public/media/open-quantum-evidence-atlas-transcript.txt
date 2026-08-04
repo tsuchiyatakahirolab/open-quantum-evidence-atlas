@@ -1,0 +1,19 @@
+When governments fund international quantum research, grants and papers are easy to count. The harder question is: what becomes reusable?
+
+Open Quantum Evidence Atlas turns that question into an executable observability audit of the OpenAIRE Graph.
+
+Inside a declared 2020-to-2026 Japan–EU27 boundary, we audited all 645 publications. Project or funding links reach 60.8 percent. Dataset visibility falls to 27.8 percent; software to 7.4. An 8.2-fold cliff.
+
+These are graph measurements, not model estimates. Change the boundary, and the auditor recomputes every denominator and Wilson interval.
+
+A strict title search changes the sample, not the conclusion. Each record is connected, not observable, or not audited. Not observable never means nonexistent.
+
+Seventeen records form complete chains. The featured case traces European Commission funding through three projects and partner institutions to a publication, a Figshare dataset, and two software records. Every step opens its source.
+
+Then we test the interface. Alien's authenticated OpenAIRE MCP confirms the DOI and grant, but returns no rows for nonzero dataset and software totals. The cause: OpenAIRE starts at page zero; the MCP accepts page one or higher. A public reproducer and direct API fallback turn that boundary into a regression test.
+
+A full rerun reproduced all 645 identifiers, every link state, and all four rates. Six uncached checks passed.
+
+Reuse the auditor for any programme, field, or country pair. Keep the broad Atlas for landscapes; use Q-NEKO as a clock for graph-entry lag.
+
+Measure the gap. Fix the links. Watch the graph change. Open Quantum Evidence Atlas.
