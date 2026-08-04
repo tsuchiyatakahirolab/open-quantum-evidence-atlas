@@ -14,6 +14,29 @@ async function render(pathname = "/") {
   );
 }
 
+test("retires internal strategy URLs at the worker boundary", async () => {
+  const workerUrl = new URL("../worker.atlas.js", import.meta.url);
+  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
+  const { default: worker } = await import(workerUrl.href);
+
+  for (const pathname of [
+    "/reproducibility/win-probability-artifact.json",
+    "/reproducibility/win-probability-report.sql",
+    "/reproducibility/win-probability-source-notes.md",
+  ]) {
+    const response = await worker.fetch(new Request(`http://localhost${pathname}`), {}, {});
+    assert.equal(response.status, 404);
+    assert.match(response.headers.get("cache-control") ?? "", /no-store/i);
+  }
+
+  const assetResponse = await worker.fetch(
+    new Request("http://localhost/assets/example.css"),
+    { ASSETS: { fetch: async () => new Response("asset", { status: 200 }) } },
+    {},
+  );
+  assert.equal(await assetResponse.text(), "asset");
+});
+
 test("server-renders the evidence atlas and social metadata", async () => {
   const response = await render();
   assert.equal(response.status, 200);
