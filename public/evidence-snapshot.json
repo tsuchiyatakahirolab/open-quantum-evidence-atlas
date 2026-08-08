@@ -1,0 +1,112 @@
+{
+  "artifact": "Open Quantum Evidence Atlas",
+  "source": {
+    "name": "OpenAIRE Graph",
+    "api": "https://api.openaire.eu/graph/",
+    "license": "CC BY 4.0",
+    "license_url": "https://graph.openaire.eu/docs/license/",
+    "attribution": "Derived from OpenAIRE Graph metadata; OpenAIRE is the acknowledged source.",
+    "transformations": "Eight-phrase discovery, record deduplication, resolved Japan-EU27 affiliation filtering, and project/funding/dataset/software link classification."
+  },
+  "license": {
+    "derived_artifact": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "snapshot_timestamp": "2026-07-29T00:13:14Z",
+  "generated_at": "2026-07-29T00:13:14Z",
+  "source_retrieval_window": {
+    "from": "2026-07-28T08:39:51Z",
+    "to": "2026-07-29T00:13:14Z",
+    "cache_directory": "analysis\\output\\cache-runs\\2026-07-28"
+  },
+  "scope": {
+    "years": "2020-2026",
+    "type": "publication",
+    "geography": "at least one resolved Japan affiliation and at least one resolved EU27 affiliation",
+    "search_phrases": [
+      "quantum computing",
+      "quantum communication",
+      "quantum sensing",
+      "quantum simulation",
+      "quantum cryptography",
+      "quantum information",
+      "quantum metrology",
+      "quantum network"
+    ]
+  },
+  "observed_corpus": {
+    "japan_query_union": 2334,
+    "eu27_japan_publications": 645,
+    "strict_title_subset": 87,
+    "project": {
+      "connected": 392,
+      "audited": 645,
+      "rate_percent": 60.775
+    },
+    "funding": {
+      "connected": 392,
+      "audited": 645,
+      "rate_percent": 60.775
+    },
+    "dataset": {
+      "connected": 179,
+      "audited": 645,
+      "rate_percent": 27.8,
+      "wilson_95_percent": [
+        24.4,
+        31.3
+      ]
+    },
+    "software": {
+      "connected": 48,
+      "audited": 645,
+      "rate_percent": 7.4,
+      "wilson_95_percent": [
+        5.7,
+        9.7
+      ]
+    }
+  },
+  "link_audit_quality": {
+    "audited": 645,
+    "missing_ids": 0,
+    "duplicate_corpus_ids": 0,
+    "duplicate_link_ids": 0
+  },
+  "strict_title_subset": {
+    "records": 87,
+    "project": {
+      "connected": 45,
+      "audited": 87,
+      "rate_percent": 51.7
+    },
+    "funding": {
+      "connected": 45,
+      "audited": 87,
+      "rate_percent": 51.7
+    },
+    "dataset": {
+      "connected": 21,
+      "audited": 87,
+      "rate_percent": 24.1
+    },
+    "software": {
+      "connected": 7,
+      "audited": 87,
+      "rate_percent": 8.0
+    }
+  },
+  "q_neko_watchlist": {
+    "as_of": "2026-07-29T00:16:22Z",
+    "aliases_audited": [
+      "Q-Neko",
+      "QNEKO",
+      "Nippon-Europe Quantum Koraborēshon",
+      "HORIZON-EUROHPC-JU-2024-INCO-06"
+    ],
+    "openaire_project_union": 0,
+    "openaire_research_product_union": 0,
+    "interpretation": "Historical bounded-query result. See reproducibility/live-recheck.json for the latest observation; product search hits are not grant attribution."
+  },
+  "semantics": "Connected means at least one observable OpenAIRE product-project/funder edge or research-product link. Zero does not prove that no underlying project, dataset, or software exists."
+}

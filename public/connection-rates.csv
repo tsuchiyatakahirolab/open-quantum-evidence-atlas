@@ -1,0 +1,9 @@
+scope,connection,connected,audited,rate_percent,ci_low,ci_high
+observed,project,392,645,60.775,,
+observed,funding,392,645,60.775,,
+observed,dataset,179,645,27.8,24.4,31.3
+observed,software,48,645,7.4,5.7,9.7
+strict_title,project,45,87,51.7,,
+strict_title,funding,45,87,51.7,,
+strict_title,dataset,21,87,24.1,16.4,34.1
+strict_title,software,7,87,8.0,4.0,15.7

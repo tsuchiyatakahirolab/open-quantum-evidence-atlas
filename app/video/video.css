@@ -1,0 +1,49 @@
+.video-page { --v-ink: #09101f; --v-paper: #f4f1e8; --v-acid: #c9ff3d; min-height: 100vh; color: var(--v-ink); background: var(--v-paper); }
+.video-shell { width: min(1180px, calc(100vw - 48px)); margin-inline: auto; }
+.video-nav { min-height: 84px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; border-bottom: 1px solid rgba(9,16,31,.2); }
+.video-brand { display: flex; align-items: center; gap: 10px; width: max-content; color: inherit; text-decoration: none; font-size: 10px; font-weight: 750; letter-spacing: .12em; line-height: 1.1; }
+.video-brand > span:first-child { width: 29px; height: 29px; display: grid; place-items: center; border: 1px solid; border-radius: 50%; color: #76a900; }
+.video-nav > span { color: #6f7480; font: 9px var(--font-geist-mono); letter-spacing: .08em; }
+.video-nav > span i { width: 7px; height: 7px; display: inline-block; margin-right: 7px; border-radius: 50%; background: #76a900; box-shadow: 0 0 0 4px rgba(118,169,0,.12); }
+.video-nav > a:last-child { justify-self: end; color: inherit; font-size: 11px; text-underline-offset: 4px; }
+.video-hero { padding: 92px 0 74px; }
+.video-kicker { margin: 0 0 22px; color: #727783; font: 9px var(--font-geist-mono); letter-spacing: .14em; }
+.video-hero h1 { margin: 0; font-size: clamp(58px, 8vw, 108px); line-height: .86; letter-spacing: -.075em; }
+.video-hero h1 em { color: #676b79; font-family: Georgia, serif; font-weight: 400; }
+.video-lede { max-width: 760px; margin: 36px 0 0; color: #606674; font-size: 17px; line-height: 1.75; }
+.video-player-section { padding: 64px 0; background: var(--v-ink); }
+.video-frame { overflow: hidden; border: 1px solid rgba(255,255,255,.18); box-shadow: 16px 16px 0 rgba(201,255,61,.12); background: #050914; }
+.video-frame video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #050914; }
+.video-meta { display: grid; grid-template-columns: repeat(3, 1fr) 1.5fr; margin-top: 28px; border-top: 1px solid rgba(255,255,255,.17); border-bottom: 1px solid rgba(255,255,255,.17); color: white; }
+.video-meta > div { min-height: 78px; display: flex; flex-direction: column; justify-content: center; padding: 15px 20px; border-right: 1px solid rgba(255,255,255,.17); }
+.video-meta > div:last-child { border-right: 0; }
+.video-meta span { margin-bottom: 8px; color: rgba(255,255,255,.42); font: 8px var(--font-geist-mono); letter-spacing: .1em; }
+.video-meta b { font-size: 12px; }
+.video-links { flex-direction: row !important; align-items: center; justify-content: flex-end !important; gap: 22px; }
+.video-links a { color: var(--v-acid); font-size: 10px; text-underline-offset: 5px; }
+.video-notes { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 100px; }
+.video-notes article { min-height: 220px; padding: 28px; border: 1px solid rgba(9,16,31,.18); border-right: 0; }
+.video-notes article:last-child { border-right: 1px solid rgba(9,16,31,.18); }
+.video-notes span { color: #7b808b; font: 9px var(--font-geist-mono); }
+.video-notes h2 { margin: 40px 0 15px; font-size: 30px; letter-spacing: -.04em; }
+.video-notes p { margin: 0; color: #666b78; font-size: 13px; line-height: 1.7; }
+.video-footer { padding: 45px 0; color: white; background: var(--v-ink); }
+.video-footer > div { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 30px; font: 9px var(--font-geist-mono); }
+.video-footer p { color: rgba(255,255,255,.44); }
+.video-footer a { justify-self: end; color: var(--v-acid); text-underline-offset: 4px; }
+@media (max-width: 760px) {
+  .video-shell { width: calc(100vw - 30px); }
+  .video-nav { grid-template-columns: 1fr auto; }
+  .video-nav > span { display: none; }
+  .video-hero { padding-block: 65px 50px; }
+  .video-hero h1 { font-size: 56px; }
+  .video-meta { grid-template-columns: 1fr 1fr; }
+  .video-meta > div:nth-child(2) { border-right: 0; }
+  .video-meta > div:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.17); }
+  .video-links { justify-content: flex-start !important; }
+  .video-notes { grid-template-columns: 1fr; padding-block: 60px; }
+  .video-notes article { border-right: 1px solid rgba(9,16,31,.18); border-bottom: 0; }
+  .video-notes article:last-child { border-bottom: 1px solid rgba(9,16,31,.18); }
+  .video-footer > div { grid-template-columns: 1fr; }
+  .video-footer a { justify-self: start; }
+}

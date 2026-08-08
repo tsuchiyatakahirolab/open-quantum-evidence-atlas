@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "artifact": "Open Quantum Evidence Atlas",
+  "purpose": "Executed Alien/OpenAIRE MCP cross-check and pagination regression evidence",
+  "executed_at": "2026-07-18",
+  "platform": "Official Alien Intelligence OpenAIRE demo",
+  "model_displayed_by_platform": "Sonnet 4.6",
+  "authentication": {
+    "required_for_execution": true,
+    "credentials_published": false,
+    "public_review_requires_login": false
+  },
+  "two_layer_architecture": {
+    "interactive_verification_layer": "Alien/OpenAIRE MCP: DOI, grant, project, dataset and software traversal with an inspectable agent trace",
+    "deterministic_census_layer": "Direct OpenAIRE Graph API: fixed-boundary counting over 645 retained publications",
+    "separation_rationale": "A connector pagination defect can be diagnosed and published without entering or biasing the headline denominator"
+  },
+  "replay_prompt": "Using the OpenAIRE Graph only, cross-check DOI 10.1088/1367-2630/ad5b13. Return identity, funding, projects, organisations, datasets, software and provenance. Treat missing relations as not observable.",
+  "initial_run": {
+    "mcp_calls": 30,
+    "record_identifier": "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db",
+    "doi": "10.1088/1367-2630/ad5b13",
+    "grant_code": "101102140",
+    "grant_name": "QIA-Phase1",
+    "dataset_total_reported": 1,
+    "dataset_rows_returned": 0,
+    "software_total_reported": 2,
+    "software_rows_returned": 0
+  },
+  "targeted_follow_up": {
+    "page_zero_mcp_probes_rejected": 2,
+    "validator_contract": "page must be greater than or equal to 1",
+    "upstream_contract": "GET /graph/v1/researchProducts/links serves the first tested data page at page=0",
+    "direct_api_page_zero": {
+      "dataset_rows": 1,
+      "software_rows": 2
+    },
+    "direct_api_page_one": {
+      "dataset_rows": 0,
+      "software_rows": 0
+    },
+    "classification": "MCP schema/offset defect; not an OpenAIRE evidence null"
+  },
+  "later_bounded_observation": {
+    "checked_at": "2026-08-08",
+    "dataset_page_zero_rows": 0,
+    "software_page_zero_rows": 2,
+    "software_page_one_rows": 0,
+    "interpretation": "The dataset relation drifted out of the featured record; the software relation still reproduces the page-offset defect. This does not alter the dated MCP execution or the 29 July full-census denominator."
+  },
+  "repair_contract": [
+    "Allow page=0 in the MCP input model",
+    "or translate a one-indexed MCP page to the zero-indexed upstream page",
+    "regression-test a non-zero total whose only rows occur on page 0"
+  ],
+  "aggregate_metric_policy": "MCP is the interactive verification layer and the direct API is the deterministic census layer; generated prose and the MCP pagination boundary never enter the 645-record denominator.",
+  "evidence": {
+    "human_readable_trace": "https://atlas.tsuchiyatakahiro.com/reproducibility/openaire-mcp-crosscheck.md",
+    "minimal_reproducer": "https://atlas.tsuchiyatakahiro.com/reproducibility/openaire_mcp_pagination_repro.py",
+    "bounded_live_recheck": "https://atlas.tsuchiyatakahiro.com/reproducibility/live-recheck.json",
+    "official_demo": "https://demo.alien.club/openaire",
+    "official_openapi": "https://api.openaire.eu/graph/v3/api-docs"
+  },
+  "license": "CC BY 4.0"
+}

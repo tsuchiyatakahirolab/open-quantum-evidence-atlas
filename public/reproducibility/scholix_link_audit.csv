@@ -1,0 +1,646 @@
+﻿id,title,publication_date,countries,strict_title_match,broad_sample,dataset_connected,dataset_outgoing_links,dataset_incoming_links,software_connected,software_outgoing_links,software_incoming_links
+a9ac50f576aa::561fcc331d1097a61d014fd9f97a8af1,Quantum Enhanced Machine Learning,2020-01-01,DE;FR;IT;JP,False,True,False,0,0,False,0,0
+dedup_wf_002::338a24aef2614be5d9d5f09dfe4006f1,Roadmap on Spin-Wave Computing,2022-01-01,AT;BE;DE;ES;FR;GB;IN;JP;NL;SE;US,False,True,True,10,0,False,0,0
+dedup_wf_002::46d7d89238d3a8dc695c0703a9523ac8,Privacy preserving post-quantum cryptography,2020-01-01,ES;FR;JP;RU,True,True,False,0,0,False,0,0
+dedup_wf_002::89e0bea8df6ba3dc5b3b1636a935d1ff,Classical access structures of ramp secret sharing based on quantum stabilizer codes,2020-01-01,DK;JP,False,True,False,0,0,False,0,0
+dedup_wf_002::c3f96f2032810b532b4b73b97096d7bf,Search for pair production of heavy particles decaying to a top quark and a gluon in the lepton+jets final state in proton–proton collisions at √s=13TeV,2025-01-01,AM;AT;AU;AZ;BD;BE;BG;BO;BR;CH;CL;CN;CO;CY;CZ;DE;DO;EC;EE;EG;ES;FI;FR;GB;GE;GR;GT;HR;HU;IE;IN;IR;IT;JP;KR;KW;LK;LT;LV;ME;MX;MY;NZ;PH;PK;PL;PT;PY;QA;RO;RS;RU;SK;TH;TN;TR;TW;UA;UNKNOWN;US;VE,False,True,True,3,0,True,1,1
+dedup_wf_002::cde1277261c6586861a0bf49d88f17fc,"LIPIcs, Volume 232, TQC 2022, Complete Volume",2022-01-01,DE;JP,False,True,True,1,0,True,1,1
+doi_________::0033907154d4818369765761f3740196,(Invited) Nanowires from Dilute Nitride and Dilute Bismide Alloys for Nanophotonics,2023-12-22,JP;SE,False,True,False,0,0,False,0,0
+doi_________::0d66fb81eae7e6dc2617db4596736627,Coherent Spectroscopy with a Single Antiproton Spin,2025-03-20,CH;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_________::0ddf6503577fa10373cc8fc3b61eaf7f,Quantifying Quantumness of Channels Without Entanglement,2022-01-01,AT;CZ;DE;JP;PL;TW;US,False,True,True,1,0,False,0,0
+doi_________::12b66dc84123fa70bdf1b3d389938fd5,Transfer-printing-based integration of silicon nitride grating structure on single-crystal diamond toward sensitive magnetometers,2022-10-17,DE;JP,False,True,False,0,0,False,0,0
+doi_________::1cabe5516a9ac1f4ab15694a80af9d05,Freshness flavour perception via quantum-inspired and quantum ligand-based virtual screening,2025-05-15,ES;JP,False,True,False,0,0,True,1,1
+doi_________::23f620c66f171cd56b1ad094e1ba446b,Codebase release 1.0 for TeNPy,2024-11-26,AT;CH;DE;GB;IL;JP;US,False,True,False,0,0,False,0,0
+doi_________::25f0e6b124669028ee99561f33f15782,Half-Quantized Quantum Hall Plateaus in the Confined Geometry of Graphene,2024-10-14,FI;FR;IL;IN;JP,False,True,False,0,0,False,0,0
+doi_________::31d55557afede3b6f047069b2261600e,Simple loss-tolerant protocol for Greenberger-Horne-Zeilinger-state distribution in a quantum network,2025-02-21,JP;NL,True,True,False,0,0,False,0,0
+doi_________::34156b6250aa7f62ad5f40eb59c63ba8,High-dynamic-range vector magnetometry in solid-state systems,2026-03-16,DE;JP;US,False,True,False,0,0,False,0,0
+doi_________::349942233dfb814808d8fc8967f425d4,Special topic on phonon–magnon interactions: From fundamentals to device physics,2026-03-12,DE;ES;FR;JP,False,True,False,0,0,False,0,0
+doi_________::43d226b08c8c5001217c06310c5e7770,"Resolved-sideband cooling of a single  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mmultiscripts><mml:mi>Be</mml:mi><mml:none/><mml:mo>+</mml:mo><mml:mprescripts/><mml:none/><mml:mn>9</mml:mn></mml:mmultiscripts></mml:math>  ion in a cryogenic multi-Penning-trap for discrete symmetry tests with (anti-)protons",2024-09-03,DE;JP,False,True,False,0,0,False,0,0
+doi_________::5069c7c966fcd65a11ccf665a08e3ee5,Real Time Generation and Measurement of 60-GHz Optical Entangled States,2024-01-01,FR;JP,False,True,False,0,0,False,0,0
+doi_________::515eaa3be28966c476758df7cc41e248,Non-Hermitian quantum correlations in the time domain: well beyond Luders bound,2023-10-25,CN;JP;KG;PL,False,True,False,0,0,False,0,0
+doi_________::54b08b1c5947d7bdabf9820dcee0fce3,Calculation and Proposal for Improving the Timing Jitter of Transition-Edge Sensors,2026-01-07,DE;JP,False,True,False,0,0,False,0,0
+doi_________::82884d20342ad7a64dc060135cbb1e2c,Coulomb Interaction‐Controlled Quantum Correlation and Teleportation Via Electro–Opto–Magnomechanical System,2026-04-01,FR;JO;JP;MA;PK,False,True,False,0,0,False,0,0
+doi_________::98a0f4489b14b6bf3009d90c350bbad9,Spontaneous emission of a quantum emitter near a graphene nanodisk under strong light-matter coupling,2022-07-27,GR;JP,False,True,False,0,0,False,0,0
+doi_________::b57513835fe9f8d0dbee146cafced1d9,Adaptive Dynamics in Physics and Biology is the Unified Principle of our Universe and Existence,2025-05-06,JP;SE,False,True,False,0,0,False,0,0
+doi_________::b9973f95bfcad4826b3e0506425fc6cc,Quantum communication protocols based on time-entangled photonic qudits,2024-03-13,AU;CA;CN;DE;FR;JP,True,True,False,0,0,False,0,0
+doi_________::bc321190420d5527370756d91a0c945b,Nanofabricated and Integrated Colour Centres in Silicon Carbide with High-Coherence Spin-Optical Properties,2021-01-01,DE;JP;NL;SE;US,False,True,True,1,0,False,0,0
+doi_________::bc619de0f4219502ce617ec4d6a52864,Exploring Phonon Interference: Insights From a Nano‐Scale Silicon Double Slit Atomistic Simulation,2025-07-10,FR;GR;JP,False,True,True,3,0,False,0,0
+doi_________::c544e3ef452210095e2adc45602d0789,Non-monotonic variation of the Kramers point band gap with increasing magnetic doping in BiTeI,2021-08-12,IT;JP;RU,False,True,False,0,0,False,0,0
+doi_________::dc191bac2e8d58ef3793a88f094ab08e,Strong coupling in the entanglement dynamics of two qubits interacting with a graphene nanodisk,2022-10-24,GR;JP,False,True,False,0,0,False,0,0
+doi_________::e7b0ba51b3fe7b18c5fec740fa7abbb6,On-chip band-stop filter using multimode waveguide Bragg grating in alumina visible-light waveguides,2026-01-28,JP;NL,False,True,False,0,0,False,0,0
+doi_________::fc4a3e7e721dd7064d3f0325cac875e9,Di- and trivalent Bis(stannolediides) of Dysprosium and Terbium: A novel class of High-Performance Single Molecule Magnets,2025-03-12,DE;FR;JP,False,True,True,1,0,False,0,0
+doi_dedup___::0004c0b05a10a6e104717b6534e5a2eb,Variational quantum compiling for three-qubit-gate design in quantum dots,2025-04-18,CN;ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::00bf0e58af6dffa695bf0ac4abea6014,Large-range tuning and stabilization of the optical transition of diamond tin-vacancy centers by <i>in situ</i> strain control,2025-04-28,JP;NL;US,False,True,True,3,0,True,1,0
+doi_dedup___::01a8504bb839688bf4919fc8c80901d9,Harnessing center-of-mass excitations in quantum metrology,2022-10-31,AT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::022f06d93ea7e37e476086904e5af50d,"Entanglement and complexity of purification in ( <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math> )-dimensional free conformal field theories",2021-03-17,AU;BE;DE;DK;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::0245891fcd0b5a6ada6791c4b26f3c39,Integrated and Portable Magnetometer Based on Nitrogen‐Vacancy Ensembles in Diamond,2021-02-10,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::032b1f35499018aa40c0a64b68455934,Universal quantum control of an atomic spin qubit on a surface,2023-05-18,AU;FR;GB;JP;KR,False,True,True,2,0,False,0,0
+doi_dedup___::03fdd8bbcd7eaf3191c8d4c232bf28a3,Relational superposition measurements with a material quantum ruler,2024-05-06,AU;CA;CH;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::04b4db5d6c2da584505ee05df3e0fb67,Ultranarrow electroluminescence from magnetic excitons in the van der Waals antiferromagnetic semiconductor NiPS3,2025-11-26,CH;CZ;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::061018dd0029746b59a9568683fc25d5,Te-doped selective-area grown InAs nanowires for superconducting hybrid devices,2022-02-24,CA;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::061ed4435c94fae9939b1f0d3799ba59,All-optical seeding of a light-induced phase transition with correlated disorder,2024-04-11,DK;ES;FR;JP;US;VE,False,True,True,1,0,False,0,0
+doi_dedup___::065256cfb4cd40fbda62f2f1b5b76226,Fast Gate-Based Readout of Silicon Quantum Dots Using Josephson Parametric Amplification,2020-02-14,FR;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::06bb4cfa1adac642929e39c1fc2f0a38,Quantum State Tomography with Conditional Generative Adversarial Networks,2021-09-27,ES;GB;JP;SE;US,False,True,True,1,0,True,1,1
+doi_dedup___::072286ae21297784f9dd576dbb127366,Spectrally reconfigurable quantum emitters enabled by optimized fast modulation,2020-09-17,DE;JP;SE;US,False,True,True,2,0,True,1,1
+doi_dedup___::0729ee49dd3e30590470551e670f7703,Pauli Blockade in Silicon Quantum Dots with Spin-Orbit Control,2021-01-07,AU;FI;JP;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::0765745ff934b28851f4ae22431e6561,Observation of quantum temporal correlations well beyond Lüders bound,2025-01-15,CN;JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::07885150318f0d40ac636c40a19de266,Steering-enhanced quantum metrology using superpositions of noisy phase shifts,2023-02-13,AT;JP;PL;TW;US,True,True,True,1,0,False,0,0
+doi_dedup___::0797f81091d521cfa50d373d9ab5e5db,Essential Difference Between 2D and 3D From the Perspective of real-space Renormalization Group,2026-02-23,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::07a43ac1b0b007b91bae17893e2f7776,High-fidelity spin readout via the double latching mechanism,2024-10-03,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::07ca9162f3bd8f3e2096b94555487a72,Infrared single-photon detection with superconducting magic-angle twisted bilayer graphene,2024-09-20,DE;JP;US,False,True,True,2,0,False,0,0
+doi_dedup___::07de62107b97a0735f362b1ae2df8eca,Cryogenic integrated optical modulators for classical and quantum computing,2024-10-02,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::0847cb9eb3e15f42a698dbd431a45231,Confinement of Polariton Condensates in Quasi‐Flat Band BICs in Plasmonic and Dielectric Metasurfaces,2026-04-01,ES;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::085c9e78a79de7d31187ef3690a68104,Transmission Spectroscopy of Molecular Spin Ensembles in the Dispersive Regime,2021-07-01,IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::087b52388137d788f0bd7b036f8f19a6,Feebly-Interacting Particles: FIPs 2022 Workshop Report,2023-05-02,AU;BE;BR;CA;CH;DE;ES;FR;GB;HU;IT;JP;KR;PT;SE;TR;US,False,True,True,5,0,True,2,0
+doi_dedup___::089efaabc65a1d890fe049143931efca,Perspectives of quantum annealing: methods and implementations,2020-05-01,AT;DE;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::092524196d528646956b89ded7cd404d,Strong coupling between a single-photon and a two-photon Fock state,2025-09-30,CH;CN;IT;JP;US,False,True,False,0,0,True,1,0
+doi_dedup___::0a3c5043f945e7a15179994a115e3ba5,Hidden Quantum Memory: Is Memory There When Somebody Looks?,2023-04-27,AT;GB;IE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::0b1c2b0d6756390a9f5128f73d2e0d5b,Controlling interactions between high-frequency phonons and single quantum systems using phononic crystals,2024-12-18,JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::0b705e365f7888d22f440e6b43667ae0,Efficient Simulation of Loop Quantum Gravity — A Scalable Linear-Optical Approach,2020-01-01,CN;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::0bb99b9365b9db184b4a2970897a58f9,Ultrafast nano-imaging of dark excitons,2025-01-03,DE;GB;JP,False,True,True,2,0,False,0,0
+doi_dedup___::0bd76c9a738fe9e63d3985c759e81bb1,Asymptotic quantification of entanglement with a single copy,2026-03-01,DE;IT;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::0c1b3d8650325c1d418a39245b6f4522,Entangling Schrödinger’s cat states by bridging discrete- and continuous-variable encoding,2025-02-03,AT;JP;SE,False,True,True,1,0,True,1,1
+doi_dedup___::0c9ccc011fe064f340a7c85c0191e30c,On the Time Scaling of Entanglement in Integrable Scale-Invariant Theories,2021-01-01,DE;IR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::0d788e3f5897bcbde925a9aedecd2ca8,Heat-Driven Electron-Motion in a Nanoscale Electronic Circuit,2021-11-15,DE;FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::0d8967653407e9f8b9b02ca134a10fe3,Hierarchy of Symmetry Breaking Correlated Phases in Twisted Bilayer Graphene,2022-01-01,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::0df3070d46d93c5342a57fb63a940d69,Resource-efficient generalized quantum subspace expansion,2025-05-08,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::0e48a24b3bad6b0bfba5f2b7e08c8fe4,Impact of device resistances in the performance of graphene-based terahertz photodetectors,2024-06-12,ES;JP,False,True,True,1,1,False,0,0
+doi_dedup___::0ed91f40992ecf6b28ad7053604fc230,Cryogenic Integration for Quantum Computer Using Diamond Color Center Spin Qubits,2023-05-01,JP;NL,False,True,True,1,0,False,0,0
+doi_dedup___::0f883cedf5466a3cf797f8dff3f30158,Measurement-device-independent quantum key distribution with leaky sources,2021-01-18,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::102e4c71009d51a097ead56c22a0f8de,Efficient and robust estimation of many-qubit Hamiltonians,2024-01-08,DE;DK;EG;FR;GB;JP;NL;RU;US,False,True,True,1,0,False,0,0
+doi_dedup___::104b10bc3ac1c466c31dd7d399a6bad5,Spin Quintet in a Silicon Double Quantum Dot: Spin Blockade and Relaxation,2020-10-14,FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::115d66337b078c5a5e459cfaea503a6e,Collectively induced exceptional points of quantum emitters coupled to nanoparticle surface plasmons,2020-01-14,JP;PL;TW;US,False,True,False,0,0,False,0,0
+doi_dedup___::11a1ec138f6909333217aae98320fd5c,Multichannel hybrid quantum cryptography for submarine optical     communications,2026-02-02,ES;JP,True,True,False,0,0,False,0,0
+doi_dedup___::11dde93e261937129dbce3722d0d6a14,Survey of New Applications of Geometric Algebra,2023-02-20,CZ;GR;JP,False,True,False,0,0,True,1,1
+doi_dedup___::11eb6f6ecbef2e97257a07df7758a3ee,Time-optimal variational control of a bright matter-wave soliton,2020-11-13,CN;ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::12a879783004d96df7771b3e40f0df2a,"Bright, narrow-linewidth color centers in Silicon Carbide-on-Insulator microresonators",2022-01-01,JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::12c2e9cf5b481fd55eafc52349ce7632,Materials challenges and opportunities for quantum computing hardware,2021-04-16,AT;CH;JP;KR;TH;US,True,True,False,0,0,False,0,0
+doi_dedup___::12eff1edd2d525b6d1ab1594327755b7,Communication Complexity of Private Simultaneous Quantum Messages Protocols,2021-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::1397462295c01e207a220ecf5d173625,Nanoscale confinement and control of excitonic complexes in a monolayer WSe2,2023-01-01,AT;JP;KR;US,False,True,False,0,0,False,0,0
+doi_dedup___::140701a8976cd6b16abca9cb2a605378,A General and Modular Approach to Solid-State Integration of Zero-Dimensional Quantum Systems,2025-09-03,JP;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::147eafde6d753758906945bc9cdfc1c8,A Stable Radical in Cationic Dinuclear Rare-Earth Triple-Decker Complexes Featuring Switchable Magnetic Properties,2025-10-20,DE;FR;JP;PA,False,True,True,0,4,False,0,0
+doi_dedup___::150bd8a8d9438d739d48640ce66b457e,Absorption and birefringence study for reduced optical losses in diamond with high nitrogen-vacancy concentration,2023-12-04,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::15142cd21836cd228f89761350db8ba1,Anisotropic activations controlling doublet–quartet spin conversion of linked chromophore-radical molecular qubits in fluid,2025-02-04,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::153cea808f4d9b6915ac5db6984d05d1,Evidence for Moiré Trions in Twisted MoSe<sub>2</sub> Homobilayers,2021-05-10,CN;IT;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::154831eaef815ee626f7a8c533d499be,One-Wayness in Quantum Cryptography,2022-01-01,DE;JP,True,True,False,0,0,False,0,0
+doi_dedup___::1570cd8608266d4e9d9b2a0e49b65660,Self-induced superradiant masing,2026-01-01,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::15f2789c491c569607ccd56fc4da3697,Efficient Construction of Functional Representations for Quantum Algorithms,2021-01-01,AT;IN;JP;US,False,True,False,0,0,True,1,1
+doi_dedup___::1615587e70ef749338d5ebb6814c833e,Initializing 2<sup>14</sup> Pure 14-Qubit Entangled Nuclear Spin States in a Hyperpolarized Molecular Solid,2021-04-07,DE;JP;RU;US,False,True,False,0,0,False,0,0
+doi_dedup___::16322905576406f3dafdfdb8d46339e9,Propagating Gottesman-Kitaev-Preskill states encoded in an optical oscillator,2023-01-01,CZ;DE;JP,False,True,True,4,0,False,0,0
+doi_dedup___::16b7921e4d1c4da0cb5b4374ea3f4848,Enhancing Quantum Memories with Light-Matter Interference,2025-01-01,GB;JP;PL,False,True,True,2,0,False,0,0
+doi_dedup___::16fcd0b9e02bea872ae4b55732f425cc,Quantum repeaters: From quantum networks to the quantum internet,2023-12-20,CA;CN;JP;NL;US,True,True,True,4,0,False,0,0
+doi_dedup___::170e371c54730ea155147ce9593cd4bc,No Distributed Quantum Advantage for Approximate Graph Coloring,2024-06-10,DE;FI;FR;IN;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::17fd575918f035c4b0b494872caaf9a0,Beyond the standard quantum limit for parametric amplification of broadband signals,2021-11-08,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::184a77dbe4a6aad53ceb8dd29b8c218c,Unitary channel discrimination beyond group structures: Advantages of sequential and indefinite-causal-order strategies,2022-04-01,AT;JP,False,True,False,0,0,True,1,1
+doi_dedup___::1941e821c7c2b3471f4f0491d5cbe110,Classical simulation and quantum resource theory of non-Gaussian optics,2025-10-13,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::1af3e07a0301c2d883d13feed55a88ef,Pulse-level noisy quantum circuits with QuTiP,2022-01-24,DE;GB;JP;SE;US,False,True,False,0,0,True,7,2
+doi_dedup___::1b1897ded5fd06f8e5506ab11764b6e1,Author Correction: Error suppression in adiabatic quantum computing with qubit ensembles,2021-05-26,CN;DE;IR;JP;RU;US,True,True,False,0,0,False,0,0
+doi_dedup___::1b5452832f181dd4c2b95316e4b0c1cd,Chiral Light Emission from a Sphere Revealed by Nanoscale Relative-Phase Mapping,2020-08-26,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::1b7aee1190ac2d1ffb03d8478f4ac6ea,Long-range four-body interactions in structured nonlinear photonic waveguides,2024-12-02,CN;JP;PL;US,False,True,False,0,0,False,0,0
+doi_dedup___::1d962035b550e012c7e9fde8cb534cfc,Qubit Casimir effect,2025-03-03,JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::1ddbb957a421478b1431676be8898b64,GeSn quantum wells as a platform for spin-resolved hole transport,2025-10-02,CA;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::1e19bbc7d2440921df13594fe2a8f3ba,<i>In Situ</i>  Thermometry of a Cold Fermi Gas via Dephasing Impurities,2020-08-19,IE;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::1fda06e559aefc5cd0d9b44cce59a856,Dissipationless zero energy epigraphene edge state for nanoelectronics,2021-05-07,FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2027461ee1b6358c183c34da57b992c1,Parallel distributed quantum gates for dual-species quantum emitters,2026-04-30,CN;JP;PL;US,False,True,False,0,0,False,0,0
+doi_dedup___::20574734ed1325c857afd37d688673b6,Dynamical Control of Excitons in Atomically Thin Semiconductors,2024-01-01,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2094f5810ba88c84c0fcec1d889a793c,Semiconductor Circuits for Quantum Computing with Electronic Wave Packets,2024-01-01,DE;FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::20c246b9362bcbb36d994bb5a44ddcc1,Di- and trivalent Bis(stannolediides) of Dysprosium and Terbium: A novel class of High-Performance Single Molecule Magnets,2025-01-01,DE;FR;JP,False,True,True,1,0,False,0,0
+doi_dedup___::2116e985778ff2f5a26aa3722fe6dec2,Generalized hyper-Ramsey-Bordé matter-wave interferometry: Quantum engineering of robust atomic sensors with composite pulses,2022-06-17,FR;GB;JP;RU;SG,False,True,False,0,0,False,0,0
+doi_dedup___::2126b9eae688e1ca6e735901bb454e46,Extended Lipkin model: Proposal for implementation in a quantum platform and machine learning analysis of its phase diagram,2024-10-16,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::216aa22e038654fbd054a78cf335e55f,A Quantum-Like Model of Information Processing in the Brain,2020-01-19,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::21ad59698d21b7205f732246a29852a0,Recent Trends in Signal and Image Processing,2021-01-01,HR;IN;JP,False,True,False,0,0,False,0,0
+doi_dedup___::22f2e42e94c5d9d1ab4ae1741e830fd7,Impact of competing energy scales on the shell-filling sequence in elliptic bilayer graphene quantum dots,2023-09-20,DE;JP,False,True,True,7,0,False,0,0
+doi_dedup___::230592c88276f2ad762ec5c89d01a600,Scalable single-photon sources in atomically thin MoS2,2020-01-01,DE;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::2320a3b9449329538f747fb1384a6494,Reconciling Partial and Local Invertibility,2024-01-01,GB;JP;SE,False,True,False,0,0,True,2,2
+doi_dedup___::2370338dbce54bd987011d91d70c1be8,Quantum information and CP measurement in $H \to τ^+ τ^-$ at future lepton colliders,2022-01-01,BE;FR;IT;JP;PL,True,True,False,0,0,False,0,0
+doi_dedup___::23a5ab3e3382518e7b88a69a07cfe9c0,Beam steering at the nanosecond time scale with an atomically thin reflector,2022-06-14,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::242e363b8ee358014c22dea1b44050dd,Excitation of <sup>87</sup>Rb Rydberg atoms to nS and nD states (n≤68) via an optical nanofiber,2023-09-28,DK;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::24514d2813f0e204274c3ddb8e626365,Stochastic gradient line Bayesian optimization for efficient noise-robust optimization of parameterized quantum circuits,2022-07-27,AT;JP,False,True,False,0,0,True,2,2
+doi_dedup___::246a3b4eaed8935ef55c79ad94b05833,Hot atomic vapors for nonlinear and quantum optics,2023-05-01,FR;JP;US,False,True,True,3,0,True,1,0
+doi_dedup___::251f18845208c0647eddf9fd03948f9b,Three-Receiver Quantum Broadcast Channels: Classical Communication with Quantum Non-unique Decoding,2025-06-30,CN;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2545a1a71d6843f3c832f938c776636e,A New World in the Depths of Microcrypt: Separating OWSGs and Quantum Money from QEFID,2025-01-01,IL;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::258cd5ee00e8e4059dfda8d77d49dc21,Human-machine collaboration: Ordering mechanism of rank-2 spin liquid on breathing pyrochlore lattice,2025-07-14,CN;DE;FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::25a672fdb097ab48202148742fbd2efa,Fast multiplexed superconducting qubit readout with intrinsic Purcell filtering,2024-01-01,FI;JP,False,True,False,0,0,False,0,0
+doi_dedup___::25c6cff9c2d4e9449823d3a55ceffbac,Generation and characterization of two-photon entanglement in the mid infrared,2021-10-06,DE;FI;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::25d9f03fee016214c6c67ddfb558c512,Quantum process tomography of continuous-variable gates using coherent states,2023-01-01,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::264ad120a4b11c26fc61bea33b3e7118,Rapid characterisation of linear-optical networks via PhaseLift,2020-01-01,AT;DE;GB;JP,False,True,True,2,0,True,1,1
+doi_dedup___::2848f3d28393fbda5f370ce287e7b130,Linear Program Witness for Network Nonlocality in Arbitrary Networks,2026-01-01,JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::2885ecce9a9f148a5a97339ffba199f7,Generation and robustness of quantum entanglement in spin graphs,2020-12-18,DE;GB;JP,False,True,True,1,0,False,0,0
+doi_dedup___::28c80b0de921eead9bb4851d425ee9bd,Bright Nitrogen-Vacancy Centers in Diamond Inverted Nanocones,2020-09-02,DE;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::28fd0c8a30ad4824b4b3ce37d65a24be,Integration of the QKD Layer in Fibre Networks Using Multicore Fibres,2023-07-02,IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::298363e8a9a899f4f69ca6560cfe1e16,Proceedings 9th International Conference on Quantum Simulation and Quantum Walks,2020-04-03,FR;GB;JP,True,True,False,0,0,False,0,0
+doi_dedup___::29d2359f2fe221be70a2e2d437dd7edf,Editorial introduction to the jstqe special issue on photonics for quantum information technologies,2020-05-01,IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::2a674d55e8ee39d02c6c1f3f798b6e82,"A Full-Stack View of Probabilistic Computing With p-Bits: Devices, Architectures, and Algorithms",2023-06-01,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2a7a1c73dff681fd0d7268587b4aa05a,Acceleration and deceleration of quantum dynamics based on inter-trajectory travel with fast-forward scaling theory,2022-06-24,JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::2c0e066d7bedc6456db23429f1a9549d,Narrowband and High-Rate Entangled Photon-Pair Generation from a High-Q Silicon Microring Resonator,2026-04-21,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::2c39ff6e1373b0f67006d462a0061c04,Mineral detection of neutrinos and dark matter. A whitepaper,2023-08-01,CA;CH;DE;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2cd7eedf19ea49b3430dd631d92efc58,Impact of the Angular Alignment on the Crystal Field and Intrinsic Doping of Bilayer Graphene/BN Heterostructures,2025-01-30,BE;BR;FR;GB;JP,False,True,True,1,0,False,0,0
+doi_dedup___::2ce9269ff2ce44c4ad95c3997d6539b8,Transfer-Matrix Approach to Determining the Linear Response of All-Fiber Networks of Cavity-QED Systems,2020-06-03,HU;JP;NZ,False,True,False,0,0,False,0,0
+doi_dedup___::2d155551276848f348a8ea20e55ab544,Weak ergodicity breaking with isolated integrable sectors,2025-04-29,HU;JP;SI,False,True,False,0,0,False,0,0
+doi_dedup___::2d922ecac39fdda39460f16d240b0a59,Attosecond temporal structure of non-consecutive harmonic combs revealed by multiple near-infrared photon transitions in two-color photoionisation,2025-05-20,CZ;DE;ES;HU;IT;JP;SE;SI,False,True,True,1,0,False,0,0
+doi_dedup___::2ddfbfb88d61b4f9d138040ae5cfbebd,M-center in 4H-SiC: Isothermal DLTS and first principles modeling studies,2021-09-28,AU;HR;JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::2dfcfb29a1c20d50da7245951acc772e,Epidemic spreading and herd immunity in a driven non-equilibrium system of strongly-interacting atoms,2021-01-01,CN;DK;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::2e1bdc9cfbd97942bf8222ebf49669fe,Half-quantized Hall Plateaus in the Confined Geometry of Graphene,2024-01-01,FI;FR;IL;IN;JP,False,True,False,0,0,False,0,0
+doi_dedup___::2e6868462bcc28c0e980b96c3e6e5cb3,Measurement-induced population switching,2023-04-14,CH;DE;GB;JP,False,True,True,4,0,False,0,0
+doi_dedup___::2ed2355bd780b11dd0af1f80362ea10f,Network medicine-based epistasis detection in complex diseases: ready for quantum computing,2023-11-09,BE;CH;DE;DK;IT;JP;KR;PL;US,True,True,False,0,0,True,1,1
+doi_dedup___::2f077a2f79aeee08b7f1b35e722b1b6e,Roadmap on Spin-Wave Computing,2021-01-01,AT;BE;DE;ES;FR;GB;IN;JP;NL;SA;SE;US,False,True,True,10,0,False,0,0
+doi_dedup___::2f747f3de5bdbec14a68b6c1acf0a5bf,Benchmark for Synthesized Diamond Sensors Based on Isotopically Engineered Nitrogen‐Vacancy Spin Ensembles for Magnetometry Applications,2020-08-28,BE;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::301d7446b56bee18f1c5caea7e872bff,Roadmap on Atomtronics: State of the art and perspective,2021-08-25,AT;AU;CH;DE;ES;FR;GB;GR;IL;IT;JP;SG;UA;US,False,True,True,5,0,False,0,0
+doi_dedup___::301ddc515592e791e1fbca285c31aa35,Quantum Sensing for Biomedical Applications,2021-10-16,DE;GB;JP;PL;US,True,True,False,0,0,False,0,0
+doi_dedup___::30ab5426ec1a0ecbd2659bd71f84d238,Deep recurrent networks predicting the gap evolution in adiabatic quantum computing,2023-06-12,CN;DE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::3152ade1e74ef09241f804eed2be15c5,Hardware-efficient preparation of architecture-specific graph states on near-term quantum computers,2025-01-15,DE;JP,False,True,False,0,0,True,1,0
+doi_dedup___::315d49d5c572c88e9767af485223b0f0,Optical superradiance of a pair of color centers in an integrated silicon-carbide-on-insulator microresonator,2022-01-01,JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::31682cc9646974f4da21afdec9ea2744,Visual explanations of machine learning model estimating charge states in quantum dots,2024-04-15,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::32333e3040d4dc9c4f181820861bf9b7,Topological superconductivity in a van der Waals heterostructure,2020-12-16,FI;JP;PL,False,True,True,2,0,False,0,0
+doi_dedup___::3243e54f927d320f1ceb7d89bdd1d909,A gate-tunable graphene Josephson parametric amplifier,2022-10-24,FR;IT;JP,False,True,True,1,0,False,0,0
+doi_dedup___::32fa08b0f3fdc14c4c0886a370f84f1a,Greatly Enhanced Emission from Spin Defects in Hexagonal Boron Nitride Enabled by a Low-Loss Plasmonic Nanocavity,2022-11-16,DK;JP;RU;US,False,True,True,1,0,False,0,0
+doi_dedup___::3315a758aa1a0f1273bbd33194e76e9a,Quantum Metrology with Strongly Interacting Spin Systems,2020-07-02,DE;GB;JP;US,True,True,True,1,0,False,0,0
+doi_dedup___::33d683d454376d34f6ce471717ddf9bd,Mega-scale experimental analysis of protein folding stability in biology and design,2023-07-19,FR;IL;JP;US,False,True,False,0,0,True,2,2
+doi_dedup___::33e4a814218bd7211e961a493ecb1048,Fast neutral-atom transport and transfer between optical tweezers,2025-08-28,DE;IT;JP,False,True,True,3,0,False,0,0
+doi_dedup___::3437f39027486874420cf086e1bfe076,Whispering-gallery-mode sensors for biological and physical sensing,2021-12-09,GB;JP;SI;US,False,True,True,1,0,False,0,0
+doi_dedup___::343b1056134f416bcc362c3baa818a42,Detecting and mitigating mode-collapse for flow-based sampling of lattice field theories,2023-12-08,CH;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::34643cf1dc03ac3f9823a994925740b7,Simulating quantum circuits by adiabatic computation: Improved spectral gap bounds,2020-04-01,IE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::34e0f905648ac076518067d0d06c6ce6,Comprehensive peak-width analysis in matter-wave diffraction under grazing incidence conditions,2024-07-12,DE;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::34ee368cf2341ddafd82ad57260fb79f,Computable Entanglement Cost under Positive Partial Transpose Operations,2025-03-07,IT;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::355243aa63fd18ea77571ad67d893b28,Photon Blockade with Ground-State Neutral Atoms,2020-08-13,BR;DE;EC;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::357805c9841eccf690bde0d7cfc996b2,Coherent coupling of metamaterial resonators with dipole transitions of boron acceptors in Si,2022-09-20,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::358f20dab3656ea2b8f1aedf3f95cc86,Quantum amplification and simulation of strong and ultrastrong coupling of light and matter,2024-08-01,CN;ES;JP;PL;SE;US,False,True,True,2,0,True,1,0
+doi_dedup___::35e22aa7eb919a38836b06d8adbec802,Spontaneous emission rates and energy shifts of a Rydberg rubidium atom close to an optical nanofiber,2020-01-01,DK;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::36221a97b056ec5b2d108eee30ffd40f,Spontaneous emission and energy shifts of a Rydberg rubidium atom close to an optical nanofiber,2020-05-14,DK;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::3690b3baa5375829f356159d61935396,Outcome determinism in measurement-based quantum computation with qudits,2023-02-24,FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::3690b5a4161b5a1b723962d3d11617c2,Real-time observation of picosecond-timescale optical quantum entanglement towards ultrafast quantum information processing,2025-01-29,FR;JP,True,True,True,4,0,False,0,0
+doi_dedup___::371e800814ece61430918ee018c66b36,Active topological photonics,2020-01-28,FR;JP;US,False,True,True,3,0,False,0,0
+doi_dedup___::37279a123036da00b7b296f88d9a870c,Emission and coherent control of Levitons in graphene,2023-12-15,FR;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::3729ac2a112d86903c459d1957b76d92,Ultra-bright single photon source based on an atomically thin material,2023-01-01,DE;ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::3755785530d93667ee461e24a10de175,<i>M</i>  center in 4 <i>H</i> -SiC is a carbon self-interstitial,2021-05-28,AU;HR;JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::37a33c5134e5ce1cf281cf36e40fc731,High-resolution nanoscale NMR for arbitrary magnetic fields,2023-04-26,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::38a464e9718d3dfe441d61d616b620ec,Towards a Taxonomy for Reversible Computation Approaches,2023-01-01,DE;EG;ES;FR;GB;IT;JP;MZ;PL,False,True,False,0,0,False,0,0
+doi_dedup___::39661f426cd2f86bd735040b6a3d8100,Mineral detection of neutrinos and dark matter. A whitepaper,2023-08-01,CA;CH;DE;ES;IT;JP;SE;US,False,True,True,1,0,False,0,0
+doi_dedup___::3a2374e7c4aca268fbc7883c88849a7c,Precision tomography of a three-qubit donor quantum processor in silicon,2022-01-19,AU;EG;FR;JP;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::3a339860a69d06c26106e1adf7d67784,"Quantum complexity in gravity, quantum field theory, and quantum information science",2026-02-01,BE;DE;GB;IL;JP;PL;SE;US,True,True,False,0,0,False,0,0
+doi_dedup___::3af67612282a4e452bfaff4fc8c5e1c7,D4.4 Completion of first software suite (Open source software),2022-09-26,AU;BR;CA;CH;DE;ES;FI;FR;GB;IE;IN;IT;JP;KR;NL;PL;PT;SE;SG;US,False,True,False,0,0,True,1,1
+doi_dedup___::3b19beb42954a0069bb84e66d892d0e3,Spin-Optical Dynamics and Quantum Efficiency of a Single V1 Center in Silicon Carbide,2022-05-03,DE;JP;SE;US,False,True,True,1,0,False,0,0
+doi_dedup___::3b28447aee4262d2cb3e6cda185d0cf4,Far from Perfect: Quantum Error Correction with (Hyperinvariant) Evenbly Codes,2025-08-08,AU;DE;JP;NL,False,True,True,1,0,False,0,0
+doi_dedup___::3b95ce81c8e81ba325fc0e9abd8975c0,Magnetoelectric Cavity Magnonics in Skyrmion Crystals,2022-11-21,CH;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::3bfc7465ad8ea46b10d52221783de7db,Designing Time and Frequency Entanglement for Generation of High-Dimensional Photon Cluster States,2020-07-01,AU;CA;CN;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::3c2cbbf268d721a69aefcfa6d69d2dd8,Spin–layer locking of interlayer excitons trapped in moiré potentials,2020-05-25,ES;GB;JP;PT,False,True,True,0,1,False,0,0
+doi_dedup___::3c8cd11ab2904022732412049d083209,Thermal spin-crossover and temperature-dependent zero-field splitting in magnetic nanographene chains,2024-01-01,AE;CN;DE;ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::3d01d0bd732e415743f6d53216d4f30c,High-yield fabrication of bubble-free magic-angle twisted bilayer graphene devices with high twist-angle homogeneity,2025-03-01,DE;ES;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::3d49387b85d55047dfd80c3b834e42fb,Quantum nonlinear spectroscopy of single nuclear spins,2022-09-09,CN;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::3d6a6cc39427d1bd450edcbf461ec0fb,Advanced Laser Technology for Quantum Communications (Tutorial Review),2021-08-22,GB;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::3f391e9d891b93397d746a274dc1c9ed,Fault-Tolerant Multiqubit Geometric Entangling Gates Using Photonic Cat-State Qubits,2022-08-29,IT;JP;PL;US,False,True,False,0,0,False,0,0
+doi_dedup___::3fa0809d1b9c3b0a15b5b0d44b536326,Diphenoquinone as a Prototype of Singlet Fission Chromophores,2025-10-28,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::3fba02ac500731d20973afdffb0e0a5f,Pure Dephasing of Light-Matter Systems in the Ultrastrong and Deep-Strong Coupling Regimes,2023-03-21,IT;JP;PL,False,True,True,1,1,False,0,0
+doi_dedup___::3fec23d9616895039b104f479cee5261,Heralded Optical Entanglement Generation via the Graph Picture of Linear Quantum Networks,2024-12-18,JP;KR;PL,True,True,True,2,0,False,0,0
+doi_dedup___::400a2e3f79327d664ed34a4350e48192,Unveiling Linker-Born Electron Spin Centers in UiO-66-NH                     <sub>2</sub>                     MOF,2025-12-03,CH;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::414a312c4bc08588501d058c56bb9c42,Tight Relations and Equivalences Between Smooth Relative Entropies,2025-06-22,GB;IT;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::4189f8ff064b03e28060fb434b2af18c,Graph-theory treatment of one-dimensional strongly repulsive fermions,2020-04-20,FR;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::41cc1f46cf097629a4ae664de60a097e,Azimuthal angle correlations of muons produced via heavy-flavor decays in 5.02 TeV Pb+Pb and $pp$ collisions with the ATLAS detector,2023-01-01,AE;AR;AT;AU;AZ;BR;CA;CH;CL;CN;CO;CZ;DE;ES;FR;GB;GE;GR;IL;IT;JP;MA;NL;NO;PH;PL;PT;RO;RS;SE;SI;SK;TR;TW;US;ZA,False,True,True,2,0,False,0,0
+doi_dedup___::41d9e528654fe59693fd5ff6edf82b1f,Ultrafast Many-Body Dynamics in an Ultracold Rydberg-Excited Atomic Mott Insulator,2022-01-01,CN;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::420b4754b966dfb75fd9825d21364ee6,"Vibronic States and Their Effect on the Temperature and Strain Dependence of Silicon-Vacancy Qubits in<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline"" overflow=""scroll""><mml:mn>4</mml:mn><mml:mi>H</mml:mi></mml:math>-<mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline"" overflow=""scroll""><mml:mrow><mml:mi>Si</mml:mi><mml:mi mathvariant=""normal"">C</mml:mi></mml:mrow></mml:math>",2020-05-07,DE;HU;JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::421051024d63906475dc6add44fd7db0,Grover Search as a Naturally Occurring Phenomenon,2020-05-04,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::422a16a2b8670211a1b3713c14614f17,Spin Readout of a CMOS Quantum Dot by Gate Reflectometry and Spin-Dependent Tunneling,2021-03-31,FR;GB;JP,False,True,True,1,0,False,0,0
+doi_dedup___::426e3abe9238befd7dc492e66c914329,Dispersive qubit readout with machine learning,2021-01-01,CH;FI;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::43284f672e389d14db3276be5b1d30cd,The silicon vacancy centers in SiC: determination of intrinsic spin dynamics for integrated quantum photonics,2024-07-23,DE;JP;LU;SE,False,True,True,1,0,False,0,0
+doi_dedup___::433abf38ecd01a4b6405a1335242fce7,Exponentially tighter bounds on limitations of quantum error mitigation,2024-07-25,DE;DK;EG;FR;GB;JP;RU;US,False,True,False,0,0,False,0,0
+doi_dedup___::43454aa92c8df952ada852f6654bb3c9,Single electron quantum dot in two-dimensional transition metal dichalcogenides,2025-04-10,CN;JP;PL;SG;US,False,True,False,0,0,False,0,0
+doi_dedup___::43aa35e64d9410c26f6ae78c9fa7752e,Parameter estimation from quantum-jump data using neural networks,2024-04-26,ES;JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::4406fd6d5cedcf7c5d0ed2c66c022297,Unveiling and veiling an entangled light-matter quantum state from the vacuum,2023-10-27,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::44a7b91d1afaa684e28ba1a4c2eaf957,Engineering the thin film characteristics for optimal performance of superconducting kinetic inductance amplifiers using a rigorous modelling technique,2022-07-19,FR;GB;IT;JP;US,False,True,True,2,0,False,0,0
+doi_dedup___::44bc3f7adfb07abe26c642c99b2305f7,Electrically tunable quantum confinement of neutral excitons,2022-05-25,BE;CH;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::45f63982a7dc5a53151cd5a3cded7e9a,Variational benchmarks for quantum many-body problems,2024-10-18,CA;CH;CN;DE;FR;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::466dd2c189376e6aa6219ccbfed1f429,Cryogenic Integrated Photonics: Where Optical Communication Meets Cryogenic Computing,2023-09-24,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::46896ea22839b0fb3ca9115401cd9dcf,Trouble at the CSIDH: Protecting CSIDH with Dummy-Operations Against Fault Injection Attacks,2020-09-01,DE;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::46b81206e51287daa5aad3dc3fb1c5a6,A Josephson junction with                     <i>h</i>                     -BN tunnel barrier: observation of low critical current noise,2021-10-01,DK;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::4742bd39c3d99027aa2a54d367eb4bdd,Unveiling quantum steering by quantum-classical uncertainty complementarity,2025-05-08,CZ;JP;PL;TW;US,False,True,True,2,0,False,0,0
+doi_dedup___::47e84ec400955aa4bbef04e981a5381f,Quantum dynamics in Krylov space: Methods and applications,2025-06-01,ES;GB;JP;LU;US,False,True,False,0,0,False,0,0
+doi_dedup___::4983a56a2b14420874ccdba24a09c955,Electronic interferometry with ultrashort plasmonic pulses,2025-05-19,DE;FR;GB;JP,False,True,True,1,0,False,0,0
+doi_dedup___::49abdc15691816b470c1a28ade1e73ef,Parameter estimation by learning quantum correlations in continuous photon-counting data using neural networks,2023-01-01,ES;JP;SE;US,False,True,True,1,0,False,0,0
+doi_dedup___::4aa1a5bd481631cfa22c3d66013c73a5,"Quantum-Accelerated Wireless Communications: Concepts, Connections, and Implications",2026-03-01,DE;DK;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4b194403aefc404aa805de140a8e5107,Optimizing RF Readout for Silicon Spin Qubits in an Access Array,2025-01-01,CH;FR;GB;JP;MO,False,True,False,0,0,False,0,0
+doi_dedup___::4b1cc031f7ca70d5dd1a16048be1f134,Observation of a Superradiant Phase Transition with Emergent Cat States,2023-09-11,CN;JP;PL;US,False,True,False,0,0,False,0,0
+doi_dedup___::4b2dee9d86129299d63a76ddda9dfe3f,Quantum teleportation of physical qubits into logical code spaces,2021-09-03,AT;CN;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4bb849e4cc38f97606af0b2d8cbdc51f,Application of α-order information metrics for secure communication in quantum physical layer design,2025-04-09,CN;ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4c7472672e417b684418b1de6dbf2372,Classical Simulation of Circuits with Realistic Odd-Dimensional Gottesman-Kitaev-Preskill States,2025-07-01,ES;GB;IT;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::4c8eecd385db9e91d10a5871cce7acf2,Electrical tuning of optically active interlayer excitons in bilayer MoS2,2021-06-03,DE;DK;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4cf9fe3d9f905a05637962e878970836,Quantum-assisted distortion-free audio signal sensing,2021-11-19,DE;IN;JP;RU,False,True,True,1,0,False,0,0
+doi_dedup___::4d7097b8748e6dbb6faf1bfdaa9ea26d,Lattice study of SU(2) gauge theory coupled to four adjoint Higgs fields,2024-11-19,DE;ES;JP;TW,False,True,False,0,0,False,0,0
+doi_dedup___::4da20db0ffb0fd27c3ea1716d8cb8d49,A photonic integrated quantum secure communication system,2021-10-21,GB;IT;JP,False,True,True,2,0,False,0,0
+doi_dedup___::4e16d0fcc2948148552bfd4a305f112e,Computation-Aided Classical-Quantum Multiple Access to Boost Network Communication Speeds,2021-11-10,CN;ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4e2cb3d750f1c974e2ee59222813ca68,"Quadratization of gray coded representations, long path problems and needle functions",2021-06-26,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::4e3593e0d6f19dbcce5e348250a68bc2,Focus point: classical and quantum information geometry,2021-05-01,DE;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::4efaaf08647781f9da62075810a7a8f3,Characterization of a surface plasmon antenna fabricated on a gate-defined lateral quantum dot,2020-09-29,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::4f98cffae1a681a16c69c15fdc42af3f,Phonon-limited valley lifetimes in single-particle bilayer graphene quantum dots,2025-07-10,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::507577cb0303597a4ee07b2470fabb3d,Picosecond-Scale Ultrafast Many-Body Dynamics in an Ultracold Rydberg-Excited Atomic Mott Insulator,2023-09-22,CN;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5084860e7d089143d563c3258ad3cf57,Roadmap for Quantum Nanophotonics with Free Electrons,2025-07-15,BE;CH;CN;CZ;DE;ES;FR;IL;IT;JP;NL;US,False,True,True,12,0,False,0,0
+doi_dedup___::50f2396183abb22caec9047b8e5b8592,Diamond optomechanical cavity with a color center for coherent microwave-to-optical quantum interfaces,2023-10-13,FR;JP,False,True,True,4,0,False,0,0
+doi_dedup___::51030726d64f849ff5920c830386289d,On a gap in the proof of the generalised quantum Stein&amp;apos;s lemma and its consequences for the reversibility of quantum resources,2023-09-07,CA;DE;GB;IT;JP;NL;SG;US,False,True,False,0,0,False,0,0
+doi_dedup___::512ce7d1a50e78c0cdabd1938b8607a4,"Enhanced magnetization by defect-assisted exciton recombination in atomically thin  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:msub><mml:mi>CrCl</mml:mi><mml:mn>3</mml:mn></mml:msub></mml:math>",2024-10-01,CZ;IL;JP;KR;US,False,True,True,1,0,False,0,0
+doi_dedup___::5141502d160778fb8f89ad9bd2246e1d,Experimental demonstration of topological bounds in quantum metrology,2024-02-26,BE;CN;DE;FR;GB;JP,True,True,True,2,0,False,0,0
+doi_dedup___::51d47b87b7cacb1282bd0d3906aa34e8,Entanglement Swapping in Orbit: a Satellite Quantum Link Case Study,2024-09-15,FR;JP,False,True,False,0,0,True,1,1
+doi_dedup___::538215691456eb10c04ebb5cdb71b1a3,Comment on “Recovering noise-free quantum observables”,2024-10-21,ES;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5387c770b0012a57896ecef97c48cb2f,Broadband generation and tomography of non-Gaussian states for ultra-fast optical quantum processors,2024-11-01,FR;JP;US,False,True,True,4,0,False,0,0
+doi_dedup___::53a9269b4b2cda802c62592daa505b5d,Assessing non-Gaussian quantum state conversion with the stellar rank,2026-05-05,FR;GB;IT;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::543747c141e40a3956426b760db4bac1,Simulating ultrastrong-coupling processes breaking parity conservation in Jaynes-Cummings systems,2020-09-11,GB;JP;PL;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::54582ccf9196c229b8cbb83b87182f25,Creating and concentrating quantum resource states in noisy environments using a quantum neural network,2021-04-01,FR;JP;PL;SG,False,True,True,2,0,False,0,0
+doi_dedup___::54867f4cd826a75243a20471c305b5e0,Experimental simulation of postselected closed timelike curves for decoding scrambled quantum information,2026-04-29,JP;PL;TW;US,True,True,False,0,0,False,0,0
+doi_dedup___::549fed0c3d479c6b6c1a797c52c8eb8c,Reference-frame-independent quantum metrology,2026-03-26,DE;ES;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::558c12b3dceb354c5ef6703d3771692a,Generating series and matrix models for meandric systems with one shallow side,2024-01-31,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5637b282585cd568a4a126ca5a005b14,Resonant stroboscopic Rydberg dressing: Electron-motion coupling and multibody interactions,2025-04-29,DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::566b9ec0f6d949981eef06b2b88adc49,Asymptotic reversibility of thermal operations for interacting quantum spin systems via generalized quantum Stein’s lemma,2021-11-19,CH;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::566dd398180a464bd885b4d742e004f0,Non-Majorana origin of anomalous current-phase relation and Josephson diode effect in Bi             <sub>2</sub>             Se             <sub>3</sub>             /NbSe             <sub>2</sub>             Josephson junctions,2025-06-13,JP;RU;SE;SG,False,True,True,1,0,False,0,0
+doi_dedup___::57657b819128c51b3eb3e6942349d0fc,Thresholds for the distributed surface code in the presence of memory decoherence,2024-07-01,JP;NL;US,False,True,True,3,1,True,1,1
+doi_dedup___::583f0c4df4104379442ab639a9050e00,Epidemic spreading and herd immunity in a driven non-equilibrium system of strongly-interacting atoms,2024-11-18,CN;DK;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::58876a6c00f744527806c35a73768c8b,Quantum Network Utilizing Mutiple Channels Based on Cavity-QED and Continuous-Variable Codes,2024-01-01,DE;JP,True,True,False,0,0,False,0,0
+doi_dedup___::5888551952dfe5382ff0a4fac99ae022,Magnon-mediated qubit coupling determined via dissipation measurements,2024-01-02,JP;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::5919b71058b971b6c209e51b9865793e,Equivalence of Approaches to Relational Quantum Dynamics in Relativistic Settings,2021-06-18,AT;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::592b16f20be767dbc001b4539efbf101,Electromagnetically induced transparency in inhomogeneously broadened divacancy defect ensembles in SiC,2022-03-03,JP;NL;SE,False,True,False,0,0,False,0,0
+doi_dedup___::596b67485143f88e1ab44fb99aca87f7,Concentration estimates for random subspaces of a tensor product and application to quantum information theory,2022-10-01,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::59a756e19b25d1b537fbd52addfff27d,Quantum-centric supercomputing for materials science: A perspective on challenges and future directions,2024-11-01,BR;CA;CH;DE;ES;IE;IT;JP;KR;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::59f953229423c1e64a72204e924b67e4,Electron qubits surfing on acoustic waves: review of recent progress,2024-10-16,AU;FR;JP,False,True,True,5,0,False,0,0
+doi_dedup___::5a889e16b2cb44b8bfca3d53fb6c7099,Hamiltonian phase error in resonantly driven CNOT gate above the fault-tolerant threshold,2024-01-11,AU;JP;NL;TW,False,True,True,1,1,False,0,0
+doi_dedup___::5ab4daee1cbbc101dcb0bfe4ceb07e37,Novel Magnetic-Sensing Modalities with Nitrogen-Vacancy Centers in Diamond,2021-08-18,CN;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::5adda6e45270da98216e37a2164f2bb5,Rapid single-shot parity spin readout in a silicon double quantum dot with fidelity exceeding 99%,2024-02-13,AU;JP;NL;US,False,True,True,1,0,False,0,0
+doi_dedup___::5b2f2ab1bf7df1491f1d393680ecd740,Deterministic Loading of Microwaves onto an Artificial Atom Using a Time-Reversed Waveform,2022-10-06,CN;DE;JP;SE;TW;US,False,True,False,0,0,False,0,0
+doi_dedup___::5b89675c12b07fc06ea1312558330d65,Noise-robust classification of single-shot electron spin readouts using a deep neural network,2021-09-09,DE;JP,False,True,True,1,0,True,1,1
+doi_dedup___::5ba1070673e213fa22f2d2f6b7a6d470,Landauer Versus Nernst: What is the True Cost of Cooling a Quantum System?,2023-03-27,AT;BR;CH;DE;DK;FR;IE;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::5cc09762987e0f69cd800906c29cf0ac,Flow conditions for continuous variable measurement-based quantum computing,2023-10-19,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::5d15ac771e718ddcbded7060376ab654,Limitations in Quantum Computing from Resource Constraints,2021-11-15,FR;JP;SG,True,True,False,0,0,False,0,0
+doi_dedup___::5e85f9959c2b7a81a394b7b99cac50a1,Light-Harvesting Spin Hyperpolarization of Organic Radicals in a Metal–Organic Framework,2025-01-23,FI;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5ef73899fe0cbd213e633797f7da0d7d,Plasmonic‐Strain Engineering of Quantum Emitters in Hexagonal Boron Nitride,2025-06-05,AT;DE;IN;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5f20dffa4a5f0d42be2bb25a04edd2c1,Spin-rotation coupling observed in neutron interferometry,2020-02-14,AT;AU;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5f4774b3f98aa1bc5ab3d98c63649daf,Certification of the efficient random number generation technique based on single‐photon detector arrays and time‐to‐digital converters,2021-08-27,CH;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::5f7ac3af75e08e28b98211ea9f9c0b61,Magnetic domains and domain wall pinning in atomically thin CrBr3 revealed by nanoscale imaging,2021-03-31,DE;JP;US,False,True,True,2,0,False,0,0
+doi_dedup___::5f850a7317234db58646415080d0e363,Protecting the Quantum Interference of Cat States by Phase-Space Compression,2023-04-07,CZ;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::5f96a84940404bd9580b348ac12d4a14,Photoluminescence at the ground-state level anticrossing of the nitrogen-vacancy center in diamond: A comprehensive study,2021-01-20,DE;HU;JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::5fa68132c82c2f7a33105e53cb5d4b5a,Thermal transport mapping in twisted double bilayer graphene,2025-11-10,BE;FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::60fb49fcbe55a154d0d83c4d6f89f93d,"High-Threshold, Low-Overhead and Single-Shot Decodable Fault-Tolerant Quantum Memory",2026-04-17,AU;DE;GB;JP;SE,False,True,True,1,0,False,0,0
+doi_dedup___::61501bdac861a86bcbc9d32e286f2a2c,Nonlinear chiral quantum optics with giant-emitter pairs,2024-01-01,CN;JP;SE;US,False,True,True,1,0,False,0,0
+doi_dedup___::61a27313d72c09527d0e828b81afe4aa,Mid-infrared Quantum Interference and Polarization Entanglement,2020-01-01,DE;FI;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::61b71c4e88837d0409e9d79fe76d1a0c,Entanglement Cost for Infinite-Dimensional Physical Systems,2025-10-03,CA;IT;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::62d263ca6b21b3cd74e22ff802f2a70a,The tangled state of quantum hypothesis testing,2023-12-22,CA;DE;GB;JP;NL;SG;US,False,True,False,0,0,False,0,0
+doi_dedup___::630be038ef9b4cf45807bcabf8b73ca1,One-shot quantum error correction of classical and quantum information,2021-07-08,AT;JP,True,True,False,0,0,True,1,1
+doi_dedup___::63b54e737f1b754c1c56603df29b253f,Stationary Bootstrap: A Refined Error Estimation for Equilibrium Time Series,2021-01-01,CN;FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::63de05b74d8a03892394fa95b0ce88b3,Resolved-sideband cooling of a single $^9$Be$^+$ ion in a Penning trap,2023-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::64e9f2dc5ef7d696ac0a4b38fdcf7b04,Fault-Tolerant Quantum Computation with Constant Overhead for General Noise,2025-11-13,DE;EG;FR;GB;JP;RU,False,True,False,0,0,False,0,0
+doi_dedup___::64fefeeada187208b2d3d129809b8abf,Eigenstate control of plasmon wavepackets with electron-channel blockade,2025-11-12,DE;FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::653087bc56af0e9c08a6fe2083c52f22,Efficient Backcasting Search for Optical Quantum State Synthesis,2022-06-17,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::65fc0c44a27b77e232b322220a6fb845,Graphene-based Josephson junction microwave bolometer,2020-09-30,ES;JP;KR;US,False,True,False,0,0,False,0,0
+doi_dedup___::664329fd4f58598ea1b410b47dc36e1c,Realization of a one-dimensional topological insulator in ultrathin germanene nanoribbons,2025-02-28,CN;JP;NL,False,True,True,1,0,False,0,0
+doi_dedup___::674971fa2e730c1bc34ca44f72ca8840,Broadband microwave detection using electron spins in a hybrid diamond-magnet sensor chip,2023-01-30,CN;JP;NL,False,True,True,3,0,False,0,0
+doi_dedup___::67643c853c736a4d6aa11a08b3fda026,NV centres by vacancies trapping in irradiated diamond: experiments and modelling,2024-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::67aaa23e31ae1cb1a6d601680201693c,Floquet Flux Attachment in Cold Atomic Systems,2022-06-13,AT;CA;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::67d41208c9e1d2e208baf0dd49d262a1,A Robust Quasi-Quantum Walks-based Steganography Protocol for Secure Transmission of Images on Cloud-based E-healthcare Platforms,2020-05-31,CN;EG;FR;JP;SA,False,True,False,0,0,False,0,0
+doi_dedup___::67ed9614dc31d383a2835e89c44d29d9,Twist-Programmable Superconductivity in Spin-Orbit Coupled Bilayer Graphene,2024-01-01,DE;IL;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::67f23c014e815e1bffbde6f8c62bc173,Top-down integration of an hBN quantum emitter in a monolithic photonic waveguide,2023-06-26,FR;JP,False,True,True,1,0,False,0,0
+doi_dedup___::685489a527da7cda4ee6915eb26cf683,Linear programs for entanglement and key distribution in the quantum internet,2020-03-20,ES;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::68cff0b907f5560ab2e1d3917f48de17,LIMDD: A Decision Diagram for Simulation of Quantum Computing Including Stabilizer States,2023-09-11,AU;JP;NL,True,True,False,0,0,True,1,1
+doi_dedup___::68dc8a1307e07d82677f744341183683,Roadmap on wavefront shaping and deep imaging in complex media,2022-08-12,AT;CH;CZ;DE;FR;GB;IL;JP;KR;NL;TR;US,False,True,True,32,0,False,0,0
+doi_dedup___::68e91adb1f6dba7f44ae8ae4294fc6ae,Quantum computing topological invariants of two-dimensional quantum matter,2024-12-17,DE;FI;JP,True,True,True,1,0,False,0,0
+doi_dedup___::6a47d136c755062b848423cd4116f5d3,Topological transformation of synthetic ferromagnetic skyrmions: thermal assisted switching of helicity by spin-orbit torque,2024-12-02,CN;JP;SA;SE,False,True,False,0,0,False,0,0
+doi_dedup___::6a525698a1cfddbd8b00af6d0ae1d7fa,Quantized conductance in hybrid split-gate arrays of superconducting quantum point contacts with semiconducting two-dimensional electron systems,2024-01-25,ES;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::6a5655dfdcb477b30a6e7bc48909a087,Simplifying the design of multilevel thermal machines using virtual qubits,2021-10-27,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::6acf66b71e7b1791dd710f873cd88e4b,Enhancing a Many-Body Dipolar Rydberg Tweezer Array with Arbitrary Local Controls,2024-06-24,ES;FR;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::6ae8f652885c0cbde33567b649612e10,Roadmap for Schottky barrier transistors,2024-12-01,AT;DE;ES;FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::6aef4468cef633c5a50ae2d4375e7ee0,Coherent phase transfer for real-world twin-field quantum key distribution,2022-01-10,GB;IT;JP,False,True,True,3,0,False,0,0
+doi_dedup___::6b47ed1675be737ff746bd2f0ac3a958,Distributed Merlin-Arthur Synthesis of Quantum States and Its Applications,2022-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::6dfa417367417071013afaf0f3dffa1e,Probing the Flat-Band Limit of the Superconducting Proximity Effect in Twisted Bilayer Graphene Josephson Junctions,2025-11-20,CN;DE;FI;JP,False,True,True,2,0,False,0,0
+doi_dedup___::6e5788c3ee8b7276b1cc817ced281caa,Practical Quantum Key Distribution That is Secure Against Side Channels,2021-03-24,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::6f036227ca8c433e62e6bf6d413c2e5a,Creating Quantum Emitters in Hexagonal Boron Nitride Deterministically on Chip-Compatible Substrates,2021-10-04,DK;JP;US,False,True,True,2,0,False,0,0
+doi_dedup___::7038655c65b6b51f2a91612f8a86aa8a,Gravitational wave matched filtering by quantum Monte Carlo integration and quantum amplitude amplification,2022-08-26,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::703a5f88511926ca6d1d0689f52df367,Software engineering for 'quantum advantage',2020-06-27,ES;JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::7051e1a9c3b2f2bd45d758ea96dbbd00,A decompositional framework for process theories in spacetime,2026-01-07,JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::714812b4b47f2b6262b0358f179f3be4,Spectroscopic investigations of negatively charged tin-vacancy centres in diamond,2020-01-01,DE;HU;JP,False,True,True,1,1,False,0,0
+doi_dedup___::717f00bf3657c3b902d98ba46793a436,Logical states for fault-tolerant quantum computation with propagating light,2024-01-19,CZ;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::71e4fe3666014dbec2b1c18b00bf5549,Dissipation-enhanced collapse singularity of a nonlocal fluid of light in a hot atomic vapor,2021-07-15,FR;JP,False,True,True,1,0,False,0,0
+doi_dedup___::72091246b52dd2886bb557ecc914c0fc,Quantum guidelines for solid-state spin defects,2021-04-26,HU;JP;KR;US,False,True,False,0,0,False,0,0
+doi_dedup___::728c7965a25ae0e391f05f8facb7e00a,Ultrafast Creation of Overlapping Rydberg Electrons in an Atomic BEC and Mott-Insulator Lattice,2020-06-22,CN;DE;FR;GB;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::72a50ee0e69d62daeaf7b944edea4496,Neutron optical test of completeness of quantum root-mean-square errors,2021-06-28,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::733ee09bb532d71c81f311b0162c41a2,"Kyber, Saber, and SK‐MLWR Lattice‐Based Key Encapsulation Mechanisms Model Checking with Maude",2023-01-01,EE;ES;FR;JP;TR,False,True,False,0,0,False,0,0
+doi_dedup___::73d62c7c8163c61d55c363d12a4eb482,Dopant-assisted stabilization of negatively charged single nitrogen-vacancy centers in phosphorus-doped diamond at low temperatures,2023-05-30,AU;DE;JP;RU,False,True,True,1,1,False,0,0
+doi_dedup___::74aa3dec8b9a6a0dfa44fa3441012576,"A Trinuclear Co(II) Complex Based on the Tris-dioxolene Triphenylene Non Innocent Bridge: Complementary Redox, Magnetic Behavior and Theoretical Calculations",2024-11-26,FR;JP,False,True,True,0,1,False,0,0
+doi_dedup___::75c77105eb2424553430ab44309b389a,Proximal nitrogen reduces the fluorescence quantum yield of nitrogen-vacancy centres in diamond,2022-03-01,AU;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::75e30cc05d1f9f8ab8d3db01f5f838eb,Position‐Controlled Functionalization of Vacancies in Silicon by Single‐Ion Implanted Germanium Atoms,2021-02-19,GB;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::761f40f49f9a2102bfbcae28211decff,Coherence of a charge stabilised tin-vacancy spin in diamond,2022-04-28,AU;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::76c63458b8c7d4fb01146d62d51b2fdd,A correspondence between quantum error correcting codes and quantum reference frames,2024-01-01,CA;FR;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::76d7ae0e3169605a3e84bd7d4edf833d,Quantum Fisher information measurement and verification of the quantum Cramér–Rao bound in a solid-state qubit,2022-05-12,AU;BE;CN;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::787930d5594cbea3f13a70d8692a2d54,The transport properties of InAs nanowires: an introduction to MnAs/InAs heterojunction nanowires for spintronics,2020-06-08,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::78859f120ad3c4990df9a5fc0dbd6ffa,Workflows Community Summit 2022: A Roadmap Revolution,2023-01-01,AT;AU;BR;CA;CH;DE;EG;ES;GB;GE;IT;JP;NL;NO;PL;US,False,True,True,1,0,True,1,1
+doi_dedup___::78cfe51a46c4d22f7a0fcbe70001d7b3,Time-Efficient Quantum Entropy Estimator via Samplizer,2025-12-01,AU;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::78d991c38f769821d88e3ffdb4f4e8c9,Non-identical moiré twins in bilayer graphene,2023-12-11,BE;FR;JP,False,True,True,2,0,False,0,0
+doi_dedup___::7917cdae098153ae20e12681e5c4a6f8,Spatial and spectral mode-selection effects in topological lasers with frequency-dependent gain,2021-05-01,IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::7919cdd643514b32e357d35003350b70,A Quantum Informational Approach to the Problem of Time,2022-02-01,AU;CA;EE;IR;JP;RU;TR,True,True,False,0,0,False,0,0
+doi_dedup___::797e1dbe694184f7e62a3359c6450557,Bounds to electron spin qubit variability for scalable CMOS architectures,2023-07-14,AU;CA;CH;DE;JP,False,True,True,1,1,False,0,0
+doi_dedup___::79cf429e3963e533dc78c086626e3467,Relative Entropy of Coherence Quantifies Performance in Bayesian Metrology,2024-07-03,AU;FR;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::79dab29ee369eb15a3a840da551a6cdc,Multiparameter quantum metrology and mode entanglement with spatially split nonclassical spin ensembles,2023-07-01,CH;CN;DE;ES;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::79f309b5e6005fef5102a999c4462fb9,Hypersonic acoustic wave control via stealthy hyperuniform phononic nanostructures,2025-08-08,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::7a05d83e151484e02a0232d184157048,Recent progress in hybrid diamond photonics for quantum information processing and sensing,2025-05-08,DE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::7b025dda440596120738a10d18738d33,Learning to generate high-dimensional distributions with low-dimensional quantum Boltzmann machines,2024-01-01,CY;DE;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::7b20b57f00fbba6a8443bc141533b89d,Quantum simulation of quantum relativistic diffusion via quantum walks,2020-04-30,ES;FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::7bbe879d0236c3c619ec8b7e43adaffb,Valley-Polarized Topological Phases with In-Plane Magnetization,2024-10-08,CN;DE;IN;IR;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::7c2b823eac4c1fb1b301bb5009981bb1,Spectroscopy of N = 50 isotones with the valence-space density matrix renormalization group,2024-08-01,DE;HU;JP,False,True,False,0,0,True,1,1
+doi_dedup___::7c4c1a9d527c510e32b61216ebf7463e,"Quantum Asymptotic Spectra of Graphs and Non-Commutative Graphs, and Quantum Shannon Capacities",2021-01-01,JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::7c6e5006c74639117e0aabc41da4a2df,Nanofabricated and integrated colour centres in silicon carbide with high-coherence spin-optical properties,2021-01-01,DE;JP;NL;SE;US,False,True,True,2,0,False,0,0
+doi_dedup___::7d516c7cd41bf0b4e9146af1109ad18e,Cryptographic approach to quantum metrology,2022-01-04,FR;GB;JP,True,True,False,0,0,False,0,0
+doi_dedup___::7dbfab9669f92cfd6dd2a6311579b2c3,Large Dispersive Interaction between a CMOS Double Quantum Dot and Microwave Photons,2021-05-05,FR;GB;JP,False,True,True,2,0,False,0,0
+doi_dedup___::7dc82bb6f90c87ba403630044bc6bc72,Fault-tolerant quantum speedup from constant depth quantum circuits,2020-09-18,FR;GB;JP;LB,False,True,False,0,0,False,0,0
+doi_dedup___::7e29c3c089e286dbe6f526270bb5b430,A Laplacian-based quantum graph neural networks for quantum semi-supervised learning,2025-04-03,BE;JP;PT;US,False,True,True,4,0,False,0,0
+doi_dedup___::7ea08b13d06a8443bb23f719b02ba107,Time-bin entangled photons for scalable quantum information processing,2024-01-01,AU;CA;CN;DE;FR;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::7fca84badf37220efba686a0c814ac07,Quantum Simulation for High-Energy Physics,2023-05-03,CA;CN;ES;GB;IT;JP;US,True,True,True,6,0,True,1,0
+doi_dedup___::800e55c7729337972e7d28e6d14b431c,General Inverse Problem Solution for Two-Level Systems and Its Application to Charge Transfer,2024-09-23,IT;JP;ZA,False,True,False,0,0,False,0,0
+doi_dedup___::801ee19457a4ba29123ab2136f3bc1d6,Detecting single gravitons with quantum sensing,2024-08-22,JP;SE;US,True,True,False,0,0,False,0,0
+doi_dedup___::8038194f4bebf2dc0d90443020c424f2,"Quantum computers, quantum computing, and quantum thermodynamics",2024-08-12,FR;JP,True,True,True,1,0,False,0,0
+doi_dedup___::810e0ac3f6459c733c427c8179b00b20,Strong error bounds for Trotter and strang-splittings and their implications for quantum chemistry,2024-11-18,AU;DE;IT;JP,False,True,True,1,0,True,1,1
+doi_dedup___::816265547ee0d12ae72ce84570afdda4,Enhancing the modal purity of orbital angular momentum photons,2020-07-01,IT;JP;SA;SG;US;ZA,False,True,False,0,0,False,0,0
+doi_dedup___::816da83ef79112b869531868283021d6,Probing spin-motion coupling of two Rydberg atoms by a Stern-Gerlach-like experiment,2025-11-17,ES;FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::819429e78986ca54e143b4b3f1c21d7f,User-specified random sampling of quantum channels and its applications,2020-02-07,FR;JP;SG;US,False,True,False,0,0,False,0,0
+doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db,Connecting quantum cities: simulation of a satellite-based quantum network,2024-07-01,ES;FR;JP;LU;NL,True,True,True,1,0,True,2,2
+doi_dedup___::8354e939745cb312944055f58f36aa39,Roadmap on topological photonics,2022-06-27,CA;CH;CN;DE;FR;GB;IT;JP;SG;US,False,True,True,1,0,False,0,0
+doi_dedup___::835f93559e69fe2774b3b9d6c651e6bc,A universal framework for the quantum simulation of Yang–Mills theory,2026-02-19,CA;DE;GB;JP;US,True,True,True,2,0,False,0,0
+doi_dedup___::838addc42bc14e31682db38496e181fd,The potential and global outlook of integrated photonics for quantum technologies,2021-12-23,AT;AU;CN;DE;IE;IT;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::838d44ae319a990c35a7a5b7af17795d,Spin-controlled generation of indistinguishable and distinguishable photons from silicon vacancy centres in silicon carbide,2020-05-20,DE;HU;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::83bbaf9e45c36459a553ffdbf3283d31,Coexistence of Strong and Weak Topological Orders in a Quasi-One-Dimensional Material,2022-09-28,AT;CN;JP,False,True,False,0,0,False,0,0
+doi_dedup___::840e28440e2f809388d6f1ae1efc90c1,U(1) CS theory vs SL(2) CS formulation: Boundary theory and Wilson line,2022-11-01,CN;JP;KR;SE;US;ZA,False,True,False,0,0,False,0,0
+doi_dedup___::84146a0f7ebea832bdb850ffa7dbe48f,Entanglement holography in quantum phases via twisted Rényi-                     <i>N</i>                     correlators,2026-03-11,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::84bd7b167952b3f2b2e5910948e01d7b,Low-frequency spin qubit energy splitting noise in highly purified 28Si/SiGe,2020-05-15,AU;DE;JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::84c613fdca77bbf85df4e40e39bef4a8,Spin squeezing in open Heisenberg spin chains,2023-09-05,ES;JP;LT;PL,False,True,False,0,0,False,0,0
+doi_dedup___::85abb14282f0660333b23e987d10ccf2,Competing correlated states around the zero-field Wigner crystallization transition of electrons in two dimensions,2021-12-23,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::8631b2693e8cdc534ddfb1c16c9b6c19,Quantum interference and occupation control in high harmonic generation from monolayer WS2,2025-11-06,AT;DE;IL;JP;KR;PA;SG,False,True,False,0,0,False,0,0
+doi_dedup___::86419568b6c7edd220e755506a466f58,Quantum simulation of many-body dynamics with noise-robust Trotter decomposition based on symmetric structures,2026-02-09,FR;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::86c20998b4edfe22ed256ee73dfcf6da,Magnetometer with nitrogen-vacancy center in a bulk diamond for detecting magnetic nanoparticles in biomedical applications,2020-02-12,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::86d56bf3736fc1abfb8f85d970a82b2e,Optimizing a quantum reservoir computer for time series prediction,2020-09-07,FI;JP,False,True,False,0,0,False,0,0
+doi_dedup___::86f9d7a1126d6b74857fb7f0c2652296,Implementing arbitrary multimode continuous-variable quantum gates with fixed non-Gaussian states and adaptive linear optics,2024-08-19,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::871e9492448f0b9d07cc977f589ac72b,Probabilistic imaginary-time evolution in state-vector-based and shot-based simulations and on quantum devices,2025-11-19,DE;JP,False,True,False,0,0,True,1,0
+doi_dedup___::875df0249658d8926d6948779d45130a,Semi-Dirac Transport and Anisotropic Localization in Polariton Honeycomb Lattices,2020-10-28,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8949a8b2780414e0b6ce73543a598862,Quantized conductance in split gate superconducting quantum point contacts with InGaAs semiconducting two-dimensional electron systems,2023-01-01,ES;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::89b41ee9e3d3bdfc5461ae659d1df4d7,Quantum machine learning with adaptive linear optics,2021-07-05,FR;JP;KR;US,False,True,True,1,0,False,0,0
+doi_dedup___::89c85255662ef4dd1291f877d418654f,Flow-Based Sampling for Entanglement Entropy and the Machine Learning of Defects,2025-04-15,CY;DE;FI;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8a6791428744c64ea1c0c09766a0f471,Nonlinear enhancement of coherent magnetization dynamics,2024-05-02,CN;JP;NL,False,True,True,2,0,False,0,0
+doi_dedup___::8af4df7616af120bd63973e4991f82d8,Probabilistic teleportation of a quantum dot spin qubit,2021-05-06,AU;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8afcbf628296bb0da075b6cd5857f7da,Assessing Quantum Extreme Learning Machines for Software Testing in Practice,2024-01-01,ES;JP;NO,False,True,True,2,0,True,1,1
+doi_dedup___::8b6ce856a4f2bf381d15092221c8feac,Fluorescent Silicon Carbide Nanoparticles,2021-07-17,AU;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8b909321d57faf563fcd6abde999c800,Going beyond gadgets: the importance of scalability for analogue quantum simulators,2024-08-02,DE;DK;EG;FR;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::8c130517dea897018ca3274a58f49e77,Topological water-wave structures manipulating particles,2025-02-05,CN;ES;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::8c43160c1f8c2914c301e1ebbe709779,Tensor network Python (TeNPy) version 1,2024-11-26,AT;CH;DE;GB;IL;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::8c764ba25309ac546dbae0f9640208c9,Chirality-induced quantum non-reciprocity,2025-05-23,CN;DE;JP;US,False,True,True,0,1,False,0,0
+doi_dedup___::8d6a5b881f38bf5825af196979b354fb,Simulating Chern insulators on a superconducting quantum processor,2022-09-22,AZ;CN;CZ;GB;HR;IN;JP;PL;RS;RU;SK;UA;US,False,True,True,2,0,False,0,0
+doi_dedup___::8d766d4e69d6af6015aa7df3bf074657,Probing the universality of topological defect formation in a quantum annealer: Kibble-Zurek mechanism and beyond,2020-09-08,ES;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::8da262a161ce1935b14f1ab03b0c333c,Magnetic Field Generation System of the Magnetic Probe With Diamond Quantum Sensor and Ferromagnetic Materials for the Detection of Sentinel Lymph Nodes With Magnetic Nanoparticles,2021-02-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8df0fbc2d7bb56424757b2e6a7011cf1,Broadband Fourier transform spectroscopy of quantum emitters photoluminescence with sub-nanosecond temporal resolution,2025-07-03,GB;IT;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::8e33aa755a975d7df2326aebae89a565,Deep learning of many-body observables and quantum information scrambling,2024-07-18,CN;DE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::8e53ba9f3222ff248e0673ee4050e25a,Engineering the Environment of a Superconducting Qubit with an Artificial Giant Atom,2024-01-01,JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::8f1dd4d62053b7b665917a3a9049993b,Modelling and verification of post-quantum key encapsulation mechanisms using Maude,2023-09-19,EE;ES;FR;JP;TR,False,True,False,0,0,True,2,2
+doi_dedup___::8f253e6ce002ad8df8537812701c7b4a,Cryogenic Resonant Amplifier for Electron-on-Helium Image Charge Readout,2024-01-19,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::8f4c1e77b5c535e1ad8888634b22c48e,Fault-tolerant structures for measurement-based quantum computation on a network,2025-05-05,JP;NL,False,True,True,1,0,False,0,0
+doi_dedup___::8ff5e4368abbcea3181eec764215bfd9,Demonstration of microwave single-shot quantum key distribution,2024-08-30,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::909957c569e64ab53f4bfde2ab2dc4d7,Nonlocal Detection of Interlayer Three-Magnon Coupling,2023-01-24,CH;CN;JP;NL,False,True,True,2,0,False,0,0
+doi_dedup___::90bbec218207299ae50c000272f4263b,When Entanglement Meets Classical Communications: Quantum Teleportation for the Quantum Internet,2020-06-01,GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::916f5ca5319c6dea14057f45fc4b0885,On‐Surface Synthesis of Edge‐Extended Zigzag Graphene Nanoribbons,2023-10-25,AT;CH;DE;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::921554ec2793be45af013c1b85b8adbb,"General Quantum Resource Theories: Distillation, Formation and Consistent Resource Measures",2020-11-01,AT;CA;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::921d66a62da54b6873eeb905e0c8c381,Room-temperature optically detected magnetic resonance of triplet excitons in a pentacene-doped picene single crystal,2022-03-14,IT;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::928d1301b9c06c2b10d19412abbe57da,Controlling the interactions in a cold atom quantum impurity system,2024-05-28,FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::92a8ab0ea479d427556ebafedae435eb,Quantum Coupon Collector,2020-01-01,DE;GB;JP;LV;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::9359bb0112947b271de0334182d3bdfe,Increased success probability in Hardy's nonlocality: Theory and demonstration,2023-04-14,FR;JP;VN,False,True,False,0,0,True,1,1
+doi_dedup___::94232bde75549b2166d63bc5d8e25330,High-Fidelity Electron Spin Gates for Scaling Diamond Quantum Registers,2025-05-27,DE;IT;JP,False,True,True,2,0,False,0,0
+doi_dedup___::942c3647ca9535b92560e6c06675f34f,Relation between 4f-magnetism and the low-temperature magnetocaloric effect in multiferroic hexagonal manganites,2025-05-11,DE;JP;NO;NZ,False,True,False,0,0,False,0,0
+doi_dedup___::9440da4ef81029514558dda39223f858,Dissipative parametric resonance in a modulated 1D Bose gas,2025-04-24,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::949acf64dfbd5506878617a0a8331617,Hybrid Approach to Mitigate Errors in Linear Photonic Bell-State Measurement for Quantum Interconnects,2024-08-12,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::94f78a34a210ee8a9ea82b2ec0a54c0a,Current-induced brightening of vacancy-related emitters in hexagonal boron nitride,2025-08-19,AT;DE;JP,False,True,True,7,0,False,0,0
+doi_dedup___::9518b9cf26d6d20ea31febd4ef4bed1c,Macrocyclic Parallel Dimer Showing Quantum Coherence of Quintet Multiexcitons at Room Temperature,2024-04-25,ES;FI;GB;JP;NL;SA,False,True,True,0,1,False,0,0
+doi_dedup___::955f0d2482f17b3a5e98a2fd8e5b6ab4,Quantum key distribution implemented with d-level time-bin entangled photons,2025-01-02,AU;CA;CN;DE;FR;JP,False,True,True,5,0,False,0,0
+doi_dedup___::95b505067b7c766cdc944175716e6b07,Time scaling of entanglement in integrable scale-invariant theories,2022-04-14,DE;IR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::96026631a097ac7c238ca7db52ba0483,Real-time observation of disintegration processes within argon clusters ionized by a hard-x-ray pulse of moderate fluence,2020-02-25,CN;DE;FR;JP;PL;RO,False,True,False,0,0,False,0,0
+doi_dedup___::96fd8733dda762350145cfa3b6ef6187,Quantum algorithms for process parallel flexible job shop scheduling,2021-05-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::97460558083ea53018eaf5dae8142dbc,Hybrid quantum systems with circuit quantum electrodynamics,2020-03-01,FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::9870b165d598ea621119f1815c2b1960,Enumerating all bilocal Clifford distillation protocols through symmetry reduction,2022-05-19,JP;NL,False,True,False,0,0,True,1,0
+doi_dedup___::98b285e40aab1bdb37923a54010351b1,Quantum technologies in diamond enabled by laser processing,2022-01-10,CA;DE;ES;GB;IT;JP,False,True,True,2,0,False,0,0
+doi_dedup___::98c04c6918caa6c421fde24b35625d48,Entanglement between two gravitating universes,2022-08-14,BE;CA;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::995fd0c0a206416f445a127f68b52fc8,Qubit guidelines for solid-state spin defects,2020-01-01,HU;JP;KR;US,False,True,False,0,0,False,0,0
+doi_dedup___::99d6bd3ae126f39fbac625b7fe6f551b,Quantum Simultaneous Protocols without Public Coins using Modified Equality Queries,2024-01-01,DE;IL;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9a22958f845b2b2fbf74502f1c3a89db,Error suppression in adiabatic quantum computing with qubit ensembles,2021-05-10,AU;CN;DE;IR;JP;RU;US,True,True,False,0,0,False,0,0
+doi_dedup___::9a68b56ee22af6a351632a779fa54d82,Two-Emitter Multimode Cavity Quantum Electrodynamics in Thin-Film Silicon Carbide Photonics,2023-01-19,JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::9a8c094ef57f2a0ebe5432983d663144,Resonance fluorescence and indistinguishable photons from a coherently driven B centre in hBN,2026-02-11,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9afbcb256ffac476c0633dcf4f879509,Nonlinear Squeezing for Measurement-Based Non-Gaussian Operations in Time Domain,2021-02-10,CZ;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9b3ccafd175e358bed769405bb1ea387,Supersingular Isogeny-based Cryptography: A Survey,2021-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9b767640c7c047c18f61c60996335302,Practical limits of error correction for quantum metrology,2021-04-01,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::9c2f709b9d13eba1e2729a3c205bf897,Dzyaloshinskii-Moriya and dipole-dipole interactions affect coupling-based Landau-Majorana-Stückelberg-Zener transitions,2020-07-17,BG;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9c3d2a41df2946b4ab6b58edd43058ab,Fast adiabatic transport of single laser-cooled 9Be+ ions in a cryogenic Penning trap stack,2024-03-15,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9d4be9b3ce100916be00320ec7d584e7,Quantum communication complexity of distribution testing,2021-11-01,FR;JP;LV;US,True,True,False,0,0,False,0,0
+doi_dedup___::9d4de201e1cb345ee47df3c5e38c31bd,Testing Quantum Electrodynamics with Exotic Atoms,2021-04-29,CN;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9d52f04d477f1256f6dedb837aa2951d,Classical-quantum network coding: a story about tensor,2021-01-01,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::9de393a001e9d39929314fcb6dcf83a9,How to realize compact and noncompact localized states in disorder-free hypercube networks,2025-07-01,CH;CZ;FI;JP;US,False,True,True,1,1,False,0,0
+doi_dedup___::9e079ac2662960658e7ecf40e0cc83cd,Near-Field Semiconductor Imaging and Classification Enabled by Signal Cancellation Using Truncated mm-Wave Silicon Waveguide,2025-06-01,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9e0dab3ed8de242cf0351c311befcb3d,Absorption and birefringence study for reduced optical losses in diamond with high NV concentration,2023-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::9efca26ff94a4bd7322395c98c3f7af4,Software Testing in the Quantum World,2026-04-01,AT;CA;DE;GB;IE;JP;NO;PT;US,False,True,False,0,0,False,0,0
+doi_dedup___::9f4879770235a785d8adc877e5857a97,One photon simultaneously excites two atoms in a ultrastrongly coupled light-matter system,2024-01-10,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::9f9a2405f20660811c0298a51c16e5fc,Gottesman-Kitaev-Preskill qubit synthesizer for propagating light,2023-10-10,AU;DE;JP,False,True,True,4,0,False,0,0
+doi_dedup___::9fd4db862f17aab53775f61caf530a3e,Efficient verification of Boson Sampling,2021-11-15,FR;GB;JP,False,True,True,1,0,False,0,0
+doi_dedup___::a0cc66c4c8cb30c36c8c7306768592e4,The properties of the nitrogen-vacancy center in milled chemical vapor deposition nanodiamonds,2026-03-01,AU;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::a139b01ba542fdd049b3bba7fa686c88,Two-parameter counter-diabatic driving in quantum annealing,2021-03-09,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a16d6017aaea434dad286a0e21485460,Axion quasiparticles for axion dark matter detection,2021-08-01,CZ;DE;GB;JP;NL;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::a215cb34b14fddfc03e324f3638e07d1,Constructing a Bridge between Functioning of Oscillatory Neuronal Networks and Quantum-Like Cognition Along with Quantum-Inspired Computation and Ai,2025-01-01,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::a29c2abcee8d4425b1dd4afd661b3380,"Quantum information and  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline""><mml:mi>C</mml:mi><mml:mi>P</mml:mi></mml:math>  measurement in  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline""><mml:mi>H</mml:mi><mml:mo stretchy=""false"">→</mml:mo><mml:msup><mml:mi>τ</mml:mi><mml:mo>+</mml:mo></mml:msup><mml:msup><mml:mi>τ</mml:mi><mml:mo>−</mml:mo></mml:msup></mml:math>  at future lepton colliders",2023-05-09,BE;FR;IT;JP;PL,True,True,False,0,0,False,0,0
+doi_dedup___::a2aedf542f41fa9d41d73924983c7ed5,A Comprehensively Adaptive Architectural Optimization-Ingrained Quantum Neural Network Model for Cloud Workloads Prediction,2025-10-01,IN;JP;PL;TW,False,True,False,0,0,False,0,0
+doi_dedup___::a4ac0a8fe4d59b1dff371b0b39b363cb,On quantum information before the Page time,2023-05-09,DE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::a51297cf02e147df85c7954081cb4ae7,Quantum expectation-maximization algorithm,2020-01-17,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a57a488a9032b72aac222d22ef89cd59,The type-independent resource theory of local operations and shared randomness,2020-04-30,CA;JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::a5ffccd841dc8777adb08895d35517e6,Interplay of plasmonics and strain for Hexagonal Boron Nitride emission engineering,2024-01-01,DE;IN;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a60ca28ca94f4365e8cd06d203eae218,Monolayer-Based Single-Photon Source in a Liquid-Helium-Free Open Cavity Featuring 65% Brightness and Quantum Coherence,2023-09-09,DE;ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::a60fb9c297963ff6fb69f2a64df2d020,Observation of quantum entanglement with top quarks at the ATLAS detector,2024-09-18,AE;AR;AT;AU;AZ;BG;BR;CA;CH;CL;CN;CO;CZ;DE;DK;ES;FR;GB;GE;GR;IL;IT;JP;MA;MN;NL;NO;PH;PL;PS;PT;RO;RS;SE;SI;SK;TR;TW;US;ZA,False,True,True,1,0,True,1,0
+doi_dedup___::a67544c5084716d203c2d3d531191c85,Universal and optimal coin sequences for high entanglement generation in 1D discrete time quantum walks,2020-10-12,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a69118e9d4863c664d9a8cdfdf8473ff,Development of an ESR/NMR Double-Magnetic-Resonance System for Use at Ultra-low Temperatures and in High Magnetic Fields and Its Use for Measurements of a Si Wafer Lightly Doped with 31P,2021-02-13,FI;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::a698ae4fb6c4f416f8cfda9e35450f11,Temperature dependence of hole transport properties through physically defined silicon quantum dots,2020-08-31,GB;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::a6f53f3aa036b5fafb27a4176c450969,Syntheses and Characterizations of Functional Polycyclic Aromatic Hydrocarbons and Graphene Nanoribbons,2020-01-24,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a734f0debc909139a7a01329b67b0c9c,Fault-Tolerant Quantum Input/Output,2026-05-01,DE;DK;EG;FR;GB;JP;RU,False,True,False,0,0,False,0,0
+doi_dedup___::a73b8b7297f8224d43b03b154059394b,Phase‐Coherent Transport in GeSn Alloys on Si,2024-11-01,DE;GB;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::a789de8992b8bac1a85f7b731a94945f,Characterization of Equivariant Maps and Application to Entanglement Detection,2020-08-17,FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a7902c6c5eedd6cb87c11b23ae78e52d,Graphite/h-BN van der Waals heterostructure as a gate stack for HgTe quantum wells,2024-06-10,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a7a6d818f788cdf816eb1cc7a7f55ad7,Charge Order Stabilized Quantum Spin Liquid in Hollandite K$_2$V$_8$O$_{16}$,2021-01-01,DE;GB;JP;RO;SE,False,True,False,0,0,False,0,0
+doi_dedup___::a7d556dffa1e889ac3e3a7f61dc4b99e,Benchmarking direct and indirect dipolar spin-exchange interactions between two Rydberg atoms,2025-06-05,CN;ES;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a7f5c7b54861b97a737a6506e5bedae1,The germanium quantum information route,2020-12-21,AT;CH;CN;FR;GB;JP;NL,True,True,False,0,0,False,0,0
+doi_dedup___::a8011c602d15d2e66dbfd835d832bf92,Fluorescent Nanodiamonds Embedded in Poly-ε-Caprolactone Fibers as Biomedical Scaffolds,2020-11-05,AU;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::a819746ec45a949eababa00b7777a245,Electrically tunable Feshbach resonances in twisted bilayer semiconductors,2021-10-15,CH;DE;IL;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a84dc34c784db0362eaa4f2150e39732,Quantum Computing for High-Energy Physics: State of the Art and Challenges. Summary of the QC4HEP Working Group,2023-01-01,AT;CA;CH;CY;DE;ES;FR;IT;JP;NL;PT;US,True,True,True,2,0,False,0,0
+doi_dedup___::a8982bbd84f93281826683b1259131da,First Encapsulation of Organometallic Single‐Molecule Magnet into Single‐Walled Carbon Nanotubes,2025-03-23,CN;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a8fde2d7f78338d2ad9970e8e9ca147d,Simulating complex quantum networks with time crystals,2020-10-16,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::a920d145b12857c362ef1bea3b0f7153,Experimental demonstration of measurement-device-independent measure of quantum steering,2020-09-08,AU;CN;DE;JP;TW;US,False,True,False,0,0,False,0,0
+doi_dedup___::a93922e614f334aed72dc2b43a012b42,Quantum Sensing and Light Guiding with Fluorescent Nanodiamond‐Doped PVA Fibers,2023-12-12,AU;IT;JP,True,True,False,0,0,False,0,0
+doi_dedup___::a976f3cc79aa733d5d86e8baad743af6,Storage of photonic time-bin qubits for up to 20 ms in a rare-earth doped crystal,2022-03-15,CH;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::a9784e6e8b2060132590f6426f68e3ab,Assessing the Precision of Quantum Simulation of Many-Body Effects in Atomic Systems Using the Variational Quantum Eigensolver Algorithm,2022-04-15,DE;IN;JP,True,True,True,1,0,False,0,0
+doi_dedup___::a979a4427bb0a1e76b71be99ab798656,Sensing atomic superfluid rotation beyond the standard quantum limit,2024-11-18,DE;IN;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::a9ed7ea05f63d5fc780bce0ebfe18f04,"Strict Hierarchy between Parallel, Sequential, and Indefinite-Causal-Order Strategies for Channel Discrimination",2021-11-12,AT;JP,False,True,False,0,0,True,1,1
+doi_dedup___::aa3e8e67f716eba8f02773297ecd6de5,Horizon causality from holographic scattering in asymptotically dS3,2024-12-27,CA;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::ab4a25933b2be3f2e8ef67416a5b1a64,"Guest Editorial Introduction to the JSTQE Issue on Advanced Photonic Modulation: Devices, Systems &amp; Techniques",2021-05-01,CN;DE;FR;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::ab7c44ef6e85aee4690419d6f95e41dd,Low-Depth Flag-Style Syndrome Extraction for Small Quantum Error-Correction Codes,2023-09-17,ES;JP;NL,False,True,True,1,0,True,1,1
+doi_dedup___::abd435766f2b0140ef869550559a7782,Quantum sensing of the electron electric dipole moment using ultracold entangled Fr atoms,2021-09-10,FR;IN;JP,True,True,False,0,0,False,0,0
+doi_dedup___::acf62c30117961a251928d95e24b0582,Variational quantum anomaly detection: Unsupervised mapping of phase diagrams on a physical quantum computer,2021-12-16,ES;JP,False,True,True,2,0,False,0,0
+doi_dedup___::ad3c781525f6c5df1fa08ab9438aebd3,Resolving Fock states near the Kerr-free point of a superconducting resonator,2023-11-10,AU;DE;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::adaab3a144d86a7aedc42a0b81a70c38,Device-independent randomness expansion with entangled photons,2021-01-28,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::ade2b33ca8e2eec4c8e43ccf6abcaebb,Relation between rare-earth magnetism and the magnetocaloric effect in multiferroic hexagonal manganites,2024-01-01,DE;JP;NO;NZ,False,True,False,0,0,False,0,0
+doi_dedup___::ae56d20e3d60573efb82b3e482457bb4,"Quantum gravity, hydrodynamics and emergent cosmology: a collection of perspectives",2024-12-18,BE;CA;CH;DE;ES;FR;GB;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::afe4f957ac7fbb067d8e27e1689490a3,Direct visualization of magnetic domains and moiré magnetism in twisted 2D magnets,2021-11-26,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::b127b326b26298f3d8e591f87018be51,Entanglement detection with classical deep neural networks,2024-05-23,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::b23bcc47078aa8bf146339bd98174ddb,On-demand electrical control of spin qubits,2023-01-12,AU;CA;DE;JP,False,True,True,2,0,False,0,0
+doi_dedup___::b25f7f4d6dd03272bfaadf6cd0092bc6,Resonant Magnetoelastic Coupling Between Magnetic Vortex and Lattice Breathing Modes,2023-05-01,CN;DE;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::b2861cbb3dabbab61b1bb0d358059ffc,Modern computing: Vision and challenges,2024-03-01,AT;AU;CA;CN;ES;GB;IN;JP;NL;PT;QA;SA;SI;US,False,True,True,1,0,False,0,0
+doi_dedup___::b3ced6f39339a9bbf1f86ad0e674122d,More global randomness from less random local gates,2024-01-01,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::b5900123970d060c2b96784306e3a6ec,Workflows Community Summit 2022: A Roadmap Revolution,2023-03-01,AT;AU;BE;BR;CA;CH;DE;EG;ES;GB;GE;IT;JP;NL;NO;PL;US,False,True,True,1,0,True,1,1
+doi_dedup___::b5c1deaa72ce2d938def5ca0fb559090,Quantum convolutional neural networks for jet images classification,2024-01-01,CY;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::b5f0b81a7a64794d9f625fad0036ba05,Dynamic Interplay of Nonlocal Recombination Pathways in Quantum Emitters in Hexagonal Boron Nitride,2025-01-16,CZ;JP;US,False,True,True,2,0,False,0,0
+doi_dedup___::b7cb6323fe3cf21123ac64174ca7ffc7,All-optical long-distance quantum communication with Gottesman-Kitaev-Preskill qubits,2021-08-05,AU;DE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::b879415655f2fbb4fc211b2bb88e0c02,Hybrid Meet-in-the-Middle Attacks for the Isogeny Path-Finding Problem,2020-10-05,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::b8b130d704b648769fff2084f5408803,Barriers for rectangular matrix multiplication,2025-02-27,DE;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::b928081afed86563b9c86e5a132cb719,Roadmap for Optical Metasurfaces,2024-02-27,AR;AU;CN;DE;FR;GB;IL;JP;KR;NL;SG;US,False,True,True,1,0,False,0,0
+doi_dedup___::ba865ba916e5e514316270f4e6a6feaa,Trinity of relational quantum dynamics,2021-09-01,AT;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::bafcd120d874121c8d5caf4e9985e9c0,Advances in Magnetics Roadmap on Spin-Wave Computing,2022-06-01,AT;AU;BE;CA;CH;CL;CZ;DE;EC;ES;FI;FR;GB;HU;IN;IT;JP;NL;PL;PT;RU;SE;UA;US,False,True,True,10,0,False,0,0
+doi_dedup___::bb0f6aec01c2c0d4dd3c7239696a6f94,Real randomized measurements for analyzing properties of quantum states,2025-08-27,CN;DE;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::bb5c3f6685f2688dd561c97eab1fda47,Robust sensing via the standard deviation with a quantum sensor,2024-11-01,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::bbaf53485fbb7eafb474cc4e5c538a8a,A Single-Molecule Digital Full Adder,2021-08-31,ES;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::bbeb65064701bde2f80b2a6b1b0b3ab8,Bridging Magic and Non-Gaussian Resources via Gottesman-Kitaev-Preskill Encoding,2025-02-18,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::bccfee26dc2481f8317d63a31e2bafa9,Modular architectures and entanglement schemes for error-corrected distributed quantum computation,2025-03-17,AU;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::bd1afc6dc444f1808847aa72ab86189b,The quest and hope of Majorana zero modes in topological superconductor for fault-tolerant quantum computing: An introductory overview,2021-01-01,ID;JP;LU,True,True,False,0,0,False,0,0
+doi_dedup___::bd343adc10fc4357c6dbba5517aedc87,Determining the position of a single spin relative to a metallic nanowire,2021-04-08,DE;FR;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::bd3981e77a419c4279a3714c18f6f102,Nonequilibrium Quantum Many-Body Rydberg Atom Engine,2020-04-30,DE;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::bd4ffd79ea9195e77718d397eedde936,Quantum state processing through controllable synthetic temporal photonic lattices,2024-10-14,CA;DE;IT;JP,False,True,True,1,0,False,0,0
+doi_dedup___::bdb2c0bb695e490955832644d37e671a,Krylov complexity and gluon cascades in the high energy limit,2024-10-10,JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::bde15da09a296064c40a8650a4a8381b,Formalization and analysis of the post-quantum signature scheme FALCON with Maude,2025-02-01,ES;JP,False,True,False,0,0,False,0,0
+doi_dedup___::be670d1e0dc84ba7fd3af0d4b785f8dd,Internal quantum reference frames for finite Abelian groups,2022-11-01,AT;CA;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::be6f74724af243ba62f7e4fd55fd8802,"Photonic quantum simulations of coupled  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mi mathvariant=""script"">PT</mml:mi></mml:math> -symmetric Hamiltonians",2022-01-26,DK;GB;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::beb780a2d353aaf975dab4c2d8b6a1cd,Visualizing multiqubit correlations using the Wigner function,2022-05-01,AT;GB;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::c0a3ff7b65fd8d05def3ea306314f33a,Continuous-time quantum-walk spatial search on the Bollobás scale-free network,2020-02-10,JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::c0fce7976d01764edce5b467c2c24e32,Influence of Irradiation on Defect Spin Coherence in Silicon Carbide,2020-04-21,AT;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c176fc4f26bf72d5b419a0c5f8eacda9,Proceedings 9th International Conference on Quantum Simulation and Quantum Walks,2020-01-01,FR;GB;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::c18d1322eb6583561193f01c6d0e2880,Direct observation of photonic Landau levels and helical edge states in strained honeycomb lattices,2020-08-19,BE;ES;FR;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::c1cf5f19a9cfeedb641abaf0ed7e9a15,Beating the Natural Grover Bound for Low-Energy Estimation and State Preparation,2025-07-15,AT;DE;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::c1ee3383ca234547d39f4dbd8d94dccf,Collective vacuum Rabi splitting with an atomic spin wave coupled to a cavity mode,2026-01-19,ES;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::c2c2a401577a535edb2e6f949166453f,Coherent spectroscopy with a single antiproton spin,2025-07-23,CH;DE;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::c31ca3baeae01e6f48316b62f6bc0baf,"Density matrix renormalization group, 30 years on",2023-04-11,DE;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c367f4b1489a631962d414bd91c20e5d,Configurable antiferromagnetic domains and lateral exchange bias in atomically thin CrPS4,2025-06-12,ES;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c421fe88c4295559a771bb14569f21c4,Fast generation of Schrödinger cat states using a Kerr-tunable superconducting resonator,2023-10-11,CN;DE;JP;SE,False,True,True,1,1,False,0,0
+doi_dedup___::c445339e291592a615a0f6d5fa6442b8,Determination of the Dipole Orientation of Single Defects in Hexagonal Boron Nitride,2020-07-15,AU;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::c56e78d2c851e37c6e40b02d1b92fed8,Two-Photon Interference from a Quantum Emitter in Hexagonal Boron Nitride,2023-04-27,FR;JP,False,True,True,3,0,False,0,0
+doi_dedup___::c5a4be880f841661854390c296a88964,Characterization and stability measurement of deployed multicore fibers for quantum applications,2021-09-16,DK;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c5a89d584112dd7aa2697087b512dfb5,Tools for quantum network design,2021-02-08,CH;DE;ES;JP;NL,True,True,False,0,0,False,0,0
+doi_dedup___::c5d9506748f93970d9f746928a714900,Experimental Low-Latency Device-Independent Quantum Randomness,2020-01-07,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c5ee3d2e00af66708690faba49d9bf55,Heralded preparation of polarization entanglement via quantum scissors,2021-07-23,AU;AZ;CN;CZ;GB;HR;IN;JP;PL;RS;RU;SK;UA;VN,False,True,False,0,0,False,0,0
+doi_dedup___::c605114feb9fe8112e835172c5f7520e,Twist-programmable superconductivity in spin–orbit-coupled bilayer graphene,2025-05-07,DE;IL;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c63550c3b6e81aa249851f95f70d6e84,Privacy in continuous-variable distributed quantum sensing,2025-01-01,DK;JP,True,True,False,0,0,False,0,0
+doi_dedup___::c70123ecfba79a55d3ea836addb48362,Robust Preparation of Wigner-Negative States with Optimized SNAP-Displacement Sequences,2022-07-01,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::c7c3f063c2cdf78659dbd3b0b098643c,Increased localization of Majorana modes in antiferromagnetic chains on superconductors,2023-02-09,AU;DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::c82faf6e3b4de5edcf60ca6236ee2c2b,Deterministic one-way logic gates on a cloud quantum computer,2022-04-18,CN;JP;SE;TW;US,False,True,True,1,0,False,0,0
+doi_dedup___::c890133978930dfbb980ba44352428a2,"Applications of single photons in quantum metrology, biology and the foundations of quantum physics",2023-05-26,AT;DE;FR;GB;JP;US,True,True,True,2,0,False,0,0
+doi_dedup___::ca262533f3e412f8d5f983671fbe7811,Microwave-Free Vector Magnetometry with Nitrogen-Vacancy Centers along a Single Axis in Diamond,2020-04-09,CN;DE;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::ca7d552a1a4756e80e170a0abd2b0009,Fast Multiplexed Superconducting-Qubit Readout with Intrinsic Purcell Filtering Using a Multiconductor Transmission Line,2025-06-05,CH;FI;JP,False,True,False,0,0,False,0,0
+doi_dedup___::caa4f2dc9f6b92b112c08e96fdbfab29,Analytically solvable Hamiltonian in invariant subspaces,2023-08-29,BR;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::cac01272f0d5b1092f3fa58822041c04,Performance of Rotation‐Symmetric Bosonic Codes in a Quantum Repeater Network,2024-05-05,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::cb263640165a627953a2ff3b715b261c,Controlling the helicity of light by electrical magnetization switching,2024-03-27,CN;DE;FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::cb9a464dce6e2abfb33b294a000eb430,Universal validity of the second law of information thermodynamics,2025-02-07,BE;JP;SK,False,True,False,0,0,False,0,0
+doi_dedup___::cdbd2e9859748dffc2592a0c19f2ba86,Gaussian breeding for encoding a qubit in propagating light,2022-01-01,DE;JP,False,True,True,2,0,False,0,0
+doi_dedup___::ce406a59e5f2fafb9e0ef333126ee8ab,Quantum computing and persistence in topological data analysis,2024-01-01,JP;NL;US,True,True,False,0,0,False,0,0
+doi_dedup___::ce6aef9707dbca816afeaa33350f5179,The 2021 quantum materials roadmap,2020-10-01,AT;BR;CA;CH;CL;DE;EG;ES;FR;GB;IN;JP;KR;NL;US,False,True,True,3,0,False,0,0
+doi_dedup___::d19629dc73c7c50ec051962f206625ac,Variational benchmarks for quantum many-body problems,2024-10-18,CA;CH;CN;DE;FR;IT;JP;US,False,True,True,1,0,True,1,1
+doi_dedup___::d271ff1f2638ab712f5086c631516e69,Remotely Pumped GHz Antibunched Emission from Single Exciton Centers in GaAs,2021-03-05,DE;FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::d2ec26a410c0b57ebb63e95806279472,SQIsign2D-East: A New Signature Scheme Using 2-Dimensional Isogenies,2024-12-12,BE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::d364fa857e008595f441edeb01eeba24,Evidence of Two-Source King Plot Nonlinearity in Spectroscopic Search for New Boson,2022-04-22,AU;CH;DE;JP;KR;US,False,True,False,0,0,False,0,0
+doi_dedup___::d375667f80eda31e496ef47f6a4ed999,"Multiwavefunction overlap and multientropy for topological ground states in ( <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mn>2</mml:mn><mml:mo>+</mml:mo><mml:mn>1</mml:mn></mml:math> ) dimensions",2025-09-25,AT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::d38866d52ba08b98062bbe30560783bc,"Direct measurement of delayed-detachment rate constants of  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mrow><mml:mi mathvariant=""normal"">C</mml:mi><mml:msup><mml:mrow><mml:msub><mml:mrow/><mml:mn>7</mml:mn></mml:msub></mml:mrow><mml:mo>−</mml:mo></mml:msup></mml:mrow></mml:math>",2023-12-11,CN;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::d3c8e0bf1bac233275662d72b0885420,Non-monotonic variation of the Kramers point band gap with increasing magnetic doping in BiTeI,2021-12-02,DE;IT;JP;RU,False,True,False,0,0,False,0,0
+doi_dedup___::d404c6225c9fb4b95537aa1f55ef331d,"RapunSL: Untangling Quantum Computing with Separation, Linear Combination and Mixing",2026-01-08,DE;GB;JP,True,True,False,0,0,False,0,0
+doi_dedup___::d47ee7f16a4d5dced34151ae0ac331aa,Quantum machine learning in high energy physics,2021-03-01,CH;DK;JP;US;ZA,False,True,False,0,0,False,0,0
+doi_dedup___::d4b09f8b09fe5ac6045b294a07cf597d,Progress in integrated and fiber optics for time-bin based quantum information processing,2025-04-11,AU;CA;DE;ES;FR;IT;JP;US,True,True,True,2,0,False,0,0
+doi_dedup___::d62e5d2bf3423c407b36383e1863e42b,Resources of nonlinear cavity magnonics for quantum information,2020-02-03,JP;NL;US,True,True,False,0,0,False,0,0
+doi_dedup___::d67710a94a31aa664a0e584427891e71,Random Matrices and Quantum Information Theory,2026-04-04,FR;JP,True,True,False,0,0,False,0,0
+doi_dedup___::d689d70ee35ece9304da8da52b9ac447,"Deterministic generation of hybrid high- <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mi>N</mml:mi></mml:math>  NOON states with Rydberg atoms trapped in microwave cavities",2020-01-08,CN;DE;IR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::d6a0fe13912ebba2a7d5c17c742dc6a9,Non-Gaussian quantum state generation by multi-photon subtraction at the telecommunication wavelength,2023-04-03,CZ;JP,False,True,True,4,2,False,0,0
+doi_dedup___::d72878959e522b436a4de6560fd917d3,Quantum reference frame transformations as symmetries and the paradox of the third particle,2021-08-27,AT;CA;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::d786444f27a77d073b917356ac5ae0af,Shot-noise-limited emission from interband and quantum cascade lasers,2025-08-13,AT;CH;DE;IT;JP,False,True,True,2,0,False,0,0
+doi_dedup___::d78c1583fd69facbdea9687b04ded836,Quantitative evaluation of methods to analyze motion changes in single-particle experiments,2025-07-22,AR;AT;CN;DE;DK;ES;FR;GB;JP;KR;SE;SG;US,False,True,True,2,0,True,3,1
+doi_dedup___::d8030bc69ff6851aa352b99e4bfe3f53,"Validity of mean-field theory in a dissipative critical system: Liouvillian gap,  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mi mathvariant=""double-struck"">PT</mml:mi></mml:math> -symmetric antigap, and permutational symmetry in the  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML""><mml:mrow><mml:mi>X</mml:mi><mml:mi>Y</mml:mi><mml:mi>Z</mml:mi></mml:mrow></mml:math>  model",2020-06-01,BE;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::d81421edde859ee6c9a9295a76219313,Topological phonon blockade and its transfer via dark-mode engineering,2025-08-29,JP;PL;US,False,True,True,1,0,False,0,0
+doi_dedup___::d8f1ddfa85acddaa3ef440d4dd98f816,All-optical quantum computing using cubic phase gates,2024-06-28,DE;JP,True,True,False,0,0,False,0,0
+doi_dedup___::d9f0ac82104e9494b74eabb5c33db428,Towards quantum computing for clinical trial design and optimization: A perspective on new opportunities and challenges,2024-01-01,GB;IE;JP;US,True,True,True,2,0,False,0,0
+doi_dedup___::da900ba385b8746ecbd5d4e91b63c26a,Hardware-Efficient Preparation of Graph States on Near-Term Quantum Computers,2024-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::db8b077580983a90eb0363cea8ee9427,Integer Programming from Quantum Annealing and Open Quantum Systems,2020-01-01,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::dbc45e5153b2918803ce70ab09547058,Analysis of the confinement string in (2+1)-dimensional Quantum Electrodynamics with a trapped-ion quantum computer,2026-01-30,CY;DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::dc053b53137392e68188627903dd616d,Moiré nematic phase in twisted double bilayer graphene,2021-12-23,AT;DE;JP;US,False,True,True,1,0,False,0,0
+doi_dedup___::dc072fcc2c1316d80b5cb51ad08bb892,Exponential Quantum One-Wayness and EFI Pairs,2024-01-01,DE;IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::dc7dc44704a22537c72bc908c563eac2,Quantum-like environment adaptive model for creation of phenotype,2024-01-01,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::dca7cbb346fc98b52d459e7056ad5213,Proposal of ensemble qubits with two-atom decay,2024-03-01,JP;PL;US,False,True,False,0,0,False,0,0
+doi_dedup___::dd2a5cd70b42a47df6c5e1ddfd2de9e1,Online Locality Meets Distributed Quantum Computing,2025-06-15,CA;CH;DE;FI;FR;IT;JP,True,True,False,0,0,True,1,1
+doi_dedup___::dd37cb4ce6336ed5d5cf3145c4759cf9,Imaging Topological Spin Structures Using Light-Polarization and Magnetic Microscopy,2021-02-17,CZ;DE;FR;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::dd6528209409d1203204a31cb43f0dee,Experimental Demonstration of a Quantum Receiver Beating the Standard Quantum Limit at Telecom Wavelength,2020-05-07,DK;JP,False,True,False,0,0,True,1,1
+doi_dedup___::dd9a986488e9d78e84a4800ceb74539a,How can quantum computing be applied in clinical trial design and optimization?,2024-10-01,GB;IE;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::de51917476e3aa3a9d6240ab8e6a53f8,Noise-Tolerant Optomechanical Entanglement via Synthetic Magnetism,2022-08-03,CN;JP;PL;US,False,True,True,2,0,False,0,0
+doi_dedup___::df0f53de58d9fee62423e9f0ca27a481,Robust Nuclear Spin Polarization via Ground-State Level Anticrossing of Boron Vacancy Defects in Hexagonal Boron Nitride,2024-06-24,CN;DE;JP;SG,False,True,False,0,0,False,0,0
+doi_dedup___::df57768a2a75c20cf526e8d9d089697a,Heterodyne sensing of microwaves with a quantum sensor,2021-05-12,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::dfc197c0bfa7b8ce334987cd9d96f3aa,Quantum Computing for High-Energy Physics: State of the Art and Challenges,2024-08-05,AT;CA;CH;CN;CY;DE;ES;FR;IT;JP;NL;PT;US,True,True,True,3,0,False,0,0
+doi_dedup___::dffea3d6d325909036cd7ef3af31654f,Probing the edge between integrability and quantum chaos in interacting few-atom systems,2021-06-29,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::e05fe2a0c338ee1294acddd1e67a6ca5,Determination of local defect density in diamond by double electron-electron resonance,2021-09-24,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::e3abec738187d60d2a63aa59897a304a,The rank of contextuality,2023-07-01,CA;CN;JP;PL,False,True,False,0,0,False,0,0
+doi_dedup___::e3bb553a4afc3066b523349a344e5faa,Distillable entanglement under dually non-entangling operations,2024-11-22,IT;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::e4ef93a5c4e58719bd9505dd6163d188,Designing Kerr Interactions for Quantum Information Processing via Counterrotating Terms of Asymmetric Josephson-Junction Loops,2022-06-09,JP;SE,True,True,True,1,0,False,0,0
+doi_dedup___::e51777eb8afbef6140791dac74bbadf0,Quantum-like modeling in biology with open quantum systems and instruments,2021-03-01,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::e58242bb54c1d3496628ad6bc3b4c618,Non-Interactive Oblivious Transfer and One-Time Programs from Noisy Quantum Storage,2024-01-01,JP;PT,False,True,False,0,0,False,0,0
+doi_dedup___::e5c265c8e43d66cf23e1a0dfa8288a83,Squeezing and Overcoming the Heisenberg Scaling with Spin-Orbit Coupled Quantum Gases,2023-02-28,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::e5f789d1f10887af55c7f085dd1be147,Creation of Boron Vacancies in Hexagonal Boron Nitride Exfoliated from Bulk Crystals for Quantum Sensing,2023-11-28,AU;DK;IL;JP,True,True,False,0,0,False,0,0
+doi_dedup___::e605f55aa606b53a2fba1ce011f77715,Exploiting many-body localization for scalable variational quantum simulation,2025-12-12,CN;DE;JP;US,True,True,True,1,0,False,0,0
+doi_dedup___::e6a550466cc7f2f720d805c419bc5bf3,Machine learning and hardware security,2020-11-02,DE;FR;JP;NL;SG;US,False,True,False,0,0,False,0,0
+doi_dedup___::e76a2550e194aa813537643af18e786d,Tight finite-key security for twin-field quantum key distribution,2021-02-05,AU;ES;GB;JP,False,True,False,0,0,False,0,0
+doi_dedup___::e76caa0c90247a3b605809f45321f383,Dissipation-induced bistability in the two-photon Dicke model,2020-08-07,ES;FR;IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::e7735220b0907e478af9e0287b6f0ab5,Narrow inhomogeneous distribution of spin-active emitters in silicon carbide,2021-04-05,DE;JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::e849e38202a0b263b1ca19eb26b16f7c,"Order-Stability in Complex Biological, Social, and AI-Systems from Quantum Information Theory",2021-03-16,JP;SE,True,True,False,0,0,False,0,0
+doi_dedup___::e863b3154b0a71c14498bcac4191a75c,Quantum Heterodyne Sensing of Nuclear Spins via Double Resonance,2022-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::e886df174111a3f4483397db9697c6d2,Topological state permutations in time-modulated non-Hermitian multiqubit systems with suppressed nonadiabatic transitions,2025-09-11,CZ;FI;JP;US,False,True,True,2,1,False,0,0
+doi_dedup___::e935f495fe9a4a476d75b4b69a0f7361,Decision Diagrams for Quantum Measurements with Shallow Circuits,2021-10-01,AT;JP;US,False,True,False,0,0,True,1,1
+doi_dedup___::e97d1483b6a86a496f741aace9fcd810,Tunable Spin–Orbit Splitting in Bilayer Graphene/WSe<sub>2</sub> Quantum Devices,2025-08-07,CH;DE;IN;JP,False,True,True,2,0,False,0,0
+doi_dedup___::e9a650e3d9916d07ea36fe7e5e02f8a6,Roadmap on Optics and Photonics for Security and Encryption,2025-01-01,CN;ES;FR;IL;IN;JP;NL;US,False,True,False,0,0,False,0,0
+doi_dedup___::e9acc7ed0943a152115b32e02259730b,Bayesian parameter estimation using Gaussian states and measurements,2021-03-05,AT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::e9cb3141ac00f83d5a45dfe027591674,Electroluminescence of Er:O-doped nano pn diode in silicon-on-insulator and its current-voltage characteristics at room temperature,2020-06-01,IT;JP,False,True,False,0,0,False,0,0
+doi_dedup___::eabf0970eba4a76eae043af4a6e1adb9,Optical force induced by strong exciton-plasmon coupling,2021-11-30,CN;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::eb910ef623de30356e4436a3c9a4d310,Memoryless Quantum Repeaters Based on Cavity‐QED and Coherent States,2023-06-08,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::ebe1adb32a4c581906c43cfe6e8b3b40,Blueprint for quantum computing using electrons on helium,2023-11-09,DE;JP,True,True,True,1,0,False,0,0
+doi_dedup___::ecefdead748189b8e40d918e12a1eec3,Polarization-controlled supercurrent in ferroelectric Josephson junctions,2026-04-10,CN;JP;NL,False,True,True,1,0,False,0,0
+doi_dedup___::ed1c2c00865299436b4cba8f04a4671a,Generalized concentratable entanglement via parallelized permutation tests,2025-07-25,CH;JP;NL,False,True,False,0,0,False,0,0
+doi_dedup___::ed8cd8138108e96d9489fee27bed697e,Proofs of Quantumness from Trapdoor Permutations,2022-01-01,DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::ee75ceb80da69f28202383733de33a00,Unquenched—a memoir on non-equilibrium dynamics of quantum many-body systems: honoring Amit Dutta,2024-07-01,CH;ES;IN;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::efa6ea2fdb1e15adc5dad9e766963f33,Compact localized fermions and Ising anyons in a chiral spin liquid,2026-03-20,DE;JP,False,True,True,1,1,False,0,0
+doi_dedup___::f029d7f86a44be8e232deef51591f4f4,Group Transference Techniques for the Estimation of the Decoherence Times and Capacities of Quantum Markov Semigroups,2021-05-01,DE;DK;EG;FR;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::f11c674b1718014c851bc62e912009b8,Quantum state rotation: Circularly transferring quantum states of multiple users,2021-06-22,AT;JP;KR,False,True,False,0,0,False,0,0
+doi_dedup___::f12efef16f081cbb7e515531adca5411,Bosenovae with quadratically-coupled scalars in quantum sensing experiments,2024-08-28,JP;SE;US,True,True,False,0,0,False,0,0
+doi_dedup___::f331a996df8b4ea62726ce871eaa64ec,Microsphere‐assisted generation of localized optical emitters in 2D hexagonal boron nitride,2025-06-05,JP;KR;NL,False,True,True,1,1,False,0,0
+doi_dedup___::f351ca86acb5dc147add97a52ed84a22,Quantum neuromorphic approach to efficient sensing of gravity-induced entanglement,2023-04-26,FR;GB;JP;MY;PL;SG,False,True,False,0,0,False,0,0
+doi_dedup___::f3806630d6f1c287578421e4b2ee6906,Time-Efficient Constant-Space-Overhead Fault-Tolerant Quantum Computation,2022-10-10,AT;JP,False,True,True,1,0,False,0,0
+doi_dedup___::f3e89dddb7bf34a9d72e0a70704ed6cd,Simulating matrix models with tensor networks,2025-09-16,CY;DE;JP,False,True,False,0,0,False,0,0
+doi_dedup___::f41d92dc3d5bebf6aab378bf986134bc,A near-quantum-limited diamond maser amplifier operating at millikelvin temperatures,2025-06-20,CN;JP;NL;TW;US,False,True,True,1,0,False,0,0
+doi_dedup___::f4296f2197929884e4b6a4b374779a27,Design and Architecture of the IBM Quantum Engine Compiler,2024-09-15,CA;DE;JP;US,False,True,False,0,0,True,4,4
+doi_dedup___::f492f10838724d8ca0215763742b0ecc,"Low-energy scattering and effective interactions of two baryons at  <mml:math xmlns:mml=""http://www.w3.org/1998/Math/MathML"" display=""inline""><mml:mrow><mml:msub><mml:mrow><mml:mi>m</mml:mi></mml:mrow><mml:mrow><mml:mi>π</mml:mi></mml:mrow></mml:msub><mml:mo>∼</mml:mo><mml:mn>450</mml:mn><mml:mtext> </mml:mtext><mml:mtext> </mml:mtext><mml:mi>MeV</mml:mi></mml:mrow></mml:math>  from lattice quantum chromodynamics",2021-03-19,ES;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::f57e540a574a0bc76900391550a850d9,Semiclassical Geometric Tensor in Multiparameter Quantum Information,2026-04-17,CN;IT;JP;SE,True,True,False,0,0,False,0,0
+doi_dedup___::f5ec4dae10482e57f8bc9302cc66bd21,How to Cross an Energy Barrier at Zero Kelvin without Tunneling Effect,2023-08-09,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::f6471342d430e8f6de36b225a8291cad,Order-Stability in Complex Biosystems from the Viewpoint of the Theory of Open Quantum Systems,2020-12-31,JP;SE,False,True,False,0,0,False,0,0
+doi_dedup___::f64cfe9c31c9e4572b90d3d462652a3d,Photoluminescence at the ground state level anticrossing of the nitrogen-vacancy center in diamond,2020-01-01,DE;JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::f65e7a260b5d2a1dbf300a912b07c5f4,Ascendance of Superconductivity in Magic-Angle Graphene Multilayers,2021-01-01,DE;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::f716da8a90731804ab028daf7f911c5e,Narrowband quantum emitters in hexagonal boron nitride with optically addressable spins,2026-01-27,AU;HU;JP,False,True,False,0,0,False,0,0
+doi_dedup___::f7b012e7d594c190e645496c69294c9c,Entanglement Quantification in Atomic Ensembles,2021-06-29,AT;CH;JP,False,True,False,0,0,False,0,0
+doi_dedup___::f9462c461e4e59c1423cb05eb77d22b1,Robustness of noisy quantum networks,2022-04-28,JP;PT,True,True,False,0,0,False,0,0
+doi_dedup___::f9719fad1bf72de9301c69cf7a50f44f,"Real-time decoding for fault-tolerant quantum computing: progress, challenges and outlook",2023-08-09,AU;DE;JP;NL;US,True,True,True,2,0,True,2,2
+doi_dedup___::fa462841739d9614ed7d30ed4be8cef3,Open-Cavity in Closed-Cycle Cryostat as a Quantum Optics Platform,2021-10-27,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::fb210110e577492f06b6bf9cef931264,Layer Hall effect in a 2D topological axion antiferromagnet,2021-07-21,CN;DE;IN;JP;SG;TW;US,False,True,False,0,0,False,0,0
+doi_dedup___::fb4082836658c69594fcf1472bf5722d,Is Measurement Enough? Rethinking Output Validation in Quantum Program Testing,2025-11-16,CN;JP;LU,False,True,False,0,0,False,0,0
+doi_dedup___::fb4c8d1f693c8557564a74414a371672,Roadmap on quantum nanotechnologies,2021-02-05,AT;AU;CA;CH;DE;DK;FI;GB;JP;KR;NL;US,False,True,True,4,1,False,0,0
+doi_dedup___::fb6681ec7a8d1ff6dd1d88256d67e9b6,Spectral properties of two superconducting artificial atoms coupled to a resonator in the ultrastrong coupling regime,2025-06-17,IT;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::fcb7cd056c1786e355b08dff7db87ee0,Mechanical quantum sensing in the search for dark matter,2021-01-18,AT;JP;US,True,True,False,0,0,False,0,0
+doi_dedup___::fcee4a29fb346cb431d0a7f2d6dcbc8b,Generic Entanglement Entropy for Quantum States with Symmetry,2020-06-19,DE;JP,False,True,True,1,0,False,0,0
+doi_dedup___::fcf2dbf2c7bcbd769877a50e0629e737,Certification of Non-Gaussian States using Double Homodyne Detection,2021-06-21,FR;JP,False,True,False,0,0,False,0,0
+doi_dedup___::fcf946448840e2069370cb5819f5bca1,Br-Mediated Spin-State Control in Nickelocene and Cobaltocene,2026-01-10,FI;JP,False,True,False,0,0,False,0,0
+doi_dedup___::fd0eec9980fd7ea42a61b049c485a30c,Quantifying Quantumness of Channels Without Entanglement,2022-05-19,AT;CZ;DE;FI;JP;PL;TW;US,False,True,True,1,0,False,0,0
+doi_dedup___::fe83ddc8ab1f23674425252a9be73980,Single-photon detection enabled by negative differential conductivity in moiré superlattices,2025-08-07,BE;ES;FR;GB;JP;US,False,True,False,0,0,False,0,0
+doi_dedup___::ff3342ab264306d418e0b778a903e067,Deterministic loading and phase shaping of microwaves onto a single artificial atom,2020-01-01,JP;SE;TW;US,False,True,False,0,0,False,0,0
+doi_dedup___::ff354ee17bed424b9ebdac5fd7e05cc0,Integrated micro-comb sources for quantum optical applications,2020-01-01,AU;CA;CN;DK;GB;JP;RU;US,False,True,True,3,0,False,0,0
+doi_dedup___::ff83ce95a68b659b542f4b3276ac5442,Fabrication and nanophotonic waveguide integration of silicon carbide colour centres with preserved spin-optical coherence,2021-11-18,DE;JP;SE;US,False,True,False,0,0,False,0,0
+doi_dedup___::ff8eeedef4118c97a5be00a1b1604430,Experimental quantum communication enhancement by superposing trajectories,2021-01-29,AT;CA;CH;CN;FR;GB;JP;US,True,True,False,0,0,False,0,0
+od______3132::b8dfeea60c5e6f247caaddcc1f3b27a5,Towards a fully integrated source of photon pairs in Bragg-reflection waveguides,2021-07-01,AT;JP;PK,False,True,True,2,0,False,0,0
+od______3848::50a0b56a14a0b61d9cdab21eb739edf9,Entanglement between two gravitating universes,2022-08-14,BE;CA;JP;US,False,True,False,0,0,False,0,0
+od_______199::b1ad10aeb3361bac563a2bac4222b8ce,"Automated optimization, learning and control for cold atom platforms",2025-01-01,AT;DE;IT;JP,False,True,True,4,0,False,0,0
+od_______348::372124f889c908e066d5ed0d07b0f27c,Photon-pair source at 2090 nm for long-distance quantum communication,2020-01-18,DE;FI;GB;JP,True,True,False,0,0,False,0,0
+pmid_dedup__::76313fedbdb875b2c2af564c1fd6f645,"Search for the Exclusive W Boson Hadronic Decays W^{±}→π^{±}γ, W^{±}→K^{±}γ and W^{±}→ρ^{±}γ with the ATLAS Detector.",2024-01-01,AE;AR;AT;AU;AZ;BR;CA;CH;CL;CN;CO;CZ;DE;ES;FR;GB;GE;GR;IL;IT;JP;MA;NL;NO;PH;PL;PT;RO;RS;SE;SI;SK;TR;TW;US;ZA,False,True,False,0,0,False,0,0
+r3c4b2081b22::1bfcc79149ed068dae8817f4660437a6,Nature Communications,2023-01-01,BE;FR;JP,False,True,True,1,0,False,0,0

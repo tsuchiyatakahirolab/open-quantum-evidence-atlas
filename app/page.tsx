@@ -1,0 +1,548 @@
+"use client";
+
+import { useState } from "react";
+import liveRecheck from "../public/reproducibility/live-recheck.json";
+import fullCensusVerification from "../public/reproducibility/full-census-verification.json";
+
+type ScopeKey = "observed" | "strict";
+
+const scopes = {
+  observed: {
+    label: "Observed corpus",
+    shortLabel: "Broad",
+    count: 645,
+    description: "Eight quantum search phrases · EU27 + Japan affiliations · 2020–2026",
+    metrics: [
+      { label: "Project", value: 60.8, count: "392 / 645", note: "all records audited" },
+      { label: "Funding", value: 60.8, count: "392 / 645", note: "all records audited" },
+      { label: "Dataset", value: 27.8, count: "179 / 645", note: "Wilson 95% reference band 24.4–31.3" },
+      { label: "Software", value: 7.4, count: "48 / 645", note: "Wilson 95% reference band 5.7–9.7" },
+    ],
+  },
+  strict: {
+    label: "Title-literal subset",
+    shortLabel: "Strict",
+    count: 87,
+    description: "A sensitivity check: a quantum phrase must appear in the title",
+    metrics: [
+      { label: "Project", value: 51.7, count: "45 / 87", note: "all records audited" },
+      { label: "Funding", value: 51.7, count: "45 / 87", note: "all records audited" },
+      { label: "Dataset", value: 24.1, count: "21 / 87", note: "all records audited" },
+      { label: "Software", value: 8.0, count: "7 / 87", note: "all records audited" },
+    ],
+  },
+};
+
+const chain = [
+  {
+    key: "funder",
+    step: "01",
+    label: "Funder",
+    short: "European Commission",
+    eyebrow: "Graph-linked funding",
+    title: "European Commission",
+    body: "The publication carries three result→project edges. Each project edge contains an EC funder object—more reliable here than the top-level publiclyFunded flag.",
+    facts: ["Horizon Europe", "Horizon 2020", "3 funded-project edges"],
+    link: "https://explore.openaire.eu/search/result?id=doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db",
+    linkLabel: "OpenAIRE record",
+  },
+  {
+    key: "projects",
+    step: "02",
+    label: "Projects",
+    short: "QIA · QUANGO · QSNP",
+    eyebrow: "Three linked projects",
+    title: "QIA-Phase1 · QUANGO · QSNP",
+    body: "One publication is linked to three European quantum-network programmes, creating a visible path from grant identifiers to a research result.",
+    facts: ["101102140", "101004341", "101114043"],
+    link: "https://doi.org/10.3030/101102140",
+    linkLabel: "Example grant DOI",
+  },
+  {
+    key: "institutions",
+    step: "03",
+    label: "Institutions",
+    short: "OIST ↔ European network",
+    eyebrow: "Resolved EU–Japan affiliation",
+    title: "OIST connects into a European network",
+    body: "The graph resolves Okinawa Institute of Science and Technology alongside Leiden, TU Delft, CNRS, Sorbonne, ICFO and LIST. This is the bilateral evidence gate used by the Atlas.",
+    facts: ["Japan: OIST", "EU: FR · ES · LU · NL", "Organisation IDs retained"],
+    link: "https://ror.org/02qg15b79",
+    linkLabel: "OIST ROR record",
+  },
+  {
+    key: "publication",
+    step: "04",
+    label: "Publication",
+    short: "Connecting quantum cities",
+    eyebrow: "Open publication · CC BY",
+    title: "Connecting quantum cities",
+    body: "A 2024 paper simulates a satellite-based European quantum network using NetSquid. It is the centre of the traceable chain—not a hand-picked policy document.",
+    facts: ["DOI 10.1088/1367-2630/ad5b13", "Published 1 Jul 2024", "14 citations in snapshot"],
+    link: "https://doi.org/10.1088/1367-2630/ad5b13",
+    linkLabel: "Open the publication",
+  },
+  {
+    key: "dataset",
+    step: "05",
+    label: "Dataset",
+    short: "Satellite measurement data",
+    eyebrow: "29 Jul snapshot · Scholix-linked dataset",
+    title: "A referenced measurement collection",
+    body: "The 29 July census exposed a references edge to ‘Quantum-limited measurements of optical signals from a geostationary satellite’ on Figshare. The 8 August bounded probe no longer returned that edge, so the Atlas preserves it as timestamped snapshot evidence rather than a timeless claim.",
+    facts: ["29 Jul: 1 dataset edge", "8 Aug probe: 0", "Figshare DOI retained"],
+    link: "https://doi.org/10.6084/m9.figshare.c.3813670",
+    linkLabel: "Open the dataset",
+  },
+  {
+    key: "software",
+    step: "06",
+    label: "Software",
+    short: "2 cited code records",
+    eyebrow: "29 Jul snapshot · Scholix-linked software",
+    title: "Two code records complete the chain",
+    body: "The paper cites ‘netsquid-freespace’ and ‘quantumcity’ software records collected from GitHub and Software Heritage. This is the kind of reusable output that is visible in only 7.4% of the full observed corpus.",
+    facts: ["netsquid-freespace", "quantumcity", "GitHub + Software Heritage"],
+    link: "https://explore.openaire.eu/search/result?id=openaire____::0203e43bc9da9dd3318eede5cd1e5544",
+    linkLabel: "Open a software record",
+  },
+];
+
+const stateLegend = [
+  { className: "linked", label: "Connected in OpenAIRE" },
+  { className: "external", label: "External policy anchor" },
+  { className: "missing", label: "Not observable" },
+  { className: "unaudited", label: "Not audited" },
+];
+
+export default function Home() {
+  const [scope, setScope] = useState<ScopeKey>("observed");
+  const [selected, setSelected] = useState(0);
+  const activeScope = scopes[scope];
+  const activeNode = chain[selected];
+
+  return (
+    <main>
+      <nav className="nav shell" aria-label="Primary navigation">
+        <a className="brand" href="#top" aria-label="Open Quantum Evidence Atlas home">
+          <span className="brand-mark" aria-hidden="true"><i /><i /><i /></span>
+          <span>OPEN QUANTUM<br />EVIDENCE ATLAS</span>
+        </a>
+        <div className="nav-links">
+          <a href="/audit">Run auditor</a>
+          <a href="/video">Watch video</a>
+          <a href="#trace">Trace</a>
+          <a href="#mcp">MCP check</a>
+          <a href="#watch">Watchlist</a>
+          <a href="#method">Method</a>
+          <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <span className="audit-stamp"><span /> AUDIT · 29 JUL 2026</span>
+      </nav>
+
+      <section className="hero shell" id="top">
+        <div className="hero-copy">
+          <div className="eyebrow"><span>OpenAIRE Graph · Theme C</span><b>EU ↔ JAPAN</b></div>
+          <h1>Funding is visible.<br /><em>Reuse links are not.</em></h1>
+          <p className="hero-lede">
+            Only <strong>17 of 645 EU–Japan quantum publications</strong> form a complete publication-centred project/funder–dataset–software path.
+            Project links reach 60.8%; software links reach 7.4%.
+          </p>
+          <div className="hero-actions">
+            <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
+            <a className="button quiet" href="/video">Watch the 119s demo</a>
+          </div>
+          <p className="source-line">Measured, not model-estimated · OpenAIRE Graph v3 + research-product links</p>
+          <p className="author-line">
+            Research &amp; development: <a href="https://tsuchiyatakahiro.com" target="_blank" rel="author noreferrer">Takahiro Tsuchiya, Ph.D.</a>
+            <span>Professor, Kyoto University of Foreign Studies · individual submission</span>
+          </p>
+        </div>
+
+        <div className="hero-signal" aria-label="Connection rate falls from project and funding to software">
+          <div className="signal-orbit orbit-one" />
+          <div className="signal-orbit orbit-two" />
+          <div className="signal-grid" aria-hidden="true" />
+          <div className="signal-topline"><span>EVIDENCE SIGNAL</span><span>n = 645 / 645</span></div>
+          <div className="signal-main">
+            <span className="signal-number">60.8</span>
+            <span className="signal-arrow">→</span>
+            <span className="signal-number dim">7.4</span>
+          </div>
+          <div className="signal-labels"><span>PROJECT-LINKED</span><span>SOFTWARE-LINKED</span></div>
+          <div className="signal-floor">
+            <span><i className="status linked" /> Graph edge</span>
+            <span><i className="status linked" /> Full-corpus Scholix audit</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="metric-strip" aria-label="Headline evidence metrics">
+        <div className="shell metric-strip-inner">
+          <div><strong>17 / 645</strong><span>complete chains</span></div>
+          <div><strong>645</strong><span>EU27–Japan corpus</span></div>
+          <div><strong>392</strong><span>project-linked</span></div>
+          <div><strong>179 / 645</strong><span>dataset-linked</span></div>
+          <div><strong>48 / 645</strong><span>software-linked</span></div>
+        </div>
+      </section>
+
+      <section className="reviewer-path" aria-label="Three-minute verification path">
+        <div className="shell reviewer-path-inner">
+          <div className="reviewer-path-label">
+            <span>VERIFY IN 3 MINUTES</span>
+            <strong>Claim → record → connector → reuse</strong>
+          </div>
+          <a href="#finding"><b>01</b><span>Read the finding</span><small>Declared denominator</small></a>
+          <a href="#trace"><b>02</b><span>Inspect one chain</span><small>Source-opening evidence</small></a>
+          <a href="#mcp"><b>03</b><span>Replay the MCP boundary</span><small>Executed regression case</small></a>
+          <a href="/reproducibility/reviewer-guide.md"><b>04</b><span>Re-run and reuse</span><small>Public verification guide</small></a>
+        </div>
+      </section>
+
+      <section className="section shell" id="finding">
+        <div className="section-heading split-heading">
+          <div>
+            <p className="kicker">01 · THE EVIDENCE GAP</p>
+            <h2>The graph sees investment.<br />It loses reusable outputs.</h2>
+          </div>
+          <p>
+            “Connected” means at least one explicit OpenAIRE edge. It is a Graph observability signal—not
+            proof of access, licensing, documentation quality or actual reuse. “Not connected” means only
+            that the edge was not observable. A “complete chain” is publication-centred; it does not assert
+            that a named grant caused or produced the connected dataset/software records.
+          </p>
+        </div>
+
+        <div className="scope-panel">
+          <div className="scope-switch" role="group" aria-label="Choose analysis scope">
+            {(Object.keys(scopes) as ScopeKey[]).map((key) => (
+              <button
+                key={key}
+                type="button"
+                className={scope === key ? "active" : ""}
+                aria-pressed={scope === key}
+                onClick={() => setScope(key)}
+              >
+                <span>{scopes[key].shortLabel}</span>
+                <b>n = {scopes[key].count}</b>
+              </button>
+            ))}
+          </div>
+          <div className="scope-meta">
+            <span>{activeScope.label}</span>
+            <p>{activeScope.description}</p>
+          </div>
+        </div>
+
+        <div className="finding-grid">
+          <div className="metric-rails">
+            {activeScope.metrics.map((metric, index) => (
+              <div className="rail-row" key={`${scope}-${metric.label}`}>
+                <div className="rail-label"><span>{metric.label}</span><b>{metric.value.toFixed(1)}%</b></div>
+                <div className="rail-track" aria-label={`${metric.label}: ${metric.value}%`}>
+                  <span
+                    className={`rail-fill rail-${index}`}
+                    style={{ width: `${metric.value}%`, animationDelay: `${index * 70}ms` }}
+                  />
+                </div>
+                <div className="rail-foot"><span>{metric.count}</span><span>{metric.note}</span></div>
+              </div>
+            ))}
+          </div>
+          <aside className="gap-card">
+            <p>FUNDING → SOFTWARE GAP</p>
+            <div className="gap-ratio">8.2<span>×</span></div>
+            <h3>A visibility cliff, not a minor drop.</h3>
+            <p>The near-identical strict-title result (51.7% → 8.0%) shows the conclusion is not created by the broad search alone.</p>
+            <div className="gap-rule"><span /></div>
+            <small>Sensitivity check: 87 title-literal records</small>
+          </aside>
+        </div>
+      </section>
+
+      <section className="trace-section" id="trace">
+        <div className="shell">
+          <div className="section-heading trace-heading">
+            <div>
+              <p className="kicker light">02 · ONE COMPLETE CHAIN</p>
+              <h2>Click the chain.<br />Inspect the evidence.</h2>
+            </div>
+            <div className="legend" aria-label="Evidence state legend">
+              {stateLegend.map((state) => (
+                <span key={state.label}><i className={`status ${state.className}`} />{state.label}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="chain-nav" role="tablist" aria-label="Evidence chain">
+            {chain.map((node, index) => (
+              <button
+                key={node.key}
+                type="button"
+                role="tab"
+                aria-selected={selected === index}
+                className={selected === index ? "active" : ""}
+                onClick={() => setSelected(index)}
+              >
+                <span className="chain-step">{node.step}</span>
+                <span className="chain-label">{node.label}</span>
+                <span className="chain-short">{node.short}</span>
+                <i className="status linked" />
+              </button>
+            ))}
+          </div>
+
+          <article className="chain-detail" role="tabpanel" aria-live="polite">
+            <div className="detail-index">{activeNode.step}</div>
+            <div className="detail-copy">
+              <p className="kicker light">{activeNode.eyebrow}</p>
+              <h3>{activeNode.title}</h3>
+              <p>{activeNode.body}</p>
+              <a href={activeNode.link} target="_blank" rel="noreferrer">{activeNode.linkLabel} <span aria-hidden="true">↗</span></a>
+            </div>
+            <div className="detail-facts">
+              {activeNode.facts.map((fact) => <span key={fact}>{fact}</span>)}
+            </div>
+          </article>
+          <p className="chain-provenance">Featured chain in the 29 Jul 2026 census: OpenAIRE product <code>doi_dedup___::82d884…</code> · Later drift is disclosed below</p>
+        </div>
+      </section>
+
+      <section className="mcp-section" id="mcp">
+        <div className="shell">
+          <div className="section-heading split-heading mcp-heading">
+            <div>
+              <p className="kicker">03 · TWO-LAYER OPENAIRE DESIGN</p>
+              <h2>MCP verifies interactively.<br />The API counts deterministically.</h2>
+            </div>
+            <p>
+              The Alien/OpenAIRE MCP is the interactive verification layer; the direct Graph API is the deterministic
+              census layer. The 30-call MCP trace followed the featured DOI and grant, while a targeted API follow-up
+              isolated a zero-based pagination mismatch without allowing that connector defect into the 645-record denominator.
+            </p>
+          </div>
+
+          <div className="live-recheck-banner">
+            <span>LATEST BOUNDED RECHECK · {liveRecheck.checked_at.slice(0, 10)} UTC</span>
+            <b>{liveRecheck.summary.term_queries_changed}/8 discovery totals moved</b>
+            <b>Q‑NEKO now visible · {liveRecheck.summary.q_neko_unique_project_records_sampled} project · {liveRecheck.summary.q_neko_unique_product_records_sampled} product search hits</b>
+            <b>Featured links now · {liveRecheck.link_page_contract.dataset["0"].rows} dataset · {liveRecheck.link_page_contract.software["0"].rows} software</b>
+            <b>29 Jul census · {fullCensusVerification.corpus.records} IDs · {fullCensusVerification.exact_match ? "verified" : "review needed"}</b>
+            <a href="/reproducibility/live-recheck.json" download>Inspect JSON ↓</a>
+          </div>
+
+          <div className="mcp-grid">
+            <article className="mcp-query-card">
+              <div className="mcp-card-top">
+                <span><i className="status linked" /> EXECUTED</span>
+                <b>OFFICIAL ALIEN DEMO · SONNET 4.6</b>
+              </div>
+              <p className="mcp-prompt">
+                “Using the OpenAIRE Graph only, cross-check DOI
+                <strong> 10.1088/1367-2630/ad5b13</strong>. Return identity, funding, projects,
+                organisations, datasets, software and provenance. Treat missing relations as not observable.”
+              </p>
+              <div className="mcp-call-strip">
+                <span><b>30</b> initial MCP calls</span>
+                <span><b>2</b> page-0 probes rejected</span>
+                <span><b>3</b> rows recovered · 18 Jul</span>
+              </div>
+              <a href="https://demo.alien.club/openaire" target="_blank" rel="noreferrer">
+                Open the official demo <span aria-hidden="true">↗</span>
+              </a>
+            </article>
+
+            <article className="mcp-findings-card">
+              <p className="mcp-label">DIRECTLY OBSERVED · 18 JUL MCP RUN</p>
+              <ul>
+                <li><span>Identity</span><b>Exact DOI resolved to <code>doi_dedup___::82d884…</code></b></li>
+                <li><span>Publication</span><b>2024 record retrieved from OpenAIRE</b></li>
+                <li><span>Funding</span><b>EC grant 101102140 · QIA-Phase1 confirmed</b></li>
+                <li><span>Recovered</span><b>1 Figshare dataset · 2 software records</b></li>
+              </ul>
+            </article>
+
+            <article className="mcp-boundary-card">
+              <p className="mcp-label">ROOT CAUSE CONFIRMED · OFF-BY-ONE</p>
+              <h3>Page 0 has the rows.<br />MCP rejects page 0.</h3>
+              <p>
+                The official link endpoint defaults to page 0. Direct calls returned all three typed rows there;
+                pages 1 and 2 returned none. Alien&apos;s <code>ResearchLinksInput</code> rejected page 0 before an
+                upstream call. This is an <strong>MCP schema/offset defect</strong>, not missing OpenAIRE data.
+              </p>
+            </article>
+          </div>
+
+          <div className="mcp-comparison" role="table" aria-label="Deterministic API census and interactive MCP verification layers">
+            <div role="row" className="mcp-comparison-head">
+              <span role="columnheader">Diagnostic</span>
+              <span role="columnheader">Deterministic census layer · API</span>
+              <span role="columnheader">Interactive verification layer · MCP</span>
+            </div>
+            <div role="row">
+              <span role="cell">Page contract</span><b role="cell">Default page = 0</b><b role="cell">Validator requires page ≥ 1</b>
+            </div>
+            <div role="row">
+              <span role="cell">Dataset</span><b role="cell">Page 0 → 1 of 1 row</b><b role="cell">Page 0 rejected</b>
+            </div>
+            <div role="row">
+              <span role="cell">Software</span><b role="cell">Page 0 → 2 of 2 rows</b><b role="cell">Page 0 rejected</b>
+            </div>
+            <div role="row">
+              <span role="cell">Repair</span><b role="cell">Direct API fallback works now</b><b role="cell">Allow 0 or translate page − 1</b>
+            </div>
+          </div>
+
+          <div className="mcp-footnote">
+            <p><strong>Time-bounded result:</strong> the table records the 18/29 July diagnostic. On 8 August the featured dataset total changed from 1 to 0, while the two software rows still reproduced the page-0 mismatch. MCP remains the inspectable traversal layer; the API remains the deterministic census layer.</p>
+            <div>
+              <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
+              <a href="/reproducibility/openaire-mcp-crosscheck.md" target="_blank" rel="noreferrer">Static integration diagnostic ↗</a><br />
+              <a href="/reproducibility/mcp-run-manifest.json" target="_blank" rel="noreferrer">Machine-readable MCP run manifest ↗</a><br />
+              <a href="/reproducibility/openaire_mcp_pagination_repro.py" download>Minimal reproducer · PY ↓</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell" id="watch">
+        <div className="watch-grid">
+          <div className="watch-copy">
+            <p className="kicker">04 · OBSERVABILITY TIMELINE</p>
+            <h2>Q‑NEKO is the test case.<br /><em>Not the corpus.</em></h2>
+            <p>
+              Q‑NEKO is a new EU–Japan joint quantum-technology project: €4m in European funding,
+              running 2026–2028. It was absent from the 29 July queries; the 8 August bounded recheck found
+              one exact project record and three research-product search hits for the Q‑Neko alias. Those hits
+              are not treated as grant-attributed outputs without a verified relation.
+            </p>
+            <div className="watch-actions">
+              <a href="https://www.eurohpc-ju.europa.eu/research-innovation/our-projects/q-neko_en" target="_blank" rel="noreferrer">EuroHPC project record ↗</a>
+              <a href="https://www8.cao.go.jp/cstp/stmain/20260413ryoshi_en.html" target="_blank" rel="noreferrer">Japan Cabinet Office ↗</a>
+            </div>
+          </div>
+
+          <div className="watch-card">
+            <div className="watch-card-top"><span><i className="status linked" /> FIRST GRAPH-ENTRY MILESTONE</span><b>29 JUL → 08 AUG 2026</b></div>
+            <div className="watch-zero">
+              <div><strong>0·0</strong><span>29 Jul · project / product hits</span></div>
+              <div className="zero-divider" />
+              <div><strong>{liveRecheck.summary.q_neko_unique_project_records_sampled}·{liveRecheck.summary.q_neko_unique_product_records_sampled}</strong><span>8 Aug · project / product search hits</span></div>
+            </div>
+            <div className="watch-callout"><i className="status linked" /><p><strong>The clock produced its first state change.</strong><br />The Atlas detected project visibility ten days after its published census; aggregate rates remain the 29 July snapshot pending an authenticated refresh.</p></div>
+            <details>
+              <summary>Show audited aliases</summary>
+              <ul>
+                <li>Q-Neko</li>
+                <li>QNEKO</li>
+                <li>Nippon-Europe Quantum Koraborēshon</li>
+                <li>HORIZON-EUROHPC-JU-2024-INCO-06</li>
+              </ul>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section className="decision-section" id="decision">
+        <div className="shell">
+          <div className="decision-title">
+            <p className="kicker">05 · DECISION BRIEF</p>
+            <h2>Build the broad Atlas.<br />Use Q‑NEKO as a live benchmark.</h2>
+            <p>One policy decision, three operating moves.</p>
+          </div>
+          <div className="decision-grid">
+            <article>
+              <span>01 · POLICY EVALUATOR</span>
+              <h3>Use the 645-record reference corpus</h3>
+              <p>The broad cohort supplies a defensible comparison baseline; Q‑NEKO is now a time-indexed change case, not a standalone impact score.</p>
+            </article>
+            <article>
+              <span>02 · RESEARCH FUNDER</span>
+              <h3>Make reuse edges a deliverable</h3>
+              <p>Require grant, DOI, repository and Software Heritage identifiers to connect before project close—not after evaluation.</p>
+            </article>
+            <article>
+              <span>03 · OPEN SCIENCE TEAM</span>
+              <h3>Re-audit the policy lag</h3>
+              <p>Record the first project milestone now, then verify project–product relations before measuring time-to-publication and reusable-output visibility.</p>
+            </article>
+          </div>
+          <div className="falsification">
+            <span>WHAT WOULD CHANGE THE CONCLUSION?</span>
+            <p>If added repository identifiers or improved OpenAIRE classification lifts software visibility near the 28% dataset rate, the “software cliff” weakens. This Atlas publishes its denominator so that claim can be tested.</p>
+          </div>
+          <div className="falsification">
+            <span>TIME-INDEXED EVIDENCE</span>
+            <p>The 29 July full census and 8 August bounded probe answer different questions. The first fixes the aggregate denominator; the second detects Graph drift without silently rewriting the published rates.</p>
+          </div>
+          <div className="falsification">
+            <span>DESIGN CONTRAST</span>
+            <p>A publication-count view asks how much research is visible. The Atlas asks whether a decision-maker can audit the whole path from investment to reusable outputs, preserves missing-edge uncertainty, and turns a connector failure into a regression test.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell method-section" id="method">
+        <div className="section-heading split-heading">
+          <div>
+            <p className="kicker">06 · REUSE THE AUDIT</p>
+            <h2>Every number has<br />a denominator.</h2>
+          </div>
+            <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes source attribution, transformations and licence metadata. Snapshot, notebook and the 22-call live probe are credential-free; a fresh full census requires an OpenAIRE bearer token and is throttled below the authenticated limit.</p>
+        </div>
+
+        <div className="method-grid">
+          <ol className="method-steps">
+            <li><span>01</span><p><strong>Discover</strong> with eight quantum phrases; deduplicate the Japan-query union.</p></li>
+            <li><span>02</span><p><strong>Resolve scope</strong> to 2020–2026 publications with Japan + EU27 affiliations.</p></li>
+            <li><span>03</span><p><strong>Audit all 645</strong> for project and funder objects in product links.</p></li>
+            <li><span>04</span><p><strong>Audit Scholix links</strong> for all 645 observed records; retain the 87 title-literal sensitivity set.</p></li>
+            <li><span>05</span><p><strong>Compare subsets</strong> with Wilson 95% binomial reference bands.</p></li>
+          </ol>
+          <div className="download-card">
+            <p>REPRODUCIBILITY PACK</p>
+            <a href="/evidence-snapshot.json" download><span>Evidence snapshot</span><b>JSON ↓</b></a>
+            <a href="/connection-rates.csv" download><span>Connection rates</span><b>CSV ↓</b></a>
+            <a href="/reproducibility/openaire_connection_rates.ipynb" download><span>Executed analysis</span><b>IPYNB ↓</b></a>
+            <a href="/analysis-report.md" download><span>Analysis report</span><b>MD ↓</b></a>
+            <a href="/reproducibility/openaire_feasibility.py" download><span>Source pipeline</span><b>PY ↓</b></a>
+            <a href="/reproducibility/openaire-mcp-crosscheck.md" download><span>Executed MCP cross-check</span><b>MD ↓</b></a>
+            <a href="/reproducibility/mcp-run-manifest.json" download><span>MCP run manifest</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/openaire_mcp_pagination_repro.py" download><span>MCP pagination reproducer</span><b>PY ↓</b></a>
+            <a href="/reproducibility/live-recheck.json" download><span>Bounded live recheck</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/full-census-verification.json" download><span>Full-census verification</span><b>JSON ↓</b></a>
+            <a href="/reproducibility/openaire_live_recheck.py" download><span>Live recheck source</span><b>PY ↓</b></a>
+            <a href="/reproducibility/reviewer-guide.md" download><span>Three-minute verification guide</span><b>MD ↓</b></a>
+            <a href="/reproducibility/responsible-use-manifest.json" download><span>Responsible-use manifest</span><b>JSON ↓</b></a>
+            <a href="/ro-crate-metadata.json" download><span>FAIR RO-Crate metadata</span><b>JSON-LD ↓</b></a>
+            <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
+            <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
+            <a href="https://api.openaire.eu/graph/v3/research-products" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
+            <small>Full census snapshot: 29 Jul 2026 · latest bounded recheck: 8 Aug 2026 · fresh full census requires authenticated access</small>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div className="shell footer-inner">
+          <div>
+            <span className="brand footer-brand"><span className="brand-mark" aria-hidden="true"><i /><i /><i /></span><span>OPEN QUANTUM<br />EVIDENCE ATLAS</span></span>
+            <p>Turn bilateral research policy into inspectable evidence.</p>
+          </div>
+          <div className="footer-meta">
+            <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
+            <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; version history · GitHub ↗</a>
+            <a href="/video">Captioned 119-second walkthrough ↗</a>
+            <a href="https://tsuchiyatakahiro.com" target="_blank" rel="noreferrer">Research profile · Takahiro Tsuchiya ↗</a>
+            <a href="https://graph.openaire.eu/docs/license/" target="_blank" rel="noreferrer">Source: OpenAIRE Graph · CC BY ↗</a>
+            <a href="/reproducibility/responsible-use-manifest.json">Responsible-use disclosure ↗</a>
+            <a href="/ro-crate-metadata.json">FAIR RO-Crate metadata ↗</a>
+            <span>Derived audit: transformations declared · External anchors: EuroHPC JU &amp; Cabinet Office of Japan</span>
+            <span>Code: MIT · Derived data, artifact and story: CC BY 4.0</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}

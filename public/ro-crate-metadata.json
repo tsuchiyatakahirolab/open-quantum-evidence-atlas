@@ -1,0 +1,126 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": { "@id": "./" },
+      "conformsTo": { "@id": "https://w3id.org/ro/crate/1.1" }
+    },
+    {
+      "@id": "./",
+      "@type": ["Dataset", "SoftwareSourceCode"],
+      "name": "Open Quantum Evidence Atlas",
+      "description": "Executable OpenAIRE evidence-chain audit of EU-Japan quantum research.",
+      "version": "1.0.0",
+      "creativeWorkStatus": "Release candidate",
+      "dateModified": "2026-08-08",
+      "url": "https://atlas.tsuchiyatakahiro.com",
+      "codeRepository": "https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas",
+      "author": { "@id": "#takahiro-tsuchiya" },
+      "license": [
+        { "@id": "https://opensource.org/license/mit" },
+        { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+      ],
+      "hasPart": [
+        { "@id": "evidence-snapshot.json" },
+        { "@id": "connection-rates.csv" },
+        { "@id": "audit-dataset.json" },
+        { "@id": "submission-story.md" },
+        { "@id": "reproducibility/openaire_connection_rates.ipynb" },
+        { "@id": "reproducibility/openaire_feasibility.py" },
+        { "@id": "reproducibility/mcp-run-manifest.json" },
+        { "@id": "reproducibility/live-recheck.json" },
+        { "@id": "reproducibility/full-census-verification.json" },
+        { "@id": "reproducibility/responsible-use-manifest.json" },
+        { "@id": "reproducibility/reviewer-guide.md" }
+      ]
+    },
+    {
+      "@id": "#takahiro-tsuchiya",
+      "@type": "Person",
+      "name": "Takahiro Tsuchiya",
+      "affiliation": "Kyoto University of Foreign Studies"
+    },
+    {
+      "@id": "evidence-snapshot.json",
+      "@type": "Dataset",
+      "name": "Bounded OpenAIRE evidence snapshot",
+      "encodingFormat": "application/json",
+      "dateModified": "2026-07-29",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "connection-rates.csv",
+      "@type": "Dataset",
+      "name": "Connection-rate table",
+      "encodingFormat": "text/csv",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "audit-dataset.json",
+      "@type": "Dataset",
+      "name": "Browser-auditor dataset",
+      "encodingFormat": "application/json",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "submission-story.md",
+      "@type": "CreativeWork",
+      "name": "OpenAIRE AI Hackathon story",
+      "encodingFormat": "text/markdown",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/openaire_connection_rates.ipynb",
+      "@type": "ComputationalNotebook",
+      "name": "Executed connection-rate notebook",
+      "encodingFormat": "application/x-ipynb+json",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/openaire_feasibility.py",
+      "@type": "SoftwareSourceCode",
+      "name": "OpenAIRE audit pipeline",
+      "programmingLanguage": "Python",
+      "license": { "@id": "https://opensource.org/license/mit" }
+    },
+    {
+      "@id": "reproducibility/mcp-run-manifest.json",
+      "@type": "Dataset",
+      "name": "Alien/OpenAIRE MCP run manifest",
+      "encodingFormat": "application/json",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/live-recheck.json",
+      "@type": "Dataset",
+      "name": "Latest bounded OpenAIRE drift recheck",
+      "encodingFormat": "application/json",
+      "dateModified": "2026-08-08",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/full-census-verification.json",
+      "@type": "Dataset",
+      "name": "29 July full-census verification",
+      "encodingFormat": "application/json",
+      "dateModified": "2026-07-29",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/responsible-use-manifest.json",
+      "@type": "CreativeWork",
+      "name": "Responsible-use manifest",
+      "encodingFormat": "application/json",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    },
+    {
+      "@id": "reproducibility/reviewer-guide.md",
+      "@type": "HowTo",
+      "name": "Three-minute verification guide",
+      "encodingFormat": "text/markdown",
+      "license": { "@id": "https://creativecommons.org/licenses/by/4.0/" }
+    }
+  ]
+}

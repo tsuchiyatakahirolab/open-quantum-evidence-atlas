@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-08T14:08:33Z",
+  "snapshot_as_of": "2026-07-29T00:13:14Z",
+  "scope": "Bounded live integrity recheck; not a recomputation of the 645-record census",
+  "request_policy": {
+    "authenticated": false,
+    "requests_made": 22,
+    "unauthenticated_limit_per_hour": 60
+  },
+  "summary": {
+    "checks_passed": 4,
+    "checks_total": 6,
+    "term_queries_changed": 8,
+    "q_neko_project_hits": 1,
+    "q_neko_product_hits": 3,
+    "q_neko_unique_project_records_sampled": 1,
+    "q_neko_unique_product_records_sampled": 3
+  },
+  "checks": {
+    "featured_doi_resolves": true,
+    "featured_grant_resolves": true,
+    "dataset_page_zero_returns_rows": false,
+    "software_page_zero_returns_rows": true,
+    "page_one_still_skips_dataset": false,
+    "page_one_still_skips_software": true
+  },
+  "term_query_counts": {
+    "quantum computing": {
+      "snapshot": 811,
+      "current": 828,
+      "delta": 17,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+computing%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum communication": {
+      "snapshot": 185,
+      "current": 191,
+      "delta": 6,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+communication%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum sensing": {
+      "snapshot": 229,
+      "current": 234,
+      "delta": 5,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+sensing%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum simulation": {
+      "snapshot": 201,
+      "current": 200,
+      "delta": -1,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+simulation%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum cryptography": {
+      "snapshot": 113,
+      "current": 116,
+      "delta": 3,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+cryptography%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum information": {
+      "snapshot": 903,
+      "current": 911,
+      "delta": 8,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+information%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum metrology": {
+      "snapshot": 119,
+      "current": 115,
+      "delta": -4,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+metrology%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    },
+    "quantum network": {
+      "snapshot": 88,
+      "current": 86,
+      "delta": -2,
+      "query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22quantum+network%22&countryCode=JP&type=publication&fromPublicationYear=2020&toPublicationYear=2026&page=1&pageSize=1"
+    }
+  },
+  "featured_record": {
+    "doi": "10.1088/1367-2630/ad5b13",
+    "expected_id": "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db",
+    "returned_ids": [
+      "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db"
+    ],
+    "doi_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%2210.1088%2F1367-2630%2Fad5b13%22&page=1&pageSize=10",
+    "grant": "101102140",
+    "grant_match_count": 1,
+    "grant_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%2210.1088%2F1367-2630%2Fad5b13%22&relProjectCode=101102140&page=1&pageSize=10"
+  },
+  "link_page_contract": {
+    "dataset": {
+      "0": {
+        "total": 0,
+        "rows": 0,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=dataset&page=0&size=10"
+      },
+      "1": {
+        "total": 0,
+        "rows": 0,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=dataset&page=1&size=10"
+      }
+    },
+    "software": {
+      "0": {
+        "total": 2,
+        "rows": 2,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=software&page=0&size=10"
+      },
+      "1": {
+        "total": 2,
+        "rows": 0,
+        "query_url": "https://api.openaire.eu/graph/v1/researchProducts/links?sourcePid=50%7Cdoi_dedup___%3A%3A82d8842e25b2e9bdbe03ab4c5db972db&targetType=software&page=1&size=10"
+      }
+    }
+  },
+  "q_neko": {
+    "Q-Neko": {
+      "products": 3,
+      "projects": 1,
+      "product_samples": [
+        {
+          "id": "od______1640::b37822a6cc48d48c6f4767af9f684d15",
+          "title": "svPITE: A Python package for the state-vector-based probabilistic imaginary-time evolution algorithm",
+          "type": "other",
+          "publication_date": "2026-05-08",
+          "pids": []
+        },
+        {
+          "id": "doi_dedup___::b9a3b1adec4ed51f393a6d359ba40f8d",
+          "title": "Correlation-driven branch in doped excitonic insulators",
+          "type": "publication",
+          "publication_date": "2026-04-15",
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.1103/nqsm-tyht"
+            },
+            {
+              "scheme": "doi",
+              "value": "10.48550/arxiv.2601.13890"
+            },
+            {
+              "scheme": "arXiv",
+              "value": "2601.13890"
+            }
+          ]
+        },
+        {
+          "id": "doi_dedup___::bb33d58f05fb1fa938d0e83a95d9599d",
+          "title": "Exploring Variational Entanglement Hamiltonians",
+          "type": "publication",
+          "publication_date": "2026-06-12",
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.22331/q-2026-06-12-2133"
+            },
+            {
+              "scheme": "doi",
+              "value": "10.48550/arxiv.2505.10530"
+            },
+            {
+              "scheme": "arXiv",
+              "value": "2505.10530"
+            }
+          ]
+        }
+      ],
+      "project_samples": [
+        {
+          "id": "corda_____he::b3e96870247e4c92b0888f763b44ad09",
+          "title": "Nippon-Europe Quantum Koraboreshon",
+          "code": "101241875",
+          "acronym": "Q-NEKO",
+          "start_date": "2026-01-01",
+          "end_date": "2028-12-31"
+        }
+      ],
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Q-Neko%22&page=1&pageSize=3",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Q-Neko&page=1&pageSize=3"
+    },
+    "QNEKO": {
+      "products": 0,
+      "projects": 0,
+      "product_samples": [],
+      "project_samples": [],
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22QNEKO%22&page=1&pageSize=3",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=QNEKO&page=1&pageSize=3"
+    },
+    "Nippon-Europe Quantum Koraborēshon": {
+      "products": 0,
+      "projects": 0,
+      "product_samples": [],
+      "project_samples": [],
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Nippon-Europe+Quantum+Korabor%C4%93shon%22&page=1&pageSize=3",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Nippon-Europe+Quantum+Korabor%C4%93shon&page=1&pageSize=3"
+    },
+    "HORIZON-EUROHPC-JU-2024-INCO-06": {
+      "products": 0,
+      "projects": 0,
+      "product_samples": [],
+      "project_samples": [],
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22HORIZON-EUROHPC-JU-2024-INCO-06%22&page=1&pageSize=3",
+      "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=HORIZON-EUROHPC-JU-2024-INCO-06&page=1&pageSize=3"
+    }
+  }
+}

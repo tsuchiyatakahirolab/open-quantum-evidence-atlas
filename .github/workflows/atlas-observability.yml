@@ -1,0 +1,93 @@
+name: Atlas observability
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Observation lane
+        required: true
+        default: bounded
+        type: choice
+        options:
+          - bounded
+          - full
+  schedule:
+    # Tue-Sun 06:30 JST: bounded observation.
+    - cron: "30 21 * * 1-6"
+    # Mon 06:30 JST: full when explicitly enabled and authenticated; bounded otherwise.
+    - cron: "30 21 * * 0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: atlas-observability
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      RUN_ROOT: ${{ runner.temp }}/atlas-observability
+      REQUESTED_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '30 21 * * 0' && 'full' || 'bounded') }}
+      OPENAIRE_ACCESS_TOKEN: ${{ secrets.OPENAIRE_ACCESS_TOKEN }}
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Select guarded lane
+        id: lane
+        shell: bash
+        env:
+          FULL_ENABLED: ${{ vars.ATLAS_FULL_CENSUS_ENABLED }}
+        run: |
+          actual="$REQUESTED_MODE"
+          if [[ "$actual" == "full" ]] && { [[ "$FULL_ENABLED" != "true" ]] || [[ -z "$OPENAIRE_ACCESS_TOKEN" ]]; }; then
+            echo "Full census is gated; falling back to the bounded lane."
+            actual="bounded"
+          fi
+          echo "mode=$actual" >> "$GITHUB_OUTPUT"
+
+      - name: Run non-publishing observation
+        id: observation
+        shell: bash
+        run: |
+          set +e
+          python scripts/atlas_observability.py "${{ steps.lane.outputs.mode }}" --run-root "$RUN_ROOT"
+          code=$?
+          echo "exit_code=$code" >> "$GITHUB_OUTPUT"
+          status=$(python -c 'import json, os; print(json.load(open(os.path.join(os.environ["RUN_ROOT"], "manifest.json")))["classification"]["status"])')
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Assert published files were not mutated
+        shell: bash
+        run: git diff --exit-code -- .
+
+      - name: Upload review bundle
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-observability-${{ steps.lane.outputs.mode }}-${{ github.run_id }}
+          path: ${{ env.RUN_ROOT }}
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Surface classification
+        if: always()
+        shell: bash
+        run: |
+          status="${{ steps.observation.outputs.status }}"
+          code="${{ steps.observation.outputs.exit_code }}"
+          if [[ "$status" == "REVIEW_REQUIRED" ]]; then
+            echo "::warning::Atlas drift requires human review; no publication occurred."
+          fi
+          if [[ "$code" != "0" ]]; then
+            echo "Atlas observation failed with status ${status:-unknown}."
+            exit "$code"
+          fi
