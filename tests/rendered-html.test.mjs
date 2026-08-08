@@ -27,6 +27,12 @@ test("serves built assets before application routes", async () => {
   assert.equal(await assetResponse.text(), "asset");
 });
 
+test("keeps Wrangler bundling enabled for the Cloudflare size limit", async () => {
+  const config = await readFile(new URL("../wrangler.atlas.jsonc", import.meta.url), "utf8");
+  assert.doesNotMatch(config, /"no_bundle"\s*:\s*true/i);
+  assert.doesNotMatch(config, /dist\/server\/\*\*\/\*\.js/i);
+});
+
 test("routes POST bodies directly to the application without disturbing them", async () => {
   const workerUrl = new URL("../worker.atlas.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);

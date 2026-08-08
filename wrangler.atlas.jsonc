@@ -4,13 +4,6 @@
   "main": "worker.atlas.js",
   "compatibility_date": "2026-05-15",
   "compatibility_flags": ["nodejs_compat"],
-  "no_bundle": true,
-  "rules": [
-    {
-      "type": "ESModule",
-      "globs": ["dist/server/**/*.js", "dist/server/**/*.mjs"]
-    }
-  ],
   "assets": {
     "directory": "dist/client",
     "binding": "ASSETS",
