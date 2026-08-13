@@ -1,12 +1,22 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-08-08T14:08:33Z",
+  "checked_at": "2026-08-13T07:42:58Z",
   "snapshot_as_of": "2026-07-29T00:13:14Z",
   "scope": "Bounded live integrity recheck; not a recomputation of the 645-record census",
   "request_policy": {
     "authenticated": false,
-    "requests_made": 22,
+    "requests_made": 23,
     "unauthenticated_limit_per_hour": 60
+  },
+  "q_neko_measurement_policy": {
+    "raw_alias_hits": "All research-product hits returned by the four literal alias searches.",
+    "self_excluded_candidates": "Raw alias hits after excluding this Atlas by its Zenodo DOI or exact title.",
+    "verified_grant_outputs": "Research products explicitly related to OpenAIRE project code 101241875; alias similarity alone is insufficient.",
+    "self_product_dois": [
+      "10.5281/zenodo.21913413",
+      "10.5281/zenodo.21913414",
+      "10.5281/zenodo.21914776"
+    ]
   },
   "summary": {
     "checks_passed": 4,
@@ -14,8 +24,13 @@
     "term_queries_changed": 8,
     "q_neko_project_hits": 1,
     "q_neko_product_hits": 3,
+    "q_neko_product_hits_raw": 4,
+    "q_neko_product_hits_self_excluded": 3,
+    "q_neko_self_product_hits": 1,
+    "q_neko_verified_grant_output_hits": 3,
     "q_neko_unique_project_records_sampled": 1,
-    "q_neko_unique_product_records_sampled": 3
+    "q_neko_unique_product_records_sampled": 3,
+    "q_neko_unique_product_records_sampled_raw": 4
   },
   "checks": {
     "featured_doi_resolves": true,
@@ -115,7 +130,93 @@
   "q_neko": {
     "Q-Neko": {
       "products": 3,
+      "products_raw": 4,
+      "products_self_matches_returned": 1,
+      "products_self_excluded": 3,
       "projects": 1,
+      "product_samples_raw": [
+        {
+          "id": "od______1640::b37822a6cc48d48c6f4767af9f684d15",
+          "title": "svPITE: A Python package for the state-vector-based probabilistic imaginary-time evolution algorithm",
+          "type": "other",
+          "publication_date": "2026-05-08",
+          "pids": []
+        },
+        {
+          "id": "doi_dedup___::b9a3b1adec4ed51f393a6d359ba40f8d",
+          "title": "Correlation-driven branch in doped excitonic insulators",
+          "type": "publication",
+          "publication_date": "2026-04-15",
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.1103/nqsm-tyht"
+            },
+            {
+              "scheme": "doi",
+              "value": "10.48550/arxiv.2601.13890"
+            },
+            {
+              "scheme": "arXiv",
+              "value": "2601.13890"
+            }
+          ]
+        },
+        {
+          "id": "od______2659::5135ee57268c4227214858c3cc54819a",
+          "title": "Open Quantum Evidence Atlas",
+          "type": "software",
+          "publication_date": null,
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.5281/zenodo.21913414"
+            },
+            {
+              "scheme": "oai",
+              "value": "oai:zenodo.org:21913414"
+            }
+          ]
+        },
+        {
+          "id": "doi_dedup___::bb33d58f05fb1fa938d0e83a95d9599d",
+          "title": "Exploring Variational Entanglement Hamiltonians",
+          "type": "publication",
+          "publication_date": "2026-06-12",
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.22331/q-2026-06-12-2133"
+            },
+            {
+              "scheme": "doi",
+              "value": "10.48550/arxiv.2505.10530"
+            },
+            {
+              "scheme": "arXiv",
+              "value": "2505.10530"
+            }
+          ]
+        }
+      ],
+      "product_samples_self": [
+        {
+          "id": "od______2659::5135ee57268c4227214858c3cc54819a",
+          "title": "Open Quantum Evidence Atlas",
+          "type": "software",
+          "publication_date": null,
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.5281/zenodo.21913414"
+            },
+            {
+              "scheme": "oai",
+              "value": "oai:zenodo.org:21913414"
+            }
+          ]
+        }
+      ],
       "product_samples": [
         {
           "id": "od______1640::b37822a6cc48d48c6f4767af9f684d15",
@@ -175,32 +276,103 @@
           "end_date": "2028-12-31"
         }
       ],
-      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Q-Neko%22&page=1&pageSize=3",
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Q-Neko%22&page=1&pageSize=10",
       "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Q-Neko&page=1&pageSize=3"
     },
     "QNEKO": {
       "products": 0,
+      "products_raw": 0,
+      "products_self_matches_returned": 0,
+      "products_self_excluded": 0,
       "projects": 0,
+      "product_samples_raw": [],
+      "product_samples_self": [],
       "product_samples": [],
       "project_samples": [],
-      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22QNEKO%22&page=1&pageSize=3",
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22QNEKO%22&page=1&pageSize=10",
       "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=QNEKO&page=1&pageSize=3"
     },
     "Nippon-Europe Quantum Koraborēshon": {
       "products": 0,
+      "products_raw": 0,
+      "products_self_matches_returned": 0,
+      "products_self_excluded": 0,
       "projects": 0,
+      "product_samples_raw": [],
+      "product_samples_self": [],
       "product_samples": [],
       "project_samples": [],
-      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Nippon-Europe+Quantum+Korabor%C4%93shon%22&page=1&pageSize=3",
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22Nippon-Europe+Quantum+Korabor%C4%93shon%22&page=1&pageSize=10",
       "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=Nippon-Europe+Quantum+Korabor%C4%93shon&page=1&pageSize=3"
     },
     "HORIZON-EUROHPC-JU-2024-INCO-06": {
       "products": 0,
+      "products_raw": 0,
+      "products_self_matches_returned": 0,
+      "products_self_excluded": 0,
       "projects": 0,
+      "product_samples_raw": [],
+      "product_samples_self": [],
       "product_samples": [],
       "project_samples": [],
-      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22HORIZON-EUROHPC-JU-2024-INCO-06%22&page=1&pageSize=3",
+      "product_query_url": "https://api.openaire.eu/graph/v3/research-products?search=%22HORIZON-EUROHPC-JU-2024-INCO-06%22&page=1&pageSize=10",
       "project_query_url": "https://api.openaire.eu/graph/v3/projects?search=HORIZON-EUROHPC-JU-2024-INCO-06&page=1&pageSize=3"
     }
+  },
+  "q_neko_verified_grant_outputs": {
+    "project_code": "101241875",
+    "raw_hits": 3,
+    "self_matches_returned": 0,
+    "verified_hits": 3,
+    "samples": [
+      {
+        "id": "doi_dedup___::b9a3b1adec4ed51f393a6d359ba40f8d",
+        "title": "Correlation-driven branch in doped excitonic insulators",
+        "type": "publication",
+        "publication_date": "2026-04-15",
+        "pids": [
+          {
+            "scheme": "doi",
+            "value": "10.1103/nqsm-tyht"
+          },
+          {
+            "scheme": "doi",
+            "value": "10.48550/arxiv.2601.13890"
+          },
+          {
+            "scheme": "arXiv",
+            "value": "2601.13890"
+          }
+        ]
+      },
+      {
+        "id": "doi_dedup___::bb33d58f05fb1fa938d0e83a95d9599d",
+        "title": "Exploring Variational Entanglement Hamiltonians",
+        "type": "publication",
+        "publication_date": "2026-06-12",
+        "pids": [
+          {
+            "scheme": "doi",
+            "value": "10.22331/q-2026-06-12-2133"
+          },
+          {
+            "scheme": "doi",
+            "value": "10.48550/arxiv.2505.10530"
+          },
+          {
+            "scheme": "arXiv",
+            "value": "2505.10530"
+          }
+        ]
+      },
+      {
+        "id": "od______1640::b37822a6cc48d48c6f4767af9f684d15",
+        "title": "svPITE: A Python package for the state-vector-based probabilistic imaginary-time evolution algorithm",
+        "type": "other",
+        "publication_date": "2026-05-08",
+        "pids": []
+      }
+    ],
+    "query_url": "https://api.openaire.eu/graph/v3/research-products?relProjectCode=101241875&page=1&pageSize=10"
   }
 }

@@ -1,3 +1,5 @@
+Recording note — the video captures the 8 August observation. A 13 August recheck subsequently separated four raw Q-NEKO product hits, excluded the Atlas's own Zenodo record, and verified the remaining three through OpenAIRE project code 101241875.
+
 When governments fund quantum research, grants and papers are easy to count. The harder question: what becomes reusable?
 
 Open Quantum Evidence Atlas turns that into an executable observability audit of the OpenAIRE Graph.

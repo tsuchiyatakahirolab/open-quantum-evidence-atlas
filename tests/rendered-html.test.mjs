@@ -74,7 +74,7 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /MCP schema\/offset defect/i);
   assert.match(html, /Static integration diagnostic/i);
   assert.match(visibleHtml, /8\/8 discovery totals moved/i);
-  assert.match(visibleHtml, /Q‑NEKO now visible.*1 project.*3 product search hits/i);
+  assert.match(visibleHtml, /Q‑NEKO.*4 raw.*3 self-excluded.*3 grant-linked/i);
   assert.match(visibleHtml, /Featured links now.*0 dataset.*2 software/i);
   assert.match(visibleHtml, /29 Jul census.*645 IDs.*verified/i);
   assert.match(html, /Takahiro Tsuchiya, Ph\.D\./i);
@@ -147,7 +147,7 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.equal(snapshot.q_neko_watchlist.openaire_project_union, 0);
   assert.match(ratesText, /observed,software,48,645,7\.4,5\.7,9\.7/);
   assert.match(storyText, /The clock then moved/i);
-  assert.match(storyText, /not claimed Q‑NEKO outputs/i);
+  assert.match(storyText, /four raw hits, three self-excluded candidates, and three records explicitly related/i);
   assert.match(mcpText, /default of `0`/i);
   assert.match(mcpText, /## Replay prompt/i);
   assert.match(mcpText, /ResearchLinksInput.*page.*greater than or equal to `1`/i);
@@ -161,14 +161,22 @@ test("publishes a denominator-complete reproducibility pack", async () => {
     term_queries_changed: 8,
     q_neko_project_hits: 1,
     q_neko_product_hits: 3,
+    q_neko_product_hits_raw: 4,
+    q_neko_product_hits_self_excluded: 3,
+    q_neko_self_product_hits: 1,
+    q_neko_verified_grant_output_hits: 3,
     q_neko_unique_project_records_sampled: 1,
     q_neko_unique_product_records_sampled: 3,
+    q_neko_unique_product_records_sampled_raw: 4,
   });
   assert.deepEqual(recheck.request_policy, {
     authenticated: false,
-    requests_made: 22,
+    requests_made: 23,
     unauthenticated_limit_per_hour: 60,
   });
+  assert.equal(recheck.q_neko_verified_grant_outputs.project_code, "101241875");
+  assert.equal(recheck.q_neko_verified_grant_outputs.verified_hits, 3);
+  assert.equal(recheck.q_neko["Q-Neko"].product_samples_self[0].pids[0].value, "10.5281/zenodo.21913414");
   const comparison = JSON.parse(comparisonText);
   assert.equal(comparison.exact_match, true);
   assert.equal(comparison.corpus.records, 645);
@@ -230,20 +238,22 @@ test("publishes machine-readable MCP, responsibility and FAIR hand-off", async (
   const crate = JSON.parse(crateText);
   assert.equal(crate["@context"], "https://w3id.org/ro/crate/1.1/context");
   const root = crate["@graph"].find((entity) => entity["@id"] === "./");
-  assert.equal(root.version, "1.0.0");
+  assert.equal(root.version, "1.0.1");
   assert.equal(root.creativeWorkStatus, "Published");
-  assert.equal(root.identifier, "https://doi.org/10.5281/zenodo.21913414");
+  assert.equal(root.identifier, "https://doi.org/10.5281/zenodo.21914776");
   assert.ok(root.hasPart.some((part) => part["@id"] === "reproducibility/mcp-run-manifest.json"));
   assert.match(guideText, /three-minute verification guide/i);
   assert.match(guideText, /Confirm responsible and FAIR hand-off/i);
 });
 
 test("keeps credential-free review bounded and requires authenticated full refreshes", async () => {
-  const [fullPipeline, livePipeline, readme, notebook] = await Promise.all([
+  const [fullPipeline, livePipeline, readme, notebook, analysisRequirements, notebookVerifier] = await Promise.all([
     readFile(new URL("../public/reproducibility/openaire_feasibility.py", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/openaire_live_recheck.py", import.meta.url), "utf8"),
     readFile(new URL("../README.md", import.meta.url), "utf8"),
     readFile(new URL("../public/reproducibility/openaire_connection_rates.ipynb", import.meta.url), "utf8"),
+    readFile(new URL("../requirements-analysis.txt", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/verify_notebook.py", import.meta.url), "utf8"),
   ]);
 
   assert.match(fullPipeline, /OPENAIRE_ACCESS_TOKEN/);
@@ -251,11 +261,16 @@ test("keeps credential-free review bounded and requires authenticated full refre
   assert.match(fullPipeline, /2,580 dataset\/software link checks/);
   assert.match(fullPipeline, /wait_for_rate_slot/);
   assert.match(fullPipeline, /AUTHENTICATED_REQUESTS_PER_SECOND/);
-  assert.match(livePipeline, /using 22 public API requests/i);
+  assert.match(livePipeline, /using 23 public API requests/i);
   assert.match(livePipeline, /UNAUTHENTICATED_REQUEST_LIMIT = 60/);
   assert.match(readme, /Public data snapshot: `2026-07-29T00:13:14Z`/);
-  assert.match(readme, /Version `v1\.0\.0` is archived under DOI `10\.5281\/zenodo\.21913414`/);
+  assert.match(readme, /Version `v1\.0\.1` is archived under DOI `10\.5281\/zenodo\.21914776`/);
   assert.match(readme, /latest 2026 publication date.*5 May/i);
   assert.match(readme, /not grant-level attribution/i);
   assert.doesNotMatch(notebook, /legacy sample|250-record/i);
+  assert.doesNotMatch(notebook, /"OUT = ROOT.*analysis|ROOT' \/ 'analysis/i);
+  assert.match(notebook, /public' \/ 'reproducibility/i);
+  assert.match(analysisRequirements, /pandas==3\.0\.1/);
+  assert.match(analysisRequirements, /matplotlib==3\.10\.9/);
+  assert.match(notebookVerifier, /code-cell-/);
 });

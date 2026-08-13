@@ -7,7 +7,7 @@
       "affiliation": "Kyoto University of Foreign Studies"
     }
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
@@ -28,6 +28,12 @@
       "identifier": "https://atlas.tsuchiyatakahiro.com",
       "relation": "isSupplementedBy",
       "resource_type": "other"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.5281/zenodo.21913414",
+      "relation": "isNewVersionOf",
+      "resource_type": "software"
     }
   ]
 }

@@ -7,7 +7,7 @@ scheduled collection is not automatic publication.
 
 | Lane | Cadence | Access | Purpose | Output |
 | --- | --- | --- | --- | --- |
-| Bounded | Daily at 06:30 JST | Public API; 22 requests | Compare discovery totals, the featured DOI/grant path, the Scholix page contract, and the Q-NEKO timeline with the latest accepted bounded baseline | Isolated manifest and review bundle |
+| Bounded | Daily at 06:30 JST | Public API; 23 requests | Compare discovery totals, the featured DOI/grant path, the Scholix page contract, and the Q-NEKO raw/self-excluded/grant-linked timeline with the latest accepted bounded baseline | Isolated manifest and review bundle |
 | Full census | Monday at 06:30 JST, only when enabled | `OPENAIRE_ACCESS_TOKEN` required | Recompute the corpus and all dataset/software relation checks | Isolated census, metric diff, manifest, and review bundle |
 
 The weekly schedule falls back to the bounded lane unless both the repository

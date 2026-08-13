@@ -43,7 +43,7 @@ export default function VideoPage() {
       <section className="video-notes video-shell">
         <article><span>01</span><h2>Measured</h2><p>Only 17 of 645 records expose every project, funding, dataset and software link; all rates retain their denominators.</p></article>
         <article><span>02</span><h2>Inspectable</h2><p>In the 29 July snapshot, the featured chain links funding, projects, institutions, a publication, one dataset and two unique software records.</p></article>
-        <article><span>03</span><h2>Time-aware</h2><p>The 8 August bounded probe discloses Graph drift instead of silently rewriting the verified 645-record snapshot.</p></article>
+        <article><span>03</span><h2>Time-aware</h2><p>The 13 August bounded probe separates four raw Q‑NEKO hits, three self-excluded records and three verified project-code relations without rewriting the 645-record snapshot.</p></article>
       </section>
 
       <footer className="video-footer">

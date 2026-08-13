@@ -12,7 +12,7 @@ on:
           - bounded
           - full
   schedule:
-    # Tue-Sun 06:30 JST: bounded observation.
+    # Tue-Sun 06:30 JST: bounded 23-request observation.
     - cron: "30 21 * * 1-6"
     # Mon 06:30 JST: full when explicitly enabled and authenticated; bounded otherwise.
     - cron: "30 21 * * 0"

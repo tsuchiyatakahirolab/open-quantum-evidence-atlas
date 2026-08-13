@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.1 — 2026-08-13
+
+Reproducibility and monitoring release, archived as [DOI 10.5281/zenodo.21914776](https://doi.org/10.5281/zenodo.21914776).
+
+- Makes the executed notebook resolve only files shipped in the public release and adds pinned Python analysis dependencies.
+- Adds clean-room notebook execution to repository CI and a standalone verifier for all six code cells and 645 audit rows.
+- Separates Q‑NEKO monitoring into four raw alias hits, three self-excluded records and three explicit OpenAIRE project-code relations.
+- Preserves the 29 July 645-record census and publishes the 13 August bounded observation as a separate, non-rewriting layer.
+- Leaves the immutable v1.0.0 archive available under DOI 10.5281/zenodo.21913414.
+
 ## 1.0.0 — 2026-08-13
 
 First stable public release for the OpenAIRE AI Hackathon, archived as [DOI 10.5281/zenodo.21913414](https://doi.org/10.5281/zenodo.21913414).

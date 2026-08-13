@@ -3,7 +3,7 @@
 
 This does not recompute the 645-record census. It verifies the eight discovery
 query counts, the featured DOI and grant link, the page-0 Scholix contract, and
-the Q-NEKO timeline using 22 public API requests, below OpenAIRE's documented
+the Q-NEKO timeline using 23 public API requests, below OpenAIRE's documented
 60 requests/hour unauthenticated ceiling. A bearer token is optional.
 """
 
@@ -28,6 +28,13 @@ UNAUTHENTICATED_REQUEST_LIMIT = 60
 FEATURED_DOI = "10.1088/1367-2630/ad5b13"
 FEATURED_ID = "doi_dedup___::82d8842e25b2e9bdbe03ab4c5db972db"
 FEATURED_GRANT = "101102140"
+Q_NEKO_GRANT = "101241875"
+SELF_PRODUCT_DOIS = {
+    "10.5281/zenodo.21913413",
+    "10.5281/zenodo.21913414",
+    "10.5281/zenodo.21914776",
+}
+SELF_PRODUCT_TITLES = {"open quantum evidence atlas"}
 ALIASES = [
     "Q-Neko",
     "QNEKO",
@@ -71,7 +78,7 @@ def row_count(payload: dict) -> int:
 
 def q_neko_samples(payload: dict, kind: str) -> list[dict]:
     samples = []
-    for row in (payload.get("results", []) or [])[:3]:
+    for row in (payload.get("results", []) or [])[:10]:
         sample = {
             "id": row.get("id"),
             "title": row.get("mainTitle") or row.get("title"),
@@ -95,6 +102,19 @@ def q_neko_samples(payload: dict, kind: str) -> list[dict]:
             )
         samples.append(sample)
     return samples
+
+
+def product_dois(sample: dict) -> set[str]:
+    return {
+        str(pid.get("value", "")).strip().lower()
+        for pid in sample.get("pids", [])
+        if str(pid.get("scheme", "")).strip().lower() == "doi"
+    }
+
+
+def is_self_product(sample: dict) -> bool:
+    title = str(sample.get("title") or "").strip().lower()
+    return bool(product_dois(sample) & SELF_PRODUCT_DOIS) or title in SELF_PRODUCT_TITLES
 
 
 def unique_sample_count(q_neko: dict, sample_key: str) -> int:
@@ -157,18 +177,37 @@ def main() -> None:
 
     q_neko = {}
     for alias in ALIASES:
-        product_url = build_url("/v3/research-products", [("search", f'"{alias}"'), ("page", 1), ("pageSize", 3)])
+        product_url = build_url("/v3/research-products", [("search", f'"{alias}"'), ("page", 1), ("pageSize", 10)])
         project_url = build_url("/v3/projects", [("search", alias), ("page", 1), ("pageSize", 3)])
         products = get_json(product_url)
         projects = get_json(project_url)
+        raw_product_samples = q_neko_samples(products, "product")
+        self_product_samples = [sample for sample in raw_product_samples if is_self_product(sample)]
+        candidate_product_samples = [sample for sample in raw_product_samples if not is_self_product(sample)]
+        raw_product_hits = int(products["header"]["numFound"])
         q_neko[alias] = {
-            "products": int(products["header"]["numFound"]),
+            "products": max(raw_product_hits - len(self_product_samples), 0),
+            "products_raw": raw_product_hits,
+            "products_self_matches_returned": len(self_product_samples),
+            "products_self_excluded": max(raw_product_hits - len(self_product_samples), 0),
             "projects": int(projects["header"]["numFound"]),
-            "product_samples": q_neko_samples(products, "product"),
+            "product_samples_raw": raw_product_samples,
+            "product_samples_self": self_product_samples,
+            "product_samples": candidate_product_samples,
             "project_samples": q_neko_samples(projects, "project"),
             "product_query_url": product_url,
             "project_query_url": project_url,
         }
+
+    verified_url = build_url(
+        "/v3/research-products",
+        [("relProjectCode", Q_NEKO_GRANT), ("page", 1), ("pageSize", 10)],
+    )
+    verified_products = get_json(verified_url)
+    verified_samples_raw = q_neko_samples(verified_products, "product")
+    verified_samples = [sample for sample in verified_samples_raw if not is_self_product(sample)]
+    verified_raw_hits = int(verified_products["header"]["numFound"])
+    verified_self_hits = len(verified_samples_raw) - len(verified_samples)
 
     checks = {
         "featured_doi_resolves": FEATURED_ID in featured_ids,
@@ -188,20 +227,39 @@ def main() -> None:
             "requests_made": REQUEST_COUNT,
             "unauthenticated_limit_per_hour": UNAUTHENTICATED_REQUEST_LIMIT,
         },
+        "q_neko_measurement_policy": {
+            "raw_alias_hits": "All research-product hits returned by the four literal alias searches.",
+            "self_excluded_candidates": "Raw alias hits after excluding this Atlas by its Zenodo DOI or exact title.",
+            "verified_grant_outputs": f"Research products explicitly related to OpenAIRE project code {Q_NEKO_GRANT}; alias similarity alone is insufficient.",
+            "self_product_dois": sorted(SELF_PRODUCT_DOIS),
+        },
         "summary": {
             "checks_passed": sum(checks.values()),
             "checks_total": len(checks),
             "term_queries_changed": sum(item["delta"] != 0 for item in term_results.values()),
             "q_neko_project_hits": sum(item["projects"] for item in q_neko.values()),
-            "q_neko_product_hits": sum(item["products"] for item in q_neko.values()),
+            "q_neko_product_hits": sum(item["products_self_excluded"] for item in q_neko.values()),
+            "q_neko_product_hits_raw": sum(item["products_raw"] for item in q_neko.values()),
+            "q_neko_product_hits_self_excluded": sum(item["products_self_excluded"] for item in q_neko.values()),
+            "q_neko_self_product_hits": sum(item["products_self_matches_returned"] for item in q_neko.values()),
+            "q_neko_verified_grant_output_hits": max(verified_raw_hits - verified_self_hits, 0),
             "q_neko_unique_project_records_sampled": unique_sample_count(q_neko, "project_samples"),
             "q_neko_unique_product_records_sampled": unique_sample_count(q_neko, "product_samples"),
+            "q_neko_unique_product_records_sampled_raw": unique_sample_count(q_neko, "product_samples_raw"),
         },
         "checks": checks,
         "term_query_counts": term_results,
         "featured_record": {"doi": FEATURED_DOI, "expected_id": FEATURED_ID, "returned_ids": featured_ids, "doi_query_url": featured_url, "grant": FEATURED_GRANT, "grant_match_count": int(grant["header"]["numFound"]), "grant_query_url": grant_url},
         "link_page_contract": link_contract,
         "q_neko": q_neko,
+        "q_neko_verified_grant_outputs": {
+            "project_code": Q_NEKO_GRANT,
+            "raw_hits": verified_raw_hits,
+            "self_matches_returned": verified_self_hits,
+            "verified_hits": max(verified_raw_hits - verified_self_hits, 0),
+            "samples": verified_samples,
+            "query_url": verified_url,
+        },
     }
     outputs = args.output or [Path("live_recheck.json")]
     rendered = json.dumps(result, ensure_ascii=False, indent=2) + "\n"

@@ -89,8 +89,8 @@ const chain = [
     short: "Satellite measurement data",
     eyebrow: "29 Jul snapshot · Scholix-linked dataset",
     title: "A referenced measurement collection",
-    body: "The 29 July census exposed a references edge to ‘Quantum-limited measurements of optical signals from a geostationary satellite’ on Figshare. The 8 August bounded probe no longer returned that edge, so the Atlas preserves it as timestamped snapshot evidence rather than a timeless claim.",
-    facts: ["29 Jul: 1 dataset edge", "8 Aug probe: 0", "Figshare DOI retained"],
+    body: "The 29 July census exposed a references edge to ‘Quantum-limited measurements of optical signals from a geostationary satellite’ on Figshare. The 13 August bounded probe no longer returned that edge, so the Atlas preserves it as timestamped snapshot evidence rather than a timeless claim.",
+    facts: ["29 Jul: 1 dataset edge", "13 Aug probe: 0", "Figshare DOI retained"],
     link: "https://doi.org/10.6084/m9.figshare.c.3813670",
     linkLabel: "Open the dataset",
   },
@@ -326,7 +326,7 @@ export default function Home() {
           <div className="live-recheck-banner">
             <span>LATEST BOUNDED RECHECK · {liveRecheck.checked_at.slice(0, 10)} UTC</span>
             <b>{liveRecheck.summary.term_queries_changed}/8 discovery totals moved</b>
-            <b>Q‑NEKO now visible · {liveRecheck.summary.q_neko_unique_project_records_sampled} project · {liveRecheck.summary.q_neko_unique_product_records_sampled} product search hits</b>
+            <b>Q‑NEKO · {liveRecheck.summary.q_neko_product_hits_raw} raw → {liveRecheck.summary.q_neko_product_hits_self_excluded} self-excluded → {liveRecheck.summary.q_neko_verified_grant_output_hits} grant-linked</b>
             <b>Featured links now · {liveRecheck.link_page_contract.dataset["0"].rows} dataset · {liveRecheck.link_page_contract.software["0"].rows} software</b>
             <b>29 Jul census · {fullCensusVerification.corpus.records} IDs · {fullCensusVerification.exact_match ? "verified" : "review needed"}</b>
             <a href="/reproducibility/live-recheck.json" download>Inspect JSON ↓</a>
@@ -395,7 +395,7 @@ export default function Home() {
           </div>
 
           <div className="mcp-footnote">
-            <p><strong>Time-bounded result:</strong> the table records the 18/29 July diagnostic. On 8 August the featured dataset total changed from 1 to 0, while the two software rows still reproduced the page-0 mismatch. MCP remains the inspectable traversal layer; the API remains the deterministic census layer.</p>
+            <p><strong>Time-bounded result:</strong> the table records the 18/29 July diagnostic. On 13 August the featured dataset total was 0, while the two software rows still reproduced the page-0 mismatch. MCP remains the inspectable traversal layer; the API remains the deterministic census layer.</p>
             <div>
               <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
               <a href="/reproducibility/openaire-mcp-crosscheck.md" target="_blank" rel="noreferrer">Static integration diagnostic ↗</a><br />
@@ -413,9 +413,9 @@ export default function Home() {
             <h2>Q‑NEKO is the test case.<br /><em>Not the corpus.</em></h2>
             <p>
               Q‑NEKO is a new EU–Japan joint quantum-technology project: €4m in European funding,
-              running 2026–2028. It was absent from the 29 July queries; the 8 August bounded recheck found
-              one exact project record and three research-product search hits for the Q‑Neko alias. Those hits
-              are not treated as grant-attributed outputs without a verified relation.
+              running 2026–2028. It was absent from the 29 July queries. By 13 August, the bounded recheck found
+              one exact project record and four raw product hits. One was this Atlas itself; after self-exclusion,
+              the remaining three records also resolved through the explicit Q‑NEKO project-code relation.
             </p>
             <div className="watch-actions">
               <a href="https://www.eurohpc-ju.europa.eu/research-innovation/our-projects/q-neko_en" target="_blank" rel="noreferrer">EuroHPC project record ↗</a>
@@ -424,11 +424,11 @@ export default function Home() {
           </div>
 
           <div className="watch-card">
-            <div className="watch-card-top"><span><i className="status linked" /> FIRST GRAPH-ENTRY MILESTONE</span><b>29 JUL → 08 AUG 2026</b></div>
+            <div className="watch-card-top"><span><i className="status linked" /> FIRST GRAPH-ENTRY MILESTONE</span><b>29 JUL → 13 AUG 2026</b></div>
             <div className="watch-zero">
               <div><strong>0·0</strong><span>29 Jul · project / product hits</span></div>
               <div className="zero-divider" />
-              <div><strong>{liveRecheck.summary.q_neko_unique_project_records_sampled}·{liveRecheck.summary.q_neko_unique_product_records_sampled}</strong><span>8 Aug · project / product search hits</span></div>
+              <div><strong>{liveRecheck.summary.q_neko_unique_project_records_sampled}·{liveRecheck.summary.q_neko_verified_grant_output_hits}</strong><span>13 Aug · project / verified graph-linked products</span></div>
             </div>
             <div className="watch-callout"><i className="status linked" /><p><strong>The clock produced its first state change.</strong><br />The Atlas detected project visibility ten days after its published census; aggregate rates remain the 29 July snapshot pending an authenticated refresh.</p></div>
             <details>
@@ -474,7 +474,7 @@ export default function Home() {
           </div>
           <div className="falsification">
             <span>TIME-INDEXED EVIDENCE</span>
-            <p>The 29 July full census and 8 August bounded probe answer different questions. The first fixes the aggregate denominator; the second detects Graph drift without silently rewriting the published rates.</p>
+            <p>The 29 July full census and 13 August bounded probe answer different questions. The first fixes the aggregate denominator; the second detects Graph drift without silently rewriting the published rates.</p>
           </div>
           <div className="falsification">
             <span>DESIGN CONTRAST</span>
@@ -519,7 +519,7 @@ export default function Home() {
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
             <a href="https://api.openaire.eu/graph/v3/research-products" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
-            <small>Full census snapshot: 29 Jul 2026 · latest bounded recheck: 8 Aug 2026 · fresh full census requires authenticated access</small>
+            <small>Full census snapshot: 29 Jul 2026 · latest bounded recheck: 13 Aug 2026 · fresh full census requires authenticated access</small>
           </div>
         </div>
       </section>
@@ -533,7 +533,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; version history · GitHub ↗</a>
-            <a href="https://doi.org/10.5281/zenodo.21913414" target="_blank" rel="noreferrer">Version 1.0.0 archive · Zenodo DOI ↗</a>
+            <a href="https://doi.org/10.5281/zenodo.21914776" target="_blank" rel="noreferrer">Version 1.0.1 archive · Zenodo DOI ↗</a>
             <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com" target="_blank" rel="noreferrer">Research profile · Takahiro Tsuchiya ↗</a>
             <a href="https://graph.openaire.eu/docs/license/" target="_blank" rel="noreferrer">Source: OpenAIRE Graph · CC BY ↗</a>

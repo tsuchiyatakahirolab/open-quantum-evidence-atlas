@@ -1,6 +1,6 @@
 {
   "name": "open-quantum-evidence-atlas",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -9,6 +9,7 @@
     "atlas:ops:bounded": "python -B scripts/atlas_observability.py bounded",
     "atlas:ops:full": "python -B scripts/atlas_observability.py full",
     "atlas:ops:test": "python -B -m unittest tests/atlas_observability_test.py",
+    "notebook:test": "python -B scripts/verify_notebook.py",
     "data:build": "node scripts/build-audit-data.mjs",
     "predev": "npm run data:build",
     "dev": "vinext dev",

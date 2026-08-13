@@ -1,11 +1,11 @@
 # Open Quantum Evidence Atlas
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21913414.svg)](https://doi.org/10.5281/zenodo.21913414)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21914776.svg)](https://doi.org/10.5281/zenodo.21914776)
 
 An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The artifact traces how observable links fall from funding and projects to datasets and software, then uses Q‑NEKO as a time-indexed policy-observability benchmark.
 
 - Canonical public Atlas: <https://atlas.tsuchiyatakahiro.com>
-- Version 1.0.0 archive: <https://doi.org/10.5281/zenodo.21913414>
+- Version 1.0.1 archive: <https://doi.org/10.5281/zenodo.21914776>
 
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
 
@@ -24,9 +24,9 @@ This path is designed so a technical or strategic reviewer can verify the main c
 
 ## Snapshot and latest observation
 
-The aggregate rates are a verified full census dated `2026-07-29T00:13:14Z`. A separate 22-request bounded recheck on 8 August detected expected Graph movement: all eight discovery totals changed, Q‑NEKO became visible as one exact project record plus three alias-based research-product search hits, and the featured dataset relation changed from one row to zero while its two software rows remained visible. Product search hits are not treated as Q‑NEKO grant outputs without a verified relation. The bounded result is published separately and does not silently rewrite the 645-record denominator.
+The aggregate rates are a verified full census dated `2026-07-29T00:13:14Z`. A separate 23-request bounded recheck on 13 August detected expected Graph movement: all eight discovery totals changed, Q‑NEKO was visible as one exact project record, and the literal alias search returned four products. One of the four was this Atlas's newly indexed Zenodo record; after that self-result was excluded, three records remained. A direct `relProjectCode=101241875` query returned those same three records, so they are reported as verified OpenAIRE graph links to Q‑NEKO—not as causal proof that the grant produced them. The featured dataset relation changed from one row to zero while its two software rows remained visible. The bounded result is published separately and does not silently rewrite the 645-record denominator.
 
-A bounded uncached live recheck uses 22 requests to verify the eight discovery-query totals, featured DOI and grant, page-0 link contract, and Q‑NEKO watchlist. It can run without credentials within OpenAIRE's documented 60 requests/hour unauthenticated ceiling. A fresh full census performs 2,580 dataset/software link checks plus discovery and organisation requests, so `OPENAIRE_ACCESS_TOKEN` is required and requests are globally throttled below the documented 7,200 requests/hour authenticated ceiling. Cached historical replay does not require a token and uses an explicit `OPENAIRE_CACHE_DIR`.
+A bounded uncached live recheck uses 23 requests to verify the eight discovery-query totals, featured DOI and grant, page-0 link contract, Q‑NEKO watchlist, self-exclusion, and Q‑NEKO grant relation. It can run without credentials within OpenAIRE's documented 60 requests/hour unauthenticated ceiling. A fresh full census performs 2,580 dataset/software link checks plus discovery and organisation requests, so `OPENAIRE_ACCESS_TOKEN` is required and requests are globally throttled below the documented 7,200 requests/hour authenticated ceiling. Cached historical replay does not require a token and uses an explicit `OPENAIRE_CACHE_DIR`.
 
 ## Headline finding
 
@@ -38,11 +38,17 @@ Only 17 of 645 EU27–Japan quantum publications (2.6%) expose a complete projec
 
 ```bash
 npm ci
+npm run lint
 npm run dev
 npm test
 ```
 
-The test suite performs a production build, server-renders the artifact, verifies social metadata, and checks the published metric denominators.
+The test suite performs a production build, server-renders the artifact, verifies social metadata, and checks the published metric denominators. The analysis environment and clean-room notebook execution are separately declared and tested:
+
+```bash
+python -m pip install -r requirements-analysis.txt
+npm run notebook:test
+```
 
 The public snapshot, executed notebook and bounded live recheck require no credentials:
 
@@ -60,7 +66,7 @@ The token is sent only in the HTTPS `Authorization: Bearer` header; it is not wr
 
 ## Scheduled observation
 
-The read-only GitHub Actions workflow runs a bounded 22-request observation each day and can run the authenticated full-census lane only when it is explicitly enabled. Every run writes an isolated review bundle; the workflow has no permission or code path to commit, deploy or overwrite the published baseline. See the [automation and publication-gate documentation](docs/atlas-observability-automation.md).
+The read-only GitHub Actions workflow runs a bounded 23-request observation each day and can run the authenticated full-census lane only when it is explicitly enabled. Every run writes an isolated review bundle; the workflow has no permission or code path to commit, deploy or overwrite the published baseline. A separate CI workflow installs the pinned Python analysis dependencies and executes every notebook code cell on each push and pull request. See the [automation and publication-gate documentation](docs/atlas-observability-automation.md).
 
 ```bash
 npm run atlas:ops:bounded
@@ -76,6 +82,7 @@ The public reproducibility pack includes:
 - `public/connection-rates.csv` — connection numerators, denominators and intervals
 - `public/reproducibility/openaire_feasibility.py` — OpenAIRE extraction/audit pipeline
 - `public/reproducibility/openaire_connection_rates.ipynb` — executed notebook
+- `requirements-analysis.txt` — pinned Python dependencies for clean-room notebook replay
 - `public/analysis-report.md` — findings, decision logic, limitations and next steps
 - `public/reproducibility/eu27_japan_corpus.csv` — the deduplicated observed corpus
 - `public/reproducibility/scholix_link_audit.csv` — audited research-product links
@@ -90,7 +97,7 @@ The public reproducibility pack includes:
 - `public/ro-crate-metadata.json` — FAIR, machine-readable artifact inventory using RO-Crate JSON-LD
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
-Public data snapshot: `2026-07-29T00:13:14Z`. The full-census verification confirmed all 645 IDs, all 645 link states and all four published rates. At this snapshot, the latest 2026 publication date in the retained corpus was 5 May. Version `v1.0.0` is archived under DOI `10.5281/zenodo.21913414`; later data refreshes will be published as separately versioned updates rather than silently replacing this evidence snapshot.
+Public data snapshot: `2026-07-29T00:13:14Z`. The full-census verification confirmed all 645 IDs, all 645 link states and all four published rates. At this snapshot, the latest 2026 publication date in the retained corpus was 5 May. Version `v1.0.1` is archived under DOI `10.5281/zenodo.21914776`; it retains the verified census, adds clean-room notebook execution and publishes the separately dated 13 August bounded observation. Later full-census refreshes will be published as separately versioned updates rather than silently replacing this evidence snapshot.
 
 ## License
 

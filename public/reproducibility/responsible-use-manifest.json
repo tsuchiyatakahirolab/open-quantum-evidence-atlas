@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "artifact": "Open Quantum Evidence Atlas",
-  "version": "1.0.0",
-  "doi": "10.5281/zenodo.21913414",
+  "version": "1.0.1",
+  "doi": "10.5281/zenodo.21914776",
   "as_of": "2026-08-13",
   "sources": [
     {
@@ -35,7 +35,7 @@
       "published snapshot and CSV/JSON outputs",
       "executed notebook",
       "browser auditor",
-      "22-request bounded live recheck"
+      "23-request bounded live recheck"
     ],
     "authenticated": "An uncached full census requires OPENAIRE_ACCESS_TOKEN because it performs 2,580 link checks plus discovery and organisation calls.",
     "rate_limit_controls": "Full-census request starts are globally throttled below OpenAIRE's documented 7,200 requests/hour authenticated ceiling; the token is sent only in the HTTPS Authorization header and is never cached, logged or published. Interactive alias preflights use at most eight upstream calls for the four default aliases and request one-hour upstream caching."
@@ -54,9 +54,10 @@
     "The 645 records form a census within the published search and affiliation boundary, not a census of all EU-Japan quantum activity.",
     "Wilson intervals are reference bands for subset comparison, not estimates of search-boundary, metadata or coverage uncertainty.",
     "At the 29 July snapshot, the latest 2026 publication date in the retained corpus was 5 May; 2026 is not interpreted as a trend.",
-    "Q-NEKO had zero project and product query hits at the 29 July snapshot; the 8 August bounded recheck found one exact project and three alias-based product search hits.",
-    "Alias-based product search hits are candidates, not Q-NEKO outputs or grant attribution without a verified project relation.",
-    "The 8 August bounded probe detects drift but does not recompute or silently replace the verified 29 July full-census rates."
+    "Q-NEKO had zero project and product query hits at the 29 July snapshot; by 13 August the bounded recheck found one exact project and four raw alias-based product hits.",
+    "One raw product hit was this Atlas's newly indexed Zenodo record; the public monitor excludes it before reporting external candidates.",
+    "The three self-excluded candidates were independently returned by relProjectCode=101241875 and are therefore explicit OpenAIRE graph links, not causal proof of grant production, reuse, access or quality.",
+    "The 13 August bounded probe detects drift but does not recompute or silently replace the verified 29 July full-census rates."
   ],
   "falsification_condition": "If improved identifiers, deposits or OpenAIRE classification lift software visibility close to the dataset rate, the software-cliff conclusion weakens.",
   "contact": "t_tsuchiya@kufs.ac.jp",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Run non-publishing OpenAIRE observations for the Atlas.
 
-The bounded lane performs the public 22-request integrity recheck. The full
+The bounded lane performs the public 23-request integrity recheck. The full
 lane runs the authenticated census into an isolated run directory. Both lanes
 classify drift and emit a review bundle; neither mutates the published Atlas.
 """
@@ -49,9 +49,13 @@ def add_reason(
 def baseline_q_neko_totals(baseline: dict[str, Any]) -> dict[str, int]:
     summary = baseline.get("summary", {})
     if "q_neko_project_hits" in summary or "q_neko_product_hits" in summary:
+        products = int(summary.get("q_neko_product_hits_self_excluded", summary.get("q_neko_product_hits", 0)))
         return {
             "projects": int(summary.get("q_neko_project_hits", 0)),
-            "products": int(summary.get("q_neko_product_hits", 0)),
+            "products_self_excluded": products,
+            "products_raw": int(summary.get("q_neko_product_hits_raw", products)),
+            "self_products": int(summary.get("q_neko_self_product_hits", 0)),
+            "verified_grant_outputs": int(summary.get("q_neko_verified_grant_output_hits", 0)),
         }
     q_neko = baseline.get("q_neko", {})
     return {
@@ -59,10 +63,16 @@ def baseline_q_neko_totals(baseline: dict[str, Any]) -> dict[str, int]:
             int(item.get("count", 0))
             for item in q_neko.get("project_queries", {}).values()
         ),
-        "products": sum(
+        "products_self_excluded": sum(
             int(item.get("count", 0))
             for item in q_neko.get("product_queries", {}).values()
         ),
+        "products_raw": sum(
+            int(item.get("count", 0))
+            for item in q_neko.get("product_queries", {}).values()
+        ),
+        "self_products": 0,
+        "verified_grant_outputs": 0,
     }
 
 
@@ -140,11 +150,7 @@ def classify_bounded(
         )
 
     expected_q_neko = baseline_q_neko_totals(baseline)
-    summary = result.get("summary", {})
-    current_q_neko = {
-        "projects": int(summary.get("q_neko_project_hits", 0)),
-        "products": int(summary.get("q_neko_product_hits", 0)),
-    }
+    current_q_neko = baseline_q_neko_totals(result)
     if current_q_neko != expected_q_neko:
         add_reason(
             state,

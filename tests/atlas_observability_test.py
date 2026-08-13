@@ -92,6 +92,28 @@ class BoundedClassificationTests(unittest.TestCase):
         result = MODULE.classify_bounded(result_data, monitor_baseline())
         self.assertEqual(result["status"], "REVIEW_REQUIRED")
 
+    def test_review_when_q_neko_verification_layer_changes(self):
+        baseline_data = bounded_result()
+        current = bounded_result()
+        baseline_data["summary"].update(
+            {
+                "q_neko_product_hits_raw": 4,
+                "q_neko_product_hits_self_excluded": 3,
+                "q_neko_self_product_hits": 1,
+                "q_neko_verified_grant_output_hits": 3,
+            }
+        )
+        current["summary"].update(
+            {
+                "q_neko_product_hits_raw": 4,
+                "q_neko_product_hits_self_excluded": 3,
+                "q_neko_self_product_hits": 1,
+                "q_neko_verified_grant_output_hits": 2,
+            }
+        )
+        result = MODULE.classify_bounded(current, baseline_data)
+        self.assertEqual(result["status"], "REVIEW_REQUIRED")
+
 
 class FullClassificationTests(unittest.TestCase):
     def test_review_when_full_metric_changes(self):

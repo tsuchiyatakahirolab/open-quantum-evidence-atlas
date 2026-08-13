@@ -20,11 +20,11 @@ Open the [MCP cross-check](https://atlas.tsuchiyatakahiro.com/#mcp) and the [mac
 
 - Use the [browser auditor](https://atlas.tsuchiyatakahiro.com/audit) to change the boundary and recompute numerators, denominators and Wilson reference bands.
 - Run `npm ci && npm test` to build and server-render the public artifact.
-- Run `python public/reproducibility/openaire_live_recheck.py` for the bounded 22-request integrity probe; no credential is required within OpenAIRE's 60 requests/hour unauthenticated limit.
+- Run `python public/reproducibility/openaire_live_recheck.py` for the bounded 23-request integrity probe; no credential is required within OpenAIRE's 60 requests/hour unauthenticated limit.
 - For a fresh full Graph census, set an access token locally as `OPENAIRE_ACCESS_TOKEN`, then run `python public/reproducibility/openaire_feasibility.py`. The 2,580 link checks plus discovery/organisation calls are throttled below OpenAIRE's 7,200 requests/hour authenticated limit. Cached replay does not need a token.
 - Open the [executed notebook](https://atlas.tsuchiyatakahiro.com/reproducibility/openaire_connection_rates.ipynb) for the saved calculation trail.
 
-Later live results may differ as the OpenAIRE Graph evolves. The published 8 August bounded result demonstrates this: eight discovery totals moved, Q‑NEKO appeared as one exact project record plus three product search hits, and the featured dataset edge changed from one to zero while the software pagination case persisted. These observations do not recompute the 645-record census, and product search hits are not grant attribution. Each execution is timestamped; historical replay requires an explicit cache directory.
+Later live results may differ as the OpenAIRE Graph evolves. The published 13 August bounded result demonstrates this: eight discovery totals moved, Q‑NEKO appeared as one exact project record, and four raw product hits became three after self-exclusion. Those same three records were returned by the explicit project-code relation query. The featured dataset edge changed from one to zero while the software pagination case persisted. These observations do not recompute the 645-record census, and a graph relation is not causal production or reuse. Each execution is timestamped; historical replay requires an explicit cache directory.
 
 ## 5. Confirm responsible and FAIR hand-off
 

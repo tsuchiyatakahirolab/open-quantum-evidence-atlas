@@ -27,7 +27,7 @@ from pathlib import Path
 from threading import Lock
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUT = Path(
     os.environ.get("OPENAIRE_OUTPUT_DIR", str(ROOT / "analysis" / "output"))
 ).resolve()

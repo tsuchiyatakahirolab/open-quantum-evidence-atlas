@@ -1,8 +1,8 @@
 # Open Quantum Evidence Atlas — Analysis Report
 
-**Version:** 1.0.0
+**Version:** 1.0.1
 
-**DOI:** https://doi.org/10.5281/zenodo.21913414
+**DOI:** https://doi.org/10.5281/zenodo.21914776
 
 **Snapshot:** 2026-07-29T00:13:14Z
 
@@ -12,7 +12,7 @@
 
 ## Decision
 
-Proceed with the broad Open Quantum Evidence Atlas and use Q‑NEKO as a time-indexed observability benchmark. The 645-record EU27–Japan corpus supplies the comparison baseline; Q‑NEKO supplies a live state-change case. It moved from no project or product hits on 29 July to one exact project record and three alias-based research-product search hits on 8 August.
+Proceed with the broad Open Quantum Evidence Atlas and use Q‑NEKO as a time-indexed observability benchmark. The 645-record EU27–Japan corpus supplies the comparison baseline; Q‑NEKO supplies a live state-change case. It moved from no project or product hits on 29 July to one exact project record on 8 August. By 13 August the literal alias search returned four products: one was this Atlas's own newly indexed Zenodo record, while the other three were also returned by an explicit OpenAIRE relation query for Q‑NEKO project code 101241875.
 
 ## Measured finding
 
@@ -39,7 +39,7 @@ The design deliberately has two OpenAIRE layers. The interactive verification la
 
 ## Live integrity recheck
 
-On 29 July 2026, an uncached bounded recheck passed all six historical integrity checks, and an authenticated fresh full-corpus execution exactly reproduced all 645 corpus IDs, all 645 dataset/software link states and all four connection rates. On 8 August, a separate bounded recheck detected Graph drift: all eight discovery totals moved; Q‑NEKO returned one exact project record and three research-product search hits for the Q‑Neko alias; the featured dataset relation changed from one row to zero; and the two software rows still reproduced the page-0 connector mismatch. The aggregate rates remain the verified 29 July census until another authenticated full run is reviewed.
+On 29 July 2026, an uncached bounded recheck passed all six historical integrity checks, and an authenticated fresh full-corpus execution exactly reproduced all 645 corpus IDs, all 645 dataset/software link states and all four connection rates. The 13 August bounded recheck detected Graph drift: all eight discovery totals had moved; Q‑NEKO returned one exact project record; four raw research-product alias hits became three after the Atlas's own Zenodo record was excluded; and all three remaining records resolved through `relProjectCode=101241875`. The featured dataset relation had changed from one row to zero, while the two software rows still reproduced the page-0 connector mismatch. The aggregate rates remain the verified 29 July census until another authenticated full run is reviewed.
 
 ## Falsification and limits
 
@@ -49,7 +49,7 @@ Public snapshot and notebook replay require no credentials. The bounded live int
 
 ## Q‑NEKO timeline
 
-Q‑NEKO is a watchlist case, not the observed corpus. Its 29 July absence was an observation state, not a performance verdict. The 8 August project appearance is the first recorded Graph-entry milestone. The three product search hits remain candidate records until their project relations are verified.
+Q‑NEKO is a watchlist case, not the observed corpus. Its 29 July absence was an observation state, not a performance verdict. The 8 August project appearance is the first recorded Graph-entry milestone. On 13 August, the three non-self product records were verified as explicit OpenAIRE graph links to project code 101241875. That relation supports graph-level attribution only; it does not establish causal production, reuse, access, or output quality.
 
 ## Reproducibility and licensing
 
