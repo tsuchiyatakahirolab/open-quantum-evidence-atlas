@@ -29,7 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
-      RUN_ROOT: ${{ runner.temp }}/atlas-observability
       REQUESTED_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || (github.event.schedule == '30 21 * * 0' && 'full' || 'bounded') }}
       OPENAIRE_ACCESS_TOKEN: ${{ secrets.OPENAIRE_ACCESS_TOKEN }}
       PYTHONDONTWRITEBYTECODE: "1"
@@ -56,6 +55,8 @@ jobs:
       - name: Run non-publishing observation
         id: observation
         shell: bash
+        env:
+          RUN_ROOT: ${{ runner.temp }}/atlas-observability
         run: |
           set +e
           python scripts/atlas_observability.py "${{ steps.lane.outputs.mode }}" --run-root "$RUN_ROOT"
@@ -74,7 +75,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: atlas-observability-${{ steps.lane.outputs.mode }}-${{ github.run_id }}
-          path: ${{ env.RUN_ROOT }}
+          path: ${{ runner.temp }}/atlas-observability
           if-no-files-found: error
           retention-days: 30
 
