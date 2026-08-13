@@ -6,6 +6,8 @@ authors:
   - family-names: "Tsuchiya"
     given-names: "Takahiro"
 version: 1.0.0
+doi: 10.5281/zenodo.21913414
+date-released: 2026-08-13
 url: "https://atlas.tsuchiyatakahiro.com"
 repository-code: "https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas"
 license: MIT

@@ -1,0 +1,33 @@
+{
+  "title": "Open Quantum Evidence Atlas",
+  "description": "An executable, publication-centred audit of EU–Japan quantum research observability in the OpenAIRE Graph. The release combines a deterministic 645-record census, an Alien/OpenAIRE MCP interactive verification layer, a no-login Evidence Chain Auditor, a timestamped Q-NEKO monitoring case, and reproducibility code, notebook, data and FAIR manifests.",
+  "creators": [
+    {
+      "name": "Tsuchiya, Takahiro",
+      "affiliation": "Kyoto University of Foreign Studies"
+    }
+  ],
+  "version": "1.0.0",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "OpenAIRE",
+    "Open Science",
+    "Quantum Technology",
+    "EU–Japan",
+    "Research Policy",
+    "Scientometrics",
+    "Knowledge Graph",
+    "Research Software",
+    "FAIR"
+  ],
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://atlas.tsuchiyatakahiro.com",
+      "relation": "isSupplementedBy",
+      "resource_type": "other"
+    }
+  ]
+}

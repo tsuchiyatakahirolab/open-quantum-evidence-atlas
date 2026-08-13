@@ -1,8 +1,8 @@
 # Changelog
 
-## Unreleased — v1.0.0 release candidate
+## 1.0.0 — 2026-08-13
 
-First public release candidate for the OpenAIRE AI Hackathon. No GitHub Release is claimed until final QA is complete.
+First stable public release for the OpenAIRE AI Hackathon, archived as [DOI 10.5281/zenodo.21913414](https://doi.org/10.5281/zenodo.21913414).
 
 - Publishes the 29 July 2026 OpenAIRE snapshot and complete 645-record audit.
 - Provides a no-login Atlas, reusable Evidence Chain Auditor and 119-second walkthrough.

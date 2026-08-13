@@ -1,7 +1,9 @@
 {
   "schema_version": 1,
   "artifact": "Open Quantum Evidence Atlas",
-  "as_of": "2026-08-08",
+  "version": "1.0.0",
+  "doi": "10.5281/zenodo.21913414",
+  "as_of": "2026-08-13",
   "sources": [
     {
       "name": "OpenAIRE Graph",

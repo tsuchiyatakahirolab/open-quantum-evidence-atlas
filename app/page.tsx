@@ -533,6 +533,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; version history · GitHub ↗</a>
+            <a href="https://doi.org/10.5281/zenodo.21913414" target="_blank" rel="noreferrer">Version 1.0.0 archive · Zenodo DOI ↗</a>
             <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com" target="_blank" rel="noreferrer">Research profile · Takahiro Tsuchiya ↗</a>
             <a href="https://graph.openaire.eu/docs/license/" target="_blank" rel="noreferrer">Source: OpenAIRE Graph · CC BY ↗</a>

@@ -1,8 +1,11 @@
 # Open Quantum Evidence Atlas
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21913414.svg)](https://doi.org/10.5281/zenodo.21913414)
+
 An interactive OpenAIRE evidence-chain audit of EU–Japan quantum research. The artifact traces how observable links fall from funding and projects to datasets and software, then uses Q‑NEKO as a time-indexed policy-observability benchmark.
 
 - Canonical public Atlas: <https://atlas.tsuchiyatakahiro.com>
+- Version 1.0.0 archive: <https://doi.org/10.5281/zenodo.21913414>
 
 The `/audit` route is a reusable Evidence Chain Auditor. It filters and recomputes the verified snapshot, accepts compatible JSON snapshots, extracts high-completeness records, exports JSON/CSV/Markdown results, and performs a live OpenAIRE alias preflight.
 
@@ -87,7 +90,7 @@ The public reproducibility pack includes:
 - `public/ro-crate-metadata.json` — FAIR, machine-readable artifact inventory using RO-Crate JSON-LD
 - `public/submission-story.md` — the required 1–2 page hackathon story
 
-Public data snapshot: `2026-07-29T00:13:14Z`. The full-census verification confirmed all 645 IDs, all 645 link states and all four published rates. At this snapshot, the latest 2026 publication date in the retained corpus was 5 May. Release target: `v1.0.0`; no GitHub Release is claimed until final QA and publication are complete.
+Public data snapshot: `2026-07-29T00:13:14Z`. The full-census verification confirmed all 645 IDs, all 645 link states and all four published rates. At this snapshot, the latest 2026 publication date in the retained corpus was 5 May. Version `v1.0.0` is archived under DOI `10.5281/zenodo.21913414`; later data refreshes will be published as separately versioned updates rather than silently replacing this evidence snapshot.
 
 ## License
 

@@ -231,7 +231,8 @@ test("publishes machine-readable MCP, responsibility and FAIR hand-off", async (
   assert.equal(crate["@context"], "https://w3id.org/ro/crate/1.1/context");
   const root = crate["@graph"].find((entity) => entity["@id"] === "./");
   assert.equal(root.version, "1.0.0");
-  assert.equal(root.creativeWorkStatus, "Release candidate");
+  assert.equal(root.creativeWorkStatus, "Published");
+  assert.equal(root.identifier, "https://doi.org/10.5281/zenodo.21913414");
   assert.ok(root.hasPart.some((part) => part["@id"] === "reproducibility/mcp-run-manifest.json"));
   assert.match(guideText, /three-minute verification guide/i);
   assert.match(guideText, /Confirm responsible and FAIR hand-off/i);
@@ -253,8 +254,7 @@ test("keeps credential-free review bounded and requires authenticated full refre
   assert.match(livePipeline, /using 22 public API requests/i);
   assert.match(livePipeline, /UNAUTHENTICATED_REQUEST_LIMIT = 60/);
   assert.match(readme, /Public data snapshot: `2026-07-29T00:13:14Z`/);
-  assert.match(readme, /Release target: `v1\.0\.0`/);
-  assert.match(readme, /no GitHub Release is claimed/i);
+  assert.match(readme, /Version `v1\.0\.0` is archived under DOI `10\.5281\/zenodo\.21913414`/);
   assert.match(readme, /latest 2026 publication date.*5 May/i);
   assert.match(readme, /not grant-level attribution/i);
   assert.doesNotMatch(notebook, /legacy sample|250-record/i);

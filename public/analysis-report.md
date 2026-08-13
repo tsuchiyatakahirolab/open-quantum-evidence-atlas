@@ -1,6 +1,8 @@
 # Open Quantum Evidence Atlas — Analysis Report
 
-**Version:** 1.0.0 release candidate
+**Version:** 1.0.0
+
+**DOI:** https://doi.org/10.5281/zenodo.21913414
 
 **Snapshot:** 2026-07-29T00:13:14Z
 
