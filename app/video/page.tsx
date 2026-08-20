@@ -16,10 +16,10 @@ export default function VideoPage() {
 
       <section className="video-hero video-shell">
         <p className="video-kicker">OPENAIRE AI HACKATHON · THEME C</p>
-        <h1>See the evidence<br />chain <em>run.</em></h1>
+        <h1>Watch a policy question<br />become an <em>action.</em></h1>
         <p className="video-lede">
-          A 119-second, captioned walkthrough of why only 17 of 645 records expose a complete evidence chain,
-          one chain reviewers can inspect, and the MCP boundary turned into a reproducible interoperability finding.
+          In 119 seconds: find where a funded portfolio loses reusable-output links, verify one exact chain,
+          export what to fix, and see why the Alien/OpenAIRE MCP check makes the result safer.
         </p>
       </section>
 
@@ -41,9 +41,9 @@ export default function VideoPage() {
       </section>
 
       <section className="video-notes video-shell">
-        <article><span>01</span><h2>Measured</h2><p>Only 17 of 645 records expose every project, funding, dataset and software link; all rates retain their denominators.</p></article>
-        <article><span>02</span><h2>Inspectable</h2><p>In the 29 July snapshot, the featured chain links funding, projects, institutions, a publication, one dataset and two unique software records.</p></article>
-        <article><span>03</span><h2>Time-aware</h2><p>The 13 August bounded probe separates four raw Q‑NEKO hits, three self-excluded records and three verified project-code relations without rewriting the 645-record snapshot.</p></article>
+        <article><span>01</span><h2>Find</h2><p>Only 17 of 645 records expose every project, funding, dataset and software link; every rate keeps its denominator.</p></article>
+        <article><span>02</span><h2>Verify</h2><p>Open one exact funding-to-software chain and inspect the underlying OpenAIRE, DOI, Figshare and software records.</p></article>
+        <article><span>03</span><h2>Act</h2><p>Export the missing-identifier action, then repeat the same bounded audit to measure Graph-entry improvement over time.</p></article>
       </section>
 
       <footer className="video-footer">

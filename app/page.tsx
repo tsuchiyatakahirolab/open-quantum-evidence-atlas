@@ -89,8 +89,8 @@ const chain = [
     short: "Satellite measurement data",
     eyebrow: "29 Jul snapshot · Scholix-linked dataset",
     title: "A referenced measurement collection",
-    body: "The 29 July census exposed a references edge to ‘Quantum-limited measurements of optical signals from a geostationary satellite’ on Figshare. The 13 August bounded probe no longer returned that edge, so the Atlas preserves it as timestamped snapshot evidence rather than a timeless claim.",
-    facts: ["29 Jul: 1 dataset edge", "13 Aug probe: 0", "Figshare DOI retained"],
+    body: "The 29 July census exposed a references edge to ‘Quantum-limited measurements of optical signals from a geostationary satellite’ on Figshare. The 20 August bounded probe no longer returned that edge, so the Atlas preserves it as timestamped snapshot evidence rather than a timeless claim.",
+    facts: ["29 Jul: 1 dataset edge", "20 Aug probe: 0", "Figshare DOI retained"],
     link: "https://doi.org/10.6084/m9.figshare.c.3813670",
     linkLabel: "Open the dataset",
   },
@@ -142,17 +142,17 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-copy">
-          <div className="eyebrow"><span>OpenAIRE Graph · Theme C</span><b>EU ↔ JAPAN</b></div>
+          <div className="eyebrow"><span>For funders · programme managers · Open Science teams</span><b>EU ↔ JAPAN</b></div>
           <h1>Funding is visible.<br /><em>Reuse links are not.</em></h1>
           <p className="hero-lede">
-            Only <strong>17 of 645 EU–Japan quantum publications</strong> form a complete publication-centred project/funder–dataset–software path.
-            Project links reach 60.8%; software links reach 7.4%.
+            The Atlas shows where a research portfolio&apos;s public evidence chain breaks—and which identifiers to fix.
+            In a full audit, only <strong>17 of 645 EU–Japan quantum publications</strong> expose project/funder, dataset and software links in OpenAIRE.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href="/audit">Run the auditor <span aria-hidden="true">→</span></a>
-            <a className="button quiet" href="/video">Watch the 119s demo</a>
+            <a className="button primary" href="/audit">Audit the evidence <span aria-hidden="true">→</span></a>
+            <a className="button quiet" href="/video">Watch the 119s proof</a>
           </div>
-          <p className="source-line">Measured, not model-estimated · OpenAIRE Graph v3 + research-product links</p>
+          <p className="source-line">Working artifact · 645/645 records audited · inspect sources · export JSON, CSV or Markdown</p>
           <p className="author-line">
             Research &amp; development: <a href="https://tsuchiyatakahiro.com" target="_blank" rel="author noreferrer">Takahiro Tsuchiya, Ph.D.</a>
             <span>Professor, Kyoto University of Foreign Studies · individual submission</span>
@@ -187,16 +187,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="reviewer-path" aria-label="Three-minute verification path">
+      <section className="reviewer-path" aria-label="From evidence gap to action">
         <div className="shell reviewer-path-inner">
           <div className="reviewer-path-label">
-            <span>VERIFY IN 3 MINUTES</span>
-            <strong>Claim → record → connector → reuse</strong>
+            <span>FROM FINDING TO ACTION</span>
+            <strong>Find → verify → fix → re-audit</strong>
           </div>
-          <a href="#finding"><b>01</b><span>Read the finding</span><small>Declared denominator</small></a>
-          <a href="#trace"><b>02</b><span>Inspect one chain</span><small>Source-opening evidence</small></a>
-          <a href="#mcp"><b>03</b><span>Replay the MCP boundary</span><small>Executed regression case</small></a>
-          <a href="/reproducibility/reviewer-guide.md"><b>04</b><span>Re-run and reuse</span><small>Public verification guide</small></a>
+          <a href="/audit#configure"><b>01</b><span>Find the gap</span><small>Set a portfolio boundary</small></a>
+          <a href="#trace"><b>02</b><span>Verify the record</span><small>Open exact source evidence</small></a>
+          <a href="/audit#exports"><b>03</b><span>Export what to fix</span><small>JSON · CSV · decision brief</small></a>
+          <a href="#watch"><b>04</b><span>Measure improvement</span><small>Re-audit Graph-entry lag</small></a>
         </div>
       </section>
 
@@ -395,7 +395,7 @@ export default function Home() {
           </div>
 
           <div className="mcp-footnote">
-            <p><strong>Time-bounded result:</strong> the table records the 18/29 July diagnostic. On 13 August the featured dataset total was 0, while the two software rows still reproduced the page-0 mismatch. MCP remains the inspectable traversal layer; the API remains the deterministic census layer.</p>
+            <p><strong>Time-bounded result:</strong> the table records the 18/29 July diagnostic. On 20 August the featured dataset total remained 0, while the two software rows still reproduced the page-0 mismatch. MCP remains the inspectable traversal layer; the API remains the deterministic census layer.</p>
             <div>
               <a href="https://api.openaire.eu/graph/swagger-ui/index.html" target="_blank" rel="noreferrer">Official OpenAPI ↗</a><br />
               <a href="/reproducibility/openaire-mcp-crosscheck.md" target="_blank" rel="noreferrer">Static integration diagnostic ↗</a><br />
@@ -413,9 +413,9 @@ export default function Home() {
             <h2>Q‑NEKO is the test case.<br /><em>Not the corpus.</em></h2>
             <p>
               Q‑NEKO is a new EU–Japan joint quantum-technology project: €4m in European funding,
-              running 2026–2028. It was absent from the 29 July queries. By 13 August, the bounded recheck found
-              one exact project record and four raw product hits. One was this Atlas itself; after self-exclusion,
-              the remaining three records also resolved through the explicit Q‑NEKO project-code relation.
+              running 2026–2028. It was absent from the 29 July queries. By 20 August, the bounded recheck found
+              one exact project record and five raw product hits. Two were this Atlas&apos;s own Zenodo releases; after
+              self-exclusion, the remaining three records also resolved through the explicit Q‑NEKO project-code relation.
             </p>
             <div className="watch-actions">
               <a href="https://www.eurohpc-ju.europa.eu/research-innovation/our-projects/q-neko_en" target="_blank" rel="noreferrer">EuroHPC project record ↗</a>
@@ -424,11 +424,11 @@ export default function Home() {
           </div>
 
           <div className="watch-card">
-            <div className="watch-card-top"><span><i className="status linked" /> FIRST GRAPH-ENTRY MILESTONE</span><b>29 JUL → 13 AUG 2026</b></div>
+            <div className="watch-card-top"><span><i className="status linked" /> FIRST GRAPH-ENTRY MILESTONE</span><b>29 JUL → 20 AUG 2026</b></div>
             <div className="watch-zero">
               <div><strong>0·0</strong><span>29 Jul · project / product hits</span></div>
               <div className="zero-divider" />
-              <div><strong>{liveRecheck.summary.q_neko_unique_project_records_sampled}·{liveRecheck.summary.q_neko_verified_grant_output_hits}</strong><span>13 Aug · project / verified graph-linked products</span></div>
+              <div><strong>{liveRecheck.summary.q_neko_unique_project_records_sampled}·{liveRecheck.summary.q_neko_verified_grant_output_hits}</strong><span>20 Aug · project / verified graph-linked products</span></div>
             </div>
             <div className="watch-callout"><i className="status linked" /><p><strong>The clock produced its first state change.</strong><br />The Atlas detected project visibility ten days after its published census; aggregate rates remain the 29 July snapshot pending an authenticated refresh.</p></div>
             <details>
@@ -448,24 +448,24 @@ export default function Home() {
         <div className="shell">
           <div className="decision-title">
             <p className="kicker">05 · DECISION BRIEF</p>
-            <h2>Build the broad Atlas.<br />Use Q‑NEKO as a live benchmark.</h2>
-            <p>One policy decision, three operating moves.</p>
+            <h2>Make evidence links<br />a project deliverable.</h2>
+            <p>One finding, three operating moves.</p>
           </div>
           <div className="decision-grid">
             <article>
               <span>01 · POLICY EVALUATOR</span>
-              <h3>Use the 645-record reference corpus</h3>
-              <p>The broad cohort supplies a defensible comparison baseline; Q‑NEKO is now a time-indexed change case, not a standalone impact score.</p>
+              <h3>Benchmark the portfolio</h3>
+              <p>Use a declared denominator to see where funding, dataset and software visibility falls—before interpreting project performance.</p>
             </article>
             <article>
               <span>02 · RESEARCH FUNDER</span>
-              <h3>Make reuse edges a deliverable</h3>
-              <p>Require grant, DOI, repository and Software Heritage identifiers to connect before project close—not after evaluation.</p>
+              <h3>Fix the missing identifiers</h3>
+              <p>Require grant IDs, publication DOIs, repository IDs and software identifiers before project close—not after evaluation.</p>
             </article>
             <article>
               <span>03 · OPEN SCIENCE TEAM</span>
-              <h3>Re-audit the policy lag</h3>
-              <p>Record the first project milestone now, then verify project–product relations before measuring time-to-publication and reusable-output visibility.</p>
+              <h3>Measure improvement over time</h3>
+              <p>Schedule the same bounded audit again. Q‑NEKO demonstrates how to record Graph-entry milestones without turning a missing edge into a performance verdict.</p>
             </article>
           </div>
           <div className="falsification">
@@ -474,7 +474,7 @@ export default function Home() {
           </div>
           <div className="falsification">
             <span>TIME-INDEXED EVIDENCE</span>
-            <p>The 29 July full census and 13 August bounded probe answer different questions. The first fixes the aggregate denominator; the second detects Graph drift without silently rewriting the published rates.</p>
+            <p>The 29 July full census and 20 August bounded probe answer different questions. The first fixes the aggregate denominator; the second detects Graph drift without silently rewriting the published rates.</p>
           </div>
           <div className="falsification">
             <span>DESIGN CONTRAST</span>
@@ -489,7 +489,7 @@ export default function Home() {
             <p className="kicker">06 · REUSE THE AUDIT</p>
             <h2>Every number has<br />a denominator.</h2>
           </div>
-            <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes source attribution, transformations and licence metadata. Snapshot, notebook and the 22-call live probe are credential-free; a fresh full census requires an OpenAIRE bearer token and is throttled below the authenticated limit.</p>
+            <p>The artifact separates observed links from unknowns, retains API URLs in the analysis cache, and publishes source attribution, transformations and licence metadata. Snapshot, notebook and the 23-request live probe are credential-free; a fresh full census requires an OpenAIRE bearer token and is throttled below the authenticated limit.</p>
         </div>
 
         <div className="method-grid">
@@ -519,7 +519,7 @@ export default function Home() {
             <a href="/submission-story.md" download><span>1–2 page story</span><b>MD ↓</b></a>
             <a href="/video"><span>Captioned walkthrough</span><b>119 SEC ↗</b></a>
             <a href="https://api.openaire.eu/graph/v3/research-products" target="_blank" rel="noreferrer"><span>OpenAIRE endpoint</span><b>API ↗</b></a>
-            <small>Full census snapshot: 29 Jul 2026 · latest bounded recheck: 13 Aug 2026 · fresh full census requires authenticated access</small>
+            <small>Full census snapshot: 29 Jul 2026 · latest bounded recheck: 20 Aug 2026 · fresh full census requires authenticated access</small>
           </div>
         </div>
       </section>
@@ -533,7 +533,7 @@ export default function Home() {
           <div className="footer-meta">
             <a href="https://innovation.openaire.eu/component/content/article/openaire-ai-hackathon.html?catid=8" target="_blank" rel="noreferrer">OpenAIRE AI Hackathon · Theme C ↗</a>
             <a href="https://github.com/tsuchiyatakahirolab/open-quantum-evidence-atlas" target="_blank" rel="noreferrer">Source, data &amp; version history · GitHub ↗</a>
-            <a href="https://doi.org/10.5281/zenodo.21914776" target="_blank" rel="noreferrer">Version 1.0.1 archive · Zenodo DOI ↗</a>
+            <a href="https://doi.org/10.5281/zenodo.21913413" target="_blank" rel="noreferrer">Version 1.0.2 archive · Zenodo DOI ↗</a>
             <a href="/video">Captioned 119-second walkthrough ↗</a>
             <a href="https://tsuchiyatakahiro.com" target="_blank" rel="noreferrer">Research profile · Takahiro Tsuchiya ↗</a>
             <a href="https://graph.openaire.eu/docs/license/" target="_blank" rel="noreferrer">Source: OpenAIRE Graph · CC BY ↗</a>

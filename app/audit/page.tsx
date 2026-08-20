@@ -236,7 +236,7 @@ export default function AuditLab() {
       `Generated: ${new Date().toISOString()}`, `Source: ${dataset?.title ?? "Uploaded snapshot"}`, "",
       "## Scope", "", `- Records after filters: ${filtered.length}`, `- Link-audited denominator: ${linkAudited.length}`, `- Complete project→data→software chains: ${completeChains}`, "",
       "## Connection rates", "", ...metrics.map((item) => `- ${item.label}: ${item.rate.toFixed(1)}% (${item.connected}/${item.audited}; Wilson 95% reference band ${item.low.toFixed(1)}–${item.high.toFixed(1)})`), "",
-      "## Decision", "", gapRatio ? `Funding visibility is ${gapRatio.toFixed(1)}× software visibility in this filtered scope. Prioritise persistent software and repository identifiers, then re-run this audit.` : "Software has no observable links in the audited denominator. Verify repository identifiers before interpreting this as no software output.", "",
+      "## Recommended action", "", gapRatio ? `Funding visibility is ${gapRatio.toFixed(1)}× software visibility in this filtered scope. Require persistent grant, publication, repository and software identifiers, then repeat this audit to measure improvement.` : "Software has no observable links in the audited denominator. Verify repository and software identifiers before interpreting this as no software output, then repeat the audit.", "",
       "## Semantics", "", "An OpenAIRE edge is an observability signal, not proof of access, licensing, documentation quality or actual reuse. A complete chain is a publication-centred path with project/funder, dataset and software connections; it is not causal or grant-level attribution. An absent edge means not observable for this audit; it does not prove that no underlying output exists.",
     ];
     download("evidence-audit-brief.md", "text/markdown", lines.join("\n"));
@@ -269,24 +269,24 @@ export default function AuditLab() {
     <main className="audit-page">
       <header className="audit-nav audit-shell">
         <Link href="/" className="audit-brand"><span aria-hidden="true">◉</span><span>OPEN QUANTUM<br />EVIDENCE ATLAS</span></Link>
-        <div className="audit-nav-state"><i /> AUDITOR · PUBLIC BETA</div>
+        <div className="audit-nav-state"><i /> EVIDENCE CHAIN AUDITOR · PUBLIC BETA</div>
         <Link href="/" className="audit-back">Read the case study ↗</Link>
       </header>
 
       <section className="audit-hero audit-shell">
         <div>
-          <p className="audit-kicker">EVIDENCE CHAIN AUDITOR · V1</p>
-          <h1>Turn a policy question<br />into an <em>evidence audit.</em></h1>
-          <p>Filter a verified OpenAIRE snapshot, recompute every denominator, surface the strongest chains and export a decision-ready result.</p>
-          <a className="audit-cta" href="#configure">Configure the audit <span>↓</span></a>
+          <p className="audit-kicker">FOR FUNDERS · PROGRAMME MANAGERS · OPEN SCIENCE TEAMS</p>
+          <h1>Find the broken link.<br /><em>Export what to fix.</em></h1>
+          <p>Choose a research-portfolio boundary, measure where evidence disappears, inspect the exact source records and export a decision-ready remediation brief.</p>
+          <a className="audit-cta" href="#configure">Audit the EU–Japan case <span>↓</span></a>
         </div>
         <aside className="audit-manifest">
-          <span>RUNTIME CONTRACT</span>
+          <span>4-STEP RUNTIME</span>
           <ol>
-            <li><b>01</b><p>Choose scope</p><i>topic · partner · years</i></li>
-            <li><b>02</b><p>Run audit</p><i>rates · reference bands · states</i></li>
-            <li><b>03</b><p>Inspect chain</p><i>project · data · software</i></li>
-            <li><b>04</b><p>Export decision</p><i>JSON · CSV · Markdown</i></li>
+            <li><b>01</b><p>Choose portfolio</p><i>topic · partner · years</i></li>
+            <li><b>02</b><p>Find the gap</p><i>rates · denominators · states</i></li>
+            <li><b>03</b><p>Verify evidence</p><i>project · data · software</i></li>
+            <li><b>04</b><p>Export the fix</p><i>JSON · CSV · Markdown</i></li>
           </ol>
         </aside>
       </section>
@@ -318,7 +318,7 @@ export default function AuditLab() {
 
       <section className="audit-results audit-shell">
         <div className="audit-section-head results-head">
-          <div><p className="audit-kicker">02 · RESULTS</p><h2>The evidence signal.</h2></div>
+          <div><p className="audit-kicker">02 · RESULTS</p><h2>Where the evidence chain breaks.</h2></div>
           <div className="result-summary"><span><b>{filtered.length}</b> records</span><span><b>{linkAudited.length}</b> link-audited</span><span><b>{completeChains}</b> complete chains</span></div>
         </div>
 
@@ -361,8 +361,8 @@ export default function AuditLab() {
           </aside>
         </div>
 
-        <div className="export-bar">
-          <div><p className="audit-kicker">04 · EXPORT</p><h3>Take the audit with you.</h3><p>Every export includes the applied filters and denominator.</p></div>
+        <div className="export-bar" id="exports">
+          <div><p className="audit-kicker">04 · ACT</p><h3>Export the next action.</h3><p>Every export keeps the applied filters, denominator and evidence semantics attached.</p></div>
           <div><button type="button" onClick={exportJson}>Evidence <b>JSON ↓</b></button><button type="button" onClick={exportCsv}>Records <b>CSV ↓</b></button><button type="button" onClick={exportBrief}>Policy brief <b>MD ↓</b></button></div>
         </div>
       </section>

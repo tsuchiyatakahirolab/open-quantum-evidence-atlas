@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.2 — 2026-08-20
+
+Submission-day monitoring and presentation release. The stable concept DOI is [10.5281/zenodo.21913413](https://doi.org/10.5281/zenodo.21913413); Zenodo assigns the version DOI from the GitHub release.
+
+- Preserves the authenticated 29 July 645-record census as the aggregate evidence snapshot.
+- Publishes a separately timestamped 20 August bounded recheck within the unauthenticated 60 requests/hour limit.
+- Separates five raw Q‑NEKO alias hits into two Atlas self-records and three explicit project-code-linked records.
+- Re-records the captioned 119-second walkthrough against the final public candidate and makes its self-exclusion narration robust to later indexing.
+- Stabilises the local and CI lint gate by excluding generated Wrangler bundles.
+
 ## 1.0.1 — 2026-08-13
 
 Reproducibility and monitoring release, archived as [DOI 10.5281/zenodo.21914776](https://doi.org/10.5281/zenodo.21914776).

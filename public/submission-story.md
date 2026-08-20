@@ -2,7 +2,9 @@
 
 ## The question
 
-Can a decision-maker trace EU–Japan quantum-research policy through funding and projects to publications—and then to reusable datasets and software? We used the OpenAIRE Graph to measure that evidence chain rather than infer collaboration from publication counts alone.
+Funders can count grants and papers. The harder question is whether the public evidence can be followed to datasets and software that others can find and inspect. Open Quantum Evidence Atlas answers that question with a working auditor: choose a research-portfolio boundary, find where the evidence chain breaks, open the exact source records, export the identifiers to fix, and repeat the audit to measure improvement.
+
+The verified case asks whether EU–Japan quantum funding can be traced beyond grants and publications to reusable-output links—without mistaking an absent Graph edge for a missing output.
 
 ## The journey
 
@@ -20,11 +22,11 @@ The architecture deliberately separates two OpenAIRE layers. The Alien/OpenAIRE 
 
 An uncached live integrity recheck on 29 July repeated the eight discovery queries, featured DOI and grant lookup, page-0/page-1 link comparison, and four Q‑NEKO aliases. All six contract checks passed, all eight discovery counts were unchanged, and the page mismatch remained reproducible. We also completed an authenticated fresh full-corpus execution: all 645 corpus IDs, all 645 dataset/software link states, and all four connection rates exactly matched the published audit.
 
-The clock then moved. On 8 August, the bounded probe found one exact Q‑NEKO project record and three alias-based research-product search hits. On 13 August the same alias query returned four products, but one was this Atlas's newly indexed Zenodo record. The monitor now separates four raw hits, three self-excluded candidates, and three records explicitly related to OpenAIRE project code 101241875. That graph relation is inspectable evidence, not a causal claim that the grant produced the outputs. All eight discovery totals had also changed; the featured dataset relation moved from one row to zero, whereas the two software rows continued to reproduce the MCP page mismatch. We publish drift separately rather than rewriting the 29 July census. Q‑NEKO therefore becomes a demonstrated time-indexed policy benchmark, not a zero-output verdict.
+The clock then moved. On 8 August, the bounded probe found one exact Q‑NEKO project record and three alias-based research-product search hits. On 20 August the same alias query returned five products, but two were this Atlas's indexed Zenodo releases. The monitor now separates five raw hits, three self-excluded candidates, and three records explicitly related to OpenAIRE project code 101241875. That graph relation is inspectable evidence, not a causal claim that the grant produced the outputs. All eight discovery totals had also changed; the featured dataset relation remained at zero rows, whereas the two software rows continued to reproduce the MCP page mismatch. We publish drift separately rather than rewriting the 29 July census. Q‑NEKO therefore becomes a demonstrated time-indexed policy benchmark, not a zero-output verdict.
 
 ## What a decision-maker can do
 
-Keep the broad 645-record Atlas as the comparison baseline while Q‑NEKO matures. Record the first project-visibility milestone, verify project–product relations, and then measure time-to-publication and time-to-reusable-output. Make grant, publication, repository and software identifiers an explicit close-out deliverable. The timestamped denominator and bounded rechecks make the argument falsifiable and reusable in another bilateral domain.
+For the current portfolio, use the 645-record baseline before interpreting an individual project. Require grant IDs, publication DOIs, repository IDs and software identifiers as explicit close-out deliverables. Then repeat the same bounded audit to measure whether the links become observable. Q‑NEKO demonstrates that operating cycle: record the first project-visibility milestone, verify project–product relations, and measure graph-entry lag without treating linkage as causal production.
 
 OpenAIRE Graph is acknowledged as the source under its CC BY terms; the published snapshot declares the transformations applied. This derived artifact and story are licensed CC BY 4.0.
 

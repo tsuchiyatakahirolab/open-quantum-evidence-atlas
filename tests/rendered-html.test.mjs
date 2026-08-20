@@ -61,10 +61,10 @@ test("server-renders the evidence atlas and social metadata", async () => {
 
   const html = await response.text();
   const visibleHtml = html.replaceAll("<!-- -->", "");
-  assert.match(html, /<title>Open Quantum Evidence Atlas \| EU–Japan<\/title>/i);
+  assert.match(html, /<title>Evidence Chain Auditor for Funders \| Open Quantum Evidence Atlas<\/title>/i);
   assert.match(html, /Funding is visible\./i);
-  assert.match(visibleHtml, /Only\s+17 of 645 EU–Japan quantum publications/i);
-  assert.match(html, /Watch the 119s demo/i);
+  assert.match(visibleHtml, /Only\s*<strong>17 of 645 EU–Japan quantum publications<\/strong>/i);
+  assert.match(html, /Watch the 119s proof/i);
   assert.match(html, /TWO-LAYER OPENAIRE DESIGN/i);
   assert.match(html, /MCP verifies interactively/i);
   assert.match(html, /API counts deterministically/i);
@@ -74,18 +74,18 @@ test("server-renders the evidence atlas and social metadata", async () => {
   assert.match(html, /MCP schema\/offset defect/i);
   assert.match(html, /Static integration diagnostic/i);
   assert.match(visibleHtml, /8\/8 discovery totals moved/i);
-  assert.match(visibleHtml, /Q‑NEKO.*4 raw.*3 self-excluded.*3 grant-linked/i);
+  assert.match(visibleHtml, /Q‑NEKO.*5 raw.*3 self-excluded.*3 grant-linked/i);
   assert.match(visibleHtml, /Featured links now.*0 dataset.*2 software/i);
   assert.match(visibleHtml, /29 Jul census.*645 IDs.*verified/i);
   assert.match(html, /Takahiro Tsuchiya, Ph\.D\./i);
   assert.match(html, /Professor, Kyoto University of Foreign Studies.*individual submission/i);
   assert.match(html, /rel="canonical" href="https:\/\/atlas\.tsuchiyatakahiro\.com"/i);
   assert.match(html, /Q‑NEKO is the test case/i);
-  assert.match(html, /Build the broad Atlas/i);
+  assert.match(html, /Make evidence links/i);
   assert.match(html, /property="og:image" content="http:\/\/localhost(?::3000)?\/og-atlas\.png"/i);
   assert.match(html, /role="tablist"/i);
   assert.match(html, /Wilson 95% binomial reference bands/i);
-  assert.match(html, /VERIFY IN 3 MINUTES/i);
+  assert.match(html, /FROM FINDING TO ACTION/i);
   assert.match(html, /POLICY EVALUATOR/i);
   assert.match(html, /RESEARCH FUNDER/i);
   assert.match(html, /OPEN SCIENCE TEAM/i);
@@ -100,7 +100,7 @@ test("server-renders the reusable Evidence Chain Auditor", async () => {
   assert.equal(response.status, 200);
   const html = await response.text();
   assert.match(html, /Evidence Chain Auditor/i);
-  assert.match(html, /Turn a policy question/i);
+  assert.match(html, /Find the broken link/i);
   assert.match(html, /Run evidence audit/i);
   assert.match(html, /Check OpenAIRE live/i);
   assert.match(html, /Upload JSON/i);
@@ -147,7 +147,7 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   assert.equal(snapshot.q_neko_watchlist.openaire_project_union, 0);
   assert.match(ratesText, /observed,software,48,645,7\.4,5\.7,9\.7/);
   assert.match(storyText, /The clock then moved/i);
-  assert.match(storyText, /four raw hits, three self-excluded candidates, and three records explicitly related/i);
+  assert.match(storyText, /five raw hits, three self-excluded candidates, and three records explicitly related/i);
   assert.match(mcpText, /default of `0`/i);
   assert.match(mcpText, /## Replay prompt/i);
   assert.match(mcpText, /ResearchLinksInput.*page.*greater than or equal to `1`/i);
@@ -161,13 +161,13 @@ test("publishes a denominator-complete reproducibility pack", async () => {
     term_queries_changed: 8,
     q_neko_project_hits: 1,
     q_neko_product_hits: 3,
-    q_neko_product_hits_raw: 4,
+    q_neko_product_hits_raw: 5,
     q_neko_product_hits_self_excluded: 3,
-    q_neko_self_product_hits: 1,
+    q_neko_self_product_hits: 2,
     q_neko_verified_grant_output_hits: 3,
     q_neko_unique_project_records_sampled: 1,
     q_neko_unique_product_records_sampled: 3,
-    q_neko_unique_product_records_sampled_raw: 4,
+    q_neko_unique_product_records_sampled_raw: 5,
   });
   assert.deepEqual(recheck.request_policy, {
     authenticated: false,
@@ -176,7 +176,12 @@ test("publishes a denominator-complete reproducibility pack", async () => {
   });
   assert.equal(recheck.q_neko_verified_grant_outputs.project_code, "101241875");
   assert.equal(recheck.q_neko_verified_grant_outputs.verified_hits, 3);
-  assert.equal(recheck.q_neko["Q-Neko"].product_samples_self[0].pids[0].value, "10.5281/zenodo.21913414");
+  const selfDois = recheck.q_neko["Q-Neko"].product_samples_self
+    .flatMap((record) => record.pids)
+    .filter((pid) => pid.scheme === "doi")
+    .map((pid) => pid.value)
+    .sort();
+  assert.deepEqual(selfDois, ["10.5281/zenodo.21913414", "10.5281/zenodo.21914776"]);
   const comparison = JSON.parse(comparisonText);
   assert.equal(comparison.exact_match, true);
   assert.equal(comparison.corpus.records, 645);
@@ -238,9 +243,9 @@ test("publishes machine-readable MCP, responsibility and FAIR hand-off", async (
   const crate = JSON.parse(crateText);
   assert.equal(crate["@context"], "https://w3id.org/ro/crate/1.1/context");
   const root = crate["@graph"].find((entity) => entity["@id"] === "./");
-  assert.equal(root.version, "1.0.1");
+  assert.equal(root.version, "1.0.2");
   assert.equal(root.creativeWorkStatus, "Published");
-  assert.equal(root.identifier, "https://doi.org/10.5281/zenodo.21914776");
+  assert.equal(root.identifier, "https://doi.org/10.5281/zenodo.21913413");
   assert.ok(root.hasPart.some((part) => part["@id"] === "reproducibility/mcp-run-manifest.json"));
   assert.match(guideText, /three-minute verification guide/i);
   assert.match(guideText, /Confirm responsible and FAIR hand-off/i);
@@ -264,7 +269,7 @@ test("keeps credential-free review bounded and requires authenticated full refre
   assert.match(livePipeline, /using 23 public API requests/i);
   assert.match(livePipeline, /UNAUTHENTICATED_REQUEST_LIMIT = 60/);
   assert.match(readme, /Public data snapshot: `2026-07-29T00:13:14Z`/);
-  assert.match(readme, /Version `v1\.0\.1` is archived under DOI `10\.5281\/zenodo\.21914776`/);
+  assert.match(readme, /Version `v1\.0\.2` is archived under the stable concept DOI `10\.5281\/zenodo\.21913413`/);
   assert.match(readme, /latest 2026 publication date.*5 May/i);
   assert.match(readme, /not grant-level attribution/i);
   assert.doesNotMatch(notebook, /legacy sample|250-record/i);

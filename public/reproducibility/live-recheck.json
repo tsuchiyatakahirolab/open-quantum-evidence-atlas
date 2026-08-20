@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-08-13T07:42:58Z",
+  "checked_at": "2026-08-20T03:50:00Z",
   "snapshot_as_of": "2026-07-29T00:13:14Z",
   "scope": "Bounded live integrity recheck; not a recomputation of the 645-record census",
   "request_policy": {
@@ -24,13 +24,13 @@
     "term_queries_changed": 8,
     "q_neko_project_hits": 1,
     "q_neko_product_hits": 3,
-    "q_neko_product_hits_raw": 4,
+    "q_neko_product_hits_raw": 5,
     "q_neko_product_hits_self_excluded": 3,
-    "q_neko_self_product_hits": 1,
+    "q_neko_self_product_hits": 2,
     "q_neko_verified_grant_output_hits": 3,
     "q_neko_unique_project_records_sampled": 1,
     "q_neko_unique_product_records_sampled": 3,
-    "q_neko_unique_product_records_sampled_raw": 4
+    "q_neko_unique_product_records_sampled_raw": 5
   },
   "checks": {
     "featured_doi_resolves": true,
@@ -130,8 +130,8 @@
   "q_neko": {
     "Q-Neko": {
       "products": 3,
-      "products_raw": 4,
-      "products_self_matches_returned": 1,
+      "products_raw": 5,
+      "products_self_matches_returned": 2,
       "products_self_excluded": 3,
       "projects": 1,
       "product_samples_raw": [
@@ -141,6 +141,22 @@
           "type": "other",
           "publication_date": "2026-05-08",
           "pids": []
+        },
+        {
+          "id": "od______2659::f67d5fb687857a5a54e88f376c7f4f10",
+          "title": "Open Quantum Evidence Atlas",
+          "type": "software",
+          "publication_date": null,
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.5281/zenodo.21914776"
+            },
+            {
+              "scheme": "oai",
+              "value": "oai:zenodo.org:21914776"
+            }
+          ]
         },
         {
           "id": "doi_dedup___::b9a3b1adec4ed51f393a6d359ba40f8d",
@@ -200,6 +216,22 @@
         }
       ],
       "product_samples_self": [
+        {
+          "id": "od______2659::f67d5fb687857a5a54e88f376c7f4f10",
+          "title": "Open Quantum Evidence Atlas",
+          "type": "software",
+          "publication_date": null,
+          "pids": [
+            {
+              "scheme": "doi",
+              "value": "10.5281/zenodo.21914776"
+            },
+            {
+              "scheme": "oai",
+              "value": "oai:zenodo.org:21914776"
+            }
+          ]
+        },
         {
           "id": "od______2659::5135ee57268c4227214858c3cc54819a",
           "title": "Open Quantum Evidence Atlas",

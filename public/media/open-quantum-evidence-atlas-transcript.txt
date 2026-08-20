@@ -1,21 +1,19 @@
-Recording note — the video captures the 8 August observation. A 13 August recheck subsequently separated four raw Q-NEKO product hits, excluded the Atlas's own Zenodo record, and verified the remaining three through OpenAIRE project code 101241875.
+When governments fund research, grants and papers are easy to count. The harder question: does the public evidence reach datasets and software—and what must be fixed when it does not?
 
-When governments fund quantum research, grants and papers are easy to count. The harder question: what becomes reusable?
+Open Quantum Evidence Atlas turns that question into four actions: find the gap, verify the record, export the fix, and measure improvement.
 
-Open Quantum Evidence Atlas turns that into an executable observability audit of the OpenAIRE Graph.
+Inside a declared Japan–EU27 boundary, we audited all 645 publications. Only seventeen expose project or funder, dataset, and software links in OpenAIRE. Project visibility is 60.8 percent. Software visibility is 7.4—an 8.2-fold cliff.
 
-Within a declared 2020-to-2026 Japan–EU27 boundary, we audited 645 publications. Project or funding links reach 60.8 percent; dataset links 27.8; software 7.4. An 8.2-fold cliff.
+This is a working auditor, not a model estimate. Choose a portfolio boundary; every denominator recomputes. Inspect exact records, then export JSON, CSV, or a decision brief.
 
-These are Graph measurements, not model estimates. Change the boundary and the auditor recomputes denominators and Wilson intervals.
+Connected means an explicit Graph edge. Not observable never means nonexistent.
 
-A strict-title search changes the sample, not the conclusion. States are connected, not observable, or not audited. Not observable never means nonexistent.
+One chain connects European Commission funding, three projects, a publication, a Figshare dataset, and two software records. A later edge change proves why timestamped snapshots matter.
 
-Seventeen records form complete July chains. One traces European Commission funding through three projects to a publication, a Figshare dataset, and two software records. The dataset edge later changed, so timestamps and sources remain visible.
+Alien's authenticated OpenAIRE MCP verified the DOI and grant, and exposed a connector boundary: OpenAIRE starts relation pages at zero; the MCP accepts one or higher. The direct census protects the headline; the reproducer makes the defect a regression test.
 
-Alien's authenticated OpenAIRE MCP confirms the DOI and grant, yet returns no rows for nonzero relation totals. Why? OpenAIRE begins at page zero; the MCP accepts one or higher. A reproducer and direct API fallback make this a regression test.
+An authenticated rerun reproduced all 645 identifiers and link states. The monitor then excluded the Atlas's own indexed records and verified the remaining three through the project code.
 
-An authenticated rerun reproduced all 645 identifiers and link states. Ten days later, a bounded monitor found movement in every discovery total. Q-NEKO appeared as one project and three search candidates—not attributed outputs.
+Require grant IDs, publication DOIs, repository IDs, and software identifiers before project close-out. Repeat the audit to measure improvement.
 
-Reuse the auditor for any programme, field, or country pair. Separate full censuses from bounded drift probes; use Q-NEKO to track graph-entry lag.
-
-Measure the gap. Fix the links. Watch the graph change. Open Quantum Evidence Atlas.
+Trace the investment. Fix the links. Measure improvement. Open Quantum Evidence Atlas.

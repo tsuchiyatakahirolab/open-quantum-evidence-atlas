@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Evidence Chain Auditor | Open Quantum Evidence Atlas",
-  description: "Re-run a denominator-complete OpenAIRE evidence audit, inspect research chains, export results and check project visibility live.",
+  title: "Find the Broken Evidence Link | Open Quantum Evidence Atlas",
+  description: "Audit a research portfolio, inspect exact OpenAIRE source records and export the identifiers to fix.",
 };
 
 export default function AuditLayout({ children }: Readonly<{ children: React.ReactNode }>) {

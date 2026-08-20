@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "artifact": "Open Quantum Evidence Atlas",
-  "version": "1.0.1",
-  "doi": "10.5281/zenodo.21914776",
-  "as_of": "2026-08-13",
+  "version": "1.0.2",
+  "doi": "10.5281/zenodo.21913413",
+  "as_of": "2026-08-20",
   "sources": [
     {
       "name": "OpenAIRE Graph",
@@ -54,10 +54,10 @@
     "The 645 records form a census within the published search and affiliation boundary, not a census of all EU-Japan quantum activity.",
     "Wilson intervals are reference bands for subset comparison, not estimates of search-boundary, metadata or coverage uncertainty.",
     "At the 29 July snapshot, the latest 2026 publication date in the retained corpus was 5 May; 2026 is not interpreted as a trend.",
-    "Q-NEKO had zero project and product query hits at the 29 July snapshot; by 13 August the bounded recheck found one exact project and four raw alias-based product hits.",
-    "One raw product hit was this Atlas's newly indexed Zenodo record; the public monitor excludes it before reporting external candidates.",
+    "Q-NEKO had zero project and product query hits at the 29 July snapshot; by 20 August the bounded recheck found one exact project and five raw alias-based product hits.",
+    "Two raw product hits were this Atlas's indexed Zenodo releases; the public monitor excludes both before reporting external candidates.",
     "The three self-excluded candidates were independently returned by relProjectCode=101241875 and are therefore explicit OpenAIRE graph links, not causal proof of grant production, reuse, access or quality.",
-    "The 13 August bounded probe detects drift but does not recompute or silently replace the verified 29 July full-census rates."
+    "The 20 August bounded probe detects drift but does not recompute or silently replace the verified 29 July full-census rates."
   ],
   "falsification_condition": "If improved identifiers, deposits or OpenAIRE classification lift software visibility close to the dataset rate, the software-cliff conclusion weakens.",
   "contact": "t_tsuchiya@kufs.ac.jp",

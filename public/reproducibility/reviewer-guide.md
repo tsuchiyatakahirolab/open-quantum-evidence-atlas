@@ -1,6 +1,6 @@
 # Open Quantum Evidence Atlas: three-minute verification guide
 
-This guide verifies the submission from claim to reusable evidence without a login.
+This guide verifies the submission from policy decision to reusable evidence without a login. The product workflow is: find the portfolio gap, verify the exact records, export the missing-identifier action, and repeat the audit to measure improvement.
 
 ## 1. Verify the decision question and denominator
 
@@ -24,7 +24,7 @@ Open the [MCP cross-check](https://atlas.tsuchiyatakahiro.com/#mcp) and the [mac
 - For a fresh full Graph census, set an access token locally as `OPENAIRE_ACCESS_TOKEN`, then run `python public/reproducibility/openaire_feasibility.py`. The 2,580 link checks plus discovery/organisation calls are throttled below OpenAIRE's 7,200 requests/hour authenticated limit. Cached replay does not need a token.
 - Open the [executed notebook](https://atlas.tsuchiyatakahiro.com/reproducibility/openaire_connection_rates.ipynb) for the saved calculation trail.
 
-Later live results may differ as the OpenAIRE Graph evolves. The published 13 August bounded result demonstrates this: eight discovery totals moved, Q‑NEKO appeared as one exact project record, and four raw product hits became three after self-exclusion. Those same three records were returned by the explicit project-code relation query. The featured dataset edge changed from one to zero while the software pagination case persisted. These observations do not recompute the 645-record census, and a graph relation is not causal production or reuse. Each execution is timestamped; historical replay requires an explicit cache directory.
+Later live results may differ as the OpenAIRE Graph evolves. The published 20 August bounded result demonstrates this: all eight discovery totals differ from the 29 July snapshot, Q‑NEKO appears as one exact project record, and five raw product hits become three after the Atlas's two indexed releases are excluded. Those same three records are returned by the explicit project-code relation query. The featured dataset edge remains at zero while the software pagination case persists. These observations do not recompute the 645-record census, and a graph relation is not causal production or reuse. Each execution is timestamped; historical replay requires an explicit cache directory.
 
 ## 5. Confirm responsible and FAIR hand-off
 

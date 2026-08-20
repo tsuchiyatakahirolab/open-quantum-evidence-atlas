@@ -10,8 +10,8 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(origin),
-    title: "Open Quantum Evidence Atlas | EU–Japan",
-    description: "Only 17 of 645 EU–Japan quantum publications expose a complete publication-centred project/funder–dataset–software path in OpenAIRE.",
+    title: "Evidence Chain Auditor for Funders | Open Quantum Evidence Atlas",
+    description: "Find where research funding loses observable dataset and software links, inspect the source evidence and export what to fix.",
     authors: [{ name: "Takahiro Tsuchiya", url: "https://tsuchiyatakahiro.com" }],
     creator: "Takahiro Tsuchiya",
     publisher: "Takahiro Tsuchiya",
@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       title: "Funding is visible. Reuse links are not.",
-      description: "Only 17 of 645 EU–Japan quantum publications expose a complete evidence chain.",
+      description: "Audit a research portfolio, inspect where the evidence chain breaks and export the identifiers to fix.",
       type: "website",
       url: "https://atlas.tsuchiyatakahiro.com",
       images: [{ url: `${origin}/og-atlas.png`, width: 1536, height: 1024, alt: "Open Quantum Evidence Atlas: funding is visible; reuse links are not" }],
@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
     twitter: {
       card: "summary_large_image",
       title: "Funding is visible. Reuse links are not.",
-      description: "Only 17 of 645 EU–Japan quantum publications expose a complete evidence chain.",
+      description: "Audit a research portfolio, inspect where the evidence chain breaks and export the identifiers to fix.",
       images: [`${origin}/og-atlas.png`],
     },
   };

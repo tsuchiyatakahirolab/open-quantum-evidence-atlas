@@ -1,6 +1,6 @@
 {
   "name": "open-quantum-evidence-atlas",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -18,7 +18,7 @@
     "deploy:cloudflare": "npm run build && wrangler deploy --config wrangler.atlas.jsonc",
     "start": "wrangler dev --config wrangler.atlas.jsonc --local --port 3000",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .tmp"
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next --ignore-pattern .tmp --ignore-pattern .wrangler"
   },
   "dependencies": {
     "next": "^16.3.0",
